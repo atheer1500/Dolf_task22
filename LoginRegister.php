@@ -9,12 +9,14 @@
 </head>
 <body class="LoginRegisterPage">
     <div class="loginContainer">
-        <h2> LogIn </h2>
+        <h2> Consorts  </h2>
         <div class="loginBox">
             <form action="#" >
-            <label for="Email">Email</label><br>
-            <input type="text" id="Email" name="Email" value="example@example.com"><br>
             <br>
+            <input  class="loginInputs" type="text" id="Email" name="Email" placeholder="ُE-maill address"><br><br>
+            <input class="loginInputs" type="password" id="password" name="password" placeholder="Password"><br>
+
+            <button style="width:230px ;height: 39px;">Log In</button>
             </form>
 
         </div>

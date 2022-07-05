@@ -147,3 +147,9 @@ font-size: small;
     border-width: 2px;
     /* background-color: #debac2; */
 }
+.loginInputs
+{
+  height: 30px;
+  width: 230px;
+  border-radius: 4px;
+}
