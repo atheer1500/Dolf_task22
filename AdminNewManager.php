@@ -22,8 +22,8 @@ td {
 <body class="homePage admin">
 
 <div class="sidenav">
-  <a href="AdminHome.php"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="AdminNewActor.html"><i class="fa-solid fa-circle-plus"></i> Add Actor</a>
+  <a href="#services"><i class="fa-solid fa-house"></i> Home</a>
+  <a href="#clients"><i class="fa-solid fa-circle-plus"></i> Add Actor</a>
   <a href="#clients"><i class="fa-solid fa-circle-plus"></i> Add Manager</a>
   <a href="#contact"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 </div>
