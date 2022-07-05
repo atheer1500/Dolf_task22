@@ -14,7 +14,7 @@
             <form action="#" >
             <label for="Email">Email</label><br>
             <input type="text" id="Email" name="Email" value="example@example.com"><br>
-
+            <br>
             </form>
 
         </div>
