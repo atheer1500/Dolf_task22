@@ -1,0 +1,117 @@
+/* our Main colors in Hex
+#efaf96
+#ea9087
+#cb8d9a
+#9d98ae
+#8497b5
+
+ */
+.firstPage
+{
+    background-image: linear-gradient(#e66465, #9198e5),
+     url('background.png');
+    color: white;
+    font-size:6em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.firstPage .paragraph{
+    color: white;
+    font-size: medium;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.firstPage a {
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+
+.homePage
+{
+    background: linear-gradient(#e66465, #9198e5);
+    background-attachment: fixed;
+    color: white;
+    font-size:2em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.homePage p
+{
+    color: white;
+    text-align: center;
+}
+
+hr
+{
+    opacity: 0.2;
+}
+
+button, .buttonstyle
+{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    background: none;
+    text-align: center;
+    margin: 10px;
+}
+
+.center{
+
+    margin-left:auto; margin-right: auto;
+    text-align: center;
+}
+
+/*for sidebar menu*/
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .2);
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    display: block;
+    margin-bottom: 25px;
+  }
+  
+  .sidenav a:hover {
+  }
+  
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+
+/*for admin page*/
+  .admin p
+  {
+font-size: small;
+  }
+
+  h1,h2,h3,h4,h5,h6
+  {
+    text-align: center;
+  }
