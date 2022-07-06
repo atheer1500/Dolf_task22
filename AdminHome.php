@@ -17,15 +17,16 @@ td {
 }
 
 
+
 </style>
 </head>
 <body class="homePage admin">
 
 <div class="sidenav">
   <a href="AdminHome.php"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="AdminNewActor.html"><i class="fa-solid fa-circle-plus"></i> Add Actor</a>
-  <a href="#clients"><i class="fa-solid fa-circle-plus"></i> Add Manager</a>
-  <a href="#contact"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+  <a href="AdminNewActor.php"><i class="fa-solid fa-circle-plus"></i> Add Actor</a>
+  <a href="AdminNewManager.php"><i class="fa-solid fa-circle-plus"></i> Add Manager</a>
+  <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
 </div>
 
 
@@ -42,8 +43,13 @@ td {
 <hr>
 
 <h5 id="actors"> List of actors </h5>
-<button>+ New</button>
+<a class="buttonstyle" href="AdminNewActor.php">+ New</a>
+
 <?php
+   if (isset ($_GET['problem']) and ($_GET['problem']=='DELETED')){
+        echo '<script> window.onload=function(){alert("The actor is deleted successfuly");}; </script>         ';
+        }
+
 $conn = mysqli_connect("localhost:3306", "root", "", "event");
 if (!$conn)
 die ("Could not connect to the database");
@@ -60,6 +66,8 @@ echo '<tr>';
 while ($row=mysqli_fetch_row($result))
 {
         $count ++;
+
+        $id = $row[3]; //Current ID
         
         echo '<td>
         Name: '
@@ -69,7 +77,9 @@ while ($row=mysqli_fetch_row($result))
 . $row[1] .
 '<br> Gender: '
 . $row[2] .
-'<br><button>Edit</button>
+'<br><a class="buttonstyle" href="AdminEditActor.php?id='
+. $id .
+'">Edit</a>
         </td>';	
         //Add each 3 items in a new row
         if ($count % 3 == 0)	
@@ -81,7 +91,8 @@ echo '</table>';
 <hr> 
 
 <h5 id="managers"> List of event Managers </h5>
-<button>+ New</button>
+<a class="buttonstyle" href="AdminNewManager.php">+ New</a>
+
 <?php
 $conn = mysqli_connect("localhost:3306", "root", "", "event");
 if (!$conn)

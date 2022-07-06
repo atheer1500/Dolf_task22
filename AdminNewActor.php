@@ -1,49 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/191f749b6c.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=yes, initial-scale=1.0">
+    <title>Admin Home</title>
+    <link rel="stylesheet" href="CSS/Maincss.css">
+    <style type="text/css">
 
 
 
+td {
+  text-align: left;
+}
+
+button, .buttonstyle, input[type=submit]
+{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    background: none;
+    text-align: center;
+    margin: 10px;
+}
+
+</style>
+</head>
+<body class="homePage admin">
+
+<div class="sidenav">
+    <a href="AdminHome.php"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="AdminNewActor.php"><i class="fa-solid fa-circle-plus"></i> Add Actor</a>
+  <a href="AdminNewManager.php"><i class="fa-solid fa-circle-plus"></i> Add Manager</a>
+  <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
+</div>
+
+
+<div class="main" style="margin-top: 10%">
+<h2>Add New Actor</h2>
+<h4>Enter the actor information:</h4>
+
+<form action="InsertActor.php" method="post">
 <?php
+if (isset ($_GET['problem']) and ($_GET['problem']=='ADD')) {
+echo '<script> window.onload=function(){alert("The actor is added successfuly");}; </script>';}
+
+else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR')){
+echo '<script> window.onload=function(){alert("Failed to add the actor!");}; </script>         ';
+}
+?>             
+<p>
+               <label for="actorName">Actor Name:</label>
+               <input type="text" name="actor_name" id="actorName">
+            </p>
  
- // servername => localhost
- // username => root
- // password => empty
- // database name => staff
- $conn = mysqli_connect("localhost", "root", "", "event");
-  
- // Check connection
- if($conn === false){
-     die("ERROR: Could not connect. "
-         . mysqli_connect_error());
- }
-  
-//Get number of actors
-$query = "SELECT * FROM actor";
-$result = mysqli_query($conn, $query);
-$n = mysqli_num_rows($result);
-
- // take the data from the form 
- $name =  $_REQUEST['actor_name'];
- $gender =  $_REQUEST['actor_gender'];
- $email = $_REQUEST['actor_email'];
- $id = $n+17;
- $admin_id = '1';
-
-
-  
- // insert query
- $sql = "INSERT INTO actor  VALUES ('$name',
-     '$email','$gender', '$id' ,'$admin_id')";
-  
- if(mysqli_query($conn, $sql)){
-   header('location: AdminNewActor.html'); //go back to the html page
-   echo '<script> window.alert("The product was added successfuly")</script>';
-
- }
+             
  
- else{
-     echo "ERROR: $sql. "
-         . mysqli_error($conn);
- }
-  
- // Close connection
- mysqli_close($conn);
- ?>
+             
+<p>
+               <label for="actorGender">Gender:</label>
+               <input type="text" name="actor_gender" id="actorGender">
+            </p>
+ 
+             
+ 
+             
+<p>
+               <label for="actorEmail">Actor Email:</label>
+               <input type="text" name="actor_email" id="actorEmail">
+            </p>
+ 
+           <div class="center"><input type="submit" value="Add"> </div>
+         </form>
+
+<p> 
+
+
+</div>
+
+
+
+
+
+</body>
+</html>

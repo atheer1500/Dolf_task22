@@ -16,106 +16,67 @@ td {
   text-align: left;
 }
 
+button, .buttonstyle, input[type=submit]
+{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    background: none;
+    text-align: center;
+    margin: 10px;
+}
 
 </style>
 </head>
 <body class="homePage admin">
 
 <div class="sidenav">
-  <a href="#services"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="#clients"><i class="fa-solid fa-circle-plus"></i> Add Actor</a>
-  <a href="#clients"><i class="fa-solid fa-circle-plus"></i> Add Manager</a>
-  <a href="#contact"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    <a href="AdminHome.php"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="AdminNewActor.php"><i class="fa-solid fa-circle-plus"></i> Add Actor</a>
+  <a href="AdminNewManager.php"><i class="fa-solid fa-circle-plus"></i> Add Manager</a>
+  <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
 </div>
 
 
 <div class="main" style="margin-top: 10%">
-<h2>Welcome back admin</h2>
-<h4>What would you like to do today?</h4>
-<div class="center">
-<a class ="buttonstyle" href="#actors"> Manage Actors </a>
-<a class ="buttonstyle" href="#managers"> Manage Event Managers </a>
-</div>
+<h2>Add New Event Manager</h2>
+<h4>Enter the manager information:</h4>
 
-<br><br><br><br>
-
-<hr>
-
-<h5 id="actors"> List of actors </h5>
-<button>+ New</button>
+<form action="InsertManager.php" method="post">
 <?php
-$conn = mysqli_connect("localhost:3306", "root", "", "event");
-if (!$conn)
-die ("Could not connect to the database");
+if (isset ($_GET['problem']) and ($_GET['problem']=='ADD')) {
+echo '<script> window.onload=function(){alert("The manager is added successfuly");}; </script>';}
 
-$query="SELECT * FROM actor";
-$result=mysqli_query($conn, $query);
-$n= mysqli_num_rows($result);
-if ($n==0)
-echo '<p>You did not add any actors yet</p>'; 
-
-echo '<table cellpadding="40"  style = "text-align: center; margin-left:auto; margin-right: auto">';
-$count = 0;
-echo '<tr>';
-while ($row=mysqli_fetch_row($result))
-{
-        $count ++;
-        
-        echo '<td>
-        Name: '
-. $row[0] .
-
-'<br> Email: ' 
-. $row[1] .
-'<br> Gender: '
-. $row[2] .
-'<br><button>Edit</button>
-        </td>';	
-        //Add each 3 items in a new row
-        if ($count % 3 == 0)	
-        echo '</tr> <tr>';	
+else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR')){
+echo '<script> window.onload=function(){alert("Failed to add the manager!");}; </script>         ';
 }
-echo '</table>';
-?>
+?>                    
+<p>
+    <label for="managerName">Manager Name:</label>
+    <input type="text" name="manager_name" id="managerName">
+</p>
 
-<hr> 
+             
+             
+<p>
+    <label for="managerEmail">Manager Email:</label>
+    <input type="text" name="manager_email" id="managerEmail">
+</p>
 
-<h5 id="managers"> List of event Managers </h5>
-<button>+ New</button>
-<?php
-$conn = mysqli_connect("localhost:3306", "root", "", "event");
-if (!$conn)
-die ("Could not connect to the database");
 
-$query="SELECT * FROM `event_manger`";
-$result=mysqli_query($conn, $query);
-$n= mysqli_num_rows($result);
-if ($n==0)
-echo '<p>You did not add any event managers yet</p>'; 
+<p>
+    <label for="managerPass">Manager Password:</label>
+    <input type="text" name="manager_pass" id="managerPass">
+</p>
+ 
+           <div class="center"><input type="submit" value="Add"> </div>
+         </form>
 
-echo '<table cellpadding="40"  style = "text-align: center; margin-left:auto; margin-right: auto">';
-$count = 0;
-echo '<tr>';
-while ($row=mysqli_fetch_row($result))
-{
-        $count ++;
-        
-        echo '<td>
-        Name: '
-. $row[2] .
-
-'<br> Email: ' 
-. $row[1] .
-//'<br> Gender: '
-//. $row[2] .
-'<br><button>Edit</button>
-        </td>';	
-        //Add each 3 items in a new row
-        if ($count % 3 == 0)	
-        echo '</tr> <tr>';	
-}
-echo '</table>';
-?>
 <p> 
 </div>
 
