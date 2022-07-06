@@ -2,7 +2,7 @@
 
 function OpenCon()
 {
-$servername = "localhost";
+$servername = "localhost:3308";
 $username = "root";
 $pass = "";
 $dbname = "p_pp";
@@ -19,5 +19,9 @@ if ($conn->connect_error)
 }
 return $conn;}
 
+function close($conn)
+{
+    $conn->close();
+}
 
 ?>

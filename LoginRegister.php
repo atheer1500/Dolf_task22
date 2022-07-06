@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/Maincss.css">
     <title>Login</title>
+    <?php include('connection.php');
+  
+    ?>
 </head>
 <body class="LoginRegisterPage">
     <div class="loginContainer">
