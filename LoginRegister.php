@@ -6,20 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/Maincss.css">
     <title>Login</title>
-    <?php include('connection.php');
-  
+    <?php
+     include('connection.php');
+     $conn=OpenCon();
+     closeconn($conn);
     ?>
 </head>
 <body class="LoginRegisterPage">
     <div class="loginContainer">
         <h2> Consorts  </h2>
         <div class="loginBox">
-            <form action="#" >
+            <form action="#" method="POST" >
             <br>
             <input  class="loginInputs" type="text" id="Email" name="Email" placeholder="ُE-maill address"><br><br>
             <input class="loginInputs" type="password" id="password" name="password" placeholder="Password"><br>
 
-            <button style="width:230px ;height: 39px;">Log In</button>
+            <button  style="width:230px ;height: 39px;" onclick="checkinfo()">Log In</button>
             </form>
 
         </div>

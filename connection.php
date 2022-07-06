@@ -5,7 +5,7 @@ function OpenCon()
 $servername = "localhost:3308";
 $username = "root";
 $pass = "";
-$dbname = "p_pp";
+$dbname = "event";
   
 // Create connection
 $conn = new mysqli($servername, $username, $pass, $dbname);
@@ -19,7 +19,7 @@ if ($conn->connect_error)
 }
 return $conn;}
 
-function close($conn)
+function closeconn($conn)
 {
     $conn->close();
 }
