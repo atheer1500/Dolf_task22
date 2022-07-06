@@ -1,16 +1,16 @@
 CREATE TABLE End_User
 (
-  FirstName INT NOT NULL,
-  LastName INT NOT NULL,
+  FirstName varchar(10) NOT NULL,
+  LastName varchar(10) NOT NULL,
   Password INT NOT NULL,
-  UserEmail INT NOT NULL,
-  Gender INT NOT NULL,
+  UserEmail varchar(35) NOT NULL,
+  Gender char(1) NOT NULL,
   PRIMARY KEY (UserEmail)
 );
 
 CREATE TABLE Admin
 (
-  AdminEmail INT NOT NULL,
+  AdminEmail varchar(35) NOT NULL,
   Passowrd INT NOT NULL,
   AdminID varchar(8) NOT NULL,
   PRIMARY KEY (AdminID)
@@ -19,8 +19,8 @@ CREATE TABLE Admin
 CREATE TABLE Event_Manger
 (
   Password INT NOT NULL,
-  MangerEmail INT NOT NULL,
-  Name INT NOT NULL,
+  MangerEmail varchar(35) NOT NULL,
+  Name varchar(10) NOT NULL,
   MangerID varchar(8) NOT NULL,
   AdminID varchar(8) NOT NULL,
   PRIMARY KEY (MangerID),
@@ -29,25 +29,25 @@ CREATE TABLE Event_Manger
 
 CREATE TABLE Actor
 (
-  Name INT NOT NULL,
-  ActorEmail INT NOT NULL,
-  Gender INT NOT NULL,
-  ActorID INT NOT NULL,
-  AdminID INT NOT NULL,
+  Name varchar(10) NOT NULL,
+  ActorEmail varchar(35) NOT NULL,
+  Gender char(1) NOT NULL,
+  ActorID INT NOT NULL AUTO_INCREMENT,
+  AdminID varchar(8) NOT NULL,
   PRIMARY KEY (ActorID),
   FOREIGN KEY (AdminID) REFERENCES Admin(AdminID)
 );
 
 CREATE TABLE Event
 (
-  EventID INT NOT NULL,
-  Title INT NOT NULL,
-  Actor INT NOT NULL,
-  Time INT NOT NULL,
-  Date INT NOT NULL,
-  Description INT NOT NULL,
+  EventID INT NOT NULL AUTO_INCREMENT,
+  Title varchar(20) NOT NULL,
+  Actor varchar(10) NOT NULL,
+  Time TIME NOT NULL,
+  Date DATE NOT NULL,
+  Description varchar(100) NOT NULL,
   AvailableTickets__ INT NOT NULL,
-  Pic INT NOT NULL,
+  Pic TINYBLOB NOT NULL,
   ActorID INT NOT NULL,
   PRIMARY KEY (EventID),
   FOREIGN KEY (ActorID) REFERENCES Actor(ActorID)
@@ -55,9 +55,9 @@ CREATE TABLE Event
 
 CREATE TABLE book
 (
-  PaymentMethod INT NOT NULL,
+  PaymentMethod varchar(15) NOT NULL,
   NumberOfTickets__ INT NOT NULL,
-  UserEmail INT NOT NULL,
+  UserEmail varchar(35) NOT NULL,
   EventID INT NOT NULL,
   PRIMARY KEY (UserEmail, EventID),
   FOREIGN KEY (UserEmail) REFERENCES End_User(UserEmail),
@@ -67,7 +67,7 @@ CREATE TABLE book
 CREATE TABLE Add_Delete
 (
   MangerID varchar(8) NOT NULL,
-  EventID varchar(8)T NOT NULL,
+  EventID INT NOT NULL,
   PRIMARY KEY (MangerID, EventID),
   FOREIGN KEY (MangerID) REFERENCES Event_Manger(MangerID),
   FOREIGN KEY (EventID) REFERENCES Event(EventID)
