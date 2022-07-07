@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/Maincss.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Login</title>
+    <title>Regeister</title>
     <!-- <?php
      include('connection.php');
      $conn=OpenCon();
@@ -50,6 +50,17 @@
         <h2> Consorts  </h2>
         <div class="loginBox">
             <form  id="Regester" action = "reg.php" method="POST">
+            <br>
+            <input type="text" class="loginInputs" id="Fname" name="Fname" placeholder="Enter First Name">
+            <br><br>
+            <input type="text" class="loginInputs" id="Lname" name="Lname" placeholder="Enter Last Name">
+            <br><br>
+           
+            <input type="radio" id="F" name="Gender" value="F">
+            <label for="F">Female</label>
+            <input type="radio" id="M" name="Gender" value="M">
+            <label for="M">male</label>
+            <br>
             <br>
             <input  class="loginInputs" type="text" id="Email" name="Email" placeholder="ُE-maill address"><br><br>
             <input class="loginInputs" type="password" id="password" name="password" placeholder="Password"><br>
