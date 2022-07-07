@@ -56,7 +56,8 @@
 
             <button  style="width:230px ;height: 39px;" onclick="" >Regester</button>
             </form>
-            <a href="Login.php" class="newuser">alrady have an account? click hear!</a>
+            <a href="Login.php" class="newuser" style="  text-decoration: none;
+  color: #063a62db;">alrady have an account? click hear!</a>
 
         </div>
 

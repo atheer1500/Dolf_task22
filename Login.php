@@ -50,13 +50,17 @@
         <h2> Consorts  </h2>
         <div class="loginBox">
             <form  id="login" action = "authentication.php" method="POST">
-            <br>
+            <input type="text" class="loginInputs" id="Fname" name="Fname" placeholder="Enter First Name">
+            <br><br>
+            <input type="text" class="loginInputs" id="Lname" name="Lname" placeholder="Enter Last Name">
+            <br><br>
             <input  class="loginInputs" type="text" id="Email" name="Email" placeholder="ُE-maill address"><br><br>
             <input class="loginInputs" type="password" id="password" name="password" placeholder="Password"><br>
 
-            <button  style="width:230px ;height: 39px;" onclick="validate()" >Log In</button>
+            <button  style="width:230px ;height: 39px;" onclick="validate()" >Regester</button>
             </form>
-            <a href="Regester.php" class="newuser">new user? click hear!</a>
+            <a href="Regester.php" class="newuser"style="  text-decoration: none;
+  color: #063a62db;">new user? click hear!</a>
 
         </div>
 
