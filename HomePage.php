@@ -173,7 +173,7 @@ echo
 <div class="text">'
 . $row[1] .
 '</div>
-<button> Book Now</button>
+<button onclick=" window.open("Book.php","_blank")"> Book Now</button>
 
 </div>
 
@@ -221,7 +221,7 @@ while ($row=mysqli_fetch_row($result))
 . $row[7] .
 
 '" style="width:200px; height: 300px;">
-<br><button onclic> Book Now</button>
+<br><button  onclick=" window.open("Book.php","_blank")"> Book Now</button>
         </td>';	
         //Add each 3 items in a new row
         if ($count % 3 == 0)	

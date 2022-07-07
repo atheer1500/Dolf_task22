@@ -19,7 +19,7 @@
         $count = mysqli_num_rows($result);  
      
         if($count == 1){  
-           header("Location:viewToBook.php") ;
+           header("Location:HomePage.php") ;
         }  
         else{  
             echo "<h1> Login failed. Invalid username or password. user</h1>";  

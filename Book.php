@@ -9,6 +9,6 @@
     <title>View conserts</title>
 </head>
 <body class="LoginRegisterPage">
-
+<h1>Hi</h1>
 </body>
 </html>
