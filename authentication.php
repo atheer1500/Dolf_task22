@@ -5,6 +5,9 @@
     $Id=$_POST['Email'];
     $pass=$_POST['password']; 
     $conn=OpenCon();
+    session_start();
+    $_SESSION["id"]=$Id;
+    $_SESSION["pass"]=$pass;
       
       
         // $Id = stripcslashes($Id);  
