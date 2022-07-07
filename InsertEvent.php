@@ -32,7 +32,7 @@
  $actorID = $row[0];
 
 
-  
+ //Change this after updating the datbase (delete $actor).
  //Insert query
  $sql = "INSERT INTO  `event` VALUES ('',
      '$title','$actor', '$time' ,'$date', '$description', '$ticketsNum', '$img', '$actorID')";
