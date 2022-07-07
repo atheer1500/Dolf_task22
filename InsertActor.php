@@ -13,16 +13,15 @@
          . mysqli_connect_error());
  }
   
-//Get number of actors  //DELETE THIS LATER
-$query = "SELECT * FROM actor";
-$result = mysqli_query($conn, $query);
-$n = mysqli_num_rows($result);
+//Get number of actors 
+//$query = "SELECT * FROM actor";
+//$result = mysqli_query($conn, $query);
+//$n = mysqli_num_rows($result);
 
  // take the data from the form 
  $name =  $_REQUEST['actor_name'];
  $gender =  $_REQUEST['actor_gender'];
  $email = $_REQUEST['actor_email'];
- $id = $n+17; //CHANGE THIS
 
  //TO GET THE ADMIN ID
  $query = "SELECT * FROM `admin`";
@@ -35,7 +34,7 @@ $n = mysqli_num_rows($result);
   
  // insert query
  $sql = "INSERT INTO actor  VALUES ('$name',
-     '$email','$gender', '$id' ,'$admin_id')";
+     '$email','$gender', '' ,'$admin_id')";
   
  if(mysqli_query($conn, $sql)){
    header('location: AdminNewActor.php?problem=ADD'); //go back to the add page
