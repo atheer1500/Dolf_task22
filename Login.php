@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/Maincss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Login</title>
     <!-- <?php
      include('connection.php');
@@ -29,17 +30,17 @@
 
         function validate()
         {
-            var Email=document.getElementById("Email");
-            var Password=document.getElementById("password");
-            if(!(isset(Email)||isset(Password))||isEmpty(Email)||isEmpty(Password))
-            {
-                window.alert("somthing is missing");
-            }
-            else
-            {
-                var form=document.getElementById("login");
-                form.setAttribute.
-            }
+            // var Email=document.getElementById("Email");
+            // var Password=document.getElementById("password");
+            // if(!(isset(Email)||isset(Password))||isEmpty(Email)||isEmpty(Password))
+            // {
+            //     window.alert("somthing is missing");
+            // }
+            // else
+            // {
+            //     var form=document.getElementById("login");
+            //     form.setAttribute.
+            // }
         }
 
     </script>
@@ -55,6 +56,7 @@
 
             <button  style="width:230px ;height: 39px;" onclick="validate()" >Log In</button>
             </form>
+            <a href="Regester.php" class="newuser">new user? click hear!</a>
 
         </div>
 
