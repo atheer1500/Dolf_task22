@@ -22,10 +22,15 @@ $n = mysqli_num_rows($result);
  $name =  $_REQUEST['manager_name'];
  $pass =  $_REQUEST['manager_pass'];
  $email = $_REQUEST['manager_email'];
- $id = $n+17;
- $admin_id = '1';
+ $id = $n+17; //CHANGE THIS
+ 
+ 
+ //TO GET THE ADMIN ID
+$query = "SELECT * FROM `admin`";
+$result=mysqli_query($conn, $query);
+$row=mysqli_fetch_row($result);
 
-
+$admin_id = $row[2];
   
  // insert query
  $sql = "INSERT INTO  `event_manger`  VALUES ('$pass',

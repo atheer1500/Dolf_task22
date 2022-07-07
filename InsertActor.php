@@ -22,8 +22,14 @@ $n = mysqli_num_rows($result);
  $name =  $_REQUEST['actor_name'];
  $gender =  $_REQUEST['actor_gender'];
  $email = $_REQUEST['actor_email'];
- $id = $n+17;
- $admin_id = '1';
+ $id = $n+17; //CHANGE THIS
+
+ //TO GET THE ADMIN ID
+ $query = "SELECT * FROM `admin`";
+ $result=mysqli_query($conn, $query);
+ $row=mysqli_fetch_row($result);
+ 
+ $admin_id = $row[2];
 
 
   

@@ -20,7 +20,7 @@
  $ID = $_GET['id'];
 
 
-$deleteQuery = "DELETE FROM actor WHERE `ActorID` = '$ID'";
+$deleteQuery = "DELETE FROM `event_manger` WHERE `MangerID` = '$ID'";
 
   
 
@@ -28,19 +28,19 @@ $deleteQuery = "DELETE FROM actor WHERE `ActorID` = '$ID'";
     if (isset($_POST['update_button'])) {
       
  // take the data from the form 
- $name =  $_REQUEST['actor_name'];
- $gender =  $_REQUEST['actor_gender'];
- $email = $_REQUEST['actor_email'];
+ $name =  $_REQUEST['manager_name'];
+ $email =  $_REQUEST['manager_email'];
+ $password = $_REQUEST['manager_pass'];
  
- $updateQuery = "UPDATE actor set `Name` = '$name', `ActorEmail` = '$email', `Gender` = '$gender' WHERE `ActorID` = '$ID'";
+ $updateQuery = "UPDATE `event_manger` set `Password` = '$password', `MangerEmail` = '$email', `Name` = '$name' WHERE `MangerID` = '$ID'";
 
       //action for update here
       if(mysqli_query($conn, $updateQuery))
-        header('location: AdminEditActor.php?id=' . $ID . '&problem=UPDATED'); //go back to the EDIT page
+        header('location: AdminEditManager.php?id=' . $ID . '&problem=UPDATED'); //go back to the EDIT page
       
       
       else
-         header('location: AdminEditActor.php?problem=UPDATEERROR');
+         header('location: AdminEditManager.php?problem=UPDATEERROR');
         } 
   
 
@@ -51,7 +51,7 @@ $deleteQuery = "DELETE FROM actor WHERE `ActorID` = '$ID'";
       }
       
       else
-         header('location: AdminEditActor.php?problem=DELETEERROR');
+         header('location: AdminEditManager.php?problem=DELETEERROR');
   } 
 
   else if (isset($_POST['cancel_button'])) {
