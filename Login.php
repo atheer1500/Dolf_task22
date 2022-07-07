@@ -30,6 +30,7 @@
 
         function validate()
         {
+            window.open("Book.php","_blank");
             // var Email=document.getElementById("Email");
             // var Password=document.getElementById("password");
             // if(!(isset(Email)||isset(Password))||isEmpty(Email)||isEmpty(Password))
