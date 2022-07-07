@@ -11,7 +11,7 @@ event Manger pages:
 - add event page.)Atherr
 
 admin Ather :
--Add Actor.
+-Add/edit/delete Actor. DONE
 -Add Event Manger.
 
 
