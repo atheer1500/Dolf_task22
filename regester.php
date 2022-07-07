@@ -69,7 +69,7 @@
             </form>
             <a href="Login.php" class="newuser" style="  text-decoration: none;
   color: #063a62db;">alrady have an account? click hear!</a>
-
+<br>
         </div>
 
     </div>

@@ -56,8 +56,10 @@
 
             <button  style="width:230px ;height: 39px;" onclick="validate()" >Log In</button>
             </form>
+
             <a href="Regester.php" class="newuser"style="  text-decoration: none;
   color: #063a62db;">new user? click hear!</a>
+  <br>
 
         </div>
 
