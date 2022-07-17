@@ -16,6 +16,11 @@ td {
   text-align: left;
 }
 
+p {
+
+        line-height: 0;
+}
+
 
 
 </style>
@@ -77,7 +82,7 @@ while ($row=mysqli_fetch_row($result))
 
 '<br> <p>Email: ' 
 . $row[1] .
-'</p><br> <p>Gender: '
+'</p> <p>Gender: '
 . $row[2] .
 '</p>
 <br><a class="buttonstyle" href="AdminEditActor.php?id='
@@ -117,14 +122,15 @@ while ($row=mysqli_fetch_row($result))
         $id = $row[3]; //Current ID
 
         echo '<td>
-        Name: '
+        '
 . $row[2] .
 
-'<br> Email: ' 
+'<br> <p>Email: ' 
 . $row[1] .
 //'<br> Gender: '
 //. $row[2] .
-'<br><a class="buttonstyle" href="AdminEditManager.php?id='
+'</p>
+<br><a class="buttonstyle" href="AdminEditManager.php?id='
 . $id .
 '">Edit</a>
         </td>';	

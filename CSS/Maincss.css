@@ -82,6 +82,8 @@ button, .buttonstyle, input[type=submit]
     background: none;
     text-align: center;
     margin: 10px;
+    cursor: pointer;
+
 }
 
 .center{
@@ -126,6 +128,16 @@ button, .buttonstyle, input[type=submit]
   {
 font-size: small;
   }
+
+ /* .admin
+{
+    background: linear-gradient(#e66465, #9198e5);
+    background-attachment: fixed;
+    color: white;
+    font-size:2em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}*/
+
 
   h1,h2,h3,h4,h5,h6
   {
@@ -199,4 +211,10 @@ font-size: small;
 }
 .Select-container
 {
+}
+
+
+a, button
+{
+  cursor: pointer;
 }

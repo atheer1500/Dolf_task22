@@ -31,11 +31,9 @@
  
  $actorID = $row[0];
 
-
- //Change this after updating the datbase (delete $actor).
  //Insert query
  $sql = "INSERT INTO  `event` VALUES ('',
-     '$title','$actor', '$time' ,'$date', '$description', '$ticketsNum', '$img', '$actorID')";
+     '$title', '$time' ,'$date', '$description', '$ticketsNum', '$img', '$actorID')";
   
  if(mysqli_query($conn, $sql)){
    header('location: ManagerNewEvent.php?problem=ADD'); //Insert to the database, then go back to the add page

@@ -29,6 +29,8 @@ button, .buttonstyle, input[type=submit]
     background: none;
     text-align: center;
     margin: 10px;
+    cursor: pointer;
+
 }
 
 </style>
@@ -67,7 +69,7 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
 //if (isset ($_GET['id']))
 $managerID = $_GET['id']; 
 
-echo '<form action="EditManager.php?id=' . $managerID . '" method="post">';
+echo '<form name ="newManagerForm" action="EditManager.php?id=' . $managerID . '" method="post" onsubmit = "return(validate());">';
 
 //Database connention
 $conn = mysqli_connect("localhost:3306", "root", "", "event");
@@ -112,7 +114,7 @@ $row=mysqli_fetch_row($result);
             <input type="submit" value="Save" name="update_button"> 
             <input type="submit" value="Cancel" name = "cancel_button">
             <br><br><br>
-           <input type="submit" value="Delete this manager" name = "delete_button"style="background-color: #ea9087" onclick = "myFunction()">
+           <input type="submit" value="Delete this manager" name = "delete_button"style="background-color: #ea9087" onclick = "return confirm('Are you sure you want to delete?')">
 
 
          </div> 
@@ -124,22 +126,35 @@ $row=mysqli_fetch_row($result);
 
 </div>
 
-
-
-<?php echo '
 <script>
-function myFunction() {
-  if (confirm("Are you sure you want to delete?") == true) {
-   window.location="EditActor.php?id='
-   . $managerID .
-   '";
-   return true;
-  } 
+  //Form validation
 
-}
+  function validate() {
+//1- Check if all information filled
+  if (document.forms["newManagerForm"]["manager_name"].value == "" || document.forms["newManagerForm"]["manager_email"].value == "" || document.forms["newManagerForm"]["manager_pass"].value == "") {
+    alert("Please fill all the information. ");
+    //document.forms["newManagerForm"]["manager_name"].focus();
+    return false;
+  }
+
+//2- Check the Email format
+var email = document.forms["newManagerForm"]["manager_email"].value;
+var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+
+if (!emailFormat.test(email)) {
+   alert("Please enter valid email format. ");
+   return false;
+  }
+
+
+//Check and correct popular email domains
+//   const example = "example@gmial.com"
+// if (/@gm(ia|a|i)l.com$/.test(example)) {
+//   alert("Maybe you meant @gmail.com?")
+//   return false;
+// }
+
+      }
 </script>
-'
-?>
-
 </body>
 </html>

@@ -29,6 +29,8 @@ button, .buttonstyle, input[type=submit]
     background: none;
     text-align: center;
     margin: 10px;
+    cursor: pointer;
+
 }
 
 </style>
@@ -67,7 +69,7 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
 //if (isset ($_GET['id']))
 $actorID = $_GET['id']; 
 
-echo '<form action="EditActor.php?id=' . $actorID . '" method="post">';
+echo '<form name ="newActorForm" action="EditActor.php?id=' . $actorID . '" method="post" onsubmit = "return(validate());">';
 
 //Database connention
 $conn = mysqli_connect("localhost:3306", "root", "", "event");
@@ -90,15 +92,6 @@ $row=mysqli_fetch_row($result);
 
 
 
-<p>
-   <label for="actorGender">Gender:</label>
-   <input type="text" name="actor_gender" id="actorGender"
-   value = "<?php echo $row[2] ?>"
-   >
-</p>
-
-
-
 
 <p>
    <label for="actorEmail">Actor Email:</label>
@@ -107,12 +100,25 @@ $row=mysqli_fetch_row($result);
    >
 </p>
 
+
+<p>
+   
+Gender: 
+
+    <input type="radio" id="f2" name="actor_gender" value="Female" <?php if ($row[2] == 'F') echo 'checked="checked"'; ?>>
+<label for="f" >Female</label>
+
+<input type="radio" id="m" name="actor_gender" value="Male" <?php if ($row[2] == 'M') echo 'checked="checked"'; ?>>
+<label for="m" >Male</label><br>
+
+</p>
+
  
          <div class="center">
             <input type="submit" value="Save" name="update_button"> 
             <input type="submit" value="Cancel" name = "cancel_button">
             <br><br><br>
-           <input type="submit" value="Delete this actor" name = "delete_button"style="background-color: #ea9087" onclick = "myFunction()">
+           <input type="submit" value="Delete this actor" name = "delete_button"style="background-color: #ea9087" onclick = "return confirm('This actor and its events will be deleted!')">
 
 
          </div> 
@@ -125,21 +131,34 @@ $row=mysqli_fetch_row($result);
 </div>
 
 
-
-<?php echo '
 <script>
-function myFunction() {
-  if (confirm("Are you sure you want to delete?") == true) {
-   window.location="EditActor.php?id='
-   . $actorID .
-   '";
-   return true;
-  } 
+  //Form validation
 
-}
+  function validate() {
+//1- Check if all information filled
+  if (document.forms["newActorForm"]["actor_name"].value == "" || document.forms["newActorForm"]["actor_email"].value == "" || document.forms["newActorForm"]["actor_gender"].value == "") {
+    alert("Please fill all the information. ");
+    return false;
+  }
+
+//2- Check the Email format
+var email = document.forms["newActorForm"]["actor_email"].value;
+var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+
+if (!emailFormat.test(email)) {
+   alert("Please enter valid email format. ");
+   return false;
+  }
+
+
+//Check and correct popular email domains
+//   const example = "example@gmial.com"
+// if (/@gm(ia|a|i)l.com$/.test(example)) {
+//   alert("Maybe you meant @gmail.com?")
+//   return false;
+// }
+
+      }
 </script>
-'
-?>
-
 </body>
 </html>

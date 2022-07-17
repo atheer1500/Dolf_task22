@@ -29,7 +29,10 @@ button, .buttonstyle, input[type=submit]
     background: none;
     text-align: center;
     margin: 10px;
+    cursor: pointer;
+
 }
+
 
 </style>
 </head>
@@ -47,7 +50,7 @@ button, .buttonstyle, input[type=submit]
 <h2>Add New Actor</h2>
 <h4>Enter the actor information:</h4>
 
-<form action="InsertActor.php" method="post">
+<form name ="newActorForm" action="InsertActor.php" method="post" onsubmit = "return(validate());">
 <?php
 if (isset ($_GET['problem']) and ($_GET['problem']=='ADD')) {
 echo '<script> window.onload=function(){alert("The actor is added successfuly");}; </script>';}
@@ -57,25 +60,35 @@ echo '<script> window.onload=function(){alert("Failed to add the actor!");}; </s
 }
 ?>             
 <p>
-               <label for="actorName">Actor Name:</label>
-               <input type="text" name="actor_name" id="actorName">
-            </p>
- 
-             
- 
-             
+    <label for="actorName">Actor Name:</label>
+    <input type="text" name="actor_name" id="actorName">
+</p>
+
+  
+  
+
+  
 <p>
-               <label for="actorGender">Gender:</label>
-               <input type="text" name="actor_gender" id="actorGender">
-            </p>
- 
-             
- 
-             
+    <label for="actorEmail">Actor Email:</label>
+    <input type="text" name="actor_email" id="actorEmail">
+</p>
+
+
+
+              
 <p>
-               <label for="actorEmail">Actor Email:</label>
-               <input type="text" name="actor_email" id="actorEmail">
-            </p>
+   
+Gender: 
+
+    <input type="radio" id="f2" name="actor_gender" value="Female">
+<label for="f">Female</label>
+
+<input type="radio" id="m" name="actor_gender" value="Male">
+<label for="m">Male</label><br>
+
+</p>
+
+
  
            <div class="center"><input type="submit" value="Add"> </div>
          </form>
@@ -86,7 +99,35 @@ echo '<script> window.onload=function(){alert("Failed to add the actor!");}; </s
 </div>
 
 
+<script>
+  //Form validation
 
+  function validate() {
+//1- Check if all information filled
+  if (document.forms["newActorForm"]["actor_name"].value == "" || document.forms["newActorForm"]["actor_email"].value == "" || document.forms["newActorForm"]["actor_gender"].value == "") {
+    alert("Please fill all the information. ");
+    return false;
+  }
+
+//2- Check the Email format
+var email = document.forms["newActorForm"]["actor_email"].value;
+var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+
+if (!emailFormat.test(email)) {
+   alert("Please enter valid email format. ");
+   return false;
+  }
+
+
+//Check and correct popular email domains
+//   const example = "example@gmial.com"
+// if (/@gm(ia|a|i)l.com$/.test(example)) {
+//   alert("Maybe you meant @gmail.com?")
+//   return false;
+// }
+
+      }
+</script>
 
 
 </body>
