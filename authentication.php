@@ -1,9 +1,13 @@
-<?php      
+<?php
+
+use function PHPSTORM_META\type;
+
     include('connection.php'); 
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
     $Id=$_POST['Email'];
     $pass=$_POST['password']; 
+    $type=$_POST['User'];
     $conn=OpenCon();
     session_start();
     $_SESSION["id"]=$Id;
@@ -14,7 +18,7 @@
         //  $pass = stripcslashes( $pass);  
         // $Id = mysqli_real_escape_string( $conn, $Id);  
         //  $pass = mysqli_real_escape_string( $conn,  $pass);  
-      if (!preg_match("/^AD/",$Id)&&!preg_match("/^EM/",$Id))
+      if ($type=='UserE')
       {
         $sql = "SELECT `FirstName` FROM `end_user` WHERE `UserEmail`='$Id' AND `Password`=".$pass.";";  
         $result = mysqli_query($conn, $sql);  
@@ -28,9 +32,9 @@
             echo "<h1> Login failed. Invalid username or password. user</h1>";  
         }    
      }
-     else  if (preg_match("/^AD/",$Id))
+     else  if ($type=='Admin')
      {
-       $sql = "SELECT `AdminEmail` FROM `admin` WHERE `AdminID`='$Id' AND `Passowrd`=".$pass.";";  
+       $sql = "SELECT `AdminID` FROM `admin` WHERE `AdminEmail`='$Id' AND `Passowrd`=".$pass.";";  
        $result = mysqli_query($conn, $sql);  
        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
        $count = mysqli_num_rows($result);  
@@ -42,10 +46,10 @@
            echo "<h1> Login failed. Invalid username or password.Admin</h1>";  
        }    
     }
-    else if(preg_match("/^EM/",$Id))
+    else if($type=='EventManger')
     {
         
-        $sql = "SELECT `MangerEmail` FROM `event_manger` WHERE `MangerID`='$Id' AND `Password`=".$pass.";";  
+        $sql = "SELECT `MangerID` FROM `event_manger` WHERE `MangerEmail`='$Id' AND `Password`=".$pass.";";  
         $result = mysqli_query($conn, $sql);  
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
         $count = mysqli_num_rows($result);  

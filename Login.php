@@ -54,6 +54,15 @@
             
             <input  class="loginInputs" type="text" id="Email" name="Email" placeholder="ُE-maill address"><br><br>
             <input class="loginInputs" type="password" id="password" name="password" placeholder="Password"><br>
+            <input type="radio" id="UserEmail" name="User" value="UserE">     
+            <label for="User">User</label><br>
+
+            <input type="radio" id="Admin" name="User" value="Admin">
+            <label for="Admin">Admin</label><br>
+
+            <input type="radio" id="EventManger" name="User" value="EventManger">
+            <label for="EventManger">EventManger</label><br>
+
 
             <button  style="width:230px ;height: 39px;" onclick="validate()" >Log In</button>
             </form>
