@@ -152,7 +152,7 @@
   <!-- Full-width images with number and caption text -->
   <?php
   #Maisaa's username is localhost:3308 while Ather's is localhost:3306 
-$conn = mysqli_connect("localhost:3308", "root", "", "event");
+$conn = mysqli_connect("localhost:3306", "root", "", "event");
 if (!$conn)
 die ("Could not connect to the database");
 
@@ -169,11 +169,13 @@ echo
 '<div class="mySlides fade">
 <img class ="poster" src="'
 . $row[7] .
-'" style="width:100%">
+'" style="width:100%"> <br><br><br><br>
 <div class="text">'
 . $row[1] .
-'</div>
-<button class="buttonstyle"><a href="Book.php"> Book Now</a></button>
+'
+<br> <button class="buttonstyle"><a href="Book.php"> Book Now</a></button>
+
+</div>
 
 </div>
 
@@ -201,7 +203,7 @@ echo
 <p>All Events:</p>
 
 <?php
-$conn = mysqli_connect("localhost:3308", "root", "", "event");
+$conn = mysqli_connect("localhost:3306", "root", "", "event");
 if (!$conn)
 die ("Could not connect to the database");
 
