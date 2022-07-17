@@ -2,7 +2,7 @@
 
 function OpenCon()
 {
-$servername = "localhost:3306";
+$servername = "localhost:3308";
 $username = "root";
 $pass = "";
 $dbname = "event";
