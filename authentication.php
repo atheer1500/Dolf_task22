@@ -53,14 +53,23 @@ use function PHPSTORM_META\type;
         $result = mysqli_query($conn, $sql);  
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
         $count = mysqli_num_rows($result);  
-     
-        if($count == 1){  
+        
+        if($count == 1)
+        { 
+            if (mysqli_num_rows($result)==1)
+            {
+                $roww = mysqli_fetch_array($result);
+                echo "user Id: " . $roww['MangerID'];
+    
+            // $mewo="EMfirst";
+            // $_SESSION['MangerID']=$mewo; 
             // echo "<h1><center> Login successful  EM</center></h1>"; 
-            header("Location:viewManger.php"); 
+           // header("Location:viewManger.php"); 
         }  
         else{  
             echo "<h1> Login failed . Invalid username or password. EM</h1>";  
         } 
     }
     }
+}
 ?>  

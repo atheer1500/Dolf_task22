@@ -28,7 +28,9 @@
   <input type="text" placeholder="Search for an event.." name="search" id="searchBar" value="<?php if (isset($_GET['search'])) echo $_GET['search']; ?>">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
-    </form>
-  </div>
+</div>
+<div id="events">
+    <?php include("viewman.php"); ?>
+</div>
 </body>
 </html>
