@@ -193,6 +193,10 @@ font-size: small;
   display: block;
   margin-bottom: 25px;
 }
+.search
+{
+  padding-left: 20%;
+}
 .Select-container
 {
 }

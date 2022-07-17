@@ -27,7 +27,7 @@ td {
 <div class="sidenav">
   <a href="ManagerHome.php"><i class="fa-solid fa-house"></i> Home</a>
   <a href="ManagerNewEvent.php"><i class="fa-solid fa-circle-plus"></i> Add Event </a>
-  <a href=""><i class="fa-solid fa-circle-plus"></i> My events </a>
+  <a href="viewManger.php"><i class="fa-solid fa-circle-plus"></i> My events </a>
   <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
 </div>
 
