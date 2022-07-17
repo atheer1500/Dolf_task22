@@ -72,14 +72,15 @@ while ($row=mysqli_fetch_row($result))
         $id = $row[3]; //Current ID
         
         echo '<td>
-        Name: '
+        '
 . $row[0] .
 
-'<br> Email: ' 
+'<br> <p>Email: ' 
 . $row[1] .
-'<br> Gender: '
+'</p><br> <p>Gender: '
 . $row[2] .
-'<br><a class="buttonstyle" href="AdminEditActor.php?id='
+'</p>
+<br><a class="buttonstyle" href="AdminEditActor.php?id='
 . $id .
 '">Edit</a>
         </td>';	
