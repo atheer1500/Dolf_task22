@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 17, 2022 at 10:32 AM
+-- Generation Time: Jul 17, 2022 at 10:36 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -110,7 +110,6 @@ CREATE TABLE `end_user` (
 CREATE TABLE `event` (
   `EventID` int(11) NOT NULL,
   `Title` varchar(20) NOT NULL,
-  `Actor` varchar(10) NOT NULL,
   `Time` time NOT NULL,
   `Date` date NOT NULL,
   `Description` varchar(100) NOT NULL,
@@ -123,11 +122,11 @@ CREATE TABLE `event` (
 -- Dumping data for table `event`
 --
 
-INSERT INTO `event` (`EventID`, `Title`, `Actor`, `Time`, `Date`, `Description`, `AvailableTickets__`, `Pic`, `ActorID`) VALUES
-(4, 't', '2', '00:00:02', '2022-07-19', 't', 1, '7e579b53f4e596e8fcd1db4f5d2cd31e.png', 2),
-(5, 'super junior', '2', '00:00:08', '2022-07-13', 'music concert', 5, '162-1626751_png-pastel-bling-cute-yellow-star-90rainy-bling.png', 2),
-(6, 'tst', '1', '00:00:12', '2022-07-28', 'tst', 1, '81-814762_ayumi-via-discovered-by-on-we-cute-ghost.png', 1),
-(7, '11', '1', '00:00:04', '2022-08-04', '11', 1, '06acb336d4b5b6a434d0d0a841359ddd.png', 1);
+INSERT INTO `event` (`EventID`, `Title`, `Time`, `Date`, `Description`, `AvailableTickets__`, `Pic`, `ActorID`) VALUES
+(4, 't', '00:00:02', '2022-07-19', 't', 1, '7e579b53f4e596e8fcd1db4f5d2cd31e.png', 2),
+(5, 'super junior', '00:00:08', '2022-07-13', 'music concert', 5, '162-1626751_png-pastel-bling-cute-yellow-star-90rainy-bling.png', 2),
+(6, 'tst', '00:00:12', '2022-07-28', 'tst', 1, '81-814762_ayumi-via-discovered-by-on-we-cute-ghost.png', 1),
+(7, '11', '00:00:04', '2022-08-04', '11', 1, '06acb336d4b5b6a434d0d0a841359ddd.png', 1);
 
 -- --------------------------------------------------------
 

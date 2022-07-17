@@ -29,11 +29,15 @@ button, .buttonstyle, input[type=submit]
     background: none;
     text-align: center;
     margin: 10px;
+    cursor: pointer;
+
 }
+
+
 
 </style>
 </head>
-<body class="homePage admin">
+<body class="homePage admin" style="text-align:left">
 
 <div class="sidenav">
     <a href="AdminHome.php"><i class="fa-solid fa-house"></i> Home</a>
@@ -47,7 +51,7 @@ button, .buttonstyle, input[type=submit]
 <h2>Add New Event Manager</h2>
 <h4>Enter the manager information:</h4>
 
-<form action="InsertManager.php" method="post">
+<form name ="newManagerForm" action="InsertManager.php" method="post" onsubmit = "return(validate());">
 <?php
 if (isset ($_GET['problem']) and ($_GET['problem']=='ADD')) {
 echo '<script> window.onload=function(){alert("The manager is added successfuly");}; </script>';}
@@ -82,6 +86,36 @@ echo '<script> window.onload=function(){alert("Failed to add the manager!");}; <
 
 
 
+<script>
+  //Form validation
+
+  function validate() {
+//1- Check if all information filled
+  if (document.forms["newManagerForm"]["manager_name"].value == "" || document.forms["newManagerForm"]["manager_email"].value == "" || document.forms["newManagerForm"]["manager_pass"].value == "") {
+    alert("Please fill all the information. ");
+    //document.forms["newManagerForm"]["manager_name"].focus();
+    return false;
+  }
+
+//2- Check the Email format
+var email = document.forms["newManagerForm"]["manager_email"].value;
+var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+
+if (!emailFormat.test(email)) {
+   alert("Please enter valid email format. ");
+   return false;
+  }
+
+
+//Check and correct popular email domains
+//   const example = "example@gmial.com"
+// if (/@gm(ia|a|i)l.com$/.test(example)) {
+//   alert("Maybe you meant @gmail.com?")
+//   return false;
+// }
+
+      }
+</script>
 
 
 </body>

@@ -19,8 +19,11 @@
 
  $ID = $_GET['id'];
 
-
+//Delete actor SQL
 $deleteQuery = "DELETE FROM actor WHERE `ActorID` = '$ID'";
+//Delete actor events SQL
+$deleteEventsQuery = "DELETE FROM `event` WHERE `ActorID` = '$ID'";
+
 
   
 
@@ -46,16 +49,27 @@ $deleteQuery = "DELETE FROM actor WHERE `ActorID` = '$ID'";
 
   else if (isset($_POST['delete_button'])) {
       //action for delete
-      if(mysqli_query($conn, $deleteQuery)){
+
+      //First, delete Actor Events 
+      if(mysqli_query($conn, $deleteEventsQuery)){
+        //Now, delete the actor 
+        if (mysqli_query($conn, $deleteQuery))
         header('location: AdminHome.php?problem=DELETED'); //go back to the EDIT page
+        else
+        header('location: AdminEditActor.php?problem=DELETEERROR');
       }
       
       else
          header('location: AdminEditActor.php?problem=DELETEERROR');
+
+
+
   } 
 
   else if (isset($_POST['cancel_button'])) {
       //cancel
       header('location: AdminHome.php');
   }
+
+
  ?>
