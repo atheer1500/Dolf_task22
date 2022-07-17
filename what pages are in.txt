@@ -1,5 +1,5 @@
 -Main page (link to the real home page)  //this is html for github
--Home page (pic for concerts with<> & book now button ) Ather
+-Home page (pic for concerts with<> & book now button ) Atheer DONE
 -login/Regester ( if ID starts with EM ->event manger , starts with AD-> admin , email -> user)regster is for users only .Maisaa
 
 user pages Maisaa:
@@ -7,12 +7,12 @@ user pages Maisaa:
 -view booked events .
 
 event Manger pages:
--(viwe all Events created by this manger  with delet button ,)Maisaa (edit for the Description and title only .
-- add event page.)Atherr
+-(view all Events created by this manger  with delet button ,)Maisaa (edit for the Description and title only .
+- add event page.)Atheer
 
-admin Ather :
+admin Atheer :
 -Add/edit/delete Actor. DONE
--Add Event Manger.
+-Add Event Manger. DONE
 
 
 
