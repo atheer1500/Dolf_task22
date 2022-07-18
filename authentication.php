@@ -51,26 +51,19 @@ use function PHPSTORM_META\type;
         
         $sql = "SELECT `MangerID` FROM `event_manger` WHERE `MangerEmail`='$Id' AND `Password`=".$pass.";";  
         $result = mysqli_query($conn, $sql);  
-        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
-        $count = mysqli_num_rows($result);  
         
-        if($count == 1)
-        { 
-                if ($result->num_rows > 0)
+                if ($result->num_rows ==1)
                  {
                     // output data of each row
                     while($row = $result->fetch_assoc())
                     {
                         echo "<br> id: ". $row["MangerID"] . "<br>";
                     }
-                } else {
-                    echo "0 results";
-                }
-            // $mewo="EMfirst";
-            // $_SESSION['MangerID']=$mewo; 
+                } 
+         
             // echo "<h1><center> Login successful  EM</center></h1>"; 
            // header("Location:viewManger.php"); 
-        }  
+        
         else{  
             echo "<h1> Login failed . Invalid username or password. EM</h1>";  
         } 
