@@ -152,7 +152,7 @@
   <!-- Full-width images with number and caption text -->
   <?php
   #Maisaa's username is localhost:3308 while Ather's is localhost:3306 
-$conn = mysqli_connect("localhost:3308", "root", "", "event");
+$conn = mysqli_connect("localhost:3306", "root", "", "event");
 if (!$conn)
 die ("Could not connect to the database");
 
@@ -203,7 +203,7 @@ echo
 <p>All Events:</p>
 
 <?php
-$conn = mysqli_connect("localhost:3308", "root", "", "event");
+$conn = mysqli_connect("localhost:3306", "root", "", "event");
 if (!$conn)
 die ("Could not connect to the database");
 
