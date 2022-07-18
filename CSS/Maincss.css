@@ -223,12 +223,30 @@ a, button
   border-style: solid;
   border-color: #063a62db;
   height: 10%;
-  width:90% ;
+  width:80% ;
   border-radius: 8px;
-  padding: 5px;
+  padding: 20px;
 }
 
 .NameOfEvent
 {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  font-size: 60px;
+  text-transform: capitalize;
 }
+.Desc::first-letter{
+  text-transform: capitalize;
+  }
+.Desc
+{
+  max-width: 70%;
+  max-height: 30%;
+  padding: 20px;
+  font-size: 17px;
+  overflow:auto;
+}
+.Date-Time
+{
+  font-size: 200px;
+}
+

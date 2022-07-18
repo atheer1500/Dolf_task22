@@ -27,9 +27,12 @@ $conn=OpenCon();
     echo "<div class='NameOfEvent'>".$Title."</div>";
 
     echo "<div class='Desc'>".$Description."</div>";
-
-    echo "<div class='Date&Time'>".$Time."<br>".$Date."</div>";
     
+    echo "<div class='Date-Time'><i class='far fa-clock'></i>&ensp;"
+    .date('H:i',strtotime($Time)).
+    "&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<i class='far fa-calendar-alt'></i>&ensp;&ensp;"
+    .$Date."</div>";
+
     echo" <div class='NumOfTikContainer'> 
     <div class='NumOfTikText'>Available Tickets</div>
     <div class='NumOfTikNum'>"

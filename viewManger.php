@@ -33,8 +33,6 @@
 <div id="events" class="ViewAllEvents">
     <?php include("viewman.php"); ?>
 
- 
-
 </div>
 </body>
 </html>
