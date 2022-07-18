@@ -114,8 +114,8 @@ button, .buttonstyle, input[type=submit]
     margin-bottom: 25px;
   }
   
-  .sidenav a:hover {
-  }
+  /* .sidenav a:hover {
+  } */
   
   .main {
     margin-left: 160px; /* Same as the width of the sidenav */
@@ -209,9 +209,7 @@ font-size: small;
 {
   padding-left: 20%;
 }
-.Select-container
-{
-}
+
 
 
 a, button
