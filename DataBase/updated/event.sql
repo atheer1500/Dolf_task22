@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 18, 2022 at 10:16 AM
+-- Generation Time: Jul 18, 2022 at 10:38 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -99,7 +99,7 @@ CREATE TABLE `edit_event` (
 --
 
 INSERT INTO `edit_event` (`MangerID`, `EventID`) VALUES
-(1, 4);
+(1, 5);
 
 -- --------------------------------------------------------
 
@@ -126,10 +126,10 @@ INSERT INTO `end_user` (`FirstName`, `LastName`, `Password`, `UserEmail`, `Gende
 -- --------------------------------------------------------
 
 --
--- Table structure for table `event`
+-- Table structure for table `events`
 --
 
-CREATE TABLE `event` (
+CREATE TABLE `events` (
   `EventID` int(11) NOT NULL,
   `Title` varchar(20) NOT NULL,
   `Time` time NOT NULL,
@@ -141,10 +141,10 @@ CREATE TABLE `event` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `event`
+-- Dumping data for table `events`
 --
 
-INSERT INTO `event` (`EventID`, `Title`, `Time`, `Date`, `Description`, `AvailableTickets__`, `Pic`, `ActorID`) VALUES
+INSERT INTO `events` (`EventID`, `Title`, `Time`, `Date`, `Description`, `AvailableTickets__`, `Pic`, `ActorID`) VALUES
 (4, 't', '00:00:02', '2022-07-19', 't', 1, '7e579b53f4e596e8fcd1db4f5d2cd31e.png', 2),
 (5, 'super junior', '00:00:08', '2022-07-13', 'music concert', 5, '162-1626751_png-pastel-bling-cute-yellow-star-90rainy-bling.png', 2),
 (6, 'tst', '00:00:12', '2022-07-28', 'tst', 1, '81-814762_ayumi-via-discovered-by-on-we-cute-ghost.png', 1),
@@ -209,9 +209,9 @@ ALTER TABLE `end_user`
   ADD PRIMARY KEY (`UserEmail`);
 
 --
--- Indexes for table `event`
+-- Indexes for table `events`
 --
-ALTER TABLE `event`
+ALTER TABLE `events`
   ADD PRIMARY KEY (`EventID`),
   ADD KEY `ActorID` (`ActorID`);
 
@@ -233,9 +233,9 @@ ALTER TABLE `actor`
   MODIFY `ActorID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `event`
+-- AUTO_INCREMENT for table `events`
 --
-ALTER TABLE `event`
+ALTER TABLE `events`
   MODIFY `EventID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
@@ -259,20 +259,20 @@ ALTER TABLE `actor`
 --
 ALTER TABLE `book`
   ADD CONSTRAINT `book_ibfk_1` FOREIGN KEY (`UserEmail`) REFERENCES `end_user` (`UserEmail`),
-  ADD CONSTRAINT `book_ibfk_2` FOREIGN KEY (`EventID`) REFERENCES `event` (`EventID`);
+  ADD CONSTRAINT `book_ibfk_2` FOREIGN KEY (`EventID`) REFERENCES `events` (`EventID`);
 
 --
 -- Constraints for table `edit_event`
 --
 ALTER TABLE `edit_event`
   ADD CONSTRAINT `edit_event_ibfk_1` FOREIGN KEY (`MangerID`) REFERENCES `event_manger` (`MangerID`),
-  ADD CONSTRAINT `edit_event_ibfk_2` FOREIGN KEY (`EventID`) REFERENCES `event` (`EventID`);
+  ADD CONSTRAINT `edit_event_ibfk_2` FOREIGN KEY (`EventID`) REFERENCES `events` (`EventID`);
 
 --
--- Constraints for table `event`
+-- Constraints for table `events`
 --
-ALTER TABLE `event`
-  ADD CONSTRAINT `event_ibfk_1` FOREIGN KEY (`ActorID`) REFERENCES `actor` (`ActorID`);
+ALTER TABLE `events`
+  ADD CONSTRAINT `events_ibfk_1` FOREIGN KEY (`ActorID`) REFERENCES `actor` (`ActorID`);
 
 --
 -- Constraints for table `event_manger`
