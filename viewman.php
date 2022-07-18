@@ -34,10 +34,9 @@ $conn=OpenCon();
     .$Date."</div>";
 
     echo" <div class='NumOfTikContainer'> 
-    <div class='NumOfTikText'>Available Tickets</div>
     <div class='NumOfTikNum'>"
     .$AvailableTickets__.
-    "</div>";
+    "</div><br><div class='NumOfTikText'>Available Tickets</div></div>";
     
     
 

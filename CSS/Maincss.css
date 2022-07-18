@@ -251,7 +251,21 @@ div.Date-Time
 }
 div.NumOfTikContainer
 {
+text-align: right;
+margin-top: -200px;
+align-items: right;
+font-size: 30px;
+}
+div.NumOfTikNum
+{
   text-align: right;
-
+  align-items: right;
+  border-style: solid;
+  border-width: 3px;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  margin-left: 1100px;
+ 
 }
 
