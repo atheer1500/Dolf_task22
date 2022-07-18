@@ -157,7 +157,7 @@ if (!$conn)
 die ("Could not connect to the database");
 
 //Show only last 3 events (newly added)
-$query="SELECT * FROM (SELECT * FROM event ORDER BY EventID DESC LIMIT 3) as r ORDER BY EventID";
+$query="SELECT * FROM (SELECT * FROM events ORDER BY EventID DESC LIMIT 3) as r ORDER BY EventID";
 $result=mysqli_query($conn, $query);
 $n= mysqli_num_rows($result);
 
@@ -207,7 +207,7 @@ $conn = mysqli_connect("localhost:3306", "root", "", "event");
 if (!$conn)
 die ("Could not connect to the database");
 
-$query="select * from event";
+$query="select * from events";
 $result=mysqli_query($conn, $query);
 $n= mysqli_num_rows($result);
 
