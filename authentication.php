@@ -57,12 +57,13 @@ use function PHPSTORM_META\type;
                     // output data of each row
                     while($row = $result->fetch_assoc())
                     {
-                        echo "<br> id: ". $row["MangerID"] . "<br>";
+                        $_SESSION['MangerID']=$row["MangerID"];
+                        header("Location:viewManger.php"); 
                     }
                 } 
          
             // echo "<h1><center> Login successful  EM</center></h1>"; 
-           // header("Location:viewManger.php"); 
+          
         
         else{  
             echo "<h1> Login failed . Invalid username or password. EM</h1>";  
