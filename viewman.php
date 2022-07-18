@@ -3,7 +3,13 @@
 session_start();
 include('connection.php'); 
 $conn=OpenCon();
- $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`AvailableTickets__`,`Pic` FROM `events` WHERE `EventID`=  (SELECT `EventID` FROM `edit_event` WHERE `MangerID`='" .$_SESSION['MangerID'] ."');";  
+$sqlfortable="SELECT `EventID` FROM `edit_event` WHERE `MangerID`='" .$_SESSION['MangerID'] ."';";
+if ($resultsqlfortable = mysqli_query($conn, $sqlforview))  
+ {
+  while($rowfortable =mysqli_fetch_array($resultsqlfortable))
+  {
+    $_SESSION['EventID']=$row["EventID"];
+ $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`AvailableTickets__`,`Pic` FROM `events` WHERE `EventID`= ".$_SESSION['EventID']." ;";  
  if ($result = mysqli_query($conn, $sqlforview))  
  {
   //images\ab.jbg
@@ -46,5 +52,5 @@ $conn=OpenCon();
 else  {
     printf("Error: %s\n", mysqli_error($conn));
     exit();
-}
+}}}
 ?>
