@@ -211,9 +211,10 @@ a, button
 {
   cursor: pointer;
 }
-.search
+.search-container
 {
-  margin-left: 180px;
+  margin-left:-50px;
+ 
 }
 .ViewAllEvents
 {
