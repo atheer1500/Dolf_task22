@@ -210,9 +210,11 @@ font-size: small;
   padding-left: 20%;
 }
 
-
-
 a, button
 {
   cursor: pointer;
+}
+.ViewAllEvents
+{
+  margin-left: 20%;
 }
