@@ -56,11 +56,16 @@ use function PHPSTORM_META\type;
         
         if($count == 1)
         { 
-            if (mysqli_num_rows($result)==1)
-            {
-                $roww = mysqli_fetch_array($result, MYSQLI_ASSOC); 
-                echo "user Id: " . $roww['MangerID'];
-    
+                if ($result->num_rows > 0)
+                 {
+                    // output data of each row
+                    while($row = $result->fetch_assoc())
+                    {
+                        echo "<br> id: ". $row["MangerID"] . "<br>";
+                    }
+                } else {
+                    echo "0 results";
+                }
             // $mewo="EMfirst";
             // $_SESSION['MangerID']=$mewo; 
             // echo "<h1><center> Login successful  EM</center></h1>"; 
@@ -69,7 +74,7 @@ use function PHPSTORM_META\type;
         else{  
             echo "<h1> Login failed . Invalid username or password. EM</h1>";  
         } 
-    }
+    
     }
 }
 ?>  
