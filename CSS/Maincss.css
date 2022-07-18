@@ -245,8 +245,13 @@ a, button
   font-size: 17px;
   overflow:auto;
 }
-.Date-Time
+div.Date-Time
 {
-  font-size: 200px;
+  font-size:30px;
+}
+div.NumOfTikContainer
+{
+  text-align: right;
+
 }
 
