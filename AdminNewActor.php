@@ -34,6 +34,8 @@ button, .buttonstyle, input[type=submit]
 }
 
 
+
+
 </style>
 </head>
 <body class="homePage admin">
@@ -50,7 +52,10 @@ button, .buttonstyle, input[type=submit]
 <h2>Add New Actor</h2>
 <h4>Enter the actor information:</h4>
 
-<form name ="newActorForm" action="InsertActor.php" method="post" onsubmit = "return(validate());">
+<div style="text-align: center;">
+<div style="display: inline-block; text-align: left;">
+
+<form class ="myform" name ="newActorForm" action="InsertActor.php" method="post" onsubmit = "return(validate());">
 <?php
 if (isset ($_GET['problem']) and ($_GET['problem']=='ADD')) {
 echo '<script> window.onload=function(){alert("The actor is added successfuly");}; </script>';}
@@ -65,7 +70,7 @@ echo '<script> window.onload=function(){alert("Failed to add the actor!");}; </s
 </p>
 
   
-  
+  <br>
 
   
 <p>
@@ -74,26 +79,29 @@ echo '<script> window.onload=function(){alert("Failed to add the actor!");}; </s
 </p>
 
 
-
+<br>
               
 <p>
    
-Gender: 
+<label>Gender: </label>
 
     <input type="radio" id="f2" name="actor_gender" value="Female">
-<label for="f">Female</label>
+<label for="f" style="float: none;">Female</label>
 
 <input type="radio" id="m" name="actor_gender" value="Male">
-<label for="m">Male</label><br>
+<label for="m" style="float: none;">Male</label>
+
 
 </p>
 
+<br>
 
- 
-           <div class="center"><input type="submit" value="Add"> </div>
+           <div class="center"><input type="submit" value="Add" class="submitbutton"> </div>
          </form>
+</div>
+</div>
 
-<p> 
+
 
 
 </div>

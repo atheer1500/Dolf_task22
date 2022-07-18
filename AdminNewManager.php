@@ -35,6 +35,9 @@ button, .buttonstyle, input[type=submit]
 
 
 
+
+
+
 </style>
 </head>
 <body class="homePage admin" style="text-align:left">
@@ -51,7 +54,9 @@ button, .buttonstyle, input[type=submit]
 <h2>Add New Event Manager</h2>
 <h4>Enter the manager information:</h4>
 
-<form name ="newManagerForm" action="InsertManager.php" method="post" onsubmit = "return(validate());">
+<div style="text-align: center;">
+<div style="display: inline-block; text-align: left;">
+<form class="myform" name ="newManagerForm" action="InsertManager.php" method="post" onsubmit = "return(validate());">
 <?php
 if (isset ($_GET['problem']) and ($_GET['problem']=='ADD')) {
 echo '<script> window.onload=function(){alert("The manager is added successfuly");}; </script>';}
@@ -65,23 +70,28 @@ echo '<script> window.onload=function(){alert("Failed to add the manager!");}; <
     <input type="text" name="manager_name" id="managerName">
 </p>
 
-             
+   <br>          
              
 <p>
-    <label for="managerEmail">Manager Email:</label>
+    <label for="managerEmail">Email:</label>
     <input type="text" name="manager_email" id="managerEmail">
 </p>
 
+<br>          
 
 <p>
-    <label for="managerPass">Manager Password:</label>
+    <label for="managerPass">Password:</label>
     <input type="text" name="manager_pass" id="managerPass">
 </p>
- 
-           <div class="center"><input type="submit" value="Add"> </div>
-         </form>
 
-<p> 
+<br>          
+
+ 
+           <div class="center"><input type="submit" value="Add" class="submitbutton"> </div>
+         </form>
+</div>
+</div>
+
 </div>
 
 
