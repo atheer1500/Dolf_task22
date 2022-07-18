@@ -32,7 +32,15 @@
 </div>
 <div id="events" class="ViewAllEvents">
     <?php include("viewman.php"); ?>
-
+<div class="try">
+  <div class="NameOfEvent">name</div>
+  <div class="Desc">description</div>
+  <div class="Date&Time">Dtae and time </div>
+  <div class="NumOfTikContainer">
+    <div class="NumOfTikText">Number</div>
+    <div class="NumOfTikNum">6</div>
+  </div>
+</div>
 </div>
 </body>
 </html>

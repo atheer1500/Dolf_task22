@@ -218,5 +218,19 @@ a, button
 }
 .ViewAllEvents
 {
-  margin-left: 180px;
+  margin-left: 15%;
+  font-size: 65%;
+}
+.try
+{
+  border-style: solid;
+  border-color: #ff0000;
+  height: 10%;
+  width:90% ;
+  border-radius: 8px;
+  padding: 5px;
+}
+.NameOfEvent
+{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
 }
