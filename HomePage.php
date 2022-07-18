@@ -124,8 +124,8 @@
   margin-bottom: 25px;
 }
 
-.sidenav a:hover {
-}
+/* .sidenav a:hover {
+} */
 
 .main {
   margin-left: 160px; /* Same as the width of the sidenav */
