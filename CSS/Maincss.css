@@ -205,16 +205,17 @@ font-size: small;
   display: block;
   margin-bottom: 25px;
 }
-.search
-{
-  padding-left: 20%;
-}
+
 
 a, button
 {
   cursor: pointer;
 }
+.search
+{
+  margin-left: 180px;
+}
 .ViewAllEvents
 {
-  margin-left: 20%;
+  margin-left: 180px;
 }

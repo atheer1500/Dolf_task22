@@ -23,6 +23,7 @@
   <a href="viewManger.php"><i class="fa-solid fa-circle-plus"></i> My events </a>
   <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
 </div>
+
 <div class="search-container">
 <form  class="search" action="search.php" method="post">
   <input type="text" placeholder="Search for an event.." name="search" id="searchBar" value="<?php if (isset($_GET['search'])) echo $_GET['search']; ?>">
@@ -31,6 +32,7 @@
 </div>
 <div id="events" class="ViewAllEvents">
     <?php include("viewman.php"); ?>
+
 </div>
 </body>
 </html>
