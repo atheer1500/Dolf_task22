@@ -58,7 +58,7 @@ use function PHPSTORM_META\type;
         { 
             if (mysqli_num_rows($result)==1)
             {
-                $roww = mysqli_fetch_array($result);
+                $roww = mysqli_fetch_array($result, MYSQLI_ASSOC); 
                 echo "user Id: " . $roww['MangerID'];
     
             // $mewo="EMfirst";
