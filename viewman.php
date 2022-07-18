@@ -14,13 +14,28 @@ $conn=OpenCon();
     $Description= $rowforview['Description'];
     $AvailableTickets__= $rowforview['AvailableTickets__'];
     $Pic= $rowforview['Pic'];
+    // <div class="PicOfEvent">pic</div>
+    // <div class='NameOfEvent'>name</div>
+    // <div class='Desc'>description</div>
+    // <div class='Date&Time'>Dtae and time </div>
+    // <div class='NumOfTikContainer'>
+    //   <div class='NumOfTikText'>Number</div>
+    //   <div class='NumOfTikNum'>6</div>
+    // </div>
+    echo "<div class='PicOfEvent'>".$Pic."</div>";
 
-    echo "<br>".$Title."<br>";
-    echo "<br>".$Time."<br>";
-    echo "<br>".$Date."<br>"; 
-    echo "<br>".$Description."<br>";
-    echo "<br>".$AvailableTickets__."<br>";
-    echo "<br>".$Pic."<br>";
+    echo "<div class='NameOfEvent'>".$Title."</div>";
+
+    echo "<div class='Desc'>".$Description."</div>";
+
+    echo "<div class='Date&Time'>".$Time."<br>".$Date."</div>";
+    
+    echo" <div class='NumOfTikContainer'> 
+    <div class='NumOfTikText'>Available Tickets</div>
+    <div class='NumOfTikNum'>"
+    .$AvailableTickets__.
+    "</div>";
+    
     
 
    } 
