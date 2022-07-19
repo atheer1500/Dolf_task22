@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=yes, initial-scale=1.0">
     <title>Manager Home</title>
-    <link rel="stylesheet" href="CSS/Maincss.css">
+    <link rel="stylesheet" href="CSS/Maincss.css?v=<?php echo time(); ?>">
     <style type="text/css">
 
 

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=yes, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="CSS/Maincss.css">
+    <link rel="stylesheet" href="CSS/Maincss.css?v=<?php echo time(); ?>">
     <style type="text/css">
 
 
@@ -137,10 +137,19 @@
 </head>
 <body class="homePage">
     
+
+<script>
+      function Logout()
+      {
+         <?php
+         include_once("Logout.php");
+         ?>
+      }
+      </script>
 <div class="sidenav">
-  <a href="#services"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="#clients"><i class="fa-solid fa-ticket"></i> My tickets</a>
-  <a href="#contact"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+  <a href="homepage.php"><i class="fa-solid fa-house"></i> Home</a>
+  <a href=""><i class="fa-solid fa-ticket"></i> My tickets</a>
+  <a href="index.html" onclick="Logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 </div>
 
 
@@ -168,12 +177,13 @@ while ($row=mysqli_fetch_row($result))
 echo
 '<div class="mySlides fade">
 <img class ="poster" src="'
-. $row[7] .
-'" style="width:100%"> <br><br><br><br>
+. $row[6] .
+'" style="width:100%"> <br><br><br>
 <div class="text">'
 . $row[1] .
 '
-<br> <button class="buttonstyle"><a href="Book.php"> Book Now</a></button>
+<br> <br>
+<a href="Book.php" class="buttonstyle"> Book Now</a>
 
 </div>
 
@@ -220,10 +230,10 @@ while ($row=mysqli_fetch_row($result))
         
         echo '<td>
         <img class ="poster" src="'
-. $row[7] .
+. $row[6] .
 
 '" style="width:200px; height: 300px;">
-<br><button class=" buttonstyle"><a href="Book.php"> Book Now</a></button>
+<br><a href="Book.php"  class=" buttonstyle"> Book Now</a>
         </td>';	
         //Add each 3 items in a new row
         if ($count % 3 == 0)	

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=yes, initial-scale=1.0">
     <title>Admin Home</title>
-    <link rel="stylesheet" href="CSS/Maincss.css">
+    <link rel="stylesheet" href="CSS/Maincss.css?v=<?php echo time(); ?>">
     <style type="text/css">
 
 
@@ -43,29 +43,6 @@ opacity: 0.2;
 }
 
 
-/*form style*/
-.myform input[type=text], input[type=password] {
-  border: none;
-  border-radius: 4px;
-  float: right;
-}
-
-.myform input[type=submit] {
-  float: center;
-}
-
-.myform label {
-  border-radius: 4px;
-  float: left;
-  padding-right: 10px;
-}
-
-
-.myform .submitbutton {
-   width:30%; 
-   background-color:white; 
-   color: #8497b5;
-}
 
 </style>
 </head>

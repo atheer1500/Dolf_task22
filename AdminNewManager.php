@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=yes, initial-scale=1.0">
     <title>Admin Home</title>
-    <link rel="stylesheet" href="CSS/Maincss.css">
+    <link rel="stylesheet" href="CSS/Maincss.css?v=<?php echo time(); ?>">
     <style type="text/css">
 
 
@@ -35,29 +35,7 @@ button, .buttonstyle, input[type=submit]
 
 
 
-/*form style*/
-.myform input[type=text], input[type=password] {
-  border: none;
-  border-radius: 4px;
-  float: right;
-}
 
-.myform input[type=submit] {
-  float: center;
-}
-
-.myform label {
-  border-radius: 4px;
-  float: left;
-  padding-right: 10px;
-}
-
-
-.myform .submitbutton {
-   width:30%; 
-   background-color:white; 
-   color: #8497b5;
-}
 
 
 
@@ -66,13 +44,22 @@ button, .buttonstyle, input[type=submit]
 </head>
 <body class="homePage admin" style="text-align:left">
 
+
+<script>
+      function Logout()
+      {
+         <?php
+         include_once("Logout.php");
+         ?>
+      }
+      </script>
 <div class="sidenav">
 <a href="AdminHome.php"><i class="fa-solid fa-house"></i> Home</a>
   <a href="AdminAccount.php"><i class="fa-solid fa-user"></i> My Account</a>
 
   <a href="AdminNewActor.php"><i class="fa-solid fa-circle-plus"></i> Add Actor</a>
   <a href="AdminNewManager.php"><i class="fa-solid fa-circle-plus"></i> Add Manager</a>
-  <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
+  <a href="index.html" onclick="Logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
 </div>
 
 
@@ -110,7 +97,7 @@ echo '<script> window.onload=function(){alert("Failed to add the manager!");}; <
     <input type="text" name="manager_pass" id="managerPass">
 </p>
 
-<br>          
+<br>        <br>  
 
  
            <div class="center"><input type="submit" value="Add" class="submitbutton"> </div>
