@@ -116,8 +116,8 @@ button, .buttonstyle, input[type=submit]
     margin-bottom: 25px;
   }
   
-  .sidenav a:hover {
-  }
+  /* .sidenav a:hover {
+  } */
   
   .main {
     margin-left: 160px; /* Same as the width of the sidenav */
@@ -207,13 +207,6 @@ font-size: small;
   display: block;
   margin-bottom: 25px;
 }
-.search
-{
-  padding-left: 20%;
-}
-.Select-container
-{
-}
 
 
 a, button
@@ -247,3 +240,61 @@ a, button
    background-color:white; 
    color: #8497b5;
 }
+.search-container
+{
+  margin-left:-50px;
+ 
+}
+.ViewAllEvents
+{
+  margin-left: 15%;
+  font-size: 65%;
+  border-style: solid;
+  border-color: #063a62db;
+  height: 10%;
+  width:80% ;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.NameOfEvent
+{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  font-size: 60px;
+  text-transform: capitalize;
+}
+.Desc::first-letter{
+  text-transform: capitalize;
+  }
+.Desc
+{
+  max-width: 70%;
+  max-height: 30%;
+  padding: 20px;
+  font-size: 17px;
+  overflow:auto;
+}
+div.Date-Time
+{
+  font-size:30px;
+}
+div.NumOfTikContainer
+{
+text-align: right;
+margin-top: -200px;
+align-items: right;
+font-size: 30px;
+}
+div.NumOfTikNum
+{
+  text-align: right;
+  align-items: right;
+  border-style: solid;
+  border-width: 3px;
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  margin-left: 1100px;
+ 
+}
+

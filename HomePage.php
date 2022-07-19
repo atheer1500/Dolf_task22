@@ -124,8 +124,8 @@
   margin-bottom: 25px;
 }
 
-.sidenav a:hover {
-}
+/* .sidenav a:hover {
+} */
 
 .main {
   margin-left: 160px; /* Same as the width of the sidenav */
@@ -152,12 +152,12 @@
   <!-- Full-width images with number and caption text -->
   <?php
   #Maisaa's username is localhost:3308 while Ather's is localhost:3306 
-$conn = mysqli_connect("localhost:3308", "root", "", "event");
+$conn = mysqli_connect("localhost:3306", "root", "", "event");
 if (!$conn)
 die ("Could not connect to the database");
 
 //Show only last 3 events (newly added)
-$query="SELECT * FROM (SELECT * FROM event ORDER BY EventID DESC LIMIT 3) as r ORDER BY EventID";
+$query="SELECT * FROM (SELECT * FROM events ORDER BY EventID DESC LIMIT 3) as r ORDER BY EventID";
 $result=mysqli_query($conn, $query);
 $n= mysqli_num_rows($result);
 
@@ -203,11 +203,11 @@ echo
 <p>All Events:</p>
 
 <?php
-$conn = mysqli_connect("localhost:3308", "root", "", "event");
+$conn = mysqli_connect("localhost:3306", "root", "", "event");
 if (!$conn)
 die ("Could not connect to the database");
 
-$query="select * from event";
+$query="select * from events";
 $result=mysqli_query($conn, $query);
 $n= mysqli_num_rows($result);
 
