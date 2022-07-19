@@ -30,7 +30,7 @@
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
 </div>
-<div id="events" class="ViewAllEvents">
+<div id="events" >
     <?php include("viewman.php"); ?>
 
 </div>

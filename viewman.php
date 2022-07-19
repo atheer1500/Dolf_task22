@@ -15,6 +15,7 @@ if ($resultsqlfortable = mysqli_query($conn, $sqlfortable))
   //images\ab.jbg
  while($rowforview =mysqli_fetch_array($result)) 
    { 
+    echo "<div class='ViewAllEvents'>";
     $Title = $rowforview['Title'];
     $Time= $rowforview['Time'];
     $Date = $rowforview['Date'];
@@ -44,7 +45,7 @@ if ($resultsqlfortable = mysqli_query($conn, $sqlfortable))
     <div class='NumOfTikNum'>"
     .$AvailableTickets__.
     "</div><br><div class='NumOfTikText'>Available Tickets</div></div>";
-    
+    echo "</div>";
     
 
    } 
