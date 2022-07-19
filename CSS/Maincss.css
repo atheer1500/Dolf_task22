@@ -265,6 +265,7 @@ a, button
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
   font-size: 60px;
   text-transform: capitalize;
+  z-index: 1;
 }
 .Desc::first-letter{
   text-transform: capitalize;
@@ -300,12 +301,16 @@ div.NumOfTikNum
   margin-left: 1100px;
  
 }
-div.PicOfEvent
+img.PicOfEvent
 {
-  max-height: 7px;
-  max-width: 7px;
+ margin-left: 10px;
+ z-index: -1;
 }
-
+div.TextOfEvent
+{
+margin-left: 160px;
+  margin-top: -100px;
+}
 
 
 /*form style*/

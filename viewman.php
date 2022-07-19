@@ -30,12 +30,14 @@ if ($resultsqlfortable = mysqli_query($conn, $sqlfortable))
     //   <div class='NumOfTikText'>Number</div>
     //   <div class='NumOfTikNum'>6</div>
     // </div>
-    echo "<div class='PicOfEvent'><img src='".$Pic."' height='100px' width='110px'></div>";
+    echo "<div ><img src='".$Pic."' height='100px' width='120px' class='PicOfEvent'></div>";
+
+    echo "<div class='TextOfEvent'>";
 
     echo "<div class='NameOfEvent'>".$Title."</div>";
 
     echo "<div class='Desc'>".$Description."</div>";
-    
+    echo "</div>";
     echo "<div class='Date-Time'><i class='far fa-clock'></i>&ensp;"
     .date('H:i',strtotime($Time)).
     "&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<i class='far fa-calendar-alt'></i>&ensp;&ensp;"
@@ -45,8 +47,8 @@ if ($resultsqlfortable = mysqli_query($conn, $sqlfortable))
     <div class='NumOfTikNum'>"
     .$AvailableTickets__.
     "</div><br><div class='NumOfTikText'>Available Tickets</div></div>";
+   
     echo "</div>";
-    
 
    } 
 }
