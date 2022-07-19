@@ -214,6 +214,36 @@ a, button
   cursor: pointer;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+/*form style*/
+.myform input[type=text], input[type=password] {
+  border: none;
+  border-radius: 4px;
+  float: right;
+}
+
+.myform input[type=submit] {
+  float: center;
+}
+
+.myform label {
+  border-radius: 4px;
+  float: left;
+  padding-right: 10px;
+}
+
+
+.myform .submitbutton {
+   width:30%; 
+   background-color:white; 
+   color: #8497b5;
+}
+>>>>>>> 80979c0ce193308e5fd6ff4fe5f30d7895e47902
 .search-container
 {
   margin-left:-50px;
@@ -272,6 +302,7 @@ div.NumOfTikNum
  
 }
 
+<<<<<<< HEAD
 =======
 
 
@@ -301,3 +332,5 @@ div.NumOfTikNum
    color: #8497b5;
 }
 >>>>>>> e247234dd137809a75a5527e31a47d000821d4c4
+=======
+>>>>>>> 80979c0ce193308e5fd6ff4fe5f30d7895e47902
