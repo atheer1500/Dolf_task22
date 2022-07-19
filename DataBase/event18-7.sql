@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 19, 2022 at 12:55 PM
+-- Generation Time: Jul 18, 2022 at 10:38 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -52,7 +52,7 @@ INSERT INTO `actor` (`Name`, `ActorEmail`, `Gender`, `ActorID`, `AdminID`) VALUE
 
 CREATE TABLE `admin` (
   `AdminEmail` varchar(35) NOT NULL,
-  `Passowrd` varchar(10) NOT NULL,
+  `Passowrd` int(11) NOT NULL,
   `AdminID` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -61,7 +61,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`AdminEmail`, `Passowrd`, `AdminID`) VALUES
-('admin@admin.com', '1234', '1');
+('admin@admin.com', 1234, '1');
 
 -- --------------------------------------------------------
 
@@ -99,8 +99,7 @@ CREATE TABLE `edit_event` (
 --
 
 INSERT INTO `edit_event` (`MangerID`, `EventID`) VALUES
-(1, 5),
-(1, 7);
+(1, 5);
 
 -- --------------------------------------------------------
 
@@ -132,10 +131,10 @@ INSERT INTO `end_user` (`FirstName`, `LastName`, `Password`, `UserEmail`, `Gende
 
 CREATE TABLE `events` (
   `EventID` int(11) NOT NULL,
-  `Title` varchar(10) NOT NULL,
+  `Title` varchar(20) NOT NULL,
   `Time` time NOT NULL,
   `Date` date NOT NULL,
-  `Description` varchar(500) NOT NULL,
+  `Description` varchar(100) NOT NULL,
   `AvailableTickets__` int(11) NOT NULL,
   `Pic` text NOT NULL,
   `ActorID` int(11) NOT NULL
@@ -147,9 +146,9 @@ CREATE TABLE `events` (
 
 INSERT INTO `events` (`EventID`, `Title`, `Time`, `Date`, `Description`, `AvailableTickets__`, `Pic`, `ActorID`) VALUES
 (4, 't', '00:00:02', '2022-07-19', 't', 1, '7e579b53f4e596e8fcd1db4f5d2cd31e.png', 2),
-(5, 'super juni', '12:15:56', '2022-07-13', 'musicconcertmusicconcertmusicmusicconcertmusic\r\nconcertmusicmusicconcertmusicconcertmus\r\nicmusicconcertmusicconcertmusicmusicconcer\r\ntmusicconcer', 5, 'images\\ab.JPG', 2),
-(6, 'tst', '00:00:12', '2022-07-28', 'musicconcertmusicconcertmusicmusicconcertmusic\r\nconcertmusicmusicconcertmusicconcertmus\r\nicmusicconcertmusicconcertmusicmusicconcer\r\ntmusicconcertmusicmusicconcertmusicconcertm\r\nusicmusicconcertmusicconcertmusicmusicconc\r\nertmusicconcertmusicmusicconcertmusicconcertmus\r\nicmusicconcertmusicconcertmusicmusicconce\r\nrtmusicconcertmusicmusicconcertmusicconce\r\nrtmusicmusicconcertmusicconcertmusicmusic\r\nconcertmusicconcertmusicmusicconcertmusic\r\nconcertmusicmusicconcertmusicconcertmusic', 1, '81-814762_ayumi-via-discovered-by-on-we-cute-ghost.png', 1),
-(7, 'wowwowowow', '00:10:04', '2022-08-04', 'wowwwww wowwwowwwww wowwwww wowwwww wowwwww wowwwww wowwwww wowwwww wowwwww wowwwww wowwwww wowwwww wowwwww wowwwww wowwwww wowwwww wowwwww www ', 20, '06acb336d4b5b6a434d0d0a841359ddd.png', 1);
+(5, 'super junior', '00:00:08', '2022-07-13', 'music concert', 5, '162-1626751_png-pastel-bling-cute-yellow-star-90rainy-bling.png', 2),
+(6, 'tst', '00:00:12', '2022-07-28', 'tst', 1, '81-814762_ayumi-via-discovered-by-on-we-cute-ghost.png', 1),
+(7, '11', '00:00:04', '2022-08-04', '11', 1, '06acb336d4b5b6a434d0d0a841359ddd.png', 1);
 
 -- --------------------------------------------------------
 
@@ -158,7 +157,7 @@ INSERT INTO `events` (`EventID`, `Title`, `Time`, `Date`, `Description`, `Availa
 --
 
 CREATE TABLE `event_manger` (
-  `Password` varchar(10) NOT NULL,
+  `Password` int(11) NOT NULL,
   `MangerEmail` varchar(35) NOT NULL,
   `Name` varchar(10) NOT NULL,
   `MangerID` int(8) NOT NULL,
@@ -170,7 +169,7 @@ CREATE TABLE `event_manger` (
 --
 
 INSERT INTO `event_manger` (`Password`, `MangerEmail`, `Name`, `MangerID`, `AdminID`) VALUES
-('123', 'manger@manger.com', 'Manger', 1, '1');
+(123, 'manger@manger.com', 'Manger', 1, '1');
 
 --
 -- Indexes for dumped tables
