@@ -18,5 +18,11 @@ admin Atheer :
 -edit admin DONE
 
 
+
+NEW:
+-edit admin account DONE
+-edit event manager account
+-edit user account
+
  
  

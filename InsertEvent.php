@@ -24,16 +24,43 @@
  $ticketsNum = $_REQUEST['event_tickets'];
 
 
+
+echo $title;
+echo "<br>";
+
+echo $time ;
+echo "<br>";
+
+echo $date;
+echo "<br>";
+
+echo $description ;
+echo "<br>";
+
+
+echo $ticketsNum;
+echo "<br>";
+
+echo $img ;
+echo "<br>";
+
+
+echo $actor ;
+echo "<br>";
+
+
+
  //GET THE ACTOR ID
  $query = "SELECT `ActorID` FROM `actor` WHERE `Name` = '$actor'";
  $result=mysqli_query($conn, $query);
  $row=mysqli_fetch_row($result);
  
  $actorID = $row[0];
+ echo $actorID ;
 
  //Insert query
- $sql = "INSERT INTO  `event` VALUES ('',
-     '$title', '$time' ,'$date', '$description', '$ticketsNum', '$img', '$actorID')";
+ $sql = 'INSERT INTO `events`(`Title`, `Time`, `Date`, `Description`, `AvailableTickets__`, `Pic`, `ActorID`) 
+                      VALUES ("' . $title . '", "' . $time . '" ,"' . $date . '", "' . $description . '", "' . $ticketsNum . '", "' . $img . '", "' . $actorID . '")';
   
  if(mysqli_query($conn, $sql)){
    header('location: ManagerNewEvent.php?problem=ADD'); //Insert to the database, then go back to the add page
