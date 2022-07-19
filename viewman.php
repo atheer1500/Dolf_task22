@@ -30,7 +30,7 @@ if ($resultsqlfortable = mysqli_query($conn, $sqlfortable))
     //   <div class='NumOfTikText'>Number</div>
     //   <div class='NumOfTikNum'>6</div>
     // </div>
-    echo "<div class='PicOfEvent'><img src=".$Pic."></div>";
+    echo "<div class='PicOfEvent'><img src='".$Pic."'></div>";
 
     echo "<div class='NameOfEvent'>".$Title."</div>";
 

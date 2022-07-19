@@ -14,6 +14,7 @@
 {
   margin-left: 15%;
 }
+
     </style>
 </head>
 <body  class="managerPage">
@@ -24,7 +25,7 @@
   <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
 </div>
 
-<div class="search-container">
+<div class="search-container" >
 <form  class="search" action="search.php" method="post">
   <input type="text" placeholder="Search for an event.." name="search" id="searchBar" value="<?php if (isset($_GET['search'])) echo $_GET['search']; ?>">
   <button type="submit"><i class="fa fa-search"></i></button>
