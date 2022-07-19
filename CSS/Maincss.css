@@ -303,6 +303,10 @@ div.NumOfTikNum
 
 
 /*form style*/
+
+/*
+doesn't work so I put it in each file head.
+
 .myform input[type=text], input[type=password] {
   border: none;
   border-radius: 4px;
@@ -325,3 +329,4 @@ div.NumOfTikNum
    background-color:white; 
    color: #8497b5;
 }
+*/

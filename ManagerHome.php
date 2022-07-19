@@ -44,7 +44,7 @@ td {
 <hr>
 
 <h5 id="events"> List of events </h5>
-<a class="buttonstyle" href=" ">+ New</a>
+<a class="buttonstyle" href="ManagerNewEvent.php">+ New</a>
 
 <?php
    if (isset ($_GET['problem']) and ($_GET['problem']=='DELETED')){

@@ -42,6 +42,31 @@ color: #8497b5;
 opacity: 0.2;
 }
 
+
+/*form style*/
+.myform input[type=text], input[type=password] {
+  border: none;
+  border-radius: 4px;
+  float: right;
+}
+
+.myform input[type=submit] {
+  float: center;
+}
+
+.myform label {
+  border-radius: 4px;
+  float: left;
+  padding-right: 10px;
+}
+
+
+.myform .submitbutton {
+   width:30%; 
+   background-color:white; 
+   color: #8497b5;
+}
+
 </style>
 </head>
 <body class="homePage admin">
@@ -92,7 +117,7 @@ $row=mysqli_fetch_row($result);
 <p>
 <label for="adminEmail">Admin Email:</label>
     <input type="text" name="admin_newEmail" id="adminEmail"
-   value = "<?php echo $row[1] ?>" disabled
+   value = "<?php echo $row[0] ?>" disabled
    >
 </p>
 
@@ -142,7 +167,7 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='PASSCORRECT')){
       echo
       ' <div class="center">
       <br>
-      <input type="submit" id="updateButton" value="Update" name="update_button" style="float:left;" class="submitbutton" > 
+      <input type="submit" id="updateButton" value="Update" name="update_button" style="float:left;" class="submitbutton" onclick = "return(validateNew());"> 
       <input type="submit" id="cancelButton" value="Cancel" name = "cancel_button" style="float:right; width:30%;  " >
       <br><br><br>
 
@@ -171,6 +196,35 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='PASSCORRECT')){
     //document.forms["newManagerForm"]["manager_name"].focus();
     return false;
   }
+      }
+
+
+
+      
+  function validateNew() {
+//1- Check if all information filled
+  if (document.forms["adminForm"]["admin_newPass"].value == ""  || document.forms["adminForm"]["admin_newEmail"].value == "")   {
+    alert("Please fill all the fields.");
+    //document.forms["newManagerForm"]["manager_name"].focus();
+    return false;
+
+}
+
+//2- Check the Email format
+var email = document.forms["adminForm"]["admin_newEmail"].value;
+var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+
+if (!emailFormat.test(email)) {
+   alert("Please enter valid email format. ");
+   return false;
+  }
+
+  //3- Check password length
+    if (document.forms["adminForm"]["admin_newPass"].value.length > 10){
+      alert("Please enter a pasword less than 10 characters. ");
+   return false;
+    }
+  
 
 
       }

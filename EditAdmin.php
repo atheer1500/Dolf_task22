@@ -23,7 +23,7 @@ $email = $_REQUEST['admin_newEmail'];
 $newPass = $_REQUEST['admin_newPass'];
 
  
- $updateQuery = "UPDATE `admin` set `Name` = '$name', `ActorEmail` = '$email', `Gender` = '$gender' WHERE `ActorID` = '$ID'";
+ $updateQuery = "UPDATE `admin` set `AdminEmail` = '$email', `Passowrd` = '$newPass'";
 
       //action for update here
       if(mysqli_query($conn, $updateQuery))
