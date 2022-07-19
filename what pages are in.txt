@@ -7,13 +7,15 @@ user pages Maisaa:
 -view booked events .
 
 event Manger pages:
--(view all Events created by this manger  with delet button ,)Maisaa (edit for the Description and title only .
-- add event page.)Atheer
+-(view all Events created by this manger  with delet button ,)Maisaa 
+
+(- edit for the Description and title only .
+- add event page. Done) Atheer
 
 admin Atheer :
 -Add/edit/delete Actor. DONE
--Add Event Manger. DONE
-
+-Add/edit/delete Event Manger. DONE
+-edit admin DONE
 
 
  
