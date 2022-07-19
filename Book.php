@@ -26,10 +26,8 @@
   <a  href="Login.php" onclick="Logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 </div>
 <div class="book">
-  
-
 <?php include("BookEvent.php"); ?>
-    </div>
+ </div>
 
 </body>
 </html>
