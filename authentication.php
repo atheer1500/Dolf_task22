@@ -34,9 +34,11 @@ use function PHPSTORM_META\type;
      }
      else  if ($type=='Admin')
      {
-       $sql = "SELECT `AdminID` FROM `admin` WHERE `AdminEmail`='$Id' AND `Passowrd`=".$pass.";";  
+       $sql = "SELECT `AdminID` FROM `admin` WHERE `AdminEmail`='.$Id.' AND `Passowrd`='".$pass."';";  
        $result = mysqli_query($conn, $sql);  
-       $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
+       
+       while( $row = mysqli_fetch_array($result, MYSQLI_ASSOC))
+       {
        $count = mysqli_num_rows($result);  
     
        if($count == 1){  
@@ -44,12 +46,13 @@ use function PHPSTORM_META\type;
        }  
        else{  
            echo "<h1> Login failed. Invalid username or password.Admin</h1>";  
-       }    
+       }  
+     } 
     }
     else if($type=='EventManger')
     {
         
-        $sql = "SELECT `MangerID` FROM `event_manger` WHERE `MangerEmail`='$Id' AND `Password`=".$pass.";";  
+        $sql = "SELECT `MangerID` FROM `event_manger` WHERE `MangerEmail`='".$Id."' AND `Password`=".$pass.";";  
         $result = mysqli_query($conn, $sql);  
         
                 if ($result->num_rows ==1)
