@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 include('connection.php'); 
 $conn=OpenCon();
@@ -9,7 +10,7 @@ if ($ResultSqlForFirstName = mysqli_query($conn, $SqlForFirstName))
   while($RowForFirstName =mysqli_fetch_array($ResultSqlForFirstName))
   {
     $_SESSION['FirstName']=$RowForFirstName['FirstName'];
-    echo "Hi there !".$_SESSION['FirstName'];
+    echo "<p class='greatingUser'>Hi there ! ".$_SESSION['FirstName']."</p>";
 
   }
 }
