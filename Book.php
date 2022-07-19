@@ -9,31 +9,26 @@
     <link rel="stylesheet" href="CSS/Maincss.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>View conserts</title>
+    <script>
+      function Logout()
+      {
+         <?php
+         include_once("Logout.php");
+         ?>
+      }
+      </script>
 </head>
 <body class="LoginRegisterPage">
    
 <div class="sidenav">
   <a href="HomePage.php"><i class="fa-solid fa-house"></i> Home</a>
   <a href="#clients"><i class="fa-solid fa-ticket"></i> My tickets</a>
-  <a href="#contact"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+  <a  href="Login.php" onclick="Logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 </div>
-<div class="Select-container">
-      <label> Select a Consort:</label>
-      <select id="Consort">
-      <?php 
-      $servername = "localhost:3308";
-      $username = "root";
-      $pass = "";
-      $dbname = "event";
-        
-      // Create connection
-      $conn = new mysqli($servername, $username, $pass, $dbname);
-$sql = mysqli_query($conn, "SELECT `Title` FROM `event`");
-while ($row = $sql->fetch_assoc()){
-echo "<option value=\"owner1\">" . $row['Title'] . "</option>";
-}
-?> 
-      </select>
+<div class="book">
+  
+
+<?php include("BookEvent.php"); ?>
     </div>
 
 </body>

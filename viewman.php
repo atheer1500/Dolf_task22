@@ -1,5 +1,4 @@
 <?php
-//,`Description`,`AvailableTickets__`,`Pic`
 session_start();
 include('connection.php'); 
 $conn=OpenCon();
