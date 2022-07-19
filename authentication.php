@@ -61,7 +61,8 @@ use function PHPSTORM_META\type;
                     while($row = $result->fetch_assoc())
                     {
                         $_SESSION['MangerID']=$row["MangerID"];
-                        header("Location:viewManger.php"); 
+                        
+                        header("Location:ManagerHome.php"); 
                     }
                 } 
          

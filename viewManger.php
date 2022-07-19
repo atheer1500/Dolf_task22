@@ -32,6 +32,7 @@
 </form>
 </div>
 <div id="events" style="margin-top: 6%;" >
+<img src="" alt="" >
     <?php include("viewman.php"); ?>
 
 </div>
