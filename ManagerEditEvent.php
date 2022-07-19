@@ -1,3 +1,18 @@
+<?php
+ session_start();
+ $eventID = $_SESSION['EventID'];
+
+ 
+//Database connention
+$conn = mysqli_connect("localhost:3306", "root", "", "event");
+if (!$conn)
+die ("Could not connect to the database");
+
+$query = "SELECT * FROM `events` WHERE `EventID` = '" . $eventID . "'";
+$result=mysqli_query($conn, $query);
+$row=mysqli_fetch_row($result);
+?>       
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,12 +92,9 @@ button, .buttonstyle, input[type=submit]
 }
 
 body{
-  background: linear-gradient(#e66465, #9198e5);
-    background-attachment: fixed;
     color: white;
     font-size:2em;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
 }
 
 </style>
@@ -115,43 +127,49 @@ echo '<script> window.onload=function(){alert("Failed to add the event!");}; </s
 <p>
 
     <label for="uploadImg"> <span>Event Picture:</span>
-    <span class ="right">  <img src="upload.png" height="140px" width="140px" id="img" style="cursor: pointer">       </span>         
+    <span class ="right">  <img src= "<?php echo $row[6] ?>" height="140px" width="140px" id="img" style="cursor: pointer">       </span>         
 </label>
 
-    <input type="file" accept="image/*" name="event_img" id="uploadImg" style="display: none;" onChange="change()" required/>
+    <input type="file" accept="image/*" name="event_img" id="uploadImg" style="display: none; " onChange="change()" required/>
 </p>
 
 <p>
     <label for="eventTitle"><span>Event Title:</span></label>
-   <input type="text" name="event_title" id="eventTitle" required> 
+   <input type="text" name="event_title" id="eventTitle" 
+   value = "<?php echo $row[1] ?>"
+   required> 
 </p>
 
 <p>
     <label for="eventDescription"><span> Event Description:</span></label>
-    <textarea class="border" name="event_description" id="eventDescription" cols="60" rows="10" " required ></textarea><br>
+    <textarea class="border" name="event_description" id="eventDescription" cols="60" rows="10" " required ><?php echo $row[4]; ?></textarea><br>
 </p>
 
 <p>
     <label for="eventTime"><span>Event Time:</span></label>
     <select name="event_time" id="eventTime" required>
-        <option value="12-2PM">12 PM - 2 PM</option>
-        <option value="2-4PM">2 PM - 4 PM</option>
-        <option value="4-6PM">4 PM - 6 PM</option>
-        <option value="6-8PM">6 PM - 8 PM</option>
-        <option value="8-10PM">8 PM - 10 PM</option>
-        <option value="10-12AM Palette">10 PM - 12 AM</option>   
+        <option value="12-2PM"  <?php if ($row[2] == '12-2PM') echo 'selected'; ?>>12 PM - 2 PM</option>
+        <option value="2-4PM" <?php if ($row[2] == '2-4PM') echo 'selected'; ?>>2 PM - 4 PM</option>
+        <option value="4-6PM" <?php if ($row[2] == '4-6PM') echo 'selected'; ?>>4 PM - 6 PM</option>
+        <option value="6-8PM" <?php if ($row[2] == '6-8PM') echo 'selected'; ?>>6 PM - 8 PM</option>
+        <option value="8-10PM" <?php if ($row[2] == '8-10PM') echo 'selected'; ?>>8 PM - 10 PM</option>
+        <option value="10-12AM" <?php if ($row[2] == '10-12AM') echo 'selected'; ?>>10 PM - 12 AM</option>   
     </select>
 </p>
 
 
 <p>
     <label for="eventDate"><span>Event Date:</span></label>
-    <input type="Date" name="event_date" id="eventDate" required>
+    <input type="Date" name="event_date" id="eventDate" 
+    value = "<?php echo $row[3] ?>"
+    required>
 </p>
 
 <p>
     <label for="eventTickets"><span>Number of Tickets:</span></label>
-    <input type="number" id="eventTickets" name="event_tickets" min="1" max="100" required> 
+    <input type="number" id="eventTickets" name="event_tickets" min="1" max="100" 
+    value = "<?php echo $row[5] ?>"
+    required> 
 </p>
 
 
@@ -160,21 +178,23 @@ echo '<script> window.onload=function(){alert("Failed to add the event!");}; </s
 <label for="eventActor"><span>Actor:</span> </label>
  <select id="eventActor" name="event_actor" required>
   <?php
-  //Database connection
-  $conn = mysqli_connect("localhost:3306", "root", "", "event");
-  if (!$conn)
-  die ("Could not connect to the database");
+
   
   $query="SELECT * FROM actor";
   $result=mysqli_query($conn, $query);
 
   //Show available actors
-  while ($row=mysqli_fetch_row($result)){
+  while ($actors=mysqli_fetch_row($result)){
 
         echo '<option value="' 
-    . $row[0] .
-    '">'
-    . $row[0] .
+    . $actors[0] .
+    '"';
+
+     if ($actors[3] == $row[7]) 
+     echo 'selected'; 
+
+    echo '>'
+    . $actors[0] .
     '</option>';
   }
 
@@ -193,8 +213,10 @@ echo '<script> window.onload=function(){alert("Failed to add the event!");}; </s
 
 
  
-           <div class="center"><input type="submit" value="Create Event" style="background-color: #8497b5; border:none;"> </div>
-         </form>
+           <div class="center"><input type="submit" value="Update Event" style="background-color: #8497b5; border:none;"> </div>
+           <div class="center"><input type="submit" value="Delete Event" style="background-color: red; border:none;"> </div>
+
+          </form>
 
 </div>
 

@@ -14,8 +14,9 @@
          . mysqli_connect_error());
  }
   
+ $eventID=$_SESSION['EventID'];
 
- // take the data from the form 
+ // take the data from the database 
  $img =  $_REQUEST['event_img']; //Here we can change the path (add folder name for example)
  $title =  $_REQUEST['event_title'];
  $description = $_REQUEST['event_description'];
@@ -25,13 +26,15 @@
  $ticketsNum = $_REQUEST['event_tickets'];
 
 
+
+
+
  //GET THE ACTOR ID
  $query = "SELECT `ActorID` FROM `actor` WHERE `Name` = '$actor'";
  $result=mysqli_query($conn, $query);
  $row=mysqli_fetch_row($result);
  
  $actorID = $row[0];
-
 
  //Insert query
  $sql = 'INSERT INTO `events`(`Title`, `Time`, `Date`, `Description`, `AvailableTickets__`, `Pic`, `ActorID`) 

@@ -48,7 +48,7 @@ if ($resultsqlfortable = mysqli_query($conn, $sqlfortable))
     <div class='NumOfTikNum'>"
     .$AvailableTickets__.
     "</div><br><div class='NumOfTikText'>Available Tickets</div></div>";
-   echo "<button type='button' class='editbutton' onclick='  window.open(??????????????????????.php);'> Edit</button>";
+   echo "<a href='ManagerEditEvent.php' class='editbutton'> Edit</a>";
     echo "</div>";
 
    } 
