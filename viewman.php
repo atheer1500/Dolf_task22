@@ -4,11 +4,11 @@ session_start();
 include('connection.php'); 
 $conn=OpenCon();
 $sqlfortable="SELECT `EventID` FROM `edit_event` WHERE `MangerID`='" .$_SESSION['MangerID'] ."';";
-if ($resultsqlfortable = mysqli_query($conn, $sqlforview))  
+if ($resultsqlfortable = mysqli_query($conn, $sqlfortable))  
  {
   while($rowfortable =mysqli_fetch_array($resultsqlfortable))
   {
-    $_SESSION['EventID']=$row["EventID"];
+    $_SESSION['EventID']=$rowfortable["EventID"];
  $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`AvailableTickets__`,`Pic` FROM `events` WHERE `EventID`= ".$_SESSION['EventID']." ;";  
  if ($result = mysqli_query($conn, $sqlforview))  
  {
