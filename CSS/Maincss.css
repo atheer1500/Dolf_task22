@@ -213,9 +213,8 @@ a, button
 {
   cursor: pointer;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+/* <<<<<<< HEAD
+======= */
 
 
 
@@ -243,7 +242,7 @@ a, button
    background-color:white; 
    color: #8497b5;
 }
->>>>>>> 80979c0ce193308e5fd6ff4fe5f30d7895e47902
+/* >>>>>>> 80979c0ce193308e5fd6ff4fe5f30d7895e47902 */
 .search-container
 {
   margin-left:-50px;
@@ -302,8 +301,8 @@ div.NumOfTikNum
  
 }
 
-<<<<<<< HEAD
-=======
+/* <<<<<<< HEAD
+======= */
 
 
 
@@ -331,6 +330,4 @@ div.NumOfTikNum
    background-color:white; 
    color: #8497b5;
 }
->>>>>>> e247234dd137809a75a5527e31a47d000821d4c4
-=======
->>>>>>> 80979c0ce193308e5fd6ff4fe5f30d7895e47902
+/* >>>>>>> e247234dd137809a75a5527e31a47d000821d4c4
