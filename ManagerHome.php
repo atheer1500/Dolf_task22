@@ -57,7 +57,7 @@ $conn = mysqli_connect("localhost:3306", "root", "", "event");
 if (!$conn)
 die ("Could not connect to the database");
 
-$query="SELECT * FROM event";
+$query="SELECT * FROM `events`";
 $result=mysqli_query($conn, $query);
 $n= mysqli_num_rows($result);
 if ($n==0)
@@ -72,17 +72,14 @@ while ($row=mysqli_fetch_row($result))
 
         $id = $row[3]; //Current ID
         
-        echo '<td>
-        Name: '
-. $row[0] .
+        echo '<td> <img src="
+        '
+. $row[6] .
 
-'<br> Email: ' 
-. $row[1] .
-'<br> Gender: '
-. $row[2] .
-'<br><a class="buttonstyle" href="AdminEditActor.php?id='
-. $id .
-'">Edit</a>
+'"style="width:200px; height: 300px;"><br>' . $row[1] .
+
+
+'<br>
         </td>';	
         //Add each 3 items in a new row
         if ($count % 3 == 0)	
