@@ -326,7 +326,14 @@ margin-left: 160px;
   text-transform: Uppercase;
   display: inline-block;
 }
-
+.greatingUser
+{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-left: 20%;
+  font-size: 300%;
+  text-transform: capitalize; 
+  color: #063a62;
+}
 /*form style*/
 
 .myform input[type=text], input[type=password] {
