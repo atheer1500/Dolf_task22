@@ -48,6 +48,8 @@
     text-align: center;
 }
 
+
+
 /*for event manager page*/
 .managerPage
 {
@@ -211,6 +213,7 @@ a, button
 {
   cursor: pointer;
 }
+<<<<<<< HEAD
 .search-container
 {
   margin-left:-50px;
@@ -269,3 +272,32 @@ div.NumOfTikNum
  
 }
 
+=======
+
+
+
+
+/*form style*/
+.myform input[type=text], input[type=password] {
+  border: none;
+  border-radius: 4px;
+  float: right;
+}
+
+.myform input[type=submit] {
+  float: center;
+}
+
+.myform label {
+  border-radius: 4px;
+  float: left;
+  padding-right: 10px;
+}
+
+
+.myform .submitbutton {
+   width:30%; 
+   background-color:white; 
+   color: #8497b5;
+}
+>>>>>>> e247234dd137809a75a5527e31a47d000821d4c4

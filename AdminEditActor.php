@@ -69,7 +69,10 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
 //if (isset ($_GET['id']))
 $actorID = $_GET['id']; 
 
-echo '<form name ="newActorForm" action="EditActor.php?id=' . $actorID . '" method="post" onsubmit = "return(validate());">';
+echo '
+<div style="text-align: center;">
+<div style="display: inline-block; text-align: left;">
+<form class ="myform" name ="newActorForm" action="EditActor.php?id=' . $actorID . '" method="post" onsubmit = "return(validate());">';
 
 //Database connention
 $conn = mysqli_connect("localhost:3306", "root", "", "event");
@@ -90,7 +93,7 @@ $row=mysqli_fetch_row($result);
 </p>
 
 
-
+<br>
 
 
 <p>
@@ -100,23 +103,24 @@ $row=mysqli_fetch_row($result);
    >
 </p>
 
+<br>
 
 <p>
    
-Gender: 
+<label>Gender:</label> 
 
     <input type="radio" id="f2" name="actor_gender" value="Female" <?php if ($row[2] == 'F') echo 'checked="checked"'; ?>>
-<label for="f" >Female</label>
+<label for="f" style="float: none;">Female</label>
 
 <input type="radio" id="m" name="actor_gender" value="Male" <?php if ($row[2] == 'M') echo 'checked="checked"'; ?>>
-<label for="m" >Male</label><br>
+<label for="m" style="float: none;">Male</label><br>
 
 </p>
 
- 
+ <br>
          <div class="center">
-            <input type="submit" value="Save" name="update_button"> 
-            <input type="submit" value="Cancel" name = "cancel_button">
+            <input type="submit" value="Save" name="update_button"style="float:left;" class="submitbutton">
+            <input type="submit" value="Cancel" name = "cancel_button"style="float:right; width:30%;  ">
             <br><br><br>
            <input type="submit" value="Delete this actor" name = "delete_button"style="background-color: #ea9087" onclick = "return confirm('This actor and its events will be deleted!')">
 
@@ -124,7 +128,7 @@ Gender:
          </div> 
 
            
-         </form>
+         </form></div></div>
 
 <p> 
 
