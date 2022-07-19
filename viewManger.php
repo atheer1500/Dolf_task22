@@ -16,13 +16,21 @@
 }
 
     </style>
+    <script>
+      function Logout()
+      {
+         <?php
+         include_once("Logout.php");
+         ?>
+      }
+      </script>
 </head>
 <body  class="managerPage">
 <div class="sidenav">
   <a href="ManagerHome.php"><i class="fa-solid fa-house"></i> Home</a>
   <a href="ManagerNewEvent.php"><i class="fa-solid fa-circle-plus"></i> Add Event </a>
   <a href="viewManger.php"><i class="fa-solid fa-circle-plus"></i> My events </a>
-  <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
+  <a href="Login.php" onclick="Logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
 </div>
 
 <div class="search-container" >
@@ -32,7 +40,7 @@
 </form>
 </div>
 <div id="events" style="margin-top: 6%;" >
-<img src="" alt="" >
+
     <?php include("viewman.php"); ?>
 
 </div>
