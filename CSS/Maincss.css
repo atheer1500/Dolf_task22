@@ -11,7 +11,9 @@
 
  body {
   background-image:linear-gradient(to right bottom, #efaf96, #eaa897, #e4a197, #de9a98, #d69499, #d0919f, #c88fa5, #be8ea9, #b090b1, #a193b6, #9295b7, #8497b5);
- }
+  background-attachment: fixed;
+
+}
 .firstPage
 {
     background-image: linear-gradient(#e66465, #9198e5),
