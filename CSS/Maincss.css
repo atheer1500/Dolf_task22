@@ -316,7 +316,16 @@ div.TextOfEvent
 margin-left: 160px;
   margin-top: -100px;
 }
-
+.editbutton
+{
+  
+  margin-left: 87%;
+  margin-top: 1%;
+  text-align: center;
+  padding: 15px 32px;
+  text-transform: Uppercase;
+  display: inline-block;
+}
 
 /*form style*/
 
