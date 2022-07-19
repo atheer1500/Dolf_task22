@@ -253,10 +253,11 @@ a, button
   font-size: 65%;
   border-style: solid;
   border-color: #063a62db;
-  height: 10%;
-  width:80% ;
+  min-height: 200px;
+  min-width:200px ;
   border-radius: 8px;
   padding: 20px;
+  margin-top: 0.5%;
 }
 
 .NameOfEvent
