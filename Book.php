@@ -151,9 +151,9 @@ span.lab
 <div class="paymentRadio">
 
 <input type="radio" id="cash" name="Payment" value="cash">
-  <label for="cash">Cash</label><br>
-  <input type="radio" id="card" name="Payment" value="card">
-  <label for="card">Card</label><br>
+<label for="cash">Cash</label><br>
+<input type="radio" id="card" name="Payment" value="card">
+<label for="card">Card</label><br>
 </div>
 </p>
 
