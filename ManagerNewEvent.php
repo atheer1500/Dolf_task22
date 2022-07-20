@@ -91,7 +91,7 @@ body{
 <div class="sidenav">
   <a href="ManagerHome.php"><i class="fa-solid fa-house"></i> Home</a>
   <a href="ManagerNewEvent.php"><i class="fa-solid fa-circle-plus"></i> Add Event </a>
-  <a href=""><i class="fa-solid fa-circle-plus"></i> My events </a>
+  <a href="viewManger.php"><i class="fa-solid fa-circle-plus"></i> My events </a>
   <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
 </div>
 
@@ -108,10 +108,10 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='ADD')) {
 echo '<script> window.onload=function(){alert("The event is added successfuly");}; </script>';}
 
 else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR')){
-echo '<script> window.onload=function(){alert("Failed to add the event!");}; </script>         ';
+echo '<script> window.onload=function(){alert("Failed: Something went wrong!");}; </script>         ';
 }
 else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR1')){
-  echo '<script> window.onload=function(){alert("There is an event with the same date and time!");}; </script>         ';
+  echo '<script> window.onload=function(){alert("Failed: There is an event with the same date and time!");}; </script>         ';
   }
 ?>       
 <p>
@@ -136,12 +136,12 @@ else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR1')){
 <p>
     <label for="eventTime"><span>Event Time:</span></label>
     <select name="event_time" id="eventTime" required>
-        <option value="12-2PM">12 PM - 2 PM</option>
-        <option value="2-4PM">2 PM - 4 PM</option>
-        <option value="4-6PM">4 PM - 6 PM</option>
-        <option value="6-8PM">6 PM - 8 PM</option>
-        <option value="8-10PM">8 PM - 10 PM</option>
-        <option value="10-12AM Palette">10 PM - 12 AM</option>   
+        <option value="12 PM - 2 PM">12 PM - 2 PM</option>
+        <option value="2 PM - 4 PM">2 PM - 4 PM</option>
+        <option value="4 PM - 6 PM">4 PM - 6 PM</option>
+        <option value="6 PM - 8 PM">6 PM - 8 PM</option>
+        <option value="8 PM - 10 PM">8 PM - 10 PM</option>
+        <option value="10 PM - 12 AM">10 PM - 12 AM</option>   
     </select>
 </p>
 
