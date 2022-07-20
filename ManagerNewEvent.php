@@ -110,6 +110,9 @@ echo '<script> window.onload=function(){alert("The event is added successfuly");
 else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR')){
 echo '<script> window.onload=function(){alert("Failed to add the event!");}; </script>         ';
 }
+else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR1')){
+  echo '<script> window.onload=function(){alert("There is an event with the same date and time!");}; </script>         ';
+  }
 ?>       
 <p>
 

@@ -22,7 +22,7 @@ $row=mysqli_fetch_row($result);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=yes, initial-scale=1.0">
-    <title>Add Event</title>
+    <title>Edit Event</title>
     <link rel="stylesheet" href="CSS/Maincss.css?v=<?php echo time(); ?>">
     <style type="text/css">
 
@@ -111,8 +111,8 @@ body{
 
 
 <div class="main">
-<h2>Add New Event</h2>
-<h4>Enter the event information:</h4>
+<h2>Edit Event</h2>
+<h4>Enter the event new information:</h4>
 
 <div class="container">
 
