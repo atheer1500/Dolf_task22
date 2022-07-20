@@ -20,14 +20,15 @@
       </script>
 </head>
 <body class="LoginRegisterPage">
-<!--    
+   
 <div class="sidenav">
   <a href="HomePage.php"><i class="fa-solid fa-house"></i> Home</a>
   <a href="#clients"><i class="fa-solid fa-ticket"></i> My tickets</a>
   <a  href="Login.php" onclick="Logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
-</div> -->
+</div>
 <div class="book">
 <!-- <i class=" fa-solid fa-hand-wave "></i> -->
+
 <?php include("BookEvent.php"); ?>
  </div>
 

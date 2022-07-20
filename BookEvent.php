@@ -11,6 +11,7 @@ if ($ResultSqlForFirstName = mysqli_query($conn, $SqlForFirstName))
   {
     $_SESSION['FirstName']=$RowForFirstName['FirstName'];
     echo "<p class='greatingUser'>Hi there ! ".$_SESSION['FirstName']."</p>";
+    echo "<p class='greatingUser2 greatingUser'><br> To book an event <br> Please select :</p>";
 
   }
 }
@@ -43,17 +44,5 @@ else  {
 // <div class="Select-container">
 //       <label> Select a Consort:</label>
 //       <select id="Consort">
-//       <?php 
-//       $servername = "localhost:3308";
-//       $username = "root";
-//       $pass = "";
-//       $dbname = "event";
-        
-//       // Create connection
-//       $conn = new mysqli($servername, $username, $pass, $dbname);
-// $sql = mysqli_query($conn, "SELECT `Title` FROM `event`");
-// while ($row = $sql->fetch_assoc()){
-// echo "<option value=\"owner1\">" . $row['Title'] . "</option>";
-// }
 
 ?>

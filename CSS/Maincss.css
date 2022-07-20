@@ -336,6 +336,13 @@ margin-left: 160px;
   text-transform: capitalize; 
   color: #063a62;
 }
+.greatingUser2
+{
+  margin-top: -50px;
+  font-size: 200%;
+  text-align: center;
+  margin-left: 6%;
+}
 /*form style*/
 
 .myform input[type=text], input[type=password] {
