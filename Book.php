@@ -19,6 +19,7 @@
       }
       </script>
       <style>
+
         td {
   text-align: left;
 }
@@ -67,18 +68,19 @@ button, .buttonstyle, input[type=submit]
 	margin-top: 10px;
 	width: 50%;
 }
-.container select {
+.container select,.container input[type=number] {
 	min-height: 25px;
 	display: inline-block;
 	width: 51%;
    font-size: 15px;
 }
-
-.container input[type=number] {
-  min-height: 25px;
+/* 
+ {
+  max-height: 22px;
 	display: inline-block;
-	width: 49.4%;
-}
+width: 51%;
+   font-size: 15px;
+} */
 
 .right{
   text-align: right;
@@ -133,6 +135,15 @@ span.lab
 
     <span class ="pic">  <img src="upload.png" height="140px" width="140px" id="img"></span>         
 </label>
+</p>
+
+<p>
+<span class="lab " style="margin-left: 32%;" >Actor Name</span>
+</p>
+
+<p>
+<label for="Tickets"><span class="lab">Number Of Tickets </span></label>
+<input type="number" id="Tickets" name="Tickets"min="1" max="100">
 </p>
 
 
