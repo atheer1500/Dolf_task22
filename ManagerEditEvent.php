@@ -115,14 +115,22 @@ body{
 
 <div class="container">
 
-<form action="InsertEvent.php" method="post">
+<form action="EditEvent.php" method="post">
 <?php
-if (isset ($_GET['problem']) and ($_GET['problem']=='ADD')) {
-echo '<script> window.onload=function(){alert("The event is added successfuly");}; </script>';}
+//Show success/fail meesages
+if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
+  echo '<script> window.onload=function(){alert("The event is updated successfuly");}; </script>';}
+  
+  else if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATEERROR')){
+  echo '<script> window.onload=function(){alert("Failed to update the event!");}; </script>         ';
+  }
 
-else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR')){
-echo '<script> window.onload=function(){alert("Failed to add the event!");}; </script>         ';
-}
+
+
+  else if (isset ($_GET['problem']) and ($_GET['problem']=='DELETEERROR')){
+     echo '<script> window.onload=function(){alert("Failed to delete the event!");}; </script>         ';
+     }
+
 ?>       
 <p>
 
@@ -130,7 +138,7 @@ echo '<script> window.onload=function(){alert("Failed to add the event!");}; </s
     <span class ="right">  <img src= "<?php echo $row[6] ?>" height="140px" width="140px" id="img" style="cursor: pointer">       </span>         
 </label>
 
-    <input type="file" accept="image/*" name="event_img" id="uploadImg" style="display: none; " onChange="change()" required/>
+    <input type="file" accept="image/*" name="event_img" id="uploadImg" style="display: none; " onChange="change()" />
 </p>
 
 <p>
@@ -213,8 +221,8 @@ echo '<script> window.onload=function(){alert("Failed to add the event!");}; </s
 
 
  
-           <div class="center"><input type="submit" value="Update Event" style="background-color: #8497b5; border:none;"> </div>
-           <div class="center"><input type="submit" value="Delete Event" style="background-color: red; border:none;"> </div>
+           <div class="center"><input type="submit" name="update_button" value="Update Event" style="background-color: #8497b5; border:none;"> </div>
+           <div class="center"><input type="submit" name = "delete_button" value="Delete Event" style="background-color: red; border:none;"> </div>
 
           </form>
 
@@ -239,6 +247,12 @@ echo '<script> window.onload=function(){alert("Failed to add the event!");}; </s
           
         im.readAsDataURL(imgname); 
       }
+
+
+       //Form validation
+
+  function validate() {
+  }
       
       
       

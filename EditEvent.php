@@ -36,31 +36,55 @@
  
  $actorID = $row[0];
 
- //Insert query
- $sql = 'INSERT INTO `events`(`Title`, `Time`, `Date`, `Description`, `AvailableTickets__`, `Pic`, `ActorID`) 
-                      VALUES ("' . $title . '", "' . $time . '" ,"' . $date . '", "' . $description . '", "' . $ticketsNum . '", "' . $img . '", "' . $actorID . '")';
-  
 
+  //get event id
+  $eventID =  $_SESSION['EventID'];
 
- if(mysqli_query($conn, $sql)){
-
-  //1- get manager id from session
-  $managerID = $_SESSION["MangerID"];
-
-  //2-get event id
-  $eventID = mysqli_insert_id($conn);
-  
-  //Now insert in edit_events table, this to identify which manager has created the event
-  $sql2 = "INSERT INTO `edit_event`(`MangerID`, `EventID`) 
-                      VALUES ('$managerID ', '$eventID')";
-  if(mysqli_query($conn, $sql2)){
-   header('location: ManagerNewEvent.php?problem=ADD'); //Insert to the database, then go back to the add page
-  }
-
- }
- 
- else
-    header('location: ManagerNewEvent.php?problem=ADDERROR')
  
 
+
+
+    if (isset($_POST['update_button'])) {
+        $updateQuery = "UPDATE `events` set 
+        `Title` = '$title', 
+        `Time` = '$time', 
+        `Date` = '$date',
+        `Description` = '$description',
+        `AvailableTickets__` = '$ticketsNum',
+        `Pic` = '$img',
+        `ActorID` = '$actorID'
+         WHERE `EventID` = '$eventID'";
+
+
+        //action for update here
+        if(mysqli_query($conn, $updateQuery))
+        header('location: ManagerEditEvent.php?id=' . $eventID . '&problem=UPDATED'); //go back to the EDIT page
+
+
+        else
+        header('location: ManagerEditEvent.php?problem=UPDATEERROR');
+
+    }
+
+    else if (isset($_POST['delete_button'])) {
+        $deleteQuery1 = "DELETE FROM  `events` WHERE `EventID` = '$eventID'";
+        $deleteQuery2 = "DELETE FROM  `edit_event` WHERE `EventID` = '$eventID'";
+
+
+         //First, delete from edit_events table
+      if(mysqli_query($conn, $deleteQuery2)){
+        //Now, delete from events table
+        if (mysqli_query($conn, $deleteQuery1))
+        header('location: viewManger.php?problem=DELETED'); //go back to the EDIT page
+        else
+        header('location:ManagerEditEvent.php?problem=DELETEERROR');
+
+    }
+
+    else
+    header('location: ManagerEditEvent.php?problem=DELETEERROR');
+
+
+
+} 
  ?>
