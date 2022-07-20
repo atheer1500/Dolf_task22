@@ -39,7 +39,18 @@
   
 
 
- if(mysqli_query($conn, $sql)){
+
+//Check if event conflict with other events date & time
+
+$conflictQuery = "SELECT * FROM `events` WHERE `Time` = '$time' AND `Date` = '$date'";
+$conflictResult=mysqli_query($conn, $conflictQuery);
+$conflictCount = mysqli_num_rows($conflictResult);
+
+ if ($conflictCount > 0){
+    header('location: ManagerNewEvent.php?problem=ADDERROR1');
+ }
+
+  else if(mysqli_query($conn, $sql)){
 
   //1- get manager id from session
   $managerID = $_SESSION["MangerID"];
@@ -58,6 +69,9 @@
  
  else
     header('location: ManagerNewEvent.php?problem=ADDERROR')
- 
+
+
+
+
 
  ?>

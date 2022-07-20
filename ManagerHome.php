@@ -1,3 +1,11 @@
+<?php
+session_start();
+include('connection.php'); 
+$conn=OpenCon();
+$query="SELECT `Name` FROM  `event_manger` WHERE `MangerID`='" .$_SESSION['MangerID'] ."';";
+$result=mysqli_query($conn, $query);
+$row=mysqli_fetch_row($result);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,10 +41,11 @@ td {
 
 
 <div class="main" style="margin-top: 10%">
-<h2>Hello (name of manager)</h2>
+<h2>Hello <?php echo  $row[0];?></h2>
 <h4>What would you like to do today?</h4>
 <div class="center">
-<a class ="buttonstyle" href="#events"> Manage Events </a>
+<a class ="buttonstyle" href="#events"> View all Events </a> <a class ="buttonstyle" href="viewManger.php">Manage my Events </a>
+
 </div>
 
 <br><br><br><br>
@@ -80,7 +89,16 @@ while ($row=mysqli_fetch_row($result))
 
 
 '<br>
-        </td>';	
+
+<p> Date: '
+
+. $row[3] .
+
+'</p> <p> Time: '
+
+. $row[2] .
+
+       '</p> </td>';	
         //Add each 3 items in a new row
         if ($count % 3 == 0)	
         echo '</tr> <tr>';	
