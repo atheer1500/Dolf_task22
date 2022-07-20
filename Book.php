@@ -142,8 +142,18 @@ span.lab
 </p>
 
 <p>
-<label for="Tickets"><span class="lab">Number Of Tickets </span></label>
+<label for="Tickets"><span class="lab">Number Of Tickets : </span></label>
 <input type="number" id="Tickets" name="Tickets"min="1" max="100">
+</p>
+
+<p>
+<label for="Tickets"><span class="lab">Payment Method :</span></label>
+<div class="payment">
+<input type="radio" id="cash" name="Payment" value="cash">
+  <label for="cash">Cash</label><br>
+  <input type="radio" id="card" name="Payment" value="card">
+  <label for="card">Card</label><br>
+</div>
 </p>
 
 
