@@ -328,10 +328,11 @@ margin-left: 160px;
   text-transform: Uppercase;
   display: inline-block;
 }
-.greatingUser
+
+/* .greatingUser
 {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  margin-left: 20%;
+  margin-left: 2%;
   font-size: 300%;
   text-transform: capitalize; 
   color: #063a62;
@@ -341,7 +342,23 @@ margin-left: 160px;
   margin-top: -50px;
   font-size: 200%;
   text-align: center;
-  margin-left: 6%;
+  margin-left: 2%;
+}
+div.label1
+{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color:#063a62;
+} */
+div#book
+{
+  border-color:#042c4a;
+  border-width: 2px;
+  border-style: dashed;
+  min-width: 600px;
+  min-height: 600px;
+  display: inline-block;
+  margin-left: 31%;
+
 }
 /*form style*/
 
