@@ -103,7 +103,7 @@ body{
 
 <div class="container">
 
-<form action="InsertEvent.php" method="post">
+<form action="InsertEvent.php" method="post" name ="newEventForm" onsubmit = "return(validate());">
 <?php
 if (isset ($_GET['problem']) and ($_GET['problem']=='ADD')) {
 echo '<script> window.onload=function(){alert("The event is added successfuly");}; </script>';}
@@ -118,7 +118,7 @@ echo '<script> window.onload=function(){alert("Failed to add the event!");}; </s
     <span class ="right">  <img src="upload.png" height="140px" width="140px" id="img" style="cursor: pointer">       </span>         
 </label>
 
-    <input type="file" accept="image/*" name="event_img" id="uploadImg" style="display: none;" onChange="change()" required/>
+    <input type="file" accept="image/*" name="event_img" id="uploadImg" style="display: none;" onChange="change()" />
 </p>
 
 <p>
@@ -217,6 +217,14 @@ echo '<script> window.onload=function(){alert("Failed to add the event!");}; </s
           
         im.readAsDataURL(imgname); 
       }
+
+      function validate() {
+//1- Check if all information filled
+  if (document.forms["newEventForm"]["event_img"].value == "") {
+    alert("Please upload an image. ");
+    return false;
+  }
+}
       
       
       
