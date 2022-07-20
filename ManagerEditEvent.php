@@ -105,7 +105,7 @@ body{
 <div class="sidenav">
   <a href="ManagerHome.php"><i class="fa-solid fa-house"></i> Home</a>
   <a href="ManagerNewEvent.php"><i class="fa-solid fa-circle-plus"></i> Add Event </a>
-  <a href=""><i class="fa-solid fa-circle-plus"></i> My events </a>
+  <a href="viewManger.php"><i class="fa-solid fa-circle-plus"></i> My events </a>
   <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
 </div>
 
@@ -123,10 +123,12 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
   echo '<script> window.onload=function(){alert("The event is updated successfuly");}; </script>';}
   
   else if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATEERROR')){
-  echo '<script> window.onload=function(){alert("Failed to update the event!");}; </script>         ';
+  echo '<script> window.onload=function(){alert("Failed: Something went wrong!");}; </script>         ';
   }
 
-
+  else if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATEERROR1')){
+    echo '<script> window.onload=function(){alert("Failed: There is an event with the same date and time!");}; </script>         ';
+    }
 
   else if (isset ($_GET['problem']) and ($_GET['problem']=='DELETEERROR')){
      echo '<script> window.onload=function(){alert("Failed to delete the event!");}; </script>         ';
@@ -157,12 +159,12 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
 <p>
     <label for="eventTime"><span>Event Time:</span></label>
     <select name="event_time" id="eventTime" required>
-        <option value="12 PM - 2 PM"  <?php if ($row[2] == '12-2PM') echo 'selected'; ?>>12 PM - 2 PM</option>
-        <option value="2 PM - 4 PM" <?php if ($row[2] == '2-4PM') echo 'selected'; ?>>2 PM - 4 PM</option>
-        <option value="4 PM - 6 PM" <?php if ($row[2] == '4-6PM') echo 'selected'; ?>>4 PM - 6 PM</option>
-        <option value="6 PM - 8 PM" <?php if ($row[2] == '6-8PM') echo 'selected'; ?>>6 PM - 8 PM</option>
-        <option value="8 PM - 10 PM" <?php if ($row[2] == '8-10PM') echo 'selected'; ?>>8 PM - 10 PM</option>
-        <option value="10 PM - 12 AM" <?php if ($row[2] == '10-12AM') echo 'selected'; ?>>10 PM - 12 AM</option>   
+        <option value="12 PM - 2 PM"  <?php if ($row[2] == '12 PM - 2 PM') echo 'selected'; ?>>12 PM - 2 PM</option>
+        <option value="2 PM - 4 PM" <?php if ($row[2] == '2 PM - 4 PM') echo 'selected'; ?>>2 PM - 4 PM</option>
+        <option value="4 PM - 6 PM" <?php if ($row[2] == '4 PM - 6 PM') echo 'selected'; ?>>4 PM - 6 PM</option>
+        <option value="6 PM - 8 PM" <?php if ($row[2] == '6 PM - 8 PM') echo 'selected'; ?>>6 PM - 8 PM</option>
+        <option value="8 PM - 10 PM" <?php if ($row[2] == '8 PM - 10 PM') echo 'selected'; ?>>8 PM - 10 PM</option>
+        <option value="10 PM - 12 AM" <?php if ($row[2] == '10 PM - 12 AM') echo 'selected'; ?>>10 PM - 12 AM</option>   
     </select>
 </p>
 
