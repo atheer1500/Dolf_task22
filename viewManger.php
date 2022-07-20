@@ -44,5 +44,18 @@
     <?php include("viewman.php"); ?>
 
 </div>
+
+
+
+
+
+
+
+
+
+<?php  if (isset ($_GET['problem']) and ($_GET['problem']=='DELETED')){
+        echo '<script> window.onload=function(){alert("Deleted successfuly!");}; </script>         ';
+        }
+        ?>
 </body>
 </html>
