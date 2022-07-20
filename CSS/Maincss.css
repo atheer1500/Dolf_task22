@@ -60,8 +60,8 @@
 /*for event manager page*/
 .managerPage
 {
-    background: linear-gradient(#e66465, #9198e5);
-    background-attachment: fixed;
+    /*background: linear-gradient(#e66465, #9198e5);
+    background-attachment: fixed;*/
     color: white;
     font-size:2em;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

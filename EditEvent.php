@@ -38,13 +38,23 @@
 
 
   //get event id
-  $eventID =  $_SESSION['EventID'];
+  $eventID = $_GET['id'];
 
  
 
 
 
     if (isset($_POST['update_button'])) {
+        //If the image didn't change, keep the old image
+        $query = "SELECT `Pic` FROM `events` WHERE `EventID` = '$eventID'";
+        $result=mysqli_query($conn, $query);
+        $row=mysqli_fetch_row($result);
+        if ($img == "")
+        {
+            $img = $row[0];
+        }
+
+        //Update qeury
         $updateQuery = "UPDATE `events` set 
         `Title` = '$title', 
         `Time` = '$time', 

@@ -1,6 +1,7 @@
 <?php
  session_start();
- $eventID = $_SESSION['EventID'];
+ //$eventID = $_SESSION['EventID'];
+ $eventID = $_GET['id'];
 
  
 //Database connention
@@ -115,7 +116,7 @@ body{
 
 <div class="container">
 
-<form action="EditEvent.php" method="post">
+<form action="EditEvent.php?id=<?php echo $eventID; ?>" method="post">
 <?php
 //Show success/fail meesages
 if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
