@@ -77,7 +77,6 @@ button, .buttonstyle, input[type=submit]
 }
 
 body{
-  background: linear-gradient(#e66465, #9198e5);
     background-attachment: fixed;
     color: white;
     font-size:2em;

@@ -38,7 +38,7 @@
 
 
   //get event id
-  $eventID =  $_SESSION['EventID'];
+  $eventID = $_GET['id'];
 
  
 
@@ -53,7 +53,7 @@
         {
             $img = $row[0];
         }
-        
+
         //Update qeury
         $updateQuery = "UPDATE `events` set 
         `Title` = '$title', 
