@@ -91,7 +91,7 @@ body{
 <div class="sidenav">
   <a href="ManagerHome.php"><i class="fa-solid fa-house"></i> Home</a>
   <a href="ManagerNewEvent.php"><i class="fa-solid fa-circle-plus"></i> Add Event </a>
-  <a href=""><i class="fa-solid fa-circle-plus"></i> My events </a>
+  <a href="viewManger.php"><i class="fa-solid fa-circle-plus"></i> My events </a>
   <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
 </div>
 
@@ -108,10 +108,10 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='ADD')) {
 echo '<script> window.onload=function(){alert("The event is added successfuly");}; </script>';}
 
 else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR')){
-echo '<script> window.onload=function(){alert("Failed to add the event!");}; </script>         ';
+echo '<script> window.onload=function(){alert("Failed: Something went wrong!");}; </script>         ';
 }
 else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR1')){
-  echo '<script> window.onload=function(){alert("There is an event with the same date and time!");}; </script>         ';
+  echo '<script> window.onload=function(){alert("Failed: There is an event with the same date and time!");}; </script>         ';
   }
 ?>       
 <p>

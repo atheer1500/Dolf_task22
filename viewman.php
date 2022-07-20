@@ -39,7 +39,7 @@ if ($resultsqlfortable = mysqli_query($conn, $sqlfortable))
     echo "</div>";
 
     echo "<div class='Date-Time'><i class='far fa-clock'></i>&ensp;"
-    .date('H:i',strtotime($Time)).
+    .$Time.
     "&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<i class='far fa-calendar-alt'></i>&ensp;&ensp;"
     .$Date."</div>";
 
