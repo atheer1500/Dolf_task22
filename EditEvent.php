@@ -66,13 +66,22 @@
          WHERE `EventID` = '$eventID'";
 
 
-        //action for update here
-        if(mysqli_query($conn, $updateQuery))
+        //Action for update here
+
+        //Check if event conflict with other events date & time
+        $conflictQuery = "SELECT * FROM `events` WHERE `Time` = '$time' AND `Date` = '$date'";
+        $conflictResult=mysqli_query($conn, $conflictQuery);
+        $conflictCount = mysqli_num_rows($conflictResult);
+        if ($conflictCount > 0){
+            header('location: ManagerEditEvent.php?id=' . $eventID . '&problem=UPDATEERROR1');
+        }
+
+        else if(mysqli_query($conn, $updateQuery))
         header('location: ManagerEditEvent.php?id=' . $eventID . '&problem=UPDATED'); //go back to the EDIT page
 
 
         else
-        header('location: ManagerEditEvent.php?problem=UPDATEERROR');
+        header('location: ManagerEditEvent.php?id=' . $eventID . '&problem=UPDATEERROR');
 
     }
 
