@@ -71,6 +71,7 @@ button, .buttonstyle, input[type=submit]
 	min-height: 25px;
 	display: inline-block;
 	width: 51%;
+   font-size: 15px;
 }
 
 .container input[type=number] {
@@ -91,6 +92,19 @@ body{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
+span.lab
+{
+
+	display: inline-block;
+  min-height: 25px;
+	width: 30%;
+  font-size: 15px;
+  margin-top: 5px;
+}
+.pic 
+{
+  margin-left: 26%;
+}
         </style>
 </head>
 <body class="LoginRegisterPage">
@@ -101,17 +115,28 @@ body{
   <a  href="Login.php" onclick="Logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 </div>
 
-<div class="container">
+
 <!-- <i class=" fa-solid fa-hand-wave "></i> -->
 
 <?php include("BookEvent.php"); ?>
+<div class="container">
+<form action="#" method="post" name ="" >
+<p>
+    <label for="events"><span class="lab">Choose A Consort:</span></label>
+    <select name="events" id="events" >
+    <option value="super juni">super juni</option>
+  <option value="wow">wow</option>  
+    </select>
+</p>
 
-<label for="events">Choose An Event:</label>
-<select name="events" id="events">
-  <option value="super juni">super juni</option>
-  <option value="wow">wow</option>
-</select>
+<p>
 
+    <span class ="pic">  <img src="upload.png" height="140px" width="140px" id="img"></span>         
+</label>
+</p>
+
+
+</form>
  </div>
 
 </body>

@@ -13,8 +13,8 @@ if ($ResultSqlForFirstName = mysqli_query($conn, $SqlForFirstName))
   while($RowForFirstName =mysqli_fetch_array($ResultSqlForFirstName))
   {
     $_SESSION['FirstName']=$RowForFirstName['FirstName'];
-    echo "<h2 class='greatingUser'>Hi there ! ".$_SESSION['FirstName']."</h2>";
-    echo "<h4 class='greatingUser2 greatingUser'><br> To book an event <br> Please select :</h4>";
+    echo "<h2 >Hi There ! ".$_SESSION['FirstName']."</h2>";
+    echo "<h4 > To book an event <br> Please select :</h4>";
 
   }
 }
