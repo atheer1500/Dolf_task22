@@ -148,7 +148,8 @@ span.lab
 
 <p>
 <label for="Tickets"><span class="lab">Payment Method :</span></label>
-<div class="payment">
+<div class="paymentRadio">
+
 <input type="radio" id="cash" name="Payment" value="cash">
   <label for="cash">Cash</label><br>
   <input type="radio" id="card" name="Payment" value="card">
