@@ -124,14 +124,7 @@ span.lab
 
 <?php include("BookEvent.php"); ?>
 <div class="container">
-<form action="#" method="post" name ="" >
-<!-- <p>
-    <label for="events"><span class="lab">The Consort you choose:</span></label>
-    <select name="events" id="events" >
-    <option value="super juni">super juni</option>
-  <option value="wow">wow</option>  
-    </select>
-</p> -->
+<!-- <form action="#" method="post" name ="" >
 <p>
 <span class="lab " style="margin-left: 24%; font-size:25px;width: 90%; text-transform: Uppercase;" >Consort Name</span>
 </p>
@@ -168,7 +161,7 @@ span.lab
 </p>
 
 
-</form>
+</form> -->
  </div>
 
 </body>
