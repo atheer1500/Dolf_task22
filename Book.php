@@ -44,6 +44,7 @@ button, .buttonstyle, input[type=submit]
 	background-color: rgba(0, 0, 0, 0.5);
 	margin: auto;
 	margin-top: 20px;
+  margin-left: 33%;
 	line-height: 30px;
 	width: 500px;
   text-align: left;
@@ -121,7 +122,7 @@ span.lab
 
 <!-- <i class=" fa-solid fa-hand-wave "></i> -->
 
-<!-- <?php include("BookEvent.php"); ?> -->
+<?php include("BookEvent.php"); ?>
 <div class="container">
 <form action="#" method="post" name ="" >
 <!-- <p>
