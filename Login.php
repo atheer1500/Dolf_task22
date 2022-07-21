@@ -27,7 +27,7 @@
             
             <input  class="loginInputs" type="text" id="Email" name="Email" placeholder="ُE-maill address"><br><br>
             <input class="loginInputs" type="password" id="password" name="password" placeholder="Password"><br>
-            <input type="radio" id="UserEmail" name="User" value="UserE">     
+            <input type="radio" id="UserEmail" name="User" value="UserEmail">     
             <label for="User">User</label><br>
 
             <input type="radio" id="Admin" name="User" value="Admin">
