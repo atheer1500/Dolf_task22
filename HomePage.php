@@ -138,8 +138,11 @@
 <body class="homePage">
     
 
+
 <div class="sidenav">
   <a href="homepage.php"><i class="fa-solid fa-house"></i> Home</a>
+  <a href="UserProfile.php"><i class="fa-solid fa-user"></i> My profile </a>
+
   <a href="UserAccount.php"><i class="fa-solid fa-user"></i> My account </a>
 
   <a href=""><i class="fa-solid fa-ticket"></i> My tickets</a>
