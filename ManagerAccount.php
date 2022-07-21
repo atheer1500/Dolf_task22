@@ -24,22 +24,7 @@ td {
   text-align: left;
 }
 
-button, .buttonstyle, input[type=submit]
-{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border: 1px solid white;
-    border-radius: 50px;
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: medium;
-    background: none;
-    text-align: center;
-    margin: 10px;
-    cursor: pointer;
 
-}
 
 input[type=submit]:disabled
 {
@@ -67,7 +52,6 @@ opacity: 0.2;
 
 <div class="main" style="margin-top: 10%">
 <h2>Manager Account</h2>
-<strong> <p id="text1" style ="display: none;">Enter the account new information:</p> </strong>
 
 <?php
 //Show success/fail meesages
@@ -81,8 +65,8 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
 
 
 echo '
-<div style="text-align: center;">
-<div style="display: inline-block; text-align: left; width: 25%">
+<div style="text-align: center; ">
+<div style="display: inline-block; width: 25%;" class ="formBackground">
 
 <form class="myform" name ="adminForm" action="EditManagerAccount.php" method="post">';
 
@@ -142,6 +126,9 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='PASSERROR'))
 
 <?php 
 if (isset ($_GET['problem']) and ($_GET['problem']=='PASSCORRECT')){
+
+    // echo <strong> <p id="text1" style ="display: none;">Enter the account new information:</p> </strong>
+
       echo " <script>
       $( '#Email' ).prop('disabled', false);
       $( '#Pass' ).prop('disabled', false);

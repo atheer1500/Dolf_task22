@@ -10,10 +10,17 @@
 
 
  body {
-  background-image:linear-gradient(to right bottom, #efaf96, #eaa897, #e4a197, #de9a98, #d69499, #d0919f, #c88fa5, #be8ea9, #b090b1, #a193b6, #9295b7, #8497b5);
+  /*background-image:linear-gradient(to right bottom, #efaf96, #eaa897, #e4a197, #de9a98, #d69499, #d0919f, #c88fa5, #be8ea9, #b090b1, #a193b6, #9295b7, #8497b5);*/
+  /*background-image: linear-gradient(#e66465, #9198e5);*/
+
+  background-color: #e3e8e8;
+  /*background-image: linear-gradient(#e7f0ff, #c6dbff);*/
   background-attachment: fixed;
 
+  color: black;
 }
+
+
 .firstPage
 {
     background-image: linear-gradient(#e66465, #9198e5),
@@ -44,14 +51,14 @@
 .homePage
 {
     background-attachment: fixed;
-    color: white;
+    /*color: white;*/
     font-size:2em;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .homePage p
 {
-    color: white;
+    /*color: white;*/
     text-align: center;
 }
 
@@ -62,14 +69,14 @@
 {
     /*background: linear-gradient(#e66465, #9198e5);
     background-attachment: fixed;*/
-    color: white;
+    /*color: white;*/
     font-size:2em;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .managerPage p
 {
-    color: white;
+    /*color: white;*/
     text-align: center;
 }
 
@@ -81,11 +88,11 @@ hr
 button, .buttonstyle, input[type=submit]
 {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border: 1px solid white;
+    border: 1px solid black;
     border-radius: 50px;
     padding: 10px;
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: medium;
     background: none;
@@ -210,7 +217,7 @@ font-size: small;
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 14px;
-  color: white;
+  color:#8497b5;
   display: block;
   margin-bottom: 25px;
 }
@@ -395,6 +402,60 @@ div#book
 
 .myform .submitbutton {
    width:30%; 
-   background-color:white; 
-   color: #8497b5;
+   background-color:#8497b5; 
+   border: none;
+   color: white;
+}
+
+.formBackground {
+  background-color: rgb(255, 255, 255);  
+  padding: 5% 10% 5% 10%;   
+  border-radius: 20px;
+max-height:250px
+;}
+
+
+
+
+/* add event form style */
+
+.container {
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+	margin: auto;
+	margin-top: 20px;
+	line-height: 30px;
+	width: 500px;
+  text-align: left;
+  border-radius: 20px;
+}
+
+.container span {
+	padding-left: 40px;
+	display: inline-block;
+  vertical-align: top;
+	width: 30%;
+}
+
+.container input{
+	min-height: 25px;
+	display: inline-block;
+	width: 50%;
+}
+
+.container textarea {
+	display: inline-block;
+	margin-top: 10px;
+	width: 50%;
+}
+.container select {
+	min-height: 25px;
+	display: inline-block;
+	width: 51%;
+}
+
+.container input[type=number] {
+  min-height: 25px;
+	display: inline-block;
+	width: 49.4%;
 }

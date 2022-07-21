@@ -37,46 +37,6 @@ button, .buttonstyle, input[type=submit]
     margin: 10px;
 }
 
-.container {
-	padding: 20px;
-	background-color: rgba(0, 0, 0, 0.5);
-	margin: auto;
-	margin-top: 20px;
-	line-height: 30px;
-	width: 500px;
-  text-align: left;
-  border-radius: 20px;
-}
-
-.container span {
-	padding-left: 40px;
-	display: inline-block;
-  vertical-align: top;
-	width: 30%;
-}
-
-.container input{
-	min-height: 25px;
-	display: inline-block;
-	width: 50%;
-}
-
-.container textarea {
-	display: inline-block;
-	margin-top: 10px;
-	width: 50%;
-}
-.container select {
-	min-height: 25px;
-	display: inline-block;
-	width: 51%;
-}
-
-.container input[type=number] {
-  min-height: 25px;
-	display: inline-block;
-	width: 49.4%;
-}
 
 .right{
   text-align: right;
