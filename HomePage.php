@@ -188,6 +188,7 @@ echo
 
 
 ';
+$_SESSION['EventID']=$row[0];
 		
 }
 ?>
