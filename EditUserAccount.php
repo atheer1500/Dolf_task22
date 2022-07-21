@@ -45,7 +45,7 @@ $newPass = $_REQUEST['newPass'];
     $row=mysqli_fetch_row($result);
 
 //Action if the password is correct
-    if ($pass == $row[0])
+    if ($pass == $row[2])
         header('location: UserAccount.php?problem=PASSCORRECT'); //go back to the page
 
       else

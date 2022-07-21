@@ -85,8 +85,8 @@ $row=mysqli_fetch_row($result);
 
 
 <p>
-<label for="Email">First name:</label>
-    <input type="text" name="newEmail" id="Email"
+<label for="firstName">First name:</label>
+    <input type="text" name="first_name" id="firstName"
    value = "<?php echo $row[0] ?>" 
    >
 </p>
@@ -94,8 +94,8 @@ $row=mysqli_fetch_row($result);
 <br>
 
 <p>
-<label for="Email">Last name:</label>
-    <input type="text" name="newEmail" id="Email"
+<label for="lastName">Last name:</label>
+    <input type="text" name="last_name" id="lastName"
    value = "<?php echo $row[1] ?>" 
    >
 </p>
@@ -103,18 +103,20 @@ $row=mysqli_fetch_row($result);
 <br>
 
              
+
+
+
 <p>
    
-<label>Gender:     </label>
-
+<label>Gender:</label> 
 <span style = "float: right">
-    <input type="radio" id="f2" name="user_gender" value="Female">
-<label for="f" style="float: none;  margin-right: 25px;">Female</label>
 
-<input type="radio" id="m" name="user_gender" value="Male">
-<label for="m" style="float: none;">Male</label>
+    <input type="radio" id="f2" name="user_gender" value="Female" <?php if ($row[4] == 'F') echo 'checked="checked"'; ?>>
+<label for="f" style="float: none; margin-right: 25px;">Female</label>
+
+<input type="radio" id="m" name="user_gender" value="Male" <?php if ($row[4] == 'M') echo 'checked="checked"'; ?>>
+<label for="m" style="float: none;">Male</label><br>
   </span>
-
 </p>
 
 <br>
