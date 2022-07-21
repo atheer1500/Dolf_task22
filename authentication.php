@@ -22,9 +22,11 @@ use function PHPSTORM_META\type;
       {
 
         $sql = "SELECT `FirstName` FROM `end_user` WHERE `UserEmail`='".$Id."' AND `Password`=".$pass.";";  
-        $_SESSION["userID"]=$Id; //To book and edit account
+        
         $result = mysqli_query($conn, $sql);  
-        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
+        while( $row = mysqli_fetch_array($result, MYSQLI_ASSOC))
+        { 
+        $_SESSION["userID"]=$Id; //To book and edit account
         $count = mysqli_num_rows($result);  
      
         if($count == 1){  
@@ -33,6 +35,7 @@ use function PHPSTORM_META\type;
         else{  
             echo "<h1> Login failed. Invalid username or password. user</h1>";  
         }    
+        }
      }
      else  if ($type=='Admin')
      {
