@@ -43,7 +43,7 @@ opacity: 0.2;
 
 <div class="sidenav">
   <a href="homepage.php"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="UserProfile.php"><i class="fa-solid fa-user"></i> My profile </a>
+  <a href="UserProfile.php"><i class="fa-solid fa-id-card"></i> My profile </a>
 
   <a href="UserAccount.php"><i class="fa-solid fa-user"></i> My account </a>
 
@@ -68,7 +68,7 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
 
 echo '
 <div style="text-align: center; ">
-<div style="display: inline-block; width: 25%;" class ="userFormBackground">
+<div style="display: inline-block; text-align: right; width: 25%;" class ="formBackground">
 
 <form class="myform" name ="adminForm" action="EditManagerAccount.php" method="post">';
 
@@ -102,17 +102,25 @@ $row=mysqli_fetch_row($result);
 
 <br>
 
+             
 <p>
-<label for="Email">Gender:</label>
-    <input type="text" name="newEmail" id="Email"
-   value = "<?php echo $row[4] ?>" 
-   >
+   
+<label>Gender:     </label>
+
+<span style = "float: right">
+    <input type="radio" id="f2" name="user_gender" value="Female">
+<label for="f" style="float: none;  margin-right: 25px;">Female</label>
+
+<input type="radio" id="m" name="user_gender" value="Male">
+<label for="m" style="float: none;">Male</label>
+  </span>
+
 </p>
 
 <br>
+<br>
 
 
-<p> </p>
 
 
 <input type="submit" id="updateButton" value="Update" name="update_button" style="float:left;" class="submitbutton" onclick = "return(validateNew());"> 
