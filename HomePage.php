@@ -138,18 +138,12 @@
 <body class="homePage">
     
 
-<script>
-      function Logout()
-      {
-         <?php
-         include_once("Logout.php");
-         ?>
-      }
-      </script>
 <div class="sidenav">
   <a href="homepage.php"><i class="fa-solid fa-house"></i> Home</a>
+  <a href="UserAccount.php"><i class="fa-solid fa-user"></i> My account </a>
+
   <a href=""><i class="fa-solid fa-ticket"></i> My tickets</a>
-  <a href="index.html" onclick="Logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+  <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 </div>
 
 
