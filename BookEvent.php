@@ -30,7 +30,7 @@ $SqlForEvents="SELECT `Title`,`Time`,`Date`,`Description`,`AvailableTickets__`,`
 if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))  
  {
   while($RowForEvents =mysqli_fetch_array($ResultSqlForEvents))
-  {
+  {echo $RowForEvents['Title'];
     $_SESSION['Title']=$RowForEvents['Title'];
     $_SESSION['Time']=$RowForEvents['Time'];
     $_SESSION['Date']=$RowForEvents['Date'];
@@ -40,7 +40,7 @@ if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))
     echo"
     <form action='#' method='post' name ='' >
 <p>
-<span class='lab ' style='margin-left: 24%; font-size:25px;width: 90%; text-transform: Uppercase;' >Consort Name</span>
+<span class='lab ' style='margin-left: 24%; font-size:25px;width: 90%; text-transform: Uppercase;' >".$_SESSION['Title']."</span>
 </p>
 <p>
 
