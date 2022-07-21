@@ -136,6 +136,12 @@ span.lab
     <span class ="pic">  <img src="upload.png" height="140px" width="140px" id="img"></span>         
 </label>
 </p>
+<p>
+<span class="lab " style="margin-left: 32%;" >
+<div class='Date-Time'><i class='far fa-clock'></i>Date
+<i class='far fa-calendar-alt'></i> Time</div>
+</span>
+</p>
 
 <p>
 <span class="lab " style="margin-left: 32%;" >Actor Name</span>
@@ -148,13 +154,13 @@ span.lab
 
 <p>
 <label for="Tickets"><span class="lab">Payment Method :</span></label>
-<div class="paymentRadio">
 
-<input type="radio" id="cash" name="Payment" value="cash">
-<label for="cash">Cash</label><br>
-<input type="radio" id="card" name="Payment" value="card">
-<label for="card">Card</label><br>
-</div>
+<span style="display: inline-block;" class="paymentRadio">
+<input type="radio" id="cash" name="Payment" value="cash" >Cash
+<input type="radio" id="card" name="Payment" value="card" >Card
+
+
+</span>
 </p>
 
 

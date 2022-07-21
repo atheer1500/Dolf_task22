@@ -364,14 +364,15 @@ div#book
 */
 .paymentRadio
 {
-
-  display: inline-block;
+ 
+   display: inline; 
   min-height: 25px;
-	width: 30%;
   font-size: 15px;
-  margin-top: -190px;
   margin-left: 150px;
+  margin-top: -50px;
+
 }
+
 
 /*form style*/
 
