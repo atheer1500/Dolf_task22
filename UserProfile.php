@@ -52,8 +52,8 @@ opacity: 0.2;
 </div>
 
 
-<div class="main" style="margin-top: 5%">
-<h2>User Account</h2>
+<div class="main" style="margin-top: 10%">
+<h2>User Profile</h2>
 
 <?php
 //Show success/fail meesages
@@ -111,77 +111,12 @@ $row=mysqli_fetch_row($result);
 
 <br>
 
-<p>
-<label for="Email">Email:</label>
-    <input type="text" name="newEmail" id="Email"
-   value = "<?php echo $row[3] ?>" disabled
-   >
-</p>
-
-
-<br>
-
-<p>
-<label for="Pass" style="">Password:</label>
-    <input type="password" name="newPass" id="Pass" value = "<?php if (isset ($_GET['problem']) and ($_GET['problem']=='PASSCORRECT')) echo $row[2] ?>"
-    disabled
-   >
-   <i class="fa-solid fa-eye-slash" style="cursor:pointer; display: none; position: relative; left: 70%;" id="eyeSlash" onclick="showPass()"></i>
-   <i class="fa-solid fa-eye" style="cursor:pointer; display: none; position: relative; left: 70%;" id="eyeIcon" onclick="showPass()"></i>
-
-</p>
-<br>
 
 <p> </p>
 
-<!-- For authentication, enter current password first -->
-<div id="authentication">
-<p>
-<strong><label for="currentPass">Enter your current password to update your account information.</label></strong><br><br><br>
-    <input type="password" name="current_pass" id="currentPass" style="  float: none;" >
 
-   
-</p>
-<?php
-if (isset ($_GET['problem']) and ($_GET['problem']=='PASSERROR')) 
-      echo "<p style='color:red;'>Incorrect password. Please try again. </p> ";
- ?>
-<br>
-
-<div class="center">
-<input type="submit" value="Ok" name="OK_button" style="" class="submitbutton"  onclick = "return(validate());">
-  </div>
-  </div>
-
-<?php 
-if (isset ($_GET['problem']) and ($_GET['problem']=='PASSCORRECT')){
-
-    // echo <strong> <p id="text1" style ="display: none;">Enter the account new information:</p> </strong>
-
-      echo " <script>
-      $( '#Email' ).prop('disabled', false);
-      $( '#Pass' ).prop('disabled', false);
-     
-      $( '#eyeSlash' ).show();
-      $( '#text1' ).show();
-
-      $( '#authentication' ).hide();
-
-        </script>";
-      
-
-      echo
-      ' <div class="center">
-      <br>
-      <input type="submit" id="updateButton" value="Update" name="update_button" style="float:left;" class="submitbutton" onclick = "return(validateNew());"> 
+<input type="submit" id="updateButton" value="Update" name="update_button" style="float:left;" class="submitbutton" onclick = "return(validateNew());"> 
       <input type="submit" id="cancelButton" value="Cancel" name = "cancel_button" style="float:right; width:30%;  " >
-      <br><br><br>
-
-
-   </div> ';}
-                    ?>
-
-
  
         
 

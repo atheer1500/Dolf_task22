@@ -40,9 +40,10 @@ opacity: 0.2;
 </style>
 </head>
 <body class="homePage admin">
-
 <div class="sidenav">
   <a href="homepage.php"><i class="fa-solid fa-house"></i> Home</a>
+  <a href="UserProfile.php"><i class="fa-solid fa-user"></i> My profile </a>
+
   <a href="UserAccount.php"><i class="fa-solid fa-user"></i> My account </a>
 
   <a href=""><i class="fa-solid fa-ticket"></i> My tickets</a>
@@ -50,7 +51,7 @@ opacity: 0.2;
 </div>
 
 
-<div class="main" style="margin-top: 5%">
+<div class="main" style="margin-top: 10%">
 <h2>User Account</h2>
 
 <?php
@@ -66,7 +67,7 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
 
 echo '
 <div style="text-align: center; ">
-<div style="display: inline-block; width: 25%;" class ="userFormBackground">
+<div style="display: inline-block; width: 25%;" class ="formBackground">
 
 <form class="myform" name ="adminForm" action="EditManagerAccount.php" method="post">';
 
@@ -83,34 +84,7 @@ $row=mysqli_fetch_row($result);
 
 
 <p>
-<label for="Email">First name:</label>
-    <input type="text" name="newEmail" id="Email"
-   value = "<?php echo $row[0] ?>" 
-   >
-</p>
-
-<br>
-
-<p>
-<label for="Email">Last name:</label>
-    <input type="text" name="newEmail" id="Email"
-   value = "<?php echo $row[1] ?>" 
-   >
-</p>
-
-<br>
-
-<p>
-<label for="Email">Gender:</label>
-    <input type="text" name="newEmail" id="Email"
-   value = "<?php echo $row[4] ?>" 
-   >
-</p>
-
-<br>
-
-<p>
-<label for="Email">Email:</label>
+<label for="Email">User Email:</label>
     <input type="text" name="newEmail" id="Email"
    value = "<?php echo $row[3] ?>" disabled
    >
@@ -120,7 +94,7 @@ $row=mysqli_fetch_row($result);
 <br>
 
 <p>
-<label for="Pass" style="">Password:</label>
+<label for="Pass" style="">User Password:</label>
     <input type="password" name="newPass" id="Pass" value = "<?php if (isset ($_GET['problem']) and ($_GET['problem']=='PASSCORRECT')) echo $row[2] ?>"
     disabled
    >
