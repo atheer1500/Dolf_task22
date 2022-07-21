@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['MangerID']))
+header('location:login.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,11 +94,13 @@ body{
 </head>
 <body class="admin">
 
+
 <div class="sidenav">
   <a href="ManagerHome.php"><i class="fa-solid fa-house"></i> Home</a>
+  <a href="ManagerAccount.php"><i class="fa-solid fa-user"></i> My account </a>
+  <a href="viewManger.php"><i class="fa-solid fa-calendar-check"></i> My events </a>
   <a href="ManagerNewEvent.php"><i class="fa-solid fa-circle-plus"></i> Add Event </a>
-  <a href="viewManger.php"><i class="fa-solid fa-circle-plus"></i> My events </a>
-  <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
+  <a href="Logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 </div>
 
 

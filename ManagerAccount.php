@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION['MangerID']))
+$managerID = $_SESSION["MangerID"];
+else
+header('location:login.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +14,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=yes, initial-scale=1.0">
-    <title>Admin Account</title>
+    <title>Manager Account</title>
     <link rel="stylesheet" href="CSS/Maincss.css?v=<?php echo time(); ?>">
     <style type="text/css">
 
@@ -48,26 +56,17 @@ opacity: 0.2;
 </head>
 <body class="homePage admin">
 
-<script>
-      function Logout()
-      {
-         <?php
-         include_once("Logout.php");
-         ?>
-      }
-      </script>
 <div class="sidenav">
-<a href="AdminHome.php"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="AdminAccount.php"><i class="fa-solid fa-user"></i> My Account</a>
-
-  <a href="AdminNewActor.php"><i class="fa-solid fa-circle-plus"></i> Add Actor</a>
-  <a href="AdminNewManager.php"><i class="fa-solid fa-circle-plus"></i> Add Manager</a>
-  <a href="index.html" onclick="Logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
+  <a href="ManagerHome.php"><i class="fa-solid fa-house"></i> Home</a>
+  <a href="ManagerAccount.php"><i class="fa-solid fa-user"></i> My account </a>
+  <a href="viewManger.php"><i class="fa-solid fa-calendar-check"></i> My events </a>
+  <a href="ManagerNewEvent.php"><i class="fa-solid fa-circle-plus"></i> Add Event </a>
+  <a href="Logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 </div>
 
 
 <div class="main" style="margin-top: 10%">
-<h2>Admin Account</h2>
+<h2>Manager Account</h2>
 <strong> <p id="text1" style ="display: none;">Enter the account new information:</p> </strong>
 
 <?php
@@ -85,14 +84,14 @@ echo '
 <div style="text-align: center;">
 <div style="display: inline-block; text-align: left;">
 
-<form class="myform" name ="adminForm" action="EditAdmin.php" method="post">';
+<form class="myform" name ="adminForm" action="EditManagerAccount.php" method="post">';
 
 //Database connention
 $conn = mysqli_connect("localhost:3306", "root", "", "event");
 if (!$conn)
 die ("Could not connect to the database");
 
-$query = "SELECT * FROM `admin`";
+$query = "SELECT * FROM `event_manger` WHERE `MangerID` = '$managerID'";
 $result=mysqli_query($conn, $query);
 $row=mysqli_fetch_row($result);
 ?>        
@@ -100,9 +99,9 @@ $row=mysqli_fetch_row($result);
 
 
 <p>
-<label for="adminEmail">Admin Email:</label>
-    <input type="text" name="admin_newEmail" id="adminEmail"
-   value = "<?php echo $row[0] ?>" disabled
+<label for="Email">Manager Email:</label>
+    <input type="text" name="newEmail" id="Email"
+   value = "<?php echo $row[1] ?>" disabled
    >
 </p>
 
@@ -110,8 +109,8 @@ $row=mysqli_fetch_row($result);
 <br>
 
 <p>
-<label for="adminPass" style="">Admin Password:</label>
-    <input type="password" name="admin_newPass" id="adminPass" value = "<?php if (isset ($_GET['problem']) and ($_GET['problem']=='PASSCORRECT')) echo $row[1] ?>"
+<label for="Pass" style="">Manager Password:</label>
+    <input type="password" name="newPass" id="Pass" value = "<?php if (isset ($_GET['problem']) and ($_GET['problem']=='PASSCORRECT')) echo $row[0] ?>"
     disabled
    >
 </p>
@@ -141,8 +140,8 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='PASSERROR'))
 <?php 
 if (isset ($_GET['problem']) and ($_GET['problem']=='PASSCORRECT')){
       echo " <script>
-      $( '#adminEmail' ).prop('disabled', false);
-      $( '#adminPass' ).prop('disabled', false);
+      $( '#Email' ).prop('disabled', false);
+      $( '#Pass' ).prop('disabled', false);
      
       
       $( '#text1' ).show();
