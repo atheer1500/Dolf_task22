@@ -30,7 +30,6 @@ use function PHPSTORM_META\type;
         $count = mysqli_num_rows($result);  
      
         if($count == 1){ 
-            echo "<h1><center> Login successful  User</center></h1>"; 
            header("Location:HomePage.php") ;
         }  
         else{  
