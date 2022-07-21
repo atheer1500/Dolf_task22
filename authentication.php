@@ -20,7 +20,9 @@ use function PHPSTORM_META\type;
         //  $pass = mysqli_real_escape_string( $conn,  $pass);  
       if ($type=='UserE')
       {
+
         $sql = "SELECT `FirstName` FROM `end_user` WHERE `UserEmail`='$Id' AND `Password`=".$pass.";";  
+        $_SESSION["userID"]=$Id; //To book and edit account
         $result = mysqli_query($conn, $sql);  
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
         $count = mysqli_num_rows($result);  
