@@ -82,7 +82,7 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
 
 echo '
 <div style="text-align: center;">
-<div style="display: inline-block; text-align: left;">
+<div style="display: inline-block; text-align: left; width: 25%">
 
 <form class="myform" name ="adminForm" action="EditManagerAccount.php" method="post">';
 
@@ -113,6 +113,9 @@ $row=mysqli_fetch_row($result);
     <input type="password" name="newPass" id="Pass" value = "<?php if (isset ($_GET['problem']) and ($_GET['problem']=='PASSCORRECT')) echo $row[0] ?>"
     disabled
    >
+   <i class="fa-solid fa-eye-slash" style="cursor:pointer; display: none; position: relative; left: 70%;" id="eyeSlash" onclick="showPass()"></i>
+   <i class="fa-solid fa-eye" style="cursor:pointer; display: none; position: relative; left: 70%;" id="eyeIcon" onclick="showPass()"></i>
+
 </p>
 <br>
 
@@ -121,7 +124,7 @@ $row=mysqli_fetch_row($result);
 <!-- For authentication, enter current password first -->
 <div id="authentication">
 <p>
-<strong><label for="currentPass">Enter your current password to update your email or password.</label></strong><br><br>
+<strong><label for="currentPass">Enter your current password to update your account information.</label></strong><br><br><br>
     <input type="password" name="current_pass" id="currentPass" style="  float: none;" >
 
    
@@ -143,7 +146,7 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='PASSCORRECT')){
       $( '#Email' ).prop('disabled', false);
       $( '#Pass' ).prop('disabled', false);
      
-      
+      $( '#eyeSlash' ).show();
       $( '#text1' ).show();
 
       $( '#authentication' ).hide();
@@ -215,6 +218,24 @@ if (!emailFormat.test(email)) {
 
 
       }
+
+      
+  function showPass() {
+  var passField = document.getElementById("Pass");
+  //var eyeIcon = document.getElementById("eyeIcon");
+  //var eyeSlash = document.getElementById("eyeSlash");
+
+  if (passField.type === "password") {
+    passField.type = "text";
+    $( '#eyeIcon' ).show();
+    $( '#eyeSlash' ).hide();
+
+  } else {
+    passField.type = "password";
+    $( '#eyeIcon' ).hide();
+    $( '#eyeSlash' ).show();
+  }
+}
 </script>
 </body>
 </html>

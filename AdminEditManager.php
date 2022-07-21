@@ -63,21 +63,14 @@ button, .buttonstyle, input[type=submit]
 </head>
 <body class="homePage admin">
 
-<script>
-      function Logout()
-      {
-         <?php
-         include_once("Logout.php");
-         ?>
-      }
-      </script>
+
 <div class="sidenav">
 <a href="AdminHome.php"><i class="fa-solid fa-house"></i> Home</a>
   <a href="AdminAccount.php"><i class="fa-solid fa-user"></i> My Account</a>
 
   <a href="AdminNewActor.php"><i class="fa-solid fa-circle-plus"></i> Add Actor</a>
   <a href="AdminNewManager.php"><i class="fa-solid fa-circle-plus"></i> Add Manager</a>
-  <a href="index.html" onclick="Logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
+  <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
 </div>
 
 

@@ -48,25 +48,17 @@ opacity: 0.2;
 </head>
 <body class="homePage admin">
 
-<script>
-      function Logout()
-      {
-         <?php
-         include_once("Logout.php");
-         ?>
-      }
-      </script>
 <div class="sidenav">
 <a href="AdminHome.php"><i class="fa-solid fa-house"></i> Home</a>
   <a href="AdminAccount.php"><i class="fa-solid fa-user"></i> My Account</a>
 
   <a href="AdminNewActor.php"><i class="fa-solid fa-circle-plus"></i> Add Actor</a>
   <a href="AdminNewManager.php"><i class="fa-solid fa-circle-plus"></i> Add Manager</a>
-  <a href="index.html" onclick="Logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
+  <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
 </div>
 
 
-<div class="main" style="margin-top: 10%">
+<div class="main" style="margin-top: 10%;">
 <h2>Admin Account</h2>
 <strong> <p id="text1" style ="display: none;">Enter the account new information:</p> </strong>
 
@@ -82,8 +74,8 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
 
 
 echo '
-<div style="text-align: center;">
-<div style="display: inline-block; text-align: left;">
+<div style="text-align: center; ">
+<div style="display: inline-block; text-align: left; width: 25%">
 
 <form class="myform" name ="adminForm" action="EditAdmin.php" method="post">';
 
@@ -113,8 +105,13 @@ $row=mysqli_fetch_row($result);
 <label for="adminPass" style="">Admin Password:</label>
     <input type="password" name="admin_newPass" id="adminPass" value = "<?php if (isset ($_GET['problem']) and ($_GET['problem']=='PASSCORRECT')) echo $row[1] ?>"
     disabled
-   >
+   > 
+
+
+<i class="fa-solid fa-eye-slash" style="cursor:pointer; display: none; position: relative; left: 70%;" id="eyeSlash" onclick="showPass()"></i>
+<i class="fa-solid fa-eye" style="cursor:pointer; display: none; position: relative; left: 70%;" id="eyeIcon" onclick="showPass()"></i>
 </p>
+
 <br>
 
 <p> </p>
@@ -122,7 +119,7 @@ $row=mysqli_fetch_row($result);
 <!-- For authentication, enter current password first -->
 <div id="authentication">
 <p>
-<strong><label for="currentPass">Enter your current password to update your email or password.</label></strong><br><br>
+<strong><label for="currentPass">Enter your current password to update your account information.</label></strong><br><br><br>
     <input type="password" name="current_pass" id="currentPass" style="  float: none;" >
 
    
@@ -144,7 +141,8 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='PASSCORRECT')){
       $( '#adminEmail' ).prop('disabled', false);
       $( '#adminPass' ).prop('disabled', false);
      
-      
+      $( '#eyeSlash' ).show();
+
       $( '#text1' ).show();
 
       $( '#authentication' ).hide();
@@ -216,6 +214,24 @@ if (!emailFormat.test(email)) {
 
 
       }
+
+
+  function showPass() {
+  var passField = document.getElementById("adminPass");
+  //var eyeIcon = document.getElementById("eyeIcon");
+  //var eyeSlash = document.getElementById("eyeSlash");
+
+  if (passField.type === "password") {
+    passField.type = "text";
+    $( '#eyeIcon' ).show();
+    $( '#eyeSlash' ).hide();
+
+  } else {
+    passField.type = "password";
+    $( '#eyeIcon' ).hide();
+    $( '#eyeSlash' ).show();
+  }
+}
 </script>
 </body>
 </html>
