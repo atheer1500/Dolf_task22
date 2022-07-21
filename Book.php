@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>View conserts</title>
     <script>
-      function Logout()
-      {
-         <?php
-         include_once("Logout.php");
-         ?>
-      }
+      // function Logout()
+      // {
+      //    <?php
+      //    include_once("Logout.php");
+      //    ?>
+      // }
       </script>
       <style>
 
@@ -98,8 +98,8 @@ span.lab
 {
 
 	display: inline-block;
-  min-height: 25px;
-	width: 30%;
+  /* min-height: 25px; */
+	/* width: 30%; */
   font-size: 15px;
   margin-top: 5px;
 }
@@ -107,6 +107,7 @@ span.lab
 {
   margin-left: 26%;
 }
+
         </style>
 </head>
 <body class="LoginRegisterPage">
@@ -120,26 +121,28 @@ span.lab
 
 <!-- <i class=" fa-solid fa-hand-wave "></i> -->
 
-<?php include("BookEvent.php"); ?>
+<!-- <?php include("BookEvent.php"); ?> -->
 <div class="container">
 <form action="#" method="post" name ="" >
-<p>
-    <label for="events"><span class="lab">Choose A Consort:</span></label>
+<!-- <p>
+    <label for="events"><span class="lab">The Consort you choose:</span></label>
     <select name="events" id="events" >
     <option value="super juni">super juni</option>
   <option value="wow">wow</option>  
     </select>
+</p> -->
+<p>
+<span class="lab " style="margin-left: 24%; font-size:25px;width: 90%; text-transform: Uppercase;" >Consort Name</span>
 </p>
-
 <p>
 
     <span class ="pic">  <img src="upload.png" height="140px" width="140px" id="img"></span>         
 </label>
 </p>
 <p>
-<span class="lab " style="margin-left: 32%;" >
-<div class='Date-Time'><i class='far fa-clock'></i>Date
-<i class='far fa-calendar-alt'></i> Time</div>
+<span class="lab " style="margin-left: 19%; width: 90%;" >
+<i class='far fa-clock'>&nbsp; &nbsp;&nbsp; &nbsp;</i>Date &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<i class='far fa-calendar-alt'>&nbsp; &nbsp;&nbsp; &nbsp;</i> Time
 </span>
 </p>
 
