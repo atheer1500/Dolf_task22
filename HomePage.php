@@ -223,7 +223,8 @@ echo '<table cellpadding="40"  style = "text-align: center; margin-left:auto; ma
 $count = 0;
 echo '<tr>';
 while ($row=mysqli_fetch_row($result))
-{ $_SESSION['EventID']=$row[0];
+{  
+  $_SESSION['EventID']=$row[0];
         $count ++;
         
         echo '<td>
