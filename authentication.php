@@ -39,6 +39,7 @@ use function PHPSTORM_META\type;
        
        while( $row = mysqli_fetch_array($result, MYSQLI_ASSOC))
        {
+        $_SESSION['AdminID']=$row["AdminID"];
        $count = mysqli_num_rows($result);  
     
        if($count == 1){  
