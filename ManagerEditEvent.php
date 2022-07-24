@@ -36,69 +36,14 @@ td {
 
 button, .buttonstyle, input[type=submit]
 {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border: 1px solid white;
-    border-radius: 50px;
-    padding: 10px;
-    text-decoration: none;
     color: white;
-    font-weight: bold;
-    font-size: medium;
-    background: none;
-    text-align: center;
-    margin: 10px;
 }
 
-.container {
-	padding: 20px;
-	background-color: rgba(0, 0, 0, 0.5);
-	margin: auto;
-	margin-top: 20px;
-	line-height: 30px;
-	width: 500px;
-  text-align: left;
-  border-radius: 20px;
-}
-
-.container span {
-	padding-left: 40px;
-	display: inline-block;
-  vertical-align: top;
-	width: 30%;
-}
-
-.container input{
-	min-height: 25px;
-	display: inline-block;
-	width: 50%;
-}
-
-.container textarea {
-	display: inline-block;
-	margin-top: 10px;
-	width: 50%;
-}
-.container select {
-	min-height: 25px;
-	display: inline-block;
-	width: 51%;
-}
-
-.container input[type=number] {
-  min-height: 25px;
-	display: inline-block;
-	width: 49.4%;
-}
 
 .right{
   text-align: right;
 }
 
-body{
-    color: white;
-    font-size:2em;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
 
 </style>
 </head>
@@ -116,7 +61,6 @@ body{
 
 <div class="main">
 <h2>Edit Event</h2>
-<h4>Enter the event new information:</h4>
 
 <div class="container">
 

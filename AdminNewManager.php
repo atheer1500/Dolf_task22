@@ -63,7 +63,7 @@ button, .buttonstyle, input[type=submit]
 
 
 <div class="main" style="margin-top: 10%">
-<h2>Add New Event Manager</h2>
+<h2>New Event Manager</h2>
 
 <div style="text-align: center;">
 <div class= "formBackground">

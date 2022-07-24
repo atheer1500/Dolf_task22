@@ -58,7 +58,7 @@ button, .buttonstyle, input[type=submit]
 
 
 <div class="main" style="margin-top: 10%">
-<h2>Add New Actor</h2>
+<h2>New Actor</h2>
 
 <div style="text-align: center;">
 <div class= "formBackground">

@@ -456,6 +456,7 @@ div#book
 	width: 500px;
   text-align: left;
   border-radius: 20px;
+
 }
 
 .container span {
@@ -469,17 +470,29 @@ div#book
 	min-height: 25px;
 	display: inline-block;
 	width: 50%;
+
+  
+  border: 2px solid rgb(187, 187, 187);
+  border-radius: 4px;
 }
 
 .container textarea {
 	display: inline-block;
 	margin-top: 10px;
 	width: 50%;
+
+  
+  border: 2px solid rgb(187, 187, 187);
+  border-radius: 4px;
 }
 .container select {
 	min-height: 25px;
 	display: inline-block;
 	width: 51%;
+
+  
+  border: 2px solid rgb(187, 187, 187);
+  border-radius: 4px;
 }
 
 .container input[type=number] {

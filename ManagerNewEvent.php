@@ -59,12 +59,11 @@ button, .buttonstyle, input[type=submit]
 
 
 <div class="main">
-<h2>Add New Event</h2>
-<h4>Enter the event information:</h4>
+<h2>Create Event</h2>
 
 <div class="container">
 
-<form action="InsertEvent.php" method="post" name ="newEventForm" onsubmit = "return(validate());">
+<form  action="InsertEvent.php" method="post" name ="newEventForm" onsubmit = "return(validate());">
 <?php
 if (isset ($_GET['problem']) and ($_GET['problem']=='ADD')) {
 echo '<script> window.onload=function(){alert("The event is added successfuly");}; </script>';}
