@@ -43,13 +43,6 @@ button, .buttonstyle, input[type=submit]
   text-align: right;
 }
 
-body{
-    background-attachment: fixed;
-    color: white;
-    font-size:2em;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-}
 
 </style>
 </head>

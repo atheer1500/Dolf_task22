@@ -68,7 +68,9 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
 
 echo '
 <div style="text-align: center; ">
-<div style="display: inline-block; text-align: right; width: 25%;" class ="formBackground">
+<div style="display: inline-block; text-align: right; " class ="formBackground">
+
+
 
 <form class="myform" name ="adminForm" action="EditUserProfile.php" method="post">';
 

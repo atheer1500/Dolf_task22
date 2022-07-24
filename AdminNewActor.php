@@ -59,10 +59,9 @@ button, .buttonstyle, input[type=submit]
 
 <div class="main" style="margin-top: 10%">
 <h2>Add New Actor</h2>
-<h4>Enter the actor information:</h4>
 
 <div style="text-align: center;">
-<div style="display: inline-block; text-align: left;">
+<div class= "formBackground">
 
 <form class ="myform" name ="newActorForm" action="InsertActor.php" method="post" onsubmit = "return(validate());">
 <?php
@@ -103,9 +102,9 @@ echo '<script> window.onload=function(){alert("Failed to add the actor!");}; </s
 
 </p>
 
-<br>
+<br><br>
 
-           <div class="center"><input type="submit" value="Add" class="submitbutton"> </div>
+           <div class="center"><input type="submit" value="Add Actor" class="submitbutton" style="width: 90%"> </div>
          </form>
 </div>
 </div>

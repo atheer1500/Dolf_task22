@@ -64,10 +64,9 @@ button, .buttonstyle, input[type=submit]
 
 <div class="main" style="margin-top: 10%">
 <h2>Add New Event Manager</h2>
-<h4>Enter the manager information:</h4>
 
 <div style="text-align: center;">
-<div style="display: inline-block; text-align: left;">
+<div class= "formBackground">
 <form class="myform" name ="newManagerForm" action="InsertManager.php" method="post" onsubmit = "return(validate());">
 <?php
 if (isset ($_GET['problem']) and ($_GET['problem']=='ADD')) {
@@ -96,10 +95,10 @@ echo '<script> window.onload=function(){alert("Failed to add the manager!");}; <
     <input type="text" name="manager_pass" id="managerPass">
 </p>
 
-<br>        <br>  
+<br><br>  <br>
 
  
-           <div class="center"><input type="submit" value="Add" class="submitbutton"> </div>
+           <div class="center"><input type="submit" value="Create Account" class="submitbutton" style="width: 90%"> </div>
          </form>
 </div>
 </div>

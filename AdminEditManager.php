@@ -13,7 +13,7 @@ header('location:login.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=yes, initial-scale=1.0">
     <title>Admin Home</title>
-    <link rel="stylesheet" href="CSS/Maincss.css">
+    <link rel="stylesheet" href="CSS/Maincss.css?v=<?php echo time(); ?>">
     <style type="text/css">
 
 
@@ -22,47 +22,6 @@ td {
   text-align: left;
 }
 
-button, .buttonstyle, input[type=submit]
-{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border: 1px solid white;
-    border-radius: 50px;
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: medium;
-    background: none;
-    text-align: center;
-    margin: 10px;
-    cursor: pointer;
-
-}
-
-
-/*form style*/
-.myform input[type=text], input[type=password] {
-  border: none;
-  border-radius: 4px;
-  float: right;
-}
-
-.myform input[type=submit] {
-  float: center;
-}
-
-.myform label {
-  border-radius: 4px;
-  float: left;
-  padding-right: 10px;
-}
-
-
-.myform .submitbutton {
-   width:30%; 
-   background-color:white; 
-   color: #8497b5;
-}
 
 
 </style>
@@ -82,7 +41,6 @@ button, .buttonstyle, input[type=submit]
 
 <div class="main" style="margin-top: 10%">
 <h2>Edit Event Manager</h2>
-<h4>Enter the manager new information:</h4>
 
 <?php
 //Show success/fail meesages
@@ -106,7 +64,7 @@ $managerID = $_GET['id'];
 
 echo '
 <div style="text-align: center;">
-<div style="display: inline-block; text-align: left;">
+<div class= "formBackground">
 
 <form class="myform" name ="newManagerForm" action="EditManager.php?id=' . $managerID . '" method="post" onsubmit = "return(validate());">';
 
@@ -132,7 +90,7 @@ $row=mysqli_fetch_row($result);
 <br>
 
 <p>
-<label for="managerEmail">Manager Email:</label>
+<label for="managerEmail">Email:</label>
     <input type="text" name="manager_email" id="managerEmail"
    value = "<?php echo $row[1] ?>"
    >
@@ -142,20 +100,20 @@ $row=mysqli_fetch_row($result);
 <br>
 
 <p>
-<label for="managerPass">Manager Password:</label>
+<label for="managerPass">Password:</label>
     <input type="text" name="manager_pass" id="managerPass"
    value = "<?php echo $row[0] ?>"
    >
 </p>
 
-<br>
+<br><br>
 
  
          <div class="center">
             <input type="submit" value="Save" name="update_button" style="float:left;" class="submitbutton"> 
             <input type="submit" value="Cancel" name = "cancel_button" style="float:right; width:30%;  ">
-            <br><br><br>
-           <input type="submit" value="Delete this manager" name = "delete_button"style="background-color: #ea9087;" onclick = "return confirm('Are you sure you want to delete?')">
+            <br><br>
+           <input type="submit" value="Delete Event Manager" name = "delete_button"style="background-color: red; border:none; color: white; width:90%;" onclick = "return confirm('Are you sure you want to delete?')">
 
 
          </div> 

@@ -22,24 +22,6 @@ td {
   text-align: left;
 }
 
-button, .buttonstyle, input[type=submit]
-{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border: 1px solid white;
-    border-radius: 50px;
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: medium;
-    background: none;
-    text-align: center;
-    margin: 10px;
-    cursor: pointer;
-
-}
-
-
 
 
 </style>
@@ -59,7 +41,6 @@ button, .buttonstyle, input[type=submit]
 
 <div class="main" style="margin-top: 10%">
 <h2>Edit Actor</h2>
-<h4>Enter the actor new information:</h4>
 
 <?php
 //Show success/fail meesages
@@ -83,7 +64,7 @@ $actorID = $_GET['id'];
 
 echo '
 <div style="text-align: center;">
-<div style="display: inline-block; text-align: left;">
+<div class= "formBackground">
 <form class ="myform" name ="newActorForm" action="EditActor.php?id=' . $actorID . '" method="post" onsubmit = "return(validate());">';
 
 //Database connention
@@ -133,8 +114,8 @@ $row=mysqli_fetch_row($result);
          <div class="center">
             <input type="submit" value="Save" name="update_button"style="float:left;" class="submitbutton">
             <input type="submit" value="Cancel" name = "cancel_button"style="float:right; width:30%;  ">
-            <br><br><br>
-           <input type="submit" value="Delete this actor" name = "delete_button"style="background-color: #ea9087" onclick = "return confirm('This actor and its events will be deleted!')">
+            <br><br>
+           <input type="submit" value="Delete Actor" name = "delete_button"style="background-color: red; border:none; color: white; width:90%;" onclick = "return confirm('This actor and its events will be deleted!')">
 
 
          </div> 

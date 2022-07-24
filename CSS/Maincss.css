@@ -12,12 +12,14 @@
  body {
   /*background-image:linear-gradient(to right bottom, #efaf96, #eaa897, #e4a197, #de9a98, #d69499, #d0919f, #c88fa5, #be8ea9, #b090b1, #a193b6, #9295b7, #8497b5);*/
   /*background-image: linear-gradient(#e66465, #9198e5);*/
+  /*background-image: linear-gradient(#e7f0ff, #c6dbff);*/
 
   background-color: #e3e8e8;
-  /*background-image: linear-gradient(#e7f0ff, #c6dbff);*/
   background-attachment: fixed;
 
   color: black;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
 
@@ -435,7 +437,8 @@ div#book
   border-radius: 20px;
   max-height:250px;
   min-height:250px;
-
+  width: 350px;
+  display: inline-block;
 }
 
 

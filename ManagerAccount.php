@@ -66,7 +66,7 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
 
 echo '
 <div style="text-align: center; ">
-<div style="display: inline-block; width: 25%;" class ="formBackground">
+<div style="display: inline-block;" class ="formBackground">
 
 <form class="myform" name ="adminForm" action="EditManagerAccount.php" method="post">';
 
@@ -113,11 +113,11 @@ $row=mysqli_fetch_row($result);
 
    
 </p>
+<p id ="errormsg" style='color:red; visibility: hidden'>Incorrect password. Please try again. </p>
 <?php
 if (isset ($_GET['problem']) and ($_GET['problem']=='PASSERROR')) 
-      echo "<p style='color:red;'>Incorrect password. Please try again. </p> ";
+      echo "<script>  $( '#errormsg' ).css('visibility', 'visible');</script> ";
  ?>
-<br>
 
 <div class="center">
 <input type="submit" value="Ok" name="OK_button" style="" class="submitbutton"  onclick = "return(validate());">
