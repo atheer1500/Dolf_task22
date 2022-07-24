@@ -102,6 +102,23 @@ button, .buttonstyle, input[type=submit]
 
 }
 
+/*
+.buttonstyle2{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: medium;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 10px;
+
+
+width:30%; 
+background-color:#8497b5; 
+border: none;
+color: white;
+
+}*/
+
+
 .center{
 
     margin-left:auto; margin-right: auto;
@@ -405,7 +422,7 @@ div#book
 }
 
 
-.myform .submitbutton {
+.myform .submitbutton, .buttonstyle2 {
    width:30%; 
    background-color:#8497b5; 
    border: none;

@@ -78,14 +78,14 @@
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #efaf96;
+  background-color: #C0C0C0;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #ea9087;
+  background-color: #8497b5;
 }
 
 /* Fading animation */
@@ -103,26 +103,6 @@
     height: 450px;
 }
 
-.sidenav {
-  height: 100%;
-  width: 160px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background: rgba(255, 255, 255, .2);
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 14px;
-  color: white;
-  display: block;
-  margin-bottom: 25px;
-}
 
 /* .sidenav a:hover {
 } */
@@ -135,13 +115,13 @@
 
 </style>
 </head>
-<body class="homePage">
+<body onload="" class="homePage">
     
 
 
 <div class="sidenav">
   <a href="homepage.php"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="UserProfile.php"><i class="fa-solid fa-user"></i> My profile </a>
+  <a href="UserProfile.php"><i class="fa-solid fa-id-card"></i> My profile </a>
 
   <a href="UserAccount.php"><i class="fa-solid fa-user"></i> My account </a>
 
@@ -151,7 +131,7 @@
 
 
 <div class="main">
-<p> Recently added:</p>
+<h3> Recently added:<h3>
 <!-- Slideshow container -->
 <div class="slideshow-container">
 
@@ -193,9 +173,7 @@ $_SESSION['EventID']=$row[0];
 }
 ?>
 
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
 </div>
 
 <br>
@@ -269,6 +247,28 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
+
+
+
+// // Change Image
+// function changeImg(){	
+// 	// Run function every x seconds
+//     plusSlides(1);
+//     window.setInterval(changeImg, time);
+//   }
+
+// // Run function when page loads
+// //window.onload=changeImg;
+
+// window.onload = function(){
+//    setTimeout(changeImg, 3000)
+// };
+
+
+
+
+
 </script>
 
 
