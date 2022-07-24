@@ -156,7 +156,7 @@ else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR1')){
 
 
  
-           <div class="center"><input type="submit" value="Create Event" style="background-color: #8497b5; border:none; " onclick="sendEmail()"> </div>
+           <div class="center"><input type="submit" value="Create Event" class="submitbutton" style="background-color: #8497b5; border:none; " onclick="sendEmail()"> </div>
          </form>
 
 </div>

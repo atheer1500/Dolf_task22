@@ -424,7 +424,7 @@ div#book
 }
 
 
-.myform .submitbutton, .buttonstyle2 {
+.myform .submitbutton{
    width:30%; 
    background-color:#8497b5; 
    border: none;
@@ -449,7 +449,7 @@ div#book
 
 .container {
 	padding: 20px;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgb(255, 255, 255);
 	margin: auto;
 	margin-top: 20px;
 	line-height: 30px;
@@ -499,4 +499,8 @@ div#book
   min-height: 25px;
 	display: inline-block;
 	width: 49.4%;
+}
+
+.container input[type=submit] {
+
 }

@@ -36,7 +36,17 @@ td {
 
 button, .buttonstyle, input[type=submit]
 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 10px;
+    text-decoration: none;
     color: white;
+    font-weight: bold;
+    font-size: medium;
+    background: none;
+    text-align: center;
+    margin: 10px;
 }
 
 
