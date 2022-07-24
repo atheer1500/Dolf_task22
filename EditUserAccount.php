@@ -28,8 +28,13 @@ $newPass = $_REQUEST['newPass'];
  $updateQuery = "UPDATE `end_user` set `UserEmail` = '$email', `Password` = '$newPass'";
 
       //action for update here
-      if(mysqli_query($conn, $updateQuery))
-        header('location: UserAccount.php?problem=UPDATED'); //go back to the EDIT page
+      if(mysqli_query($conn, $updateQuery)){
+        //update session value 
+        $_SESSION["userID"] = $email;
+        
+         header('location: UserAccount.php?problem=UPDATED'); //go back to the EDIT page
+      }
+       
       
       
       else

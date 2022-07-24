@@ -70,7 +70,7 @@ echo '
 <div style="text-align: center; ">
 <div style="display: inline-block; text-align: right; width: 25%;" class ="formBackground">
 
-<form class="myform" name ="adminForm" action="EditManagerAccount.php" method="post">';
+<form class="myform" name ="adminForm" action="EditUserProfile.php" method="post">';
 
 //Database connention
 $conn = mysqli_connect("localhost:3306", "root", "", "event");

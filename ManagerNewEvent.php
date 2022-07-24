@@ -9,6 +9,7 @@ header('location:login.php');
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://kit.fontawesome.com/191f749b6c.js" crossorigin="anonymous"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=yes, initial-scale=1.0">
@@ -163,7 +164,7 @@ else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR1')){
 
 
  
-           <div class="center"><input type="submit" value="Create Event" style="background-color: #8497b5; border:none;"> </div>
+           <div class="center"><input type="submit" value="Create Event" style="background-color: #8497b5; border:none; " onclick="sendEmail()"> </div>
          </form>
 
 </div>

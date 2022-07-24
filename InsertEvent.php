@@ -62,6 +62,14 @@ $conflictCount = mysqli_num_rows($conflictResult);
   $sql2 = "INSERT INTO `edit_event`(`MangerID`, `EventID`) 
                       VALUES ('$managerID ', '$eventID')";
   if(mysqli_query($conn, $sql2)){
+//    // the message
+// $msg = "First line of text\nSecond line of text";
+
+// // use wordwrap() if lines are longer than 70 characters
+// $msg = wordwrap($msg,70);
+
+// // send email
+// mail("someone@example.com","My subject",$msg);
    header('location: ManagerNewEvent.php?problem=ADD'); //Insert to the database, then go back to the add page
   }
 

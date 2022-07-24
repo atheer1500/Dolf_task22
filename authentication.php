@@ -21,17 +21,17 @@ use function PHPSTORM_META\type;
       if ($type=='UserEmail')
       {
 
-        $sql = "SELECT `FirstName` FROM `end_user` WHERE `UserEmail`='".$Id."' AND `Password`=".$pass.";";  
+        $sql = "SELECT `UserEmail` FROM `end_user` WHERE `UserEmail`='".$Id."' AND `Password`=".$pass.";";  
         
         $result = mysqli_query($conn, $sql);  
         while( $row = mysqli_fetch_array($result, MYSQLI_ASSOC))
         { 
-        
+        $_SESSION["userID"]=$row["UserEmail"]; //To book and edit account
+
         $count = mysqli_num_rows($result);  
      
         if($count == 1){ 
            header("Location:HomePage.php") ;
-           $_SESSION["userID"]=$Id; //To book and edit account
         }  
         else{  
             echo "<h1> Login failed. Invalid username or password. user</h1>";  
