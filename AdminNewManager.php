@@ -73,8 +73,12 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='ADD')) {
 echo '<script> window.onload=function(){alert("The manager is added successfuly");}; </script>';}
 
 else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR')){
-echo '<script> window.onload=function(){alert("Failed to add the manager!");}; </script>         ';
+echo '<script> window.onload=function(){alert("Failed: Something went wrong!");}; </script>         ';
 }
+
+else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR1')){
+  echo '<script> window.onload=function(){alert("Failed: The event manager account already exists!");}; </script>         ';
+  }
 ?>                    
 <p>
     <label for="managerName">Manager Name:</label>

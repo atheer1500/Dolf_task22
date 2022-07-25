@@ -30,7 +30,21 @@ $admin_id = $row[2];
  $sql = "INSERT INTO  `event_manger`  VALUES ('$pass',
      '$email','$name', '' ,'$admin_id')";
   
- if(mysqli_query($conn, $sql)){
+
+
+
+
+//Check if manager already exists.
+
+$conflictQuery = "SELECT * FROM `event_manger` WHERE `MangerEmail` = '$email'";
+$conflictResult=mysqli_query($conn, $conflictQuery);
+$conflictCount = mysqli_num_rows($conflictResult);
+
+ if ($conflictCount > 0){
+    header('location: AdminNewManager.php?problem=ADDERROR1');
+ }
+
+ else if(mysqli_query($conn, $sql)){
    header('location: AdminNewManager.php?problem=ADD'); //go back to the add page
 
  }

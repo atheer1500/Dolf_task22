@@ -65,7 +65,7 @@ $actorID = $_GET['id'];
 echo '
 <div style="text-align: center;">
 <div class= "formBackground">
-<form class ="myform" name ="newActorForm" action="EditActor.php?id=' . $actorID . '" method="post" onsubmit = "return(validate());">';
+<form class ="myform" name ="newActorForm" action="EditActor.php?id=' . $actorID . '" method="post" >';
 
 //Database connention
 $conn = mysqli_connect("localhost:3306", "root", "", "event");
@@ -115,7 +115,7 @@ $row=mysqli_fetch_row($result);
 
  <br><br>
          <div class="center">
-            <input type="submit" value="Save" name="update_button"style="float:left;" class="submitbutton">
+            <input type="submit" value="Save" name="update_button"style="float:left;" class="submitbutton" onclick = "return(validate());">
             <input type="submit" value="Cancel" name = "cancel_button"style="float:right; width:30%;  ">
             <br><br>
            <input type="submit" value="Delete Actor" name = "delete_button"style="background-color: red; border:none; color: white; width:90%;" onclick = "return confirm('This actor and its events will be deleted!')">
