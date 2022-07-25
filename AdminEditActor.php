@@ -52,6 +52,9 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
    }
 
 
+   else if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATEERROR1')){
+    echo '<script> window.onload=function(){alert("Failed: The actor email is taken!");}; </script>         ';
+    }
 
    else if (isset ($_GET['problem']) and ($_GET['problem']=='DELETEERROR')){
       echo '<script> window.onload=function(){alert("Failed to delete the actor!");}; </script>         ';

@@ -69,7 +69,7 @@
         //Action for update here
 
         //Check if event conflict with other events date & time
-        $conflictQuery = "SELECT * FROM `events` WHERE `Time` = '$time' AND `Date` = '$date'";
+        $conflictQuery = "SELECT * FROM `events` WHERE `Time` = '$time' AND `Date` = '$date' AND `EventID` != '$eventID'";
         $conflictResult=mysqli_query($conn, $conflictQuery);
         $conflictCount = mysqli_num_rows($conflictResult);
         if ($conflictCount > 0){

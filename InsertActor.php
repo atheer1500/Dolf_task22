@@ -36,7 +36,19 @@
  $sql = "INSERT INTO actor  VALUES ('$name',
      '$email','$gender', '' ,'$admin_id')";
   
- if(mysqli_query($conn, $sql)){
+
+  //Check if if email is taken for another manager.
+
+$conflictQuery = "SELECT * FROM `actor` WHERE `ActorEmail` = '$email'";
+$conflictResult=mysqli_query($conn, $conflictQuery);
+$conflictCount = mysqli_num_rows($conflictResult);
+
+ if ($conflictCount > 0){
+    header('location: AdminNewManager.php?problem=ADDERROR1');
+ }
+
+
+ else if(mysqli_query($conn, $sql)){
    header('location: AdminNewActor.php?problem=ADD'); //go back to the add page
 
  }

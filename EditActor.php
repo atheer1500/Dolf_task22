@@ -37,6 +37,16 @@
  
  $updateQuery = "UPDATE actor set `Name` = '$name', `ActorEmail` = '$email', `Gender` = '$gender' WHERE `ActorID` = '$ID'";
 
+      //Check if if email is taken for another ACTOR.
+
+      $conflictQuery = "SELECT * FROM `actor` WHERE `ActorEmail` = '$email' AND `ActorID` != '$ID'";
+      $conflictResult=mysqli_query($conn, $conflictQuery);
+      $conflictCount = mysqli_num_rows($conflictResult);
+
+      if ($conflictCount > 0){
+          header('location: AdminEditActor.php?id=' . $ID . '&problem=UPDATEERROR1');
+      }
+
       //action for update here
       if(mysqli_query($conn, $updateQuery))
         header('location: AdminEditActor.php?id=' . $ID . '&problem=UPDATED'); //go back to the EDIT page

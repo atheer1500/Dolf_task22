@@ -34,7 +34,7 @@ $admin_id = $row[2];
 
 
 
-//Check if manager already exists.
+//Check if if email is taken for another manager.
 
 $conflictQuery = "SELECT * FROM `event_manger` WHERE `MangerEmail` = '$email'";
 $conflictResult=mysqli_query($conn, $conflictQuery);

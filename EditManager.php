@@ -34,8 +34,18 @@
  
  $updateQuery = "UPDATE `event_manger` set `Password` = '$password', `MangerEmail` = '$email', `Name` = '$name' WHERE `MangerID` = '$ID'";
 
+      //Check if if email is taken for another manager.
+
+      $conflictQuery = "SELECT * FROM `event_manger` WHERE `MangerEmail` = '$email' AND `MangerID` != '$ID'";
+      $conflictResult=mysqli_query($conn, $conflictQuery);
+      $conflictCount = mysqli_num_rows($conflictResult);
+
+      if ($conflictCount > 0){
+          header('location: AdminEditManager.php?id=' . $ID . '&problem=UPDATEERROR1');
+      }
+
       //action for update here
-      if(mysqli_query($conn, $updateQuery))
+      else if(mysqli_query($conn, $updateQuery))
         header('location: AdminEditManager.php?id=' . $ID . '&problem=UPDATED'); //go back to the EDIT page
       
       
