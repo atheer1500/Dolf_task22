@@ -83,7 +83,7 @@ $row=mysqli_fetch_row($result);
 
 
 <p>
-<label for="Email">Manager Email:</label>
+<label for="Email"><i class="fa-solid fa-envelope"></i> Manager Email:</label>
     <input type="text" name="newEmail" id="Email"
    value = "<?php echo $row[1] ?>" disabled
    >
@@ -93,7 +93,7 @@ $row=mysqli_fetch_row($result);
 <br>
 
 <p>
-<label for="Pass" style="">Manager Password:</label>
+<label for="Pass" style=""><i class="fa-solid fa-key"></i> Manager Password:</label>
     <input type="password" name="newPass" id="Pass" value = "<?php if (isset ($_GET['problem']) and ($_GET['problem']=='PASSCORRECT')) echo $row[0] ?>"
     disabled
    >

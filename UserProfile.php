@@ -110,7 +110,7 @@ $row=mysqli_fetch_row($result);
 
 <p>
    
-<label>Gender:</label> 
+<label><i class="fa-solid fa-person-half-dress"></i> Gender:</label> 
 <span style = "float: right">
 
     <input type="radio" id="f2" name="user_gender" value="Female" <?php if ($row[4] == 'F') echo 'checked="checked"'; ?>>
@@ -123,7 +123,7 @@ $row=mysqli_fetch_row($result);
 
 <br>
 <br>
-
+<br>
 
 
 

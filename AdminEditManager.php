@@ -90,7 +90,7 @@ $row=mysqli_fetch_row($result);
 <br>
 
 <p>
-<label for="managerEmail">Email:</label>
+<label for="managerEmail">Manager Email:</label>
     <input type="text" name="manager_email" id="managerEmail"
    value = "<?php echo $row[1] ?>"
    >
@@ -100,7 +100,7 @@ $row=mysqli_fetch_row($result);
 <br>
 
 <p>
-<label for="managerPass">Password:</label>
+<label for="managerPass">Manager Password:</label>
     <input type="text" name="manager_pass" id="managerPass"
    value = "<?php echo $row[0] ?>"
    >
@@ -113,7 +113,7 @@ $row=mysqli_fetch_row($result);
             <input type="submit" value="Save" name="update_button" style="float:left;" class="submitbutton"> 
             <input type="submit" value="Cancel" name = "cancel_button" style="float:right; width:30%;  ">
             <br><br>
-           <input type="submit" value="Delete Event Manager" name = "delete_button"style="background-color: red; border:none; color: white; width:90%;" onclick = "return confirm('Are you sure you want to delete?')">
+           <input type="submit" value="Delete Manager" name = "delete_button"style="background-color: red; border:none; color: white; width:90%;" onclick = "return confirm('Are you sure you want to delete?')">
 
 
          </div> 

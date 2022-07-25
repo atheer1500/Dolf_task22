@@ -84,18 +84,18 @@ echo '<script> window.onload=function(){alert("Failed to add the manager!");}; <
    <br>          
              
 <p>
-    <label for="managerEmail">Email:</label>
+    <label for="managerEmail">Manager Email:</label>
     <input type="text" name="manager_email" id="managerEmail">
 </p>
 
 <br>          
 
 <p>
-    <label for="managerPass">Password:</label>
+    <label for="managerPass">Manager Password:</label>
     <input type="text" name="manager_pass" id="managerPass">
 </p>
 
-<br><br>  <br>
+<br> <br> <br>
 
  
            <div class="center"><input type="submit" value="Create Account" class="submitbutton" style="width: 90%"> </div>

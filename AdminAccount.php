@@ -70,7 +70,7 @@ $row=mysqli_fetch_row($result);
 
 
 <p>
-<label for="adminEmail">Admin Email:</label>
+<label for="adminEmail"><i class="fa-solid fa-envelope"></i> Admin Email:</label>
     <input type="text" name="admin_newEmail" id="adminEmail"
    value = "<?php echo $row[0] ?>" disabled
    >
@@ -80,7 +80,7 @@ $row=mysqli_fetch_row($result);
 <br>
 
 <p>
-<label for="adminPass" style="">Admin Password:</label>
+<label for="adminPass" style=""><i class="fa-solid fa-key"></i> Admin Password:</label>
     <input type="password" name="admin_newPass" id="adminPass" value = "<?php if (isset ($_GET['problem']) and ($_GET['problem']=='PASSCORRECT')) echo $row[1] ?>"
     disabled
    > 

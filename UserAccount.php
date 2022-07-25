@@ -84,7 +84,7 @@ $row=mysqli_fetch_row($result);
 
 
 <p>
-<label for="Email">User Email:</label>
+<label for="Email"><i class="fa-solid fa-envelope"></i> User Email:</label>
     <input type="text" name="newEmail" id="Email"
    value = "<?php echo $row[3] ?>" disabled
    >
@@ -94,7 +94,7 @@ $row=mysqli_fetch_row($result);
 <br>
 
 <p>
-<label for="Pass" style="">User Password:</label>
+<label for="Pass" style=""><i class="fa-solid fa-key"></i> User Password:</label>
     <input type="password" name="newPass" id="Pass" value = "<?php if (isset ($_GET['problem']) and ($_GET['problem']=='PASSCORRECT')) echo $row[2] ?>"
     disabled
    >
@@ -102,9 +102,8 @@ $row=mysqli_fetch_row($result);
    <i class="fa-solid fa-eye" style="cursor:pointer; display: none; position: relative; left: 70%;" id="eyeIcon" onclick="showPass()"></i>
 
 </p>
-<br>
 
-<p> </p>
+<br>
 
 <!-- For authentication, enter current password first -->
 <div id="authentication">

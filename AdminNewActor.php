@@ -91,18 +91,20 @@ echo '<script> window.onload=function(){alert("Failed to add the actor!");}; </s
               
 <p>
    
-<label>Gender: </label>
+<label>Actor Gender: </label>
+
+<span style = "float: right">
 
     <input type="radio" id="f2" name="actor_gender" value="Female">
-<label for="f" style="float: none;">Female</label>
+<label for="f" style="float: none; margin-right: 25px;">Female</label>
 
 <input type="radio" id="m" name="actor_gender" value="Male">
 <label for="m" style="float: none;">Male</label>
-
+</span>
 
 </p>
 
-<br><br>
+<br><br><br>
 
            <div class="center"><input type="submit" value="Add Actor" class="submitbutton" style="width: 90%"> </div>
          </form>
