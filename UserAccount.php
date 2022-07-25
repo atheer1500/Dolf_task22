@@ -69,7 +69,7 @@ echo '
 <div style="text-align: center; ">
 <div style="display: inline-block; " class ="formBackground">
 
-<form class="myform" name ="adminForm" action="EditUserAccount.php" method="post">';
+<form class="myform" name ="userForm" action="EditUserAccount.php" method="post">';
 
 //Database connention
 $conn = mysqli_connect("localhost:3306", "root", "", "event");
@@ -181,7 +181,7 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='PASSCORRECT')){
       
   function validateNew() {
 //1- Check if all information filled
-  if (document.forms["adminForm"]["admin_newPass"].value == ""  || document.forms["adminForm"]["admin_newEmail"].value == "")   {
+  if (document.forms["userForm"]["newPass"].value == ""  || document.forms["userForm"]["newEmail"].value == "")   {
     alert("Please fill all the fields.");
     //document.forms["newManagerForm"]["manager_name"].focus();
     return false;
@@ -189,7 +189,7 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='PASSCORRECT')){
 }
 
 //2- Check the Email format
-var email = document.forms["adminForm"]["admin_newEmail"].value;
+var email = document.forms["userForm"]["newEmail"].value;
 var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
 
 if (!emailFormat.test(email)) {
@@ -198,7 +198,7 @@ if (!emailFormat.test(email)) {
   }
 
   //3- Check password length
-    if (document.forms["adminForm"]["admin_newPass"].value.length > 10){
+    if (document.forms["userForm"]["newPass"].value.length > 10){
       alert("Please enter a pasword less than 10 characters. ");
    return false;
     }

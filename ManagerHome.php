@@ -51,7 +51,7 @@ td {
 <h2>Hello <?php echo  $row[0];?></h2>
 <h4>What would you like to do today?</h4>
 <div class="center">
-<a class ="buttonstyle" href="#events"> View all Events </a> <a class ="buttonstyle" href="viewManger.php">Manage my Events </a>
+<a class ="buttonstyle2" href="#events"> View all Events </a> <a class ="buttonstyle2" href="viewManger.php">Manage my Events </a>
 
 </div>
 

@@ -20,6 +20,10 @@ header('location:login.php');
 
 td {
   text-align: left;
+/* background-color:white;
+
+ border-radius: 25px;
+  width: 200px; */
 }
 
 p {
@@ -49,8 +53,8 @@ p {
 <h2>Welcome back admin</h2>
 <h4>What would you like to do today?</h4>
 <div class="center">
-<a class ="buttonstyle" href="#actors"> Manage Actors </a>
-<a class ="buttonstyle" href="#managers"> Manage Event Managers </a>
+<a class ="buttonstyle2" href="#actors"> Manage Actors </a>
+<a class ="buttonstyle2" href="#managers"> Manage Event Managers </a>
 </div>
 
 <br><br><br><br>
@@ -77,7 +81,7 @@ $n= mysqli_num_rows($result);
 if ($n==0)
 echo '<p>You did not add any actors yet</p>'; 
 
-echo '<table cellpadding="40"  style = "text-align: center; margin-left:auto; margin-right: auto">';
+echo '<table cellpadding="40"  style = "text-align: center; margin-left:auto; margin-right: auto; ">';
 $count = 0;
 echo '<tr>';
 while ($row=mysqli_fetch_row($result))
@@ -122,7 +126,7 @@ $n= mysqli_num_rows($result);
 if ($n==0)
 echo '<p>You did not add any event managers yet</p>'; 
 
-echo '<table cellpadding="40"  style = "text-align: center; margin-left:auto; margin-right: auto">';
+echo '<table cellpadding="40" cellspacing="10"  style = "text-align: center; margin-left:auto; margin-right: auto;">';
 $count = 0;
 echo '<tr>';
 while ($row=mysqli_fetch_row($result))
