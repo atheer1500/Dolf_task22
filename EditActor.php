@@ -19,10 +19,10 @@
 
  $ID = $_GET['id'];
 
-//Delete actor SQL
-$deleteQuery = "DELETE FROM actor WHERE `ActorID` = '$ID'";
-//Delete actor events SQL
-$deleteEventsQuery = "DELETE FROM `event` WHERE `ActorID` = '$ID'";
+
+
+
+
 
 
   
@@ -48,9 +48,24 @@ $deleteEventsQuery = "DELETE FROM `event` WHERE `ActorID` = '$ID'";
   
 
   else if (isset($_POST['delete_button'])) {
-      //action for delete
+      //Actions for delete
 
-      //First, delete Actor Events 
+      //First, delete Actor events from `edit_events` table.
+      $selectQuery = "SELECT `EventID` FROM  `events` WHERE `ActorID` = '$ID'";
+      $selectQueryResult = mysqli_query($conn, $selectQuery);
+
+      while ($row=mysqli_fetch_row($selectQueryResult)){
+        $deleteEventsQuery2 = "DELETE FROM  `edit_event` WHERE `EventID` = '$row[0]'";
+        mysqli_query($conn, $deleteEventsQuery2);
+      }
+
+      //Second, delete Actor events from `events` table.
+
+        //Delete actor SQL
+        $deleteQuery = "DELETE FROM actor WHERE `ActorID` = '$ID'";
+        //Delete actor events SQL
+        $deleteEventsQuery = "DELETE FROM `events` WHERE `ActorID` = '$ID'";
+
       if(mysqli_query($conn, $deleteEventsQuery)){
         //Now, delete the actor 
         if (mysqli_query($conn, $deleteQuery))

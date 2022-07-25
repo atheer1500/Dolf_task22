@@ -20,9 +20,9 @@
  $ID = $_GET['id'];
 
 
-$deleteQuery = "DELETE FROM `event_manger` WHERE `MangerID` = '$ID'";
 
-  
+
+
 
 
     if (isset($_POST['update_button'])) {
@@ -45,7 +45,27 @@ $deleteQuery = "DELETE FROM `event_manger` WHERE `MangerID` = '$ID'";
   
 
   else if (isset($_POST['delete_button'])) {
-      //action for delete
+      //Actions for delete
+
+      //First, delete events creeated by this manager.
+
+        $selectQuery = "SELECT `EventID` FROM `edit_event` WHERE `MangerID` = '$ID'";
+        $selectQueryResult = mysqli_query($conn, $selectQuery);
+
+        while ($row=mysqli_fetch_row($selectQueryResult)){
+
+          //1- Delete from `edit_event` table.
+          $deleteEventsQuery1 = "DELETE FROM `edit_event` WHERE `EventID` = '$row[0]'";
+          mysqli_query($conn, $deleteEventsQuery1);
+
+          //2- Delete from `events` table.
+          $deleteEventsQuery2 = "DELETE FROM  `events` WHERE `EventID` = '$row[0]'";
+          mysqli_query($conn, $deleteEventsQuery2);
+        }
+
+      //Second, delete manager.
+      $deleteQuery = "DELETE FROM `event_manger` WHERE `MangerID` = '$ID'";
+
       if(mysqli_query($conn, $deleteQuery)){
         header('location: AdminHome.php?problem=DELETED'); //go back to the EDIT page
       }
