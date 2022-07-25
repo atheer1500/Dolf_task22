@@ -32,9 +32,18 @@
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
+  bottom: -10px;
   width: 100%;
   text-align: center;
+  font-weight: lighter;
+}
+
+.title
+{
+  background-color: white;
+  border-radius: 50px 15px 50px  15px;
+  padding: 5px;
+
 }
 
 /* The dots/bullets/indicators */
@@ -66,17 +75,10 @@
 
 .poster{
     height: 450px;
+    
 }
 
 
-/* .sidenav a:hover {
-} */
-
-.main {
-  margin-left: 160px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
 
 </style>
 </head>
@@ -96,7 +98,7 @@
 
 
 <div class="main">
-<h3> Recently added:<h3>
+<h3> Recently Added <h3>
 <!-- Slideshow container -->
 <div class="slideshow-container">
 
@@ -118,14 +120,17 @@ while ($row=mysqli_fetch_row($result))
 
 echo
 '<div class="mySlides fade">
-<img class ="poster" src="'
+<img class ="poster imgborder" src="'
 . $row[6] .
 '" style="width:100%"> <br><br><br>
-<div class="text">'
+<div class="text">
+<p class ="title">
+'
 . $row[1] .
 '
-<br> <br>
-<a href="Book.php" class="buttonstyle"> Book Now</a>
+</p>
+<br>
+<a href="Book.php" class="buttonstyle2"> Book Now</a>
 
 </div>
 
@@ -151,7 +156,7 @@ $_SESSION['EventID']=$row[0];
 </div>
 
 <hr>
-<p>All Events:</p>
+<p>All Events</p>
 
 <?php
 $conn = mysqli_connect("localhost:3306", "root", "", "event");

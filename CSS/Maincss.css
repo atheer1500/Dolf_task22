@@ -23,6 +23,12 @@
 }
 
 
+
+a, button
+{
+  cursor: pointer;
+}
+
 .firstPage
 {
     background-image: linear-gradient(#e66465, #9198e5),
@@ -64,8 +70,6 @@
     text-align: center;
 }
 
-
-
 /*for event manager page*/
 .managerPage
 {
@@ -101,25 +105,23 @@ button, .buttonstyle, input[type=submit]
     text-align: center;
     margin: 10px;
     cursor: pointer;
-
 }
 
-/*
-.buttonstyle2{
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: medium;
-  text-decoration: none;
-  border-radius: 50px;
-  padding: 10px;
-
-
-width:30%; 
-background-color:#8497b5; 
-border: none;
-color: white;
-
-}*/
-
+.buttonstyle2
+{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid #8497b5;
+    border-radius: 50px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    background-color: #8497b5;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
 
 .center{
 
@@ -177,6 +179,7 @@ font-size: small;
   h1,h2,h3,h4,h5,h6
   {
     text-align: center;
+    color: #1c2841;
   }
   .LoginRegisterPage
 {
@@ -240,15 +243,6 @@ font-size: small;
   display: block;
   margin-bottom: 25px;
 }
-
-
-a, button
-{
-  cursor: pointer;
-}
-
-
-
 
 
 /*form style*/
@@ -501,6 +495,12 @@ div#book
 	width: 49.4%;
 }
 
-.container input[type=submit] {
 
+
+/* image */
+.imgborder{
+
+  border: 5px dotted #a0bfbf;
+  padding: 5PX;
+  border-radius: 25px;
 }
