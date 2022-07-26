@@ -119,7 +119,7 @@ span.lab
 
   <a href="UserAccount.php"><i class="fa-solid fa-user"></i> My account </a>
 
-  <a href=""><i class="fa-solid fa-ticket"></i> My tickets</a>
+  <a href="Mytickets.php"><i class="fa-solid fa-ticket"></i> My tickets</a>
   <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 </div>
 
