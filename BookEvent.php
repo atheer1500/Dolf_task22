@@ -1,44 +1,52 @@
 <?php
 
-//session_start();
-//include('connection.php'); 
-//$conn=OpenCon();
+session_start();
+include('connection.php'); 
+$conn=OpenCon();
 
     
-// $conn=OpenCon();
-// $SqlForFirstName="SELECT `FirstName` FROM `end_user` WHERE `UserEmail`='".$_SESSION["userID"]."';";
+$conn=OpenCon();
+$SqlForFirstName="SELECT `FirstName` FROM `end_user` WHERE `UserEmail`='".$_SESSION["userID"]."';";
 
-// if ($ResultSqlForFirstName = mysqli_query($conn, $SqlForFirstName))  
-//  {
-//   while($RowForFirstName =mysqli_fetch_array($ResultSqlForFirstName))
-//   {
-//     $_SESSION['FirstName']=$RowForFirstName['FirstName'];
-//     echo "<h2 style='margin-left:1%;'>Hi There ! ".$_SESSION['FirstName']."</h2>";
-//     echo "<h4 > To book an event <br> Please select :</h4>";
+if ($ResultSqlForFirstName = mysqli_query($conn, $SqlForFirstName))  
+ {
+  while($RowForFirstName =mysqli_fetch_array($ResultSqlForFirstName))
+  {
+    $_SESSION['FirstName']=$RowForFirstName['FirstName'];
+    echo "<h2 style='margin-left:1%;'>Hi There ! ".$_SESSION['FirstName']."</h2>";
+    echo "<h4 > To book an event <br> Please select :</h4>";
 
-//   }
-// }
+  }
+}
 
-// else  {
-//     printf("Error: %s\n", mysqli_error($conn));
-//     exit();
-// }
-
+else  {
+    printf("Error: %s\n", mysqli_error($conn));
+    exit();
+}
 
 //,`Time`,`Date`,`Description`,`AvailableTickets__`,`Pic`
-$SqlForEvents="SELECT `Title`,`Time`,`Date`,`AvailableTickets__`,`Pic` FROM `events` WHERE `EventID`='".$_SESSION['EventID']."';";
+$SqlForEvents="SELECT `Title`,`Time`,`Date`,`AvailableTickets__`,`Pic`,`ActorID` FROM `events` WHERE `EventID`='".$_SESSION['EventID']."';";
 if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))  
  {
   while($RowForEvents =mysqli_fetch_array($ResultSqlForEvents))
   {
+    $_SESSION['ActorID']=$RowForEvents['ActorID'];
     $_SESSION['Title']=$RowForEvents['Title'];
     $_SESSION['Time']=$RowForEvents['Time'];
     $_SESSION['Date']=$RowForEvents['Date'];
-  //  $_SESSION['Description']=$RowForEvents['Description'];
     $_SESSION['AvailableTickets__']=$RowForEvents['AvailableTickets__'];
     $_SESSION['Pic']=$RowForEvents['Pic'];
+    //  $_SESSION['Description']=$RowForEvents['Description']; 
+
+    $SqlForActor="SELECT `Name` FROM `actor` WHERE `ActorID`='".$_SESSION['ActorID']."';";
+    if ($ResultSqlForActor = mysqli_query($conn, $SqlForActor))  
+    {
+       while($RowForActor =mysqli_fetch_array($ResultSqlForActor))
+     {
+      $_SESSION['Name']=$RowForActor['Name'];
     echo"
-    <form action='#' method='post' name ='' >
+    <div class='container'>
+    <form action='BookAnEvent.php' method='post'  >
 <p>
 <span class='lab ' style='margin-left: 24%; font-size:25px;width: 90%; text-transform: Uppercase;' >".$_SESSION['Title']."</span>
 </p>
@@ -55,7 +63,7 @@ if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))
 </p>
 
 <p>
-<span class='lab ' style='margin-left: 32%;' >Actor Name</span>
+<span class='lab ' style='margin-left: 32%;' >".$_SESSION['Name']."</span>
 </p>
 
 <p>
@@ -74,12 +82,17 @@ if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))
 </span>
 </p>
 
+<input type='submit'style='margin-left:24%;' value='Submit'>
+</form></div>";
+     }
 
-</form>";
-   // $_SESSION['ActorID']=$RowForEvents['ActorID'];,`ActorID`
-// $_SESSION['']=$RowForEvents[''];
   }
+  else  {
+    printf("Error: %s\n", mysqli_error($conn));
+    exit();
+}
  
+}
 }
 
 else  {
