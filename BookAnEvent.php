@@ -129,7 +129,9 @@ span.lab
   <a href='Mytickets.php'><i class='fa-solid fa-ticket'></i> My tickets</a>
   <a href='logout.php'><i class='fa-solid fa-right-from-bracket'></i> Logout</a>
 </div>
-your Ticket Have been Bookde Successfully to view your booking click hear
+<h2 style='margin-left:10%;margin-top:20%;'> your Ticket Have been Bookde Successfully
+ to view your booking click hear</h2>
+
 ";
 }
 else  {
