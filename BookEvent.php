@@ -34,7 +34,7 @@ if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))
     $_SESSION['Title']=$RowForEvents['Title'];
     $_SESSION['Time']=$RowForEvents['Time'];
     $_SESSION['Date']=$RowForEvents['Date'];
-    $_SESSION['Description']=$RowForEvents['Description'];
+  //  $_SESSION['Description']=$RowForEvents['Description'];
     $_SESSION['AvailableTickets__']=$RowForEvents['AvailableTickets__'];
     $_SESSION['Pic']=$RowForEvents['Pic'];
     echo"
@@ -60,7 +60,7 @@ if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))
 
 <p>
 <label for='Tickets'><span class='lab'>Number Of Tickets : </span></label>
-<input type='number' id='Tickets' name='Tickets'min='1' max='100'>
+<input type='number' id='Tickets' name='Tickets'min='1' max='".$_SESSION['AvailableTickets__']."'>
 </p>
 
 <p>
