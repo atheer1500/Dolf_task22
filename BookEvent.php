@@ -26,7 +26,7 @@
 
 
 //,`Time`,`Date`,`Description`,`AvailableTickets__`,`Pic`
-$SqlForEvents="SELECT `Title`,`Time`,`Date`,`Description`,`AvailableTickets__`,`Pic` FROM `events` WHERE `EventID`='".$_SESSION['EventID']."';";
+$SqlForEvents="SELECT `Title`,`Time`,`Date`,`AvailableTickets__`,`Pic` FROM `events` WHERE `EventID`='".$_SESSION['EventID']."';";
 if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))  
  {
   while($RowForEvents =mysqli_fetch_array($ResultSqlForEvents))
@@ -49,8 +49,8 @@ if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))
 </p>
 <p>
 <span class='lab ' style='margin-left: 19%; width: 90%;' >
-<i class='far fa-clock'>&nbsp; &nbsp;&nbsp; &nbsp;</i>".$_SESSION['Date']." &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-<i class='far fa-calendar-alt'>&nbsp; &nbsp;&nbsp; &nbsp;</i> ".$_SESSION['Time']."
+<i class='far fa-clock'>&nbsp; &nbsp;&nbsp; &nbsp;</i>".$_SESSION['Time']." &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<i class='far fa-calendar-alt'>&nbsp; &nbsp;&nbsp; &nbsp;</i> ".$_SESSION['Date']."
 </span>
 </p>
 
