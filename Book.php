@@ -114,9 +114,13 @@ span.lab
 <body class="LoginRegisterPage">
    
 <div class="sidenav">
-  <a href="HomePage.php"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="#clients"><i class="fa-solid fa-ticket"></i> My tickets</a>
-  <a  href="Login.php" onclick="Logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+  <a href="homepage.php" class="focused"><i class="fa-solid fa-house"></i> Home</a>
+  <a href="UserProfile.php"><i class="fa-solid fa-id-card"></i> My profile </a>
+
+  <a href="UserAccount.php"><i class="fa-solid fa-user"></i> My account </a>
+
+  <a href=""><i class="fa-solid fa-ticket"></i> My tickets</a>
+  <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 </div>
 
 

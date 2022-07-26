@@ -12,7 +12,7 @@ VALUES ('".$_POST['Payment']."','".$_POST['Tickets']."','".$_SESSION["userID"]."
 $SqlUpdateEvent="UPDATE `events` SET `AvailableTickets__`='".($_SESSION['AvailableTickets__']-$_POST['Tickets'])."' WHERE `EventID`='".$_SESSION['EventID']."';";
 if ($ResultSqlInsertToBook= mysqli_query($conn, $SqlInsertToBook)&&$ResultSqlUpdateEvent= mysqli_query($conn, $SqlUpdateEvent))  
 {
-  echo "Booked sucssfly ";
+  include_once("homepage.php");
 }
 else  {
     printf("Error: %s\n", mysqli_error($conn));
