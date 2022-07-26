@@ -53,7 +53,7 @@ button, .buttonstyle, input[type=submit]
   <a href="ManagerHome.php"><i class="fa-solid fa-house"></i> Home</a>
   <a href="ManagerAccount.php"><i class="fa-solid fa-user"></i> My account </a>
   <a href="viewManger.php"><i class="fa-solid fa-calendar-check"></i> My events </a>
-  <a href="ManagerNewEvent.php"><i class="fa-solid fa-circle-plus"></i> Add Event </a>
+  <a href="ManagerNewEvent.php"  class="focused"><i class="fa-solid fa-circle-plus"></i> Add Event </a>
   <a href="Logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 </div>
 
