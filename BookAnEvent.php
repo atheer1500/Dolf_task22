@@ -12,7 +12,9 @@ VALUES ('".$_POST['Payment']."','".$_POST['Tickets']."','".$_SESSION["userID"]."
 $SqlUpdateEvent="UPDATE `events` SET `AvailableTickets__`='".($_SESSION['AvailableTickets__']-$_POST['Tickets'])."' WHERE `EventID`='".$_SESSION['EventID']."';";
 if ($ResultSqlInsertToBook= mysqli_query($conn, $SqlInsertToBook)&&$ResultSqlUpdateEvent= mysqli_query($conn, $SqlUpdateEvent))  
 {
-    echo " <link rel='stylesheet' href='CSS/Maincss.css' media='all' type='text/css'>
+    echo "<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src='https://kit.fontawesome.com/191f749b6c.js' crossorigin='anonymous'></script>
+     <link rel='stylesheet' href='CSS/Maincss.css' media='all' type='text/css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <title>View conserts</title>
     <script>
@@ -127,6 +129,7 @@ span.lab
   <a href=''><i class='fa-solid fa-ticket'></i> My tickets</a>
   <a href='logout.php'><i class='fa-solid fa-right-from-bracket'></i> Logout</a>
 </div>
+your Ticket Have been Bookde Successfully to view your booking click hear
 ";
 }
 else  {
