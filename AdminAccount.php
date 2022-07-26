@@ -29,7 +29,7 @@ td {
 
 <div class="sidenav">
 <a href="AdminHome.php"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="AdminAccount.php"><i class="fa-solid fa-user"></i> My Account</a>
+  <a href="AdminAccount.php"  class="focused"><i class="fa-solid fa-user"></i> My Account</a>
 
   <a href="AdminNewActor.php"><i class="fa-solid fa-circle-plus"></i> Add Actor</a>
   <a href="AdminNewManager.php"><i class="fa-solid fa-circle-plus"></i> Add Manager</a>
