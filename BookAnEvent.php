@@ -5,7 +5,7 @@ if (isset($_POST['Tickets'])&&isset($_POST['Payment']))
 session_start();
 include('connection.php'); 
 $conn=OpenCon();
-$newTicketsNumber=$_POST['Tickets']-$_SESSION['AvailableTickets__'];
+$newTicketsNumber=($_POST['Tickets'])-($_SESSION['AvailableTickets__']);
 $sqlInsertToBook="INSERT INTO `book`(`PaymentMethod`, `NumberOfTickets__`, `UserEmail`, `EventID`)
 VALUES ('".$_POST['Payment']."','".$_POST['Tickets']."','".$_SESSION["userID"]."','".$_SESSION['EventID']."');";
 
