@@ -199,6 +199,15 @@ while ($row=mysqli_fetch_array($result))
 }
 echo '</table>';
 ?>
+
+<footer>
+<div class ="left" > <a href="https://goo.gl/maps/9gHLJABFrQSNQtg2A" target="_blank">Location:<a> </div>
+
+<about>
+<br><br>
+© 2022 Copyright: maevents.com
+</footer>
+
 </div>
 
 <script>
