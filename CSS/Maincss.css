@@ -22,7 +22,14 @@
 
 }
 
-
+footer {
+  text-align: center;
+  font-size: medium;
+  margin: -18px;
+  margin-top: 300px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 50px;
+}
 
 a, button
 {
@@ -124,15 +131,18 @@ button, .buttonstyle, input[type=submit]
 }
 
 .center{
-
     margin-left:auto; margin-right: auto;
     text-align: center;
 }
 
 .left{
-
   margin-left:auto; margin-right: auto;
   text-align: left;
+}
+
+.right{
+  margin-left:auto; margin-right: auto;
+  text-align: right;
 }
 
 /*for sidebar menu*/
