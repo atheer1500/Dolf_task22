@@ -201,11 +201,38 @@ echo '</table>';
 ?>
 
 <footer>
-<div class ="left" > <a href="https://goo.gl/maps/9gHLJABFrQSNQtg2A" target="_blank">Location:<a> </div>
 
-<about>
-<br><br>
-© 2022 Copyright: maevents.com
+
+
+<div style="float: left; width: 200px; ">
+ <h2>Location</h2>
+ <p class="content" ><a href="https://goo.gl/maps/9gHLJABFrQSNQtg2A" target="_blank">
+  Prince Turkey Street - Al Khobar, Eastern Province, SA
+  </a></p>
+</div>
+
+
+<div style="float: right; width: 200px; ">
+<h2> About </h2>
+<p class="content"> Our aim is to help users to book events tickets easily. </p>
+</div>
+
+
+<div style="margin: 0 auto; width: 200px;">
+<h2>Contact Us</h2>
+
+<span class="icons" style="margin-right: 25px">
+  <i  class="fa-brands fa-twitter fa-xl"></i>
+</span>
+
+<span class="icons">
+  <i class="fa-brands fa-instagram fa-xl"></i></span>
+</div>
+
+<br><br><br><br>
+
+<p style="margin-bottom: -25px; opacity: 0.4;"> © 2022 Copyright: maevents.com </p>
+
 </footer>
 
 </div>
