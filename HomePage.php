@@ -11,7 +11,7 @@
     <style type="text/css">
 
 
-* {box-sizing:border-box}
+/* * {box-sizing:border-box} */
 
 /* Slideshow container */
 .slideshow-container {
@@ -89,7 +89,7 @@ text-align: left;
 
 
 <div class="sidenav">
-  <a href="homepage.php"><i class="fa-solid fa-house"></i> Home</a>
+  <a href="homepage.php" class="focused"><i class="fa-solid fa-house"></i> Home</a>
   <a href="UserProfile.php"><i class="fa-solid fa-id-card"></i> My profile </a>
 
   <a href="UserAccount.php"><i class="fa-solid fa-user"></i> My account </a>
@@ -161,8 +161,8 @@ $_SESSION['EventID']=$row[0];
 <hr>
 <h3>All Events</h3>
 <div class="left">
-  <input type="text" placeholder="Search event..." name="search" id="searchbar" style="height: 34px; position: relative; top: -6px;">
-  <span style="cursor: pointer; background-color: white; padding-left: 10px; padding-right: 10px; margin-left: -10px; border: solid 1px black;" onclick = "searchEvents()"><i class="fa fa-search fa-2xs"></i></span>
+  <input type="text" class="searchBar" placeholder="Search event..." name="search" id="searchbar">
+  <span class="searchIcon" onclick = "searchEvents()"><i class="fa fa-search fa-2xs"></i></span>
 </div>
 
 <?php
@@ -187,11 +187,11 @@ while ($row=mysqli_fetch_array($result))
 . $row[6] .
 
 '" style="width:200px; height: 300px;"> 
-<p class ="events">
-' 
+<p class ="events" style="font-size: medium; font-weight: bold;">
+'
 . $row[1] . 
 '</p>
-<br><a href="Book.php"  class="buttonstyle"> Book Now</a>
+<a href="Book.php"  class="buttonstyle"> Book Now</a>
         </td>';	
         //Add each 3 items in a new row
         if ($count % 3 == 0)	

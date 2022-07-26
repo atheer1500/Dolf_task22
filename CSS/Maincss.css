@@ -137,25 +137,31 @@ button, .buttonstyle, input[type=submit]
 
 /*for sidebar menu*/
 .sidenav {
-    height: 100%;
-    width: 160px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background: rgba(255, 255, 255, .2);
-    overflow-x: hidden;
-    padding-top: 20px;
-  }
-  
-  .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 14px;
-    color: white;
-    display: block;
-    margin-bottom: 25px;
-  }
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, .2);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #8497b5;
+  display: block;
+  margin-bottom: 25px;
+}
+
+.sidenav .focused {
+  color: black;
+  background-color: white;
+  width: 50px;
+  border-radius: 0px 50px 50px 0px;
+}
   
  /* .sidenav a:hover {
   color: #a0bfbf;
@@ -172,15 +178,6 @@ button, .buttonstyle, input[type=submit]
   {
 font-size: small;
   }
-
- /* .admin
-{
-    background: linear-gradient(#e66465, #9198e5);
-    background-attachment: fixed;
-    color: white;
-    font-size:2em;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}*/
 
 
   h1,h2,h3,h4,h5,h6
@@ -231,25 +228,7 @@ font-size: small;
   text-decoration: none;
   color:#063a62db;
 }
-.sidenav {
-  height: 100%;
-  width: 160px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background: rgba(255, 255, 255, .2);
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 14px;
-  color:#8497b5;
-  display: block;
-  margin-bottom: 25px;
-}
+
 
 
 /*form style*/
@@ -511,3 +490,32 @@ div#book
   padding: 5PX;
   border-radius: 25px;
 }
+
+
+
+
+
+/*search bar*/
+.searchIcon
+{
+  cursor: pointer; 
+  background-color: #C0C0C0;
+  padding-left: 10px; 
+  padding-right: 10px; 
+  margin-left: -10px; 
+
+  border-radius: 0px 5px 5px 0px;
+
+}
+
+.searchBar
+{
+  height: 33px; 
+  position: relative; 
+  top: -6px;
+
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+
+}
+

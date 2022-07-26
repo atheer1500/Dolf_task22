@@ -43,7 +43,7 @@ opacity: 0.2;
 
 <div class="sidenav">
   <a href="homepage.php"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="UserProfile.php"><i class="fa-solid fa-id-card"></i> My profile </a>
+  <a href="UserProfile.php" class="focused"><i class="fa-solid fa-id-card"></i> My profile </a>
 
   <a href="UserAccount.php"><i class="fa-solid fa-user"></i> My account </a>
 
