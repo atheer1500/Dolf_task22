@@ -107,6 +107,7 @@ span.lab
 .pic 
 {
   margin-left: 26%;
+
 }
 
         </style>
@@ -122,12 +123,6 @@ span.lab
   <a href="Mytickets.php"><i class="fa-solid fa-ticket"></i> My tickets</a>
   <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 </div>
-
-
-<!-- <i class=' fa-solid fa-hand-wave '></i> -->
-
-
-<?php include("BookEvent.php"); ?>
 
 
 </body>
