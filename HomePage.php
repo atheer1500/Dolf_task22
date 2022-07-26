@@ -162,7 +162,7 @@ $_SESSION['EventID']=$row[0];
 $conn = mysqli_connect("localhost:3306", "root", "", "event");
 if (!$conn)
 die ("Could not connect to the database");
-
+session_start();
 $query="select * from events";
 $result=mysqli_query($conn, $query);
 $n= mysqli_num_rows($result);
@@ -172,7 +172,7 @@ $count = 0;
 echo '<tr>';
 while ($row=mysqli_fetch_row($result))
 {  
-  $_SESSION['EventID']=$row[0];
+  $_SESSION['EventID']=$row['EventID'];
         $count ++;
         
         echo '<td>
