@@ -106,6 +106,7 @@ text-align: left;
 
   <!-- Full-width images with number and caption text -->
   <?php
+  session_start();
   #Maisaa's username is localhost:3308 while Ather's is localhost:3306 
 $conn = mysqli_connect("localhost:3306", "root", "", "event");
 if (!$conn)
@@ -117,7 +118,7 @@ $result=mysqli_query($conn, $query);
 $n= mysqli_num_rows($result);
 
 
-while ($row=mysqli_fetch_row($result))
+while ($row=mysqli_fetch_array($result))
 {
 
 echo
@@ -176,9 +177,9 @@ $n= mysqli_num_rows($result);
 echo '<table cellpadding="40"  style = "text-align: center; margin-left:auto; margin-right: auto">';
 $count = 0;
 echo '<tr>';
-while ($row=mysqli_fetch_row($result))
+while ($row=mysqli_fetch_array($result))
 {  
-  $_SESSION['EventID']=$row[0];
+  $_SESSION['EventID']=$row['EventID'];
         $count ++;
         
         echo '<td>
