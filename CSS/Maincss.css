@@ -129,6 +129,12 @@ button, .buttonstyle, input[type=submit]
     text-align: center;
 }
 
+.left{
+
+  margin-left:auto; margin-right: auto;
+  text-align: left;
+}
+
 /*for sidebar menu*/
 .sidenav {
     height: 100%;

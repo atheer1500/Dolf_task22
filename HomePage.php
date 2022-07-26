@@ -78,11 +78,13 @@
     
 }
 
-
+input[type=search]{
+text-align: left;
+}
 
 </style>
 </head>
-<body onload="" class="homePage">
+<body class="homePage">
     
 
 
@@ -156,7 +158,11 @@ $_SESSION['EventID']=$row[0];
 </div>
 
 <hr>
-<p>All Events</p>
+<h3>All Events</h3>
+<div class="left">
+  <input type="text" placeholder="Search event..." name="search" id="searchbar" style="height: 34px; position: relative; top: -6px;">
+  <span style="cursor: pointer; background-color: white; padding-left: 10px; padding-right: 10px; margin-left: -10px; border: solid 1px black;" onclick = "searchEvents()"><i class="fa fa-search fa-2xs"></i></span>
+</div>
 
 <?php
 $conn = mysqli_connect("localhost:3306", "root", "", "event");
@@ -179,8 +185,12 @@ while ($row=mysqli_fetch_row($result))
         <img class ="poster" src="'
 . $row[6] .
 
-'" style="width:200px; height: 300px;">
-<br><a href="Book.php"  class=" buttonstyle"> Book Now</a>
+'" style="width:200px; height: 300px;"> 
+<p class ="events">
+' 
+. $row[1] . 
+'</p>
+<br><a href="Book.php"  class="buttonstyle"> Book Now</a>
         </td>';	
         //Add each 3 items in a new row
         if ($count % 3 == 0)	
@@ -237,7 +247,46 @@ function showSlides(n) {
 
 
 
+//search for event
+function searchEvents() {
+    let serachInput = document.getElementById('searchbar').value
+    serachInput=serachInput.toLowerCase();
 
+    let eventTitle = document.getElementsByClassName('events');
+
+    for (i = 0; i < eventTitle.length; i++) { 
+        if (!eventTitle[i].innerHTML.toLowerCase().includes(serachInput)) {
+          eventTitle[i].parentElement.style.display="none";
+        }
+        else {
+          eventTitle[i].parentElement.style.display="table-cell	";                 
+        }
+    }
+}
+
+// function showAll(){	
+//   let serachInput = document.getElementById('searchbar').value
+//   let eventTitle = document.getElementsByClassName('events');
+
+//   if (serachInput == "") {
+//     for (i = 0; i < eventTitle.length; i++) { 
+//           eventTitle[i].parentElement.style.display="table-cell";
+//   }
+// }
+// }
+
+let searchInput = document.getElementById("searchbar")
+let eventTitle = document.getElementsByClassName('events');
+
+//If the user clears the search bar, show all events.
+searchInput.oninput = function(){
+  if(searchInput.value == "")
+  {
+    for (i = 0; i < eventTitle.length; i++) { 
+    eventTitle[i].parentElement.style.display="table-cell";
+}
+  }
+}
 
 </script>
 
