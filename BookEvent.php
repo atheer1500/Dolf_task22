@@ -46,7 +46,7 @@ if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))
       $_SESSION['Name']=$RowForActor['Name'];
     echo"
     <div class='container'>
-    <form action='#' method='post' name ='' >
+    <form action='BookAnEvent.php' method='post'  >
 <p>
 <span class='lab ' style='margin-left: 24%; font-size:25px;width: 90%; text-transform: Uppercase;' >".$_SESSION['Title']."</span>
 </p>
@@ -82,7 +82,7 @@ if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))
 </span>
 </p>
 
-
+<input type='submit'style='margin-left:24%;' value='Submit'>
 </form></div>";
      }
 
