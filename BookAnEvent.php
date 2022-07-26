@@ -143,8 +143,7 @@ else  {
 }
 }
 else if($_POST['Payment']=='card') {
-  printf("Error: %s\n", mysqli_error($conn));
-  exit();
+ 
 }
 
 }
