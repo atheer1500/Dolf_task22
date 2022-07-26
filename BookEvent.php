@@ -26,11 +26,11 @@ else  {
 
 
 
-$SqlForEvents="SELECT `Title`,`Time`,`Date`,`Description`,`AvailableTickets__`,`Pic` FROM `events` WHERE `EventID`=".$_SESSION['EventID'].";";
+$SqlForEvents="SELECT `Title`,`Time`,`Date`,`Description`,`AvailableTickets__`,`Pic` FROM `events` WHERE `EventID`='".$_SESSION['EventID']."';";
 if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))  
  {
   while($RowForEvents =mysqli_fetch_array($ResultSqlForEvents))
-  {echo $RowForEvents['Title'];
+  {
     $_SESSION['Title']=$RowForEvents['Title'];
     $_SESSION['Time']=$RowForEvents['Time'];
     $_SESSION['Date']=$RowForEvents['Date'];
