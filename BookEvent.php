@@ -1,29 +1,5 @@
 <?php
 
-//session_start();
-//include('connection.php'); 
-//$conn=OpenCon();
-
-    
-// $conn=OpenCon();
-// $SqlForFirstName="SELECT `FirstName` FROM `end_user` WHERE `UserEmail`='".$_SESSION["userID"]."';";
-
-// if ($ResultSqlForFirstName = mysqli_query($conn, $SqlForFirstName))  
-//  {
-//   while($RowForFirstName =mysqli_fetch_array($ResultSqlForFirstName))
-//   {
-//     $_SESSION['FirstName']=$RowForFirstName['FirstName'];
-//     echo "<h2 style='margin-left:1%;'>Hi There ! ".$_SESSION['FirstName']."</h2>";
-//     echo "<h4 > To book an event <br> Please select :</h4>";
-
-//   }
-// }
-
-// else  {
-//     printf("Error: %s\n", mysqli_error($conn));
-//     exit();
-// }
-
 
 //,`Time`,`Date`,`Description`,`AvailableTickets__`,`Pic`
 $SqlForEvents="SELECT `Title`,`Time`,`Date`,`AvailableTickets__`,`Pic`,`ActorID` FROM `events` WHERE `EventID`='".$_SESSION['EventID']."';";
@@ -84,8 +60,6 @@ if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))
 
 
 </form>";
-   
-// $_SESSION['']=$RowForEvents[''];
      }
 
   }
