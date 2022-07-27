@@ -41,6 +41,8 @@
 <div class="bodyTickets">
 <?php
 include('connection.php'); 
+
+//$evID= $_GET['evID'];
 $conn=OpenCon();
 session_start();
 $sqlviewuser="SELECT `PaymentMethod`,`NumberOfTickets__`,`EventID` FROM `book` WHERE `UserEmail`=`".$_SESSION["userID"]."`;";
@@ -48,11 +50,12 @@ if ($resultsqlviewuser = mysqli_query($conn, $sqlviewuser))
  {
   while($rowviewuser =mysqli_fetch_array($resultsqlviewuser))
   {
-    $_SESSION['EventID']=$rowviewuser["EventID"];
+
+    $eventIDD=$rowviewuser["EventID"];
     $_SESSION['PaymentMethod']=$rowviewuser["PaymentMethod"];
     $_SESSION['NumberOfTickets__']=$rowviewuser["NumberOfTickets__"];
 
- $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`Pic` FROM `events` WHERE `EventID`= ".$_SESSION['EventID']." ;";  
+ $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`Pic` FROM `events` WHERE `EventID`= '". $evID . "' ;";  
  if ($result = mysqli_query($conn, $sqlforview))  
  {
  while($rowforview =mysqli_fetch_array($result)) 
@@ -62,7 +65,6 @@ if ($resultsqlviewuser = mysqli_query($conn, $sqlviewuser))
     $Time= $rowforview['Time'];
     $Date = $rowforview['Date'];
     $Description= $rowforview['Description'];
-    
     $Pic= $rowforview['Pic'];
 
     echo "<div ><img src='".$Pic."' height='100px' width='120px' class='PicOfEvent'></div>";
@@ -83,7 +85,7 @@ if ($resultsqlviewuser = mysqli_query($conn, $sqlviewuser))
     <div class='NumOfTikNum'>"
     . $_SESSION['NumberOfTickets__'].
     "</div><br><div class='NumOfTikText'>Available Tickets</div></div>";
-   echo "<a href='#' class='editbutton'> Edit</a>";
+   //echo "<a href='#' class='editbutton'> Edit</a>";
     echo "</div>";
     //?id=" . $_SESSION['EventID'] .  "
 
