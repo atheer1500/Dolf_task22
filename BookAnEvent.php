@@ -143,9 +143,20 @@ else  {
 }
 else if (!isset($_POST['Payment']))
 {
-  echo '<script type="text/javascript">
-       window.onload = function () { alert("You have not chose a payment method"); } 
-</script>'; 
+  echo "
+  <script type='text/javascript'>
+       window.onload = 
+       function ()
+        {  
+          if (confirm('You have not chose a payment method') == true) 
+          {
+            window.open('Book.php', '_blank');
+          } 
+        
+          
+          
+        } 
+  </script>"; 
 }
 
 
