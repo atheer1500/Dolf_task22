@@ -35,7 +35,7 @@ header('location:login.php');
 
 <div class="search-container" >
 <form  class="search" action="search.php" method="post">
-  <input type="text" placeholder="Search for an event.." name="search" id="searchBar" value="<?php if (isset($_GET['search'])) echo $_GET['search']; ?>">
+  <input type="text" placeholder="Search for an event.." name="search" id="searchBar" value="<?php if (isset($_POST['search'])) echo $_POST['search']; ?>">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
 </div>

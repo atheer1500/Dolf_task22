@@ -68,15 +68,15 @@ if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))
 
 <p>
 <label for='Tickets'><span class='lab'>Number Of Tickets : </span></label>
-<input type='number' id='Tickets' name='Tickets'min='1' max='".$_SESSION['AvailableTickets__']."'>
+<input type='number' id='Tickets' name='Tickets'min='1' max='".$_SESSION['AvailableTickets__']."' value='1' step='1'>
 </p>
 
 <p>
 <label for='Tickets'><span class='lab'>Payment Method :</span></label>
 
-<span style='display: inline-block;' class='paymentRadio'>
+<span style='display: block;' class='paymentRadio'>
 <input type='radio' id='cash' name='Payment' value='cash' >Cash
-<input type='radio' id='card' name='Payment' value='card' >Card
+<input type='radio' id='card' name='Payment' value='card'  >Card On Arrival
 
 
 </span>
