@@ -42,16 +42,18 @@
 <?php
 include('connection.php'); 
 $conn=OpenCon();
-$sqlviewuser="SELECT `PaymentMethod`,`NumberOfTickets__`,`EventID` FROM `book` WHERE `UserEmail`;";
+$sqlviewuser="SELECT `PaymentMethod`,`NumberOfTickets__`,`EventID` FROM `book` WHERE `UserEmail`=`".$_SESSION["userID"]."`;";
 if ($resultsqlviewuser = mysqli_query($conn, $sqlviewuser))  
  {
   while($rowviewuser =mysqli_fetch_array($resultsqlviewuser))
   {
     $_SESSION['EventID']=$rowviewuser["EventID"];
- $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`AvailableTickets__`,`Pic` FROM `events` WHERE `EventID`= ".$_SESSION['EventID']." ;";  
+    $_SESSION['PaymentMethod']=$rowviewuser["PaymentMethod"];
+    $_SESSION['NumberOfTickets__']=$rowviewuser["NumberOfTickets__"];
+
+ $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`Pic` FROM `events` WHERE `EventID`= ".$_SESSION['EventID']." ;";  
  if ($result = mysqli_query($conn, $sqlforview))  
  {
-  //images\ab.jbg
  while($rowforview =mysqli_fetch_array($result)) 
    { 
   
