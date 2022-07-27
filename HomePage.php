@@ -184,7 +184,6 @@ $_SESSION['EventID']=$row[0];
 </div>
 
 <p id ="notfound" style="font-size: medium; font-weight: bold; display: none;"> 
-<i class="fa-solid fa-face-frown-slight"></i>
 Sorry, no result found. </p>
 
 <?php
