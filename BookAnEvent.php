@@ -10,7 +10,7 @@ $evID= $_GET['evID'];
 $SqlInsertToBook="INSERT INTO `book`(`PaymentMethod`, `NumberOfTickets__`, `UserEmail`, `EventID`)
 VALUES ('".$_POST['Payment']."','".$_POST['Tickets']."','".$_SESSION["userID"]."','".$evID."');";
 
-$SqlUpdateEvent="UPDATE `events` SET `AvailableTickets__`='".($_SESSION['AvailableTickets__']-$_POST['Tickets'])."' WHERE `EventID`='".$evID."';";
+$SqlUpdateEvent="UPDATE `events` SET `AvailableTickets__`='".($_SESSION['AvailableTickets__']-$_POST['Tickets'])."' WHERE `EventID`='".$_SESSION['EventID']."';";
 if ($ResultSqlInsertToBook= mysqli_query($conn, $SqlInsertToBook)&&$ResultSqlUpdateEvent= mysqli_query($conn, $SqlUpdateEvent))  
 {
     echo "<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
@@ -43,7 +43,7 @@ if ($ResultSqlInsertToBook= mysqli_query($conn, $SqlInsertToBook)&&$ResultSqlUpd
 <h2 style='margin-left:10%;margin-top:10%;'> 
  Booked Successfully<br>
  to view your booking <a style ='  text-align: center;
- color: #1c2841;'href='Mytickets.php'>click hear</a></h2>
+ color: #1c2841;'href='Mytickets.php?evID=".$evID."'>click hear</a></h2>
 
 ";
 }
