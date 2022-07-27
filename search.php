@@ -45,13 +45,14 @@ header('location:login.php');
 include('connection.php'); 
 $conn=OpenCon();
 
-$sqlfortable="SELECT `EventID` FROM `edit_event` WHERE `MangerID`='" .$_SESSION['MangerID'] ."' AND (OR);";
+
+$sqlfortable="SELECT `EventID` FROM `edit_event` WHERE `MangerID`='" .$_SESSION['MangerID'] ."';";
 if ($resultsqlfortable = mysqli_query($conn, $sqlfortable))  
  {
   while($rowfortable =mysqli_fetch_array($resultsqlfortable))
   {
     $_SESSION['EventID']=$rowfortable["EventID"];
- $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`AvailableTickets__`,`Pic` FROM `events` WHERE `EventID`= ".$_SESSION['EventID']." ;";  
+ $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`AvailableTickets__`,`Pic` FROM `events` WHERE `EventID`= ".$_SESSION['EventID']."  AND (`Title` LIKE '%".$_GET['search']."%' OR `Description`LIKE '%".$_GET['search']."%' );";  
  if ($result = mysqli_query($conn, $sqlforview))  
  {
   //images\ab.jbg
