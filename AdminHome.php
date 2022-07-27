@@ -38,6 +38,9 @@ p {
 <body class="homePage admin">
 
 
+<header>
+  <img src="logo.png" width= "200px">
+</header>
 
 <div class="sidenav">
 <a href="AdminHome.php"  class="focused"><i class="fa-solid fa-house"></i> Home</a>
@@ -49,7 +52,11 @@ p {
 </div>
 
 
+
 <div class="main" style="margin-top: 10%">
+
+<div style="position: relative;
+  left: -50px;">
 <h2>Welcome back admin</h2>
 <h4>What would you like to do today?</h4>
 <div class="center">
@@ -57,12 +64,15 @@ p {
 <a class ="buttonstyle2" href="#managers"> Manage Event Managers </a>
 </div>
 
+</div>
+
 <br><br><br><br>
 
 <hr>
 
 <h5 id="actors"> List of actors </h5>
-<a class="buttonstyle" href="AdminNewActor.php">+ New</a>
+<a class="buttonstyle" href="AdminNewActor.php" style="position: relative;
+  left: 200px;">+ New</a>
 
 <?php
    if (isset ($_GET['problem']) and ($_GET['problem']=='DELETED')){
@@ -113,7 +123,8 @@ echo '</table>';
 <hr> 
 
 <h5 id="managers"> List of event Managers </h5>
-<a class="buttonstyle" href="AdminNewManager.php">+ New</a>
+<a class="buttonstyle" href="AdminNewManager.php" style="position: relative;
+  left: 200px;">+ New</a>
 
 <?php
 $conn = mysqli_connect("localhost:3306", "root", "", "event");
