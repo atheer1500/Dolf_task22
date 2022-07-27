@@ -183,7 +183,9 @@ $_SESSION['EventID']=$row[0];
   <span class="searchIcon" onclick = "searchEvents()"><i class="fa fa-search fa-2xs"></i></span>
 </div>
 
-<p id ="notfound" style="font-size: medium; font-weight: bold; display: none;"> No results found. </p>
+<p id ="notfound" style="font-size: medium; font-weight: bold; display: none;"> 
+<i class="fa-solid fa-face-frown-slight"></i>
+Sorry, no result found. </p>
 
 <?php
 $conn = mysqli_connect("localhost:3306", "root", "", "event");
