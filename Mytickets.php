@@ -56,9 +56,9 @@ if ($resultsqlviewuser = mysqli_query($conn, $sqlviewuser))
     $_SESSION['NumberOfTickets__']=$rowviewuser["NumberOfTickets__"];
 
  $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`Pic` FROM `events` WHERE `EventID`= '". $evID . "' ;";  
- if ($result = mysqli_query($conn, $sqlforview))  
+ if ($resultforview = mysqli_query($conn, $sqlforview))  
  {
- while($rowforview =mysqli_fetch_array($result)) 
+ while($rowforview =mysqli_fetch_array($resultforview)) 
    { 
     echo "<div class='ViewAllEvents'>";
     $Title = $rowforview['Title'];
