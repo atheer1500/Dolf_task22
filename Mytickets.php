@@ -39,7 +39,32 @@
 </form>
 </div>
 <div class="bodyTickets">
-  asdfgh
+<?php
+include('connection.php'); 
+$conn=OpenCon();
+$sqlviewuser="SELECT `PaymentMethod`,`NumberOfTickets__`,`EventID` FROM `book` WHERE `UserEmail`;";
+if ($resultsqlviewuser = mysqli_query($conn, $sqlviewuser))  
+ {
+  while($rowviewuser =mysqli_fetch_array($resultsqlviewuser))
+  {
+    $_SESSION['EventID']=$rowviewuser["EventID"];
+ $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`AvailableTickets__`,`Pic` FROM `events` WHERE `EventID`= ".$_SESSION['EventID']." ;";  
+ if ($result = mysqli_query($conn, $sqlforview))  
+ {
+  //images\ab.jbg
+ while($rowforview =mysqli_fetch_array($result)) 
+   { 
+  
+
+   } 
+}
+else  {
+    printf("Error: %s\n", mysqli_error($conn));
+    exit();
+}}}
+
+?>
+</div>
 </div>
 
 
