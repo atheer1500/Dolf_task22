@@ -4,6 +4,7 @@ session_start();
 include('connection.php'); 
 $conn=OpenCon();
 
+$evID= $_GET['evID'];
     
 $conn=OpenCon();
 $SqlForFirstName="SELECT `FirstName` FROM `end_user` WHERE `UserEmail`='".$_SESSION["userID"]."';";
@@ -25,9 +26,9 @@ else  {
 }
 
 //,`Time`,`Date`,`Description`,`AvailableTickets__`,`Pic`
-$SqlForEvents="SELECT `Title`,`Time`,`Date`,`AvailableTickets__`,`Pic`,`ActorID` FROM `events` WHERE `EventID`='".$_SESSION['EventID']."';";
+$SqlForEvents="SELECT `Title`,`Time`,`Date`,`AvailableTickets__`,`Pic`,`ActorID` FROM `events` WHERE `EventID`='".$evID."';";
 if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))  
- {
+ { 
   while($RowForEvents =mysqli_fetch_array($ResultSqlForEvents))
   {
     $_SESSION['ActorID']=$RowForEvents['ActorID'];
@@ -46,7 +47,7 @@ if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))
       $_SESSION['Name']=$RowForActor['Name'];
     echo"
     <div class='container'>
-    <form action='BookAnEvent.php' method='post'  >
+    <form action='BookAnEvent.php?evID=".$evID."' method='post'  >
 <p>
 <span class='lab ' style='margin-left: 22%; font-size:25px;width: 90%; text-transform: Uppercase;' >".$_SESSION['Title']."</span>
 </p>
@@ -82,7 +83,7 @@ if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))
 </span>
 </p>
 
-<input type='submit'style='margin-left:24%;' value='Submit'>
+<input type='submit' style='margin-left:24%;color:black;'  value='Submit'>
 </form></div>";
      }
 
