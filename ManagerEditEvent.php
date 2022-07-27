@@ -72,6 +72,7 @@ button, .buttonstyle, input[type=submit]
 <div class="main">
 <h2>Edit Event</h2>
 
+<div style="text-align: center; ">
 <div class="container">
 
 <form action="EditEvent.php?id=<?php echo $eventID; ?>" method="post">
@@ -185,7 +186,7 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
            <div class="center"><input type="submit" name="update_button" value="Update Event" style="background-color: #8497b5; border:none;"> </div>
            <div class="center"><input type="submit" name = "delete_button" value="Delete Event" style="background-color: red; border:none;"> </div>
 
-          </form>
+          </form></div>
 
 </div>
 

@@ -53,7 +53,7 @@ td {
 </div>
 
 <div style="position: relative;
-  left: -50px;">
+  left: -60px;">
 
 <h2>Hello <?php echo  $row[0];?></h2>
 <h4>What would you like to do today?</h4>

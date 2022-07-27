@@ -56,7 +56,7 @@ p {
 <div class="main" style="margin-top: 10%">
 
 <div style="position: relative;
-  left: -50px;">
+  left: -60px;">
 <h2>Welcome back admin</h2>
 <h4>What would you like to do today?</h4>
 <div class="center">
