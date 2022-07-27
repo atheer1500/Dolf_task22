@@ -44,7 +44,7 @@ $conflictResult=mysqli_query($conn, $conflictQuery);
 $conflictCount = mysqli_num_rows($conflictResult);
 
  if ($conflictCount > 0){
-    header('location: AdminNewManager.php?problem=ADDERROR1');
+    header('location: AdminNewActor.php?problem=ADDERROR1');
  }
 
 

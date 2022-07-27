@@ -37,7 +37,13 @@ td {
 </head>
 <body class="homePage admin">
 
+<header>
+  <img src="logo.png" width= "200px">
+</header>
 
+
+
+<div class="main" style="margin-top: 10%">
 <div class="sidenav">
   <a href="ManagerHome.php"  class="focused"><i class="fa-solid fa-house"></i> Home</a>
   <a href="ManagerAccount.php"><i class="fa-solid fa-user"></i> My account </a>
@@ -46,12 +52,14 @@ td {
   <a href="Logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 </div>
 
+<div style="position: relative;
+  left: -50px;">
 
-<div class="main" style="margin-top: 10%">
 <h2>Hello <?php echo  $row[0];?></h2>
 <h4>What would you like to do today?</h4>
 <div class="center">
 <a class ="buttonstyle2" href="#events"> View all Events </a> <a class ="buttonstyle2" href="viewManger.php">Manage my Events </a>
+</div>
 
 </div>
 
@@ -60,7 +68,8 @@ td {
 <hr>
 
 <h5 id="events"> List of events </h5>
-<a class="buttonstyle" href="ManagerNewEvent.php">+ New</a>
+<a class="buttonstyle" href="ManagerNewEvent.php" style="position: relative;
+  left: 200px;">+ New</a>
 
 <?php
    if (isset ($_GET['problem']) and ($_GET['problem']=='DELETED')){
