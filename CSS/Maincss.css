@@ -357,6 +357,7 @@ text-align: right;
 margin-top: -200px;
 align-items: right;
 font-size: 30px;
+
 }
 div.NumOfTikNum
 {
@@ -367,7 +368,7 @@ div.NumOfTikNum
   width:30px;
   height: 30px;
   padding: 5px;
-  margin-left: 1100px;
+  margin-left: 89%;
  
 }
 img.PicOfEvent
@@ -389,6 +390,7 @@ margin-left: 160px;
   padding: 15px 32px;
   text-transform: Uppercase;
   display: inline-block;
+  
 }
 
 /* 

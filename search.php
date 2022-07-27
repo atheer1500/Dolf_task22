@@ -21,6 +21,22 @@ header('location:login.php');
   margin-left: 15%;
 }
 
+.search-container1
+{
+  margin-left:-50px;
+  margin-top:70px;
+  margin-bottom: -40px;
+ 
+}
+.searchBar1
+{
+  height: 30px; 
+  position: relative; 
+  width: 370px; 
+  border-radius: 5px ;
+
+}
+
     </style>
 
 </head>
@@ -33,10 +49,10 @@ header('location:login.php');
   <a href="Logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> 
 </div>
 
-<div class="search-container" >
-<form  class="search" action="search.php" method="get">
-  <input type="text" placeholder="Search for an event.." name="search" id="searchBar" value="<?php if (isset($_GET['search'])) echo $_GET['search']; ?>">
-  <button type="submit"><i class="fa fa-search"></i></button>
+<div class="search-container1" >
+<form  class="search" action="search.php" method="post">
+  <input class="searchBar1"type="text" placeholder="Search for an event.." name="search" id="searchBar" value="<?php if (isset($_POST['search'])) echo $_POST['search']; ?>">
+  <button type="submit" ><i class="fa fa-search"></i></button>
 </form>
 </div>
 <div id="events" style="margin-top: 6%;" >
