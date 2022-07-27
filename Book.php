@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/Maincss.css" media="all" type="text/css">
+    <link rel="stylesheet" href="CSS/user.css" media="all" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>View conserts</title>
     <script>
@@ -18,98 +19,7 @@
       //    ?>
       // }
       </script>
-      <style>
-
-        td {
-  text-align: left;
-}
-
-button, .buttonstyle, input[type=submit]
-{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border: 1px solid white;
-    border-radius: 50px;
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: medium;
-    background: none;
-    text-align: center;
-    margin: 10px;
-}
-
-.container {
-	padding: 20px;
-	background-color: #b3b5b5;
-	margin: auto;
-	margin-top: 20px;
-  margin-left: 33%;
-	line-height: 30px;
-	width: 500px;
-  text-align: left;
-  border-radius: 20px;
-}
-
-.container span {
-	padding-left: 40px;
-	display: inline-block;
-  vertical-align: top;
-	width: 30%;
-}
-
-.container input{
-	min-height: 25px;
-	display: inline-block;
-	width: 50%;
-}
-
-.container textarea {
-	display: inline-block;
-	margin-top: 10px;
-	width: 50%;
-}
-.container select,.container input[type=number] {
-	min-height: 25px;
-	display: inline-block;
-	width: 51%;
-   font-size: 15px;
-}
-/* 
- {
-  max-height: 22px;
-	display: inline-block;
-width: 51%;
-   font-size: 15px;
-} */
-
-.right{
-  text-align: right;
-}
-
-body{
-  background-color: #e3e8e8;
-    background-attachment: fixed;
-    color: black;
-    font-size:2em;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-}
-span.lab
-{
-
-	display: inline-block;
-  /* min-height: 25px; */
-	/* width: 30%; */
-  font-size: 15px;
-  margin-top: 5px;
-}
-.pic 
-{
-  margin-left: 26%;
-}
-
-        </style>
+      
 </head>
 <body >
    
