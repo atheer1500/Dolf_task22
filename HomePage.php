@@ -87,7 +87,7 @@ text-align: left;
 
 </style>
 </head>
-<body class="homePage" style="overflow-x: hidden;">
+<body class="homePage" style="">
     
 
 <header>

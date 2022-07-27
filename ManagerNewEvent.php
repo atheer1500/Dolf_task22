@@ -61,6 +61,7 @@ button, .buttonstyle, input[type=submit]
 <div class="main">
 <h2>Create Event</h2>
 
+<div style="text-align: center; ">
 <div class="container">
 
 <form  action="InsertEvent.php" method="post" name ="newEventForm" onsubmit = "return(validate());">
@@ -159,7 +160,7 @@ else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR1')){
            <div class="center"><input type="submit" value="Create Event" class="submitbutton" style="background-color: #8497b5; border:none; " onclick="sendEmail()"> </div>
          </form>
 
-</div>
+</div></div>
 
 </div>
 
