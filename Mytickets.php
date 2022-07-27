@@ -42,6 +42,7 @@
 <?php
 include('connection.php'); 
 $conn=OpenCon();
+session_start();
 $sqlviewuser="SELECT `PaymentMethod`,`NumberOfTickets__`,`EventID` FROM `book` WHERE `UserEmail`=`".$_SESSION["userID"]."`;";
 if ($resultsqlviewuser = mysqli_query($conn, $sqlviewuser))  
  {
@@ -56,7 +57,36 @@ if ($resultsqlviewuser = mysqli_query($conn, $sqlviewuser))
  {
  while($rowforview =mysqli_fetch_array($result)) 
    { 
-  
+    echo "<div class='ViewAllEvents'>";
+    $Title = $rowforview['Title'];
+    $Time= $rowforview['Time'];
+    $Date = $rowforview['Date'];
+    $Description= $rowforview['Description'];
+    
+    $Pic= $rowforview['Pic'];
+
+    echo "<div ><img src='".$Pic."' height='100px' width='120px' class='PicOfEvent'></div>";
+
+    echo "<div class='TextOfEvent'>";
+
+    echo "<div class='NameOfEvent'>".$Title."</div>";
+
+    echo "<div class='Desc'>".$Description."</div>";
+    echo "</div>";
+
+    echo "<div class='Date-Time'><i class='far fa-clock'></i>&ensp;"
+    .$Time.
+    "&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<i class='far fa-calendar-alt'></i>&ensp;&ensp;"
+    .$Date."</div>";
+
+    echo" <div class='NumOfTikContainer'> 
+    <div class='NumOfTikNum'>"
+    . $_SESSION['NumberOfTickets__'].
+    "</div><br><div class='NumOfTikText'>Available Tickets</div></div>";
+   echo "<a href='#' class='editbutton'> Edit</a>";
+    echo "</div>";
+    //?id=" . $_SESSION['EventID'] .  "
+
 
    } 
 }
