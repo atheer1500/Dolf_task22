@@ -5,8 +5,7 @@ if (isset($_POST['Tickets'])&&isset($_POST['Payment']))
 session_start();
 include('connection.php'); 
 $conn=OpenCon();
-if($_POST['Payment']=='cash')
-{
+
 $SqlInsertToBook="INSERT INTO `book`(`PaymentMethod`, `NumberOfTickets__`, `UserEmail`, `EventID`)
 VALUES ('".$_POST['Payment']."','".$_POST['Tickets']."','".$_SESSION["userID"]."','".$_SESSION['EventID']."');";
 
@@ -142,8 +141,11 @@ else  {
     exit();
 }
 }
-else if($_POST['Payment']=='card') {
- 
+else if (!isset($_POST['Payment']))
+{
+  echo '<script type="text/javascript">
+       window.onload = function () { alert("You have not chose a payment method"); } 
+</script>'; 
 }
 
-}
+
