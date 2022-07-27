@@ -21,19 +21,7 @@ $row=mysqli_fetch_row($result);
     <meta name="viewport" content="width=yes, initial-scale=1.0">
     <title>Manager Home</title>
     <link rel="stylesheet" href="CSS/Maincss.css?v=<?php echo time(); ?>">
-    <style type="text/css">
-
-
-
-td {
-  text-align: left;
-}
-
-
-
-
-
-</style>
+    <style type="text/css"></style>
 </head>
 <body class="homePage admin">
 

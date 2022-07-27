@@ -18,14 +18,6 @@ header('location:login.php');
 
 
 
-td {
-  text-align: left;
-/* background-color:white;
-
- border-radius: 25px;
-  width: 200px; */
-}
-
 p {
 
         line-height: 0;
