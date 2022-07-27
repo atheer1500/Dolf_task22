@@ -52,7 +52,7 @@ header('location:login.php');
 <div class="search-container1" >
 <form  class="search" action="search.php" method="post">
   <input class="searchBar1"type="text" placeholder="Search for an event.." name="search" id="searchBar" value="<?php if (isset($_POST['search'])) echo $_POST['search']; ?>">
-  <button type="submit"><i class="fa fa-search"></i></button>
+  <button type="submit" ><i class="fa fa-search"></i></button>
 </form>
 </div>
 <div id="events" style="margin-top: 6%;" >
@@ -79,14 +79,7 @@ if ($resultsqlfortable = mysqli_query($conn, $sqlfortable))
     $Description= $rowforview['Description'];
     $AvailableTickets__= $rowforview['AvailableTickets__'];
     $Pic= $rowforview['Pic'];
-    // <div class="PicOfEvent">pic</div>
-    // <div class='NameOfEvent'>name</div>
-    // <div class='Desc'>description</div>
-    // <div class='Date&Time'>Dtae and time </div>
-    // <div class='NumOfTikContainer'>
-    //   <div class='NumOfTikText'>Number</div>
-    //   <div class='NumOfTikNum'>6</div>
-    // </div>
+
     echo "<div ><img src='".$Pic."' height='100px' width='120px' class='PicOfEvent'></div>";
 
     echo "<div class='TextOfEvent'>";
