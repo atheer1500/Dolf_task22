@@ -149,7 +149,8 @@ echo
 '
 </p>
 <br>
-<a href="Book.php" class="buttonstyle2"> Book Now</a>
+
+<a href="Book.php?evID='.$row[0].'" class="buttonstyle2"> Book Now</a>
 
 </div>
 
@@ -157,7 +158,7 @@ echo
 
 
 ';
-$_SESSION['EventID']=$row[0];
+//$_SESSION['EventID']=$row[0];
 		
 }
 ?>
@@ -214,7 +215,7 @@ while ($row=mysqli_fetch_array($result))
 '
 . $row[1] . 
 '</p>
-<a href="Book.php"  class="buttonstyle"> Book Now</a>
+<a href="Book.php?evID='.$row[0].'"  class="buttonstyle"> Book Now</a>
         </td>';	
         //Add each 3 items in a new row
         if ($count % 3 == 0)	

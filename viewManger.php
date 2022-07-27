@@ -98,7 +98,7 @@ if ($resultsqlfortable = mysqli_query($conn, $sqlfortable))
     <div class='NumOfTikNum'>"
     .$AvailableTickets__.
     "</div><br><div class='NumOfTikText'>Available Tickets</div></div>";
-   echo "<a href='ManagerEditEvent.php?id=" . $_SESSION['EventID'] .  "' class='editbutton'> Edit</a>";
+   echo " class=<a href='ManagerEditEvent.php?id=" . $_SESSION['EventID'] .  "''editbutton'> Edit</a>";
     echo "</div>";
 
    } 
