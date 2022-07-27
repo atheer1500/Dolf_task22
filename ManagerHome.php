@@ -41,9 +41,6 @@ td {
   <img src="logo.png" width= "200px">
 </header>
 
-
-
-<div class="main" style="margin-top: 10%">
 <div class="sidenav">
   <a href="ManagerHome.php"  class="focused"><i class="fa-solid fa-house"></i> Home</a>
   <a href="ManagerAccount.php"><i class="fa-solid fa-user"></i> My account </a>
@@ -51,6 +48,9 @@ td {
   <a href="ManagerNewEvent.php"><i class="fa-solid fa-circle-plus"></i> Add Event </a>
   <a href="Logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 </div>
+
+<div class="main" style="margin-top: 10%">
+
 
 <div style="position: relative;
   left: -60px;">
