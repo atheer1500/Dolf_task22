@@ -41,7 +41,7 @@ button, .buttonstyle, input[type=submit]
 
 .container {
 	padding: 20px;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: #b3b5b5;
 	margin: auto;
 	margin-top: 20px;
   margin-left: 33%;
@@ -88,9 +88,9 @@ width: 51%;
 }
 
 body{
-  background: linear-gradient(#e66465, #9198e5);
+  background-color: #e3e8e8;
     background-attachment: fixed;
-    color: white;
+    color: black;
     font-size:2em;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
@@ -111,7 +111,7 @@ span.lab
 
         </style>
 </head>
-<body class="LoginRegisterPage">
+<body >
    
 <div class="sidenav">
   <a href="homepage.php" class="focused"><i class="fa-solid fa-house"></i> Home</a>

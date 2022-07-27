@@ -27,94 +27,95 @@ if ($ResultSqlInsertToBook= mysqli_query($conn, $SqlInsertToBook)&&$ResultSqlUpd
       </script>
       <style>
 
-        td {
-  text-align: left;
-}
-
-button, .buttonstyle, input[type=submit]
-{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border: 1px solid white;
-    border-radius: 50px;
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: medium;
-    background: none;
-    text-align: center;
-    margin: 10px;
-}
-
-.container {
-	padding: 20px;
-	background-color: rgba(0, 0, 0, 0.5);
-	margin: auto;
-	margin-top: 20px;
-  margin-left: 33%;
-	line-height: 30px;
-	width: 500px;
-  text-align: left;
-  border-radius: 20px;
-}
-
-.container span {
-	padding-left: 40px;
-	display: inline-block;
-  vertical-align: top;
-	width: 30%;
-}
-
-.container input{
-	min-height: 25px;
-	display: inline-block;
-	width: 50%;
-}
-
-.container textarea {
-	display: inline-block;
-	margin-top: 10px;
-	width: 50%;
-}
-.container select,.container input[type=number] {
-	min-height: 25px;
-	display: inline-block;
-	width: 51%;
-   font-size: 15px;
-}
-/* 
- {
-  max-height: 22px;
-	display: inline-block;
-width: 51%;
-   font-size: 15px;
-} */
-
-.right{
-  text-align: right;
-}
-
-body{
-  background: linear-gradient(#e66465, #9198e5);
-    background-attachment: fixed;
-    color: white;
-    font-size:2em;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-}
-span.lab
-{
-
-	display: inline-block;
-  /* min-height: 25px; */
-	/* width: 30%; */
-  font-size: 15px;
-  margin-top: 5px;
-}
-.pic 
-{
-  margin-left: 26%;
-}
+      td {
+        text-align: left;
+      }
+      
+      button, .buttonstyle, input[type=submit]
+      {
+          font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          border: 1px solid white;
+          border-radius: 50px;
+          padding: 10px;
+          text-decoration: none;
+          color: white;
+          font-weight: bold;
+          font-size: medium;
+          background: none;
+          text-align: center;
+          margin: 10px;
+      }
+      
+      .container {
+        padding: 20px;
+        background-color: #b3b5b5;
+        margin: auto;
+        margin-top: 20px;
+        margin-left: 33%;
+        line-height: 30px;
+        width: 500px;
+        text-align: left;
+        border-radius: 20px;
+      }
+      
+      .container span {
+        padding-left: 40px;
+        display: inline-block;
+        vertical-align: top;
+        width: 30%;
+      }
+      
+      .container input{
+        min-height: 25px;
+        display: inline-block;
+        width: 50%;
+      }
+      
+      .container textarea {
+        display: inline-block;
+        margin-top: 10px;
+        width: 50%;
+      }
+      .container select,.container input[type=number] {
+        min-height: 25px;
+        display: inline-block;
+        width: 51%;
+         font-size: 15px;
+      }
+      /* 
+       {
+        max-height: 22px;
+        display: inline-block;
+      width: 51%;
+         font-size: 15px;
+      } */
+      
+      .right{
+        text-align: right;
+      }
+      
+      body{
+        background-color: #e3e8e8;
+          background-attachment: fixed;
+          color: black;
+          font-size:2em;
+          font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      
+      }
+      span.lab
+      {
+      
+        display: inline-block;
+        /* min-height: 25px; */
+        /* width: 30%; */
+        font-size: 15px;
+        margin-top: 5px;
+      }
+      .pic 
+      {
+        margin-left: 26%;
+      }
+      
 
         </style>
 </head>
@@ -130,7 +131,7 @@ span.lab
   <a href='logout.php'><i class='fa-solid fa-right-from-bracket'></i> Logout</a>
 </div>
 <h2 style='margin-left:10%;margin-top:10%;'> 
- Bookde Successfully<br>
+ Booked Successfully<br>
  to view your booking <a style ='  text-align: center;
  color: #1c2841;'href='Mytickets.php'>click hear</a></h2>
 
