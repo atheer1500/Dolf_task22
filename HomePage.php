@@ -18,6 +18,7 @@
   max-width: 300px;
   position: relative;
   margin: auto;
+  left: -10px;
 }
 
 /* Hide the images by default */
@@ -82,11 +83,22 @@ input[type=search]{
 text-align: left;
 }
 
+#section1{}
+
 </style>
 </head>
-<body class="homePage">
+<body class="homePage" style="overflow-x: hidden;">
     
 
+<header>
+  <img src="logo.png" width= "200px">
+</header>
+
+
+
+
+
+<div class="main">
 
 <div class="sidenav">
   <a href="homepage.php" class="focused"><i class="fa-solid fa-house"></i> Home</a>
@@ -99,10 +111,14 @@ text-align: left;
 </div>
 
 
-<div class="main">
-<h3> Recently Added <h3>
+
+<div id="section1" >
+
+
+
 <!-- Slideshow container -->
 <div class="slideshow-container">
+<h3> Recently Added <h3>
 
   <!-- Full-width images with number and caption text -->
   <?php
@@ -158,12 +174,16 @@ $_SESSION['EventID']=$row[0];
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
 
+</div>
+
 <hr>
 <h3>All Events</h3>
-<div class="left">
+<div class="right">
   <input type="text" class="searchBar" placeholder="Search event..." name="search" id="searchbar">
   <span class="searchIcon" onclick = "searchEvents()"><i class="fa fa-search fa-2xs"></i></span>
 </div>
+
+<p id ="notfound" style="font-size: medium; font-weight: bold; display: none;"> No results found. </p>
 
 <?php
 $conn = mysqli_connect("localhost:3306", "root", "", "event");
@@ -200,10 +220,9 @@ while ($row=mysqli_fetch_array($result))
 echo '</table>';
 ?>
 
+</div>
+
 <footer>
-
-
-
 <div style="float: left; width: 200px; ">
  <h2>Location</h2>
  <p class="content" ><a href="https://goo.gl/maps/9gHLJABFrQSNQtg2A" target="_blank">
@@ -234,9 +253,6 @@ echo '</table>';
 <p style="margin-bottom: -25px; opacity: 0.4;"> © 2022 Copyright: maevents.com </p>
 
 </footer>
-
-</div>
-
 <script>
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -291,13 +307,22 @@ function searchEvents() {
 
     let eventTitle = document.getElementsByClassName('events');
 
+    let found = false;
+
     for (i = 0; i < eventTitle.length; i++) { 
         if (!eventTitle[i].innerHTML.toLowerCase().includes(serachInput)) {
           eventTitle[i].parentElement.style.display="none";
         }
         else {
-          eventTitle[i].parentElement.style.display="table-cell	";                 
+          eventTitle[i].parentElement.style.display="table-cell	";   
+          found = true;  
+          $("#notfound").hide();
+
         }
+    }
+
+    if(!found){
+      $("#notfound").show();
     }
 }
 
@@ -322,6 +347,8 @@ searchInput.oninput = function(){
     for (i = 0; i < eventTitle.length; i++) { 
     eventTitle[i].parentElement.style.display="table-cell";
 }
+$("#notfound").hide();
+
   }
 }
 

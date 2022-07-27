@@ -21,13 +21,66 @@
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
+header {
+  text-align: center;
+  font-size: medium;
+  margin: -18px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 50px;
+  margin-bottom: 50px;
+
+  border-radius: 0% 0% 100% 72% / 10% 100% 0% 59%;
+  /*border: 10px solid #8497b5;*/
+
+}
+
+
+/*for sidebar menu*/
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+  float: left;
+
+  margin-left: -20px;
+}
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #8497b5;
+  display: block;
+  margin-bottom: 25px;
+}
+
+.sidenav .focused {
+  color: black;
+  background-color: white;
+  width: 50px;
+  border-radius: 0px 50px 50px 0px;
+}
+  
+ /* .sidenav a:hover {
+  color: #a0bfbf;
+  } */
+  
+  .main {
+    
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
 
 footer {
   text-align: center;
   font-size: medium;
   margin: -18px;
-  margin-top: 300px;
-  background: rgba(0, 0, 0, 0.2);
+  margin-top: 200px;
+  background: #b6baba;
   padding: 50px;
 }
 
@@ -170,43 +223,6 @@ button, .buttonstyle, input[type=submit]
   text-align: right;
 }
 
-/*for sidebar menu*/
-.sidenav {
-  height: 100%;
-  width: 160px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background: rgba(255, 255, 255, .2);
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 14px;
-  color: #8497b5;
-  display: block;
-  margin-bottom: 25px;
-}
-
-.sidenav .focused {
-  color: black;
-  background-color: white;
-  width: 50px;
-  border-radius: 0px 50px 50px 0px;
-}
-  
- /* .sidenav a:hover {
-  color: #a0bfbf;
-  } */
-  
-  .main {
-    margin-left: 160px; /* Same as the width of the sidenav */
-    font-size: 28px; /* Increased text to enable scrolling */
-    padding: 0px 10px;
-  }
 
 /*for admin page*/
   .admin p
