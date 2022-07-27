@@ -194,7 +194,7 @@ $conn = mysqli_connect("localhost:3306", "root", "", "event");
 if (!$conn)
 die ("Could not connect to the database");
 
-$query="select * from events";
+$query="select * from events WHERE `AvailableTickets__` != '0'";
 $result=mysqli_query($conn, $query);
 $n= mysqli_num_rows($result);
 
