@@ -93,7 +93,8 @@ footer a:visited {
 }
 
 footer a:hover{
-opacity: 0.5;}
+  text-decoration:underline;
+}
 
 footer p{
   font-size: small;
