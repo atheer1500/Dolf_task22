@@ -23,18 +23,34 @@
           #passwordF
 {
 margin-left: -1000px;
+
+}
+.buttonstyle, input[type=submit]
+{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid #8497b5;
+    border-radius: 50px;
+    padding: 10px;
+    text-decoration: none;
+    color: #8497b5;
+    font-weight: bold;
+    font-size: medium;
+    background: none;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
 }
     </style>
 
 </head>
 <body class="LoginRegisterPage">
     <div class="loginContainer">
-        <h2> Consorts  </h2>
+        <h2> Login  </h2>
         <div class="loginBox">
             <form  id="login" action = "authentication.php" method="POST">
-            
+            <br>
             <input  class="loginInputs" type="text" id="Email" name="Email" placeholder="ُE-maill address"><br><br>
-            <input class="loginInputs" type="password" id="passwordF" name="password" placeholder="Password"><br>
+            <input class="loginInputs" type="password" id="passwordF" name="password" placeholder="Password" style="margin-right: 230px;"><br><br>
             <input type="radio" id="UserEmail" name="User" value="UserEmail">     
             <label for="UserEmail">User</label><br>
 
@@ -43,9 +59,9 @@ margin-left: -1000px;
 
             <input type="radio" id="EventManger" name="User" value="EventManger">
             <label for="EventManger">EventManger</label><br>
+         
 
-
-            <button  style="width:230px ;height: 39px;" onclick="validate()" >Log In</button>
+            <button   class="buttonstyle"style="width:230px ;height: 39px;" onclick="validate()" >Log In</button>
             </form>
 
             <a href="Regester.php" class="newuser"style="  text-decoration: none;
