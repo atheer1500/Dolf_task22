@@ -41,21 +41,21 @@
 <div class="bodyTickets">
 <?php
 include('connection.php'); 
-
-//$evID= $_GET['evID'];
 $conn=OpenCon();
 session_start();
-$sqlviewuser="SELECT `PaymentMethod`,`NumberOfTickets__`,`EventID` FROM `book` WHERE `UserEmail`=`".$_SESSION["userID"]."`;";
+
+//$evID= $_GET['evID'];
+
+$sqlviewuser="SELECT `PaymentMethod`,`NumberOfTickets__`,`EventID` FROM `book` WHERE `UserEmail`='".$_SESSION["userID"]."';";
 if ($resultsqlviewuser = mysqli_query($conn, $sqlviewuser))  
  {
   while($rowviewuser =mysqli_fetch_array($resultsqlviewuser))
   {
-
-    $eventIDD=$rowviewuser["EventID"];
+    $evIDD=$rowviewuser["EventID"];
     $_SESSION['PaymentMethod']=$rowviewuser["PaymentMethod"];
     $_SESSION['NumberOfTickets__']=$rowviewuser["NumberOfTickets__"];
 
- $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`Pic` FROM `events` WHERE `EventID`= '". $evID . "' ;";  
+ $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`Pic` FROM `events` WHERE `EventID`= ".$evIDD." ;";  
  if ($resultforview = mysqli_query($conn, $sqlforview))  
  {
  while($rowforview =mysqli_fetch_array($resultforview)) 
@@ -95,7 +95,14 @@ if ($resultsqlviewuser = mysqli_query($conn, $sqlviewuser))
 else  {
     printf("Error: %s\n", mysqli_error($conn));
     exit();
-}}}
+}
+
+}
+}
+else  {
+      printf("Error: %s\n", mysqli_error($conn));
+      exit();
+  }
 
 ?>
 </div>
