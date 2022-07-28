@@ -129,7 +129,7 @@ if (!$conn)
 die ("Could not connect to the database");
 
 //Show only last 3 events (newly added)
-$query="SELECT * FROM (SELECT * FROM events ORDER BY EventID DESC LIMIT 3) as r ORDER BY EventID";
+$query="SELECT * FROM (SELECT * FROM events  WHERE `AvailableTickets__` != '0' ORDER BY EventID DESC LIMIT 3 ) as r ORDER BY EventID ";
 $result=mysqli_query($conn, $query);
 $n= mysqli_num_rows($result);
 
@@ -194,7 +194,7 @@ $conn = mysqli_connect("localhost:3306", "root", "", "event");
 if (!$conn)
 die ("Could not connect to the database");
 
-$query="select * from events WHERE `AvailableTickets__` != '0'";
+$query="select * from events";
 $result=mysqli_query($conn, $query);
 $n= mysqli_num_rows($result);
 
@@ -210,18 +210,33 @@ while ($row=mysqli_fetch_array($result))
         <img class ="poster" src="'
 . $row[6] .
 
-'" style="width:200px; height: 300px;"> 
-<p class ="events" style="font-size: medium; font-weight: bold;">
+'" style="width:200px; height: 300px;';
+
+if($row[5]=='0')
+echo "opacity: 0.2;";
+
+
+echo '">';
+
+if($row[5]=='0')
+echo "<img src='png.monster-215.png' width='200px' style='z-index: 5; position: relative; left: -200px; top: -50px;'>";
+
+echo '<p class ="events" style="font-size: medium; font-weight: bold;">
 '
 . $row[1] . 
-'</p>
-<a href="Book.php?evID='.$row[0].'"  class="buttonstyle"> Book Now</a>
+'</p>';
+
+
+
+echo '<a href="Book.php?evID='.$row[0].'"  class="buttonstyle"> Book Now</a>
         </td>';	
         //Add each 3 items in a new row
         if ($count % 3 == 0)	
         echo '</tr> <tr>';	
 }
 echo '</table>';
+
+
 ?>
 
 </div>
