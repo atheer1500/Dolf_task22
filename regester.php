@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Regeister</title>
     <!-- <?php
-     include('connection.php');
-     $conn=OpenCon();
     //  function  checkinfo()
     //  {
 
@@ -24,7 +22,7 @@
     //       echo "Logged in!";
     //   }
     // }
-     closeconn($conn);
+    //  closeconn($conn);
     ?> -->
     <script>
 
@@ -49,7 +47,7 @@
     <div class="loginContainer">
         <h2> Consorts  </h2>
         <div class="loginBox">
-            <form  id="Regester" action = "reg.php" method="POST">
+            <form  id="Regester" action = "NewUserRegseter.php" method="POST">
             <br>
             <input type="text" class="loginInputs" id="Fname" name="Fname" placeholder="Enter First Name">
             <br><br>
@@ -71,6 +69,7 @@
   color: #063a62db;">alrady have an account? click hear!</a>
 <br>
         </div>
+      
 
     </div>
     
