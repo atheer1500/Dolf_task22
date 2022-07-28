@@ -78,7 +78,7 @@ if ($resultsqlviewuser = mysqli_query($conn, $sqlviewuser))
     $_SESSION['PaymentMethod']=$rowviewuser["PaymentMethod"];
     $_SESSION['NumberOfTickets__']=$rowviewuser["NumberOfTickets__"];
 
- $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`Pic` FROM `events` WHERE `EventID`= ".$evIDD." AND (`Title` LIKE '%".$_POST['search']."%' OR `Description`LIKE '%".$_POST['search']."%');";  
+ $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`Pic` FROM `events` WHERE `EventID`= ".$evIDD." AND (`Title` LIKE '%".$_POST['search']."%' OR `Description` LIKE '%".$_POST['search']."%');";  
  if ($resultforview = mysqli_query($conn, $sqlforview))  
  {
  while($rowforview =mysqli_fetch_array($resultforview)) 
