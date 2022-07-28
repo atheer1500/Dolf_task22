@@ -19,6 +19,29 @@
       //    ?>
       // }
       </script>
+<style>
+            .search
+{
+  margin-left: 15%;
+}
+
+.search-container1
+{
+  margin-left:-50px;
+  margin-top:70px;
+  margin-bottom: -40px;
+ 
+}
+.searchBar1
+{
+  height: 30px; 
+  position: relative; 
+  width: 370px; 
+  border-radius: 5px ;
+
+}
+
+</style>
 
 </head>
 <body >
@@ -32,9 +55,9 @@
   <a href="Mytickets.php"class="focused"><i class="fa-solid fa-ticket"></i> My tickets</a>
   <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 </div>
-<div class="search-container" >
+<div class="search-container1" >
 <form  class="search" action="searchevents.php" method="post">
-  <input type="text" placeholder="Search for an event.." name="search" id="searchBar" value="<?php if (isset($_GET['search'])) echo $_GET['search']; ?>">
+  <input type="text" placeholder="Search for an event.." name="search" id="searchBar1" value="<?php if (isset($_GET['search'])) echo $_GET['search']; ?>">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
 </div>
@@ -55,7 +78,7 @@ if ($resultsqlviewuser = mysqli_query($conn, $sqlviewuser))
     $_SESSION['PaymentMethod']=$rowviewuser["PaymentMethod"];
     $_SESSION['NumberOfTickets__']=$rowviewuser["NumberOfTickets__"];
 
- $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`Pic` FROM `events` WHERE `EventID`= ".$evIDD." AND (OR);";  
+ $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`Pic` FROM `events` WHERE `EventID`= ".$evIDD." AND (`Title` LIKE '%".$_GET['search']."%' OR `Description`LIKE '%".$_GET['search']."%');";  
  if ($resultforview = mysqli_query($conn, $sqlforview))  
  {
  while($rowforview =mysqli_fetch_array($resultforview)) 
