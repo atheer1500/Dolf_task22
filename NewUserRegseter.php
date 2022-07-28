@@ -15,7 +15,7 @@
         $_SESSION["id"]=$Email;
         $sqlInsertNewUser="INSERT INTO `end_user` (`FirstName`, `LastName`, `Password`, `UserEmail`, `Gender`) VALUES
          ('".$FirstName."','".$LastName."','". $password."','". $Email."','".$Gender."')";
-         if(   mysqli_query($conn, $sqlInsertNewUser)  )
+         if( mysqli_query($conn, $sqlInsertNewUser))
          {
             header("HomePage.php");
          }

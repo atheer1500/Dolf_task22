@@ -63,7 +63,7 @@
             <input  class="loginInputs" type="text" id="Email" name="Email" placeholder="ُE-maill address"><br><br>
             <input class="loginInputs" type="password" id="password" name="password" placeholder="Password"><br>
 
-            <button  style="width:230px ;height: 39px;" onclick="" >Regester</button>
+            <button  style="width:230px ;height: 39px;" >Regester</button>
             </form>
             <a href="Login.php" class="newuser" style="  text-decoration: none;
   color: #063a62db;">alrady have an account? click hear!</a>
