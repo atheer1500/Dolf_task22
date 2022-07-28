@@ -62,7 +62,7 @@ p {
 
 <hr>
 
-<h5 id="actors"> List of actors </h5>
+<h5 id="actors"> List of Actors </h5>
 <a class="buttonstyle" href="AdminNewActor.php" style="position: relative;
   left: 200px;">+ New</a>
 
@@ -114,7 +114,7 @@ echo '</table>';
 
 <hr> 
 
-<h5 id="managers"> List of event Managers </h5>
+<h5 id="managers"> List of Event Managers </h5>
 <a class="buttonstyle" href="AdminNewManager.php" style="position: relative;
   left: 200px;">+ New</a>
 
