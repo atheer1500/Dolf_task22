@@ -79,7 +79,7 @@ else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR1')){
 <p>
 
     <label for="uploadImg"> <span>Event Picture:</span>
-    <span class ="right">  <img src="uploadIcon.png" height="140px" width="140px" id="img" style="cursor: pointer">       </span>         
+    <span class ="right">  <img src="uploadImg.png" height="140px" width="140px" id="img" style="cursor: pointer">       </span>         
 </label>
 
     <input type="file" accept="image/*" name="event_img" id="uploadImg" style="display: none;" onChange="change()" />
