@@ -17,7 +17,7 @@
          ('".$FirstName."','".$LastName."','". $password."','". $Email."','".$Gender."')";
          if( mysqli_query($conn, $sqlInsertNewUser))
          {
-            header("HomePage.php");
+            header("Location:HomePage.php");
          }
          else
          {
