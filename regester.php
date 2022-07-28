@@ -90,7 +90,7 @@ margin-left: -1000px;
             <br>
             <br>
             <input  class="loginInputs" type="text" id="Email" name="Email" placeholder="ُE-maill address"><br><br>
-            <input class="loginInputs" type="password" id="passwordF" name="password" placeholder="Password" style="margin-right: 230px;"><br>
+            <input class="loginInputs" type="password" id="passwordF" name="password" placeholder="Password" style="margin-right: 230px; "><br>
 <br>
             <button  class="buttonstyle"style="width:230px ;height: 39px;" >Regester</button>
             </form>
