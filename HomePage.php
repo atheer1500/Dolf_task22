@@ -85,6 +85,20 @@ text-align: left;
 
 #section1{}
 
+
+.posterContainer{ 
+ position: relative; 
+ z-index: 1; 
+ top: 0; 
+ left: 0; 
+ } 
+ .pic1{ 
+ position: absolute; 
+ z-index: 5; 
+ top: 25%; 
+ left:25%; 
+ } 
+
 </style>
 </head>
 <body class="homePage" style="">
@@ -206,20 +220,20 @@ while ($row=mysqli_fetch_array($result))
   $_SESSION['EventID']=$row['EventID'];
         $count ++;
         
-        echo '<td>
+        echo '<td> <div class="posterContainer">
         <img class ="poster" src="'
 . $row[6] .
 
-'" style="width:200px; height: 300px;';
+'" style="width:200px; height: 300px;' ;
 
 if($row[5]=='0')
 echo "opacity: 0.2;";
 
 
-echo '">';
+echo '" class="pic1">';
 
 if($row[5]=='0')
-echo "<img src='png.monster-215.png' width='200px' style='z-index: 5; position: relative; left: -200px; top: -50px;'>";
+echo "<img src='sold_out_PNG6.png' width='100px' class='pic1'>";
 
 echo '<p class ="events" style="font-size: medium; font-weight: bold;">
 '
@@ -229,7 +243,7 @@ echo '<p class ="events" style="font-size: medium; font-weight: bold;">
 
 
 echo '<a href="Book.php?evID='.$row[0].'"  class="buttonstyle"> Book Now</a>
-        </td>';	
+        </td></div>';	
         //Add each 3 items in a new row
         if ($count % 3 == 0)	
         echo '</tr> <tr>';	
