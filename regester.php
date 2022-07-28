@@ -48,10 +48,33 @@
         }
 
     </script>
+    <style>
+                  #passwordF
+{
+margin-left: -1000px;
+
+
+}
+.buttonstyle, input[type=submit]
+{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid #8497b5;
+    border-radius: 50px;
+    padding: 10px;
+    text-decoration: none;
+    color: #8497b5;
+    font-weight: bold;
+    font-size: medium;
+    background: none;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+    </style>
 </head>
 <body class="LoginRegisterPage">
     <div class="loginContainer">
-        <h2> Consorts  </h2>
+        <h2> Regester </h2>
         <div class="loginBox">
             <form  id="Regester" action = "NewUserRegseter.php" method="POST">
             <br>
@@ -67,9 +90,9 @@
             <br>
             <br>
             <input  class="loginInputs" type="text" id="Email" name="Email" placeholder="ُE-maill address"><br><br>
-            <input class="loginInputs" type="password" id="passwordF" name="password" placeholder="Password"><br>
-
-            <button  style="width:230px ;height: 39px;" >Regester</button>
+            <input class="loginInputs" type="password" id="passwordF" name="password" placeholder="Password" style="margin-right: 230px;"><br>
+<br>
+            <button  class="buttonstyle"style="width:230px ;height: 39px;" >Regester</button>
             </form>
             <a href="Login.php" class="newuser" style="  text-decoration: none;
   color: #063a62db;">alrady have an account? click hear!</a>
