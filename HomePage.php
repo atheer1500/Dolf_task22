@@ -95,8 +95,8 @@ text-align: left;
  .pic1{ 
  position: absolute; 
  z-index: 5; 
- top: 25%; 
- left:25%; 
+ top: 35%; 
+ left:15%; 
  } 
 
 </style>
@@ -233,7 +233,7 @@ echo "opacity: 0.2;";
 echo '" class="pic1">';
 
 if($row[5]=='0')
-echo "<img src='sold_out_PNG6.png' width='100px' class='pic1'>";
+echo "<img src='200 (2).gif' width='150px' class='pic1'>";
 
 echo '<p class ="events" style="font-size: medium; font-weight: bold;">
 '
@@ -242,7 +242,12 @@ echo '<p class ="events" style="font-size: medium; font-weight: bold;">
 
 
 
-echo '<a href="Book.php?evID='.$row[0].'"  class="buttonstyle"> Book Now</a>
+echo '<a href="Book.php?evID='.$row[0].'"  class="buttonstyle';
+
+if($row[5]=='0')
+echo " disable";
+
+echo '"> Book Now</a>
         </td></div>';	
         //Add each 3 items in a new row
         if ($count % 3 == 0)	

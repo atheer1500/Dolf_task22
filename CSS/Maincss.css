@@ -194,6 +194,18 @@ hr
     cursor: pointer;
 }
 
+.disable{
+  /*
+background-color: black;
+color: white;
+border:none;*/
+  color: rgb(0, 0, 0);
+  border-color: black;
+  
+  opacity: 0.2;
+  pointer-events: none;
+}
+
 .buttonstyle2
 {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

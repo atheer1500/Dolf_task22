@@ -39,7 +39,7 @@
 
   //Check if if email is taken for another manager.
 
-$conflictQuery = "SELECT * FROM `actor` WHERE `ActorEmail` = '$email'";
+$conflictQuery = "SELECT * FROM `actor` WHERE `ActorEmail` = '$email' OR `Name` = '$name'";
 $conflictResult=mysqli_query($conn, $conflictQuery);
 $conflictCount = mysqli_num_rows($conflictResult);
 
