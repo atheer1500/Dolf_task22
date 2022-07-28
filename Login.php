@@ -22,7 +22,7 @@
     <style>
           #passwordF
 {
-margin-left: -100px;
+margin-left: -1000px;
 }
     </style>
 
