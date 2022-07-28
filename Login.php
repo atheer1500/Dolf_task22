@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/Maincss.css">
+ 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Login</title>
     <!-- <?php
@@ -18,6 +19,13 @@
        
 
     </script>
+    <style>
+          #passwordF
+{
+margin-left: -1000px;
+}
+    </style>
+
 </head>
 <body class="LoginRegisterPage">
     <div class="loginContainer">
@@ -26,7 +34,7 @@
             <form  id="login" action = "authentication.php" method="POST">
             
             <input  class="loginInputs" type="text" id="Email" name="Email" placeholder="ُE-maill address"><br><br>
-            <input class="loginInputs" type="password" id="password" name="password" placeholder="Password"><br>
+            <input class="loginInputs" type="password" id="passwordF" name="password" placeholder="Password"><br>
             <input type="radio" id="UserEmail" name="User" value="UserEmail">     
             <label for="UserEmail">User</label><br>
 
