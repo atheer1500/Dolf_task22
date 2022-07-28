@@ -48,21 +48,5 @@
     }
 
 
-        // sendmail();  // call this function when you want to
-
-        if (isset($_GET['sendmail'])) {
-            sendmail();
-        }
+        sendmail(); 
 ?>
-
-
-<html>
-    <head>
-        <title>Send Mail</title>
-    </head>
-    <body>
-        <form method="get">
-            <button type="submit" name="sendmail">sendmail</button>
-        </form>
-    </body>
-</html>

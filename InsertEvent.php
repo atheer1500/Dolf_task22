@@ -1,6 +1,7 @@
 
 <?php
  session_start();
+ use PHPMailer\PHPMailer\PHPMailer;
 
  // servername => localhost
  // username => root
@@ -61,16 +62,64 @@ $conflictCount = mysqli_num_rows($conflictResult);
   //Now insert in edit_events table, this to identify which manager has created the event
   $sql2 = "INSERT INTO `edit_event`(`MangerID`, `EventID`) 
                       VALUES ('$managerID ', '$eventID')";
+
+
   if(mysqli_query($conn, $sql2)){
-//    // the message
-// $msg = "First line of text\nSecond line of text";
+   //1- Send email to actor
 
-// // use wordwrap() if lines are longer than 70 characters
-// $msg = wordwrap($msg,70);
+   //a- Get actor email
+   $query = "SELECT `ActorEmail` FROM `actor` WHERE `ActorID` = '$actorID'";
+   $result=mysqli_query($conn, $query);
+   $row=mysqli_fetch_row($result);
 
-// // send email
-// mail("someone@example.com","My subject",$msg);
-   header('location: ManagerNewEvent.php?problem=ADD'); //Insert to the database, then go back to the add page
+
+   //b- Send email code
+       $name = "MA Event";  // Name of your website or yours
+       $to = $row[0];  // mail of reciever
+       $subject = "You have been added as an actor!";
+       $body = "Dear $actor You have been added as an actor for $title event. \nDate: $date. \nTime:  $time. \nWe are excited to see you there!";
+       $from = "maevent.noreply@gmail.com";  // you mail
+       $password = "vfiqtteeuynndgyj";  // your mail password
+
+       // Ignore from here
+
+       require_once "PHPMailer/PHPMailer.php";
+       require_once "PHPMailer/SMTP.php";
+       require_once "PHPMailer/Exception.php";
+       $mail = new PHPMailer();
+
+       // To Here
+
+       //SMTP Settings
+       $mail->isSMTP();
+       // $mail->SMTPDebug = 3;  Keep It commented this is used for debugging                          
+       $mail->Host = "smtp.gmail.com"; // smtp address of your email
+       $mail->SMTPAuth = true;
+       $mail->Username = $from;
+       $mail->Password = $password;
+       $mail->Port = 587;  // port
+       $mail->SMTPSecure = "tls";  // tls or ssl
+       $mail->smtpConnect([
+       'ssl' => [
+           'verify_peer' => false,
+           'verify_peer_name' => false,
+           'allow_self_signed' => true
+           ]
+       ]);
+
+       //Email Settings
+       $mail->isHTML(true);
+       $mail->setFrom($from, $name);
+       $mail->addAddress($to); // enter email address whom you want to send
+       $mail->Subject = ("$subject");
+       $mail->Body = $body;
+       if ($mail->send()) {
+           echo "Email is sent!";
+       } else {
+           echo "Something is wrong: <br><br>" . $mail->ErrorInfo;
+       }
+
+       header('location: ManagerNewEvent.php?problem=ADD'); //2- Go back to the add page
   }
 
  }
