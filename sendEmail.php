@@ -1,86 +1,68 @@
 <?php
-// $to = "somebody@example.com, somebodyelse@example.com";
-// $subject = "HTML email";
+    use PHPMailer\PHPMailer\PHPMailer;
+    function sendmail(){
+        $name = "MA Event";  // Name of your website or yours
+        $to = "atheer1500@gmail.com";  // mail of reciever
+        $subject = "Your event...";
+        $body = "Send Mail Using PHPMailer - MS The Tech Guy";
+        $from = "maevent.noreply@gmail.com";  // you mail
+        $password = "vfiqtteeuynndgyj";  // your mail password
 
-// $message = "
-// <html>
-// <head>
-// <title>HTML email</title>
-// </head>
-// <body>
-// <p>This email contains HTML Tags!</p>
-// <table>
-// <tr>
-// <th>Firstname</th>
-// <th>Lastname</th>
-// </tr>
-// <tr>
-// <td>John</td>
-// <td>Doe</td>
-// </tr>
-// </table>
-// </body>
-// </html>
-// ";
+        // Ignore from here
 
-// // Always set content-type when sending HTML email
-// $headers = "MIME-Version: 1.0" . "\r\n";
-// $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        require_once "PHPMailer/PHPMailer.php";
+        require_once "PHPMailer/SMTP.php";
+        require_once "PHPMailer/Exception.php";
+        $mail = new PHPMailer();
 
-// // More headers
-// $headers .= 'From: <webmaster@example.com>' . "\r\n";
-// $headers .= 'Cc: myboss@example.com' . "\r\n";
+        // To Here
 
-// mail($to,$subject,$message,$headers);
+        //SMTP Settings
+        $mail->isSMTP();
+        // $mail->SMTPDebug = 3;  Keep It commented this is used for debugging                          
+        $mail->Host = "smtp.gmail.com"; // smtp address of your email
+        $mail->SMTPAuth = true;
+        $mail->Username = $from;
+        $mail->Password = $password;
+        $mail->Port = 587;  // port
+        $mail->SMTPSecure = "tls";  // tls or ssl
+        $mail->smtpConnect([
+        'ssl' => [
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
+            ]
+        ]);
+
+        //Email Settings
+        $mail->isHTML(true);
+        $mail->setFrom($from, $name);
+        $mail->addAddress($to); // enter email address whom you want to send
+        $mail->Subject = ("$subject");
+        $mail->Body = $body;
+        if ($mail->send()) {
+            echo "Email is sent!";
+        } else {
+            echo "Something is wrong: <br><br>" . $mail->ErrorInfo;
+        }
+    }
 
 
-<?php 
- 
-// Import PHPMailer classes into the global namespace 
-use PHPMailer\PHPMailer\PHPMailer; 
-use PHPMailer\PHPMailer\Exception; 
- 
-require 'PHPMailer/Exception.php'; 
-require 'PHPMailer/PHPMailer.php'; 
-require 'PHPMailer/SMTP.php'; 
- 
-$mail = new PHPMailer; 
- 
-$mail->isSMTP();                      // Set mailer to use SMTP 
-$mail->Host = 'smtp.gmail.com';       // Specify main and backup SMTP servers 
-$mail->SMTPAuth = true;               // Enable SMTP authentication 
-$mail->Username = 'user@gmail.com';   // SMTP username 
-$mail->Password = 'gmail_password';   // SMTP password 
-$mail->SMTPSecure = 'tls';            // Enable TLS encryption, `ssl` also accepted 
-$mail->Port = 587;                    // TCP port to connect to 
- 
-// Sender info 
-$mail->setFrom('sender@codexworld.com', 'CodexWorld'); 
-$mail->addReplyTo('reply@codexworld.com', 'CodexWorld'); 
- 
-// Add a recipient 
-$mail->addAddress('recipient@example.com'); 
- 
-//$mail->addCC('cc@example.com'); 
-//$mail->addBCC('bcc@example.com'); 
- 
-// Set email format to HTML 
-$mail->isHTML(true); 
- 
-// Mail subject 
-$mail->Subject = 'Email from Localhost by CodexWorld'; 
- 
-// Mail body content 
-$bodyContent = '<h1>How to Send Email from Localhost using PHP by CodexWorld</h1>'; 
-$bodyContent .= '<p>This HTML email is sent from the localhost server using PHP by <b>CodexWorld</b></p>'; 
-$mail->Body    = $bodyContent; 
- 
-// Send email 
-if(!$mail->send()) { 
-    echo 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo; 
-} else { 
-    echo 'Message has been sent.'; 
-} 
- 
+        // sendmail();  // call this function when you want to
+
+        if (isset($_GET['sendmail'])) {
+            sendmail();
+        }
 ?>
-?>
+
+
+<html>
+    <head>
+        <title>Send Mail</title>
+    </head>
+    <body>
+        <form method="get">
+            <button type="submit" name="sendmail">sendmail</button>
+        </form>
+    </body>
+</html>
