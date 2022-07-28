@@ -35,6 +35,24 @@ header('location:login.php');
   width: 370px; 
   border-radius: 5px ;
 
+  
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+
+}
+
+.searchIcon
+{
+  cursor: pointer; 
+  background-color: #C0C0C0;
+  padding-left: 10px; 
+  padding-right: 10px; 
+  margin-left: -10px; 
+
+  border-radius: 0px 5px 5px 0px;
+
+  border:none;
+  height: 32px; 
 }
 
     </style>
@@ -52,7 +70,7 @@ header('location:login.php');
 <div class="search-container1" >
 <form  class="search" action="search.php" method="post">
   <input class="searchBar1"type="text" placeholder="Search for an event.." name="search" id="searchBar" value="<?php if (isset($_POST['search'])) echo $_POST['search']; ?>">
-  <button type="submit" ><i class="fa fa-search"></i></button>
+  <button type="submit"  class="searchIcon"><i class="fa fa-search"></i></button>
 </form>
 </div>
 <div id="events" style="margin-top: 6%;" >
