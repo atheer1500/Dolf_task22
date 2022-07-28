@@ -178,7 +178,7 @@ hr
     width: 80%;
 }
 
-button, .buttonstyle, input[type=submit]
+ .buttonstyle, input[type=submit]
 {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border: 1px solid #8497b5;
