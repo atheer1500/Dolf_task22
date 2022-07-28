@@ -242,7 +242,12 @@ echo '<p class ="events" style="font-size: medium; font-weight: bold;">
 
 
 
-echo '<a href="Book.php?evID='.$row[0].'"  class="buttonstyle"> Book Now</a>
+echo '<a href="Book.php?evID='.$row[0].'"  class="buttonstyle';
+
+if($row[5]=='0')
+echo " disable";
+
+echo '"> Book Now</a>
         </td></div>';	
         //Add each 3 items in a new row
         if ($count % 3 == 0)	
