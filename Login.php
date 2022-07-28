@@ -40,6 +40,12 @@ margin-left: -1000px;
     margin: 10px;
     cursor: pointer;
 }
+.p
+{
+    border: none;
+    border-radius: 4px;
+}
+
     </style>
 
 </head>
@@ -50,7 +56,7 @@ margin-left: -1000px;
             <form  id="login" action = "authentication.php" method="POST">
             <br>
             <input  class="loginInputs" type="text" id="Email" name="Email" placeholder="ُE-maill address"><br><br>
-            <input class="loginInputs" type="password" id="passwordF" name="password" placeholder="Password" style="margin-right: 230px;"><br><br>
+            <input class="loginInputs p" type="password" id="passwordF" name="password" placeholder="Password" style="margin-right: 230px;"><br><br>
             <input type="radio" id="UserEmail" name="User" value="UserEmail">     
             <label for="UserEmail">User</label><br>
 
