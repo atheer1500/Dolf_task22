@@ -94,4 +94,25 @@ td {
     margin-top: 60px;
 
   }
+  .search
+  {
+    margin-left: 15%;
+  }
+  
+  .search-container1
+  {
+    margin-left:-50px;
+    margin-top:70px;
+    margin-bottom: -40px;
+   
+  }
+  .searchBar1
+  {
+    height: 30px; 
+    position: relative; 
+    width: 370px; 
+    border-radius: 5px ;
+  
+  }
+  
   
