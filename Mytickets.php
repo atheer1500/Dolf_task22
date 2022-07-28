@@ -33,12 +33,12 @@
   <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
 </div>
 <div class="search-container" >
-<form  class="search" action="search.php" method="post">
+<form  class="search" action="searchevents.php" method="post">
   <input type="text" placeholder="Search for an event.." name="search" id="searchBar" value="<?php if (isset($_GET['search'])) echo $_GET['search']; ?>">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
 </div>
-<div class="bodyTickets">
+<div >
 <?php
 include('connection.php'); 
 $conn=OpenCon();
