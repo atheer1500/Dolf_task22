@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="CSS/Maincss.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Regeister</title>
+    <style>
+     #passwordF
+     {
+       margin-left: -1000px;
+    }
+        </style>
     <!-- <?php
     //  function  checkinfo()
     //  {
