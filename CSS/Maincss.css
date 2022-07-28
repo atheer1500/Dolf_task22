@@ -300,7 +300,7 @@ font-size: small;
 
 
 /*form style*/
-.myform input[type=text], input[type=password]:not(.p) {
+.myform input[type=text], .myform input[type=password] {
   border: none;
   border-radius: 4px;
   float: right;
@@ -462,7 +462,7 @@ div#book
 
 /*form style*/
 
-.myform input[type=text], input[type=password]:not(.p) {
+.myform input[type=text], .myform input[type=password] {
   border: 2px solid rgb(187, 187, 187);
   border-radius: 4px;
   float: right;

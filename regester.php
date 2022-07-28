@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/Maincss.css">
+    <link rel="stylesheet" href="CSS/Maincss.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Regeister</title>
     <style>
@@ -49,12 +49,12 @@
 
     </script>
     <style>
-                  #passwordF
+                  /* #passwordF
 {
 margin-left: -1000px;
 
 
-}
+} */
 .buttonstyle, input[type=submit]
 {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -90,7 +90,7 @@ margin-left: -1000px;
             <br>
             <br>
             <input  class="loginInputs" type="text" id="Email" name="Email" placeholder="ُE-maill address"><br><br>
-            <input class="loginInputs" type="password" id="passwordF" name="password" placeholder="Password" style="margin-right: 230px; "><br>
+            <input class="loginInputs" type="password" id="passwordF" name="password" placeholder="Password" ><br>
 <br>
             <button  class="buttonstyle"style="width:230px ;height: 39px;" >Regester</button>
             </form>
