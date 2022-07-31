@@ -99,6 +99,14 @@ text-align: left;
  left:15%; 
  } 
 
+
+ #containerIntro h1,
+#containerIntro p {
+    display: inline;
+    vertical-align: top;
+    line-height: 28px;
+}
+
 </style>
 </head>
 <body class="homePage" style="">
@@ -126,12 +134,15 @@ text-align: left;
   <div class="left">
   <img src="logo2.png" width= "200px">
 </div >
-<div class="left">
-  <h3> Events 25 </h3>
-  <p> Return carefully and follow the instructions of the concerned authorities </p>
+</header>
+
+<div class="left" style="margin-top: -100px; margin-top: -100px;   margin-bottom: 50px; margin-left: 50px;">
+<div  id ="containerIntro">
+  <h1  style="text-align:  unset"> Events </h1> <h1 style="color: #8497b5">25</h1>
+</div>
+  <p style="text-align:  unset; font-size: 16px; color: #8497b5"> Return carefully and follow the instructions of the concerned authorities </p>
 </div>
 
-</header>
 
 <div id="section1" >
 
