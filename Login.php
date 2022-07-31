@@ -20,9 +20,9 @@
 
     </script>
     <style>
-          #passwordF
+ #passwordF
 {
-margin-left: -1000px;
+    margin-left: -1000px;
 
 }
 .buttonstyle, input[type=submit]
