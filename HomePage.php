@@ -104,15 +104,9 @@ text-align: left;
 <body class="homePage" style="">
     
 
-<header>
-  <img src="logo.png" width= "200px">
-</header>
 
 
 
-
-
-<div class="main">
 
 <div class="sidenav">
   <a href="homepage.php" class="focused"><i class="fa-solid fa-house"></i> Home</a>
@@ -125,6 +119,12 @@ text-align: left;
 </div>
 
 
+
+<div class="main">
+
+<header>
+  <img src="logo.png" width= "200px">
+</header>
 
 <div id="section1" >
 
@@ -258,8 +258,6 @@ echo '</table>';
 
 ?>
 
-</div>
-
 <footer>
 <div style="float: left; width: 200px; ">
  <h2>Location</h2>
@@ -291,6 +289,8 @@ echo '</table>';
 <p style="margin-bottom: -25px; opacity: 0.4;"> © 2022 Copyright: maevents.com </p>
 
 </footer>
+</div>
+
 <script>
 let slideIndex = 1;
 showSlides(slideIndex);
