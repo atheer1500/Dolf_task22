@@ -22,7 +22,9 @@
     <style>
  #passwordF
 {
-    margin-left: -1000px;
+    margin-left:225px;
+    border-style: solid;
+    border-width: 2px;
 
 }
 .buttonstyle, input[type=submit]
