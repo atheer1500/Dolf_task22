@@ -15,11 +15,33 @@
      closeconn($conn);
     ?> -->
     <script>
+function validate()
+{
+    var email=document.getElementById("Email");
+    var pass=document.getElementById("passwordF");
+    var user=document.getElementsByName("User");
+    var error=document.getElementById("ErrorMessege");
+    if (!isset(email))
+    error.style.display="block";
+    error.innerHTML="Pleas enter the email !!"
 
+}
        
 
     </script>
     <style>
+#ErrorMessege
+{
+    display: block;
+    color: red;
+    background-color: white;
+    border-radius: 4px;
+    min-height: 20px;
+    max-height: 100px;
+    width: 220px;
+    padding: 8px;
+    margin-left: 230px;
+}
  #passwordF
 {
     margin-left:225px;
@@ -54,6 +76,7 @@
 <body class="LoginRegisterPage">
     <div class="loginContainer">
         <h2> Login  </h2>
+        <div id ="ErrorMessege">Pleas enter the email !!<br>All<br>user<br>pass</div>
         <div class="loginBox">
             <form  id="login" action = "authentication.php" method="POST">
             <br>
