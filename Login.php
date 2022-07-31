@@ -15,18 +15,22 @@
      closeconn($conn);
     ?> -->
     <script>
-        const form=document.getElementById("login");
-        form.addEventListener('submit',validate());
+        // const form=document.getElementById("login");
+        // form.addEventListener("submit",validate());
 function validate()
 {
-    var email=document.getElementById("Email");
-    // var pass=document.getElementById("passwordF");
-    // var user=document.getElementsByName("User");
+   // var email=document.getElementById("Email");
+    let Email=document.forms["myform"]["Email"].value;
+    let password=document.forms["myform"]["password"].value;
+    let User=document.getElementsById("UserEmail").checked;
     var error=document.getElementById("ErrorMessege");
-    if (email)
+    //&&(User.checked==false)
+    //(typeof Email === 'string' && Email.length === 0)&&(typeof password === 'string' && password.length === 0)&&
+    if ((User.checked==false))
    {
     error.style.display="block";
-    error.innerHTML="Pleas enter the email !!"
+    error.innerHTML="Pleas dont leave any empty field  !!"
+    return false;
    }
 
 }
@@ -40,9 +44,9 @@ function validate()
     border-radius: 4px;
     min-height: 20px;
     max-height: 100px;
-    width: 220px;
+    width: 270px;
     padding: 8px;
-    margin-left: 230px;
+    margin-left: 200px;
 }
  #passwordF
 {
@@ -78,9 +82,9 @@ function validate()
 <body class="LoginRegisterPage">
     <div class="loginContainer">
         <h2> Login  </h2>
-        <div id ="ErrorMessege">Pleas enter the email !!<br>All<br>user<br>pass</div>
+        <div id ="ErrorMessege"> </div>
         <div class="loginBox">
-            <form  id="login" action = "#" method="POST">
+            <form  name="myform" id="login" action = "authentication.php" onsubmit="return  validate()" method="POST">
             <br>
             <input  class="loginInputs" type="text" id="Email" name="Email" placeholder="ُE-maill address"><br><br>
             <input class="loginInputs p" type="password" id="passwordF" name="password" placeholder="Password" style="margin-right: 230px;"><br><br>
