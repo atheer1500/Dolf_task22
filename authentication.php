@@ -1,7 +1,7 @@
 <?php
 
 use function PHPSTORM_META\type;
-
+ 
     include('connection.php'); 
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
@@ -18,7 +18,7 @@ use function PHPSTORM_META\type;
         //  $pass = stripcslashes( $pass);  
         // $Id = mysqli_real_escape_string( $conn, $Id);  
         //  $pass = mysqli_real_escape_string( $conn,  $pass);  
-      if ($type=='UserEmail')
+      if ( $type=='UserEmail')
       {
 
         $sql = "SELECT `UserEmail` FROM `end_user` WHERE `UserEmail`='".$Id."' AND `Password`=".$pass.";";  
