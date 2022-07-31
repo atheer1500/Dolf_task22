@@ -19,7 +19,7 @@
   background-color: #f4f6f8;
   background-attachment: fixed;
   color: black;
-  font-family: 'Droid Arabic Kufi', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   overflow-x: hidden;
 }
 
@@ -107,7 +107,7 @@ footer {
   margin: -18px;
   margin-top: 200px;
   padding: 50px;
-  width: 90% ; 
+  width: 80% ; 
 }
 
 footer a{
@@ -173,7 +173,7 @@ a, button
     background-attachment: fixed;
     /*color: white;*/
     font-size:2em;
-   /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+    
 }
 
 .homePage p

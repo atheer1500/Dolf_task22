@@ -33,7 +33,7 @@
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  bottom: -10px;
+  bottom: -20px;
   width: 100%;
   text-align: center;
   font-weight: lighter;
@@ -122,16 +122,20 @@ text-align: left;
 
 <div class="main">
 
-<header class="right">
+<header>
+  <div class="left">
   <img src="logo2.png" width= "200px">
-  <h3 class="right"> فعاليات الشرقية </h3>
-  نعود بحذر مع التقيد بتوجيهات الجهات المعنية
+</div >
+<div class="left">
+  <h3> Events 25 </h3>
+  <p> Return carefully and follow the instructions of the concerned authorities </p>
+</div>
 
 </header>
 
 <div id="section1" >
 
-<h3>Recently Added<h3>
+<h3>Recently Added</h3>
 
 <!-- Slideshow container -->
 
