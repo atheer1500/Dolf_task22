@@ -141,7 +141,7 @@ text-align: left;
 
 <div class="left" style="margin-top: -100px; margin-top: -100px;   margin-bottom: 100px; margin-left: 50px;">
 <div  id ="containerIntro">
-  <h1  style="text-align:  unset"> Events </h1> <h1 style="color: #8497b5">25</h1>
+  <h1  style="text-align:  unset"> Events </h1> <h1 style="color: #8497b5">22</h1>
 </div>
   <p style="text-align:  unset; font-size: 16px; color: #8497b5; font-weight: bold;"> Return carefully and follow the instructions of the concerned authorities </p>
 </div>
