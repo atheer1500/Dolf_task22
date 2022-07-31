@@ -15,24 +15,26 @@
      closeconn($conn);
     ?> -->
     <script>
+        const form=document.getElementById("login");
+        form.addEventListener('submit',validate());
 function validate()
 {
     var email=document.getElementById("Email");
-    var pass=document.getElementById("passwordF");
-    var user=document.getElementsByName("User");
+    // var pass=document.getElementById("passwordF");
+    // var user=document.getElementsByName("User");
     var error=document.getElementById("ErrorMessege");
-    if (!isset(email))
+    if (email)
+   {
     error.style.display="block";
     error.innerHTML="Pleas enter the email !!"
+   }
 
 }
-       
-
     </script>
     <style>
 #ErrorMessege
 {
-    display: block;
+    display: none;
     color: red;
     background-color: white;
     border-radius: 4px;
@@ -78,7 +80,7 @@ function validate()
         <h2> Login  </h2>
         <div id ="ErrorMessege">Pleas enter the email !!<br>All<br>user<br>pass</div>
         <div class="loginBox">
-            <form  id="login" action = "authentication.php" method="POST">
+            <form  id="login" action = "#" method="POST">
             <br>
             <input  class="loginInputs" type="text" id="Email" name="Email" placeholder="ُE-maill address"><br><br>
             <input class="loginInputs p" type="password" id="passwordF" name="password" placeholder="Password" style="margin-right: 230px;"><br><br>
@@ -92,7 +94,7 @@ function validate()
             <label for="EventManger">EventManger</label><br>
          
 
-            <button   class="buttonstyle"style="width:230px ;height: 39px;" onclick="validate()" >Log In</button>
+            <button   class="buttonstyle"style="width:230px ;height: 39px;"  >Log In</button>
             </form>
 
             <a href="Regester.php" class="newuser"style="  text-decoration: none;
