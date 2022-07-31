@@ -44,6 +44,7 @@
   background-color: white;
   border-radius: 50px 15px 50px  15px;
   padding: 5px;
+  font-weight: bold;
 
 }
 
@@ -142,7 +143,7 @@ text-align: left;
 <div  id ="containerIntro">
   <h1  style="text-align:  unset"> Events </h1> <h1 style="color: #8497b5">25</h1>
 </div>
-  <p style="text-align:  unset; font-size: 16px; color: #8497b5"> Return carefully and follow the instructions of the concerned authorities </p>
+  <p style="text-align:  unset; font-size: 16px; color: #8497b5; font-weight: bold;"> Return carefully and follow the instructions of the concerned authorities </p>
 </div>
 
 
