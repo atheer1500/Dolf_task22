@@ -78,9 +78,6 @@ user-select: none; /* Standard */
 }
 
 
-
-
-
 .sidenav .focused, .sidenav .focused:hover {
   color: white;
   background-color: #8497b5;
@@ -105,9 +102,9 @@ footer {
   text-align: center;
   font-size: medium;
   margin: -18px;
-  margin-top: 200px;
+  margin-top: 100px;
   padding: 50px;
-  width: 80% ; 
+  width: 95% ; 
 }
 
 footer a{
@@ -168,6 +165,8 @@ a, button
     font-size: large;
 }
 
+/*home page style */
+
 .homePage
 {
     background-attachment: fixed;
@@ -181,6 +180,41 @@ a, button
     /*color: white;*/
     text-align: center;
 }
+
+
+/* image */
+.imgborder{
+  border: 5px solid #8497b5;
+  padding: 5PX;
+  border-radius: 25px;
+}
+
+
+
+/*search bar*/
+.searchIcon
+{
+  cursor: pointer; 
+  background-color: #C0C0C0;
+  padding-left: 10px; 
+  padding-right: 10px; 
+  margin-left: -10px; 
+
+  border-radius: 0px 5px 5px 0px;
+
+}
+
+.searchBar
+{
+  height: 33px; 
+  position: relative; 
+  top: -6px;
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+
+}
+
+
 
 /*for event manager page*/
 .managerPage
@@ -586,41 +620,5 @@ div#book
 	width: 49.4%;
 }
 
-
-
-/* image */
-.imgborder{
-
-  border: 5px dotted #a0bfbf;
-  padding: 5PX;
-  border-radius: 25px;
-}
-
-
-
-
-
-/*search bar*/
-.searchIcon
-{
-  cursor: pointer; 
-  background-color: #C0C0C0;
-  padding-left: 10px; 
-  padding-right: 10px; 
-  margin-left: -10px; 
-
-  border-radius: 0px 5px 5px 0px;
-
-}
-
-.searchBar
-{
-  height: 33px; 
-  position: relative; 
-  top: -6px;
-  border: none;
-  border-radius: 5px 0px 0px 5px;
-
-}
 
 

@@ -123,6 +123,8 @@ text-align: left;
   <a href="UserAccount.php"><i class="fa-solid fa-user fa-2xl"></i> <br><br> My Account </a>
 
   <a href="Mytickets.php"><i class="fa-solid fa-ticket fa-2xl"></i> <br><br> My Tickets</a>
+  <hr>
+
   <a href="logout.php"><i class="fa-solid fa-right-from-bracket fa-2xl"> </i> <br><br> Logout</a>
 </div>
 
@@ -136,7 +138,7 @@ text-align: left;
 </div >
 </header>
 
-<div class="left" style="margin-top: -100px; margin-top: -100px;   margin-bottom: 50px; margin-left: 50px;">
+<div class="left" style="margin-top: -100px; margin-top: -100px;   margin-bottom: 100px; margin-left: 50px;">
 <div  id ="containerIntro">
   <h1  style="text-align:  unset"> Events </h1> <h1 style="color: #8497b5">25</h1>
 </div>
@@ -278,6 +280,7 @@ echo '</table>';
 ?>
 
 <footer class="center">
+  <hr style="border-top: 10px solid #8497b5; width: 100%; opacity: 1;">
 <div style="float: left; width: 200px; ">
  <h2>Location</h2>
  <p class="content" ><a href="https://goo.gl/maps/9gHLJABFrQSNQtg2A" target="_blank">
