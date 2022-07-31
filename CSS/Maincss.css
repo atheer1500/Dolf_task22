@@ -298,6 +298,7 @@ font-size: small;
     top:170px;
     left: 26%;
     right: 17%;
+    padding-bottom: 2%;
     align-items: center;
     text-align: center;
     color: #063a62;
@@ -307,8 +308,8 @@ font-size: small;
 {
     min-width: 200px;
     min-height: 200px;
-    border-style: solid;
-    border-width: 2px;
+    /* border-style: solid;
+    border-width: 2px; */
     /* background-color: #debac2; */
 }
 .loginInputs

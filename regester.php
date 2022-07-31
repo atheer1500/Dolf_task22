@@ -49,12 +49,13 @@
 
     </script>
     <style>
-                  /* #passwordF
+ #passwordF
 {
-margin-left: -1000px;
+    margin-left:0px;
+    border-style: solid;
+    border-width: 2px;
 
-
-} */
+}
 .buttonstyle, input[type=submit]
 {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -74,7 +75,7 @@ margin-left: -1000px;
 </head>
 <body class="LoginRegisterPage">
     <div class="loginContainer">
-        <h2> Regester </h2>
+        <h2> Register </h2>
         <div class="loginBox">
             <form  id="Regester" action = "NewUserRegseter.php" method="POST">
             <br>
