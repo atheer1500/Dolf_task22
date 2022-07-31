@@ -22,11 +22,11 @@ function validate()
    // var email=document.getElementById("Email");
     let Email=document.forms["myform"]["Email"].value;
     let password=document.forms["myform"]["password"].value;
-    let User=document.getElementsById("UserEmail").checked;
+    let User=document.forms["myform"]["UserEmail"].value;
     var error=document.getElementById("ErrorMessege");
     //&&(User.checked==false)
     //(typeof Email === 'string' && Email.length === 0)&&(typeof password === 'string' && password.length === 0)&&
-    if ((User.checked==false))
+    if ((User==false))
    {
     error.style.display="block";
     error.innerHTML="Pleas dont leave any empty field  !!"
