@@ -7,37 +7,46 @@
 ?v=<?php echo time(); ?>
  */
 
-
+ @import url(https://fonts.googleapis.com/earlyaccess/amiri.css);
+ @import url(https://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+ @import url(https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+ @import url(https://fonts.googleapis.com/earlyaccess/lateef.css); 
+ @import url(https://fonts.googleapis.com/earlyaccess/scheherazade.css);
+ @import url(https://fonts.googleapis.com/earlyaccess/thabit.css);
+ 
 
  body {
-  /*background-image:linear-gradient(to right bottom, #efaf96, #eaa897, #e4a197, #de9a98, #d69499, #d0919f, #c88fa5, #be8ea9, #b090b1, #a193b6, #9295b7, #8497b5);*/
-  /*background-image: linear-gradient(#e66465, #9198e5);*/
-  /*background-image: linear-gradient(#e7f0ff, #c6dbff);*/
-
-  background-color: #e3e8e8;
+  background-color: #f4f6f8;
   background-attachment: fixed;
   color: black;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Droid Arabic Kufi', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   overflow-x: hidden;
+}
+
+::selection {
+  background-color: rgba(0,0,0,.3);
+  color: white;
+
 }
 header {
   text-align: center;
   font-size: medium;
   margin: -18px;
-  background: rgba(0, 0, 0, 0.2);
   padding: 50px;
   margin-bottom: 50px;
+  margin-top: -80px;
 
-  border-radius: 0% 0% 100% 72% / 10% 100% 0% 59%;
-  /*border: 10px solid #8497b5;*/
-
+  -webkit-user-select: none; /* Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+user-select: none; /* Standard */
 }
 
 
 /*for sidebar menu*/
 .sidenav {
   height: 100%;
-  width: 160px;
+  width: 100px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -45,33 +54,51 @@ header {
   overflow-x: hidden;
   padding-top: 20px;
   background-color: white;
-  
-}
-.sidenav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 14px;
-  color: #8497b5;
-  display: block;
-  margin-bottom: 25px;
+  border-right: 1px rgba(0, 0, 0, 0.1) solid ;
+
+  padding-top: 35px;
 }
 
-.sidenav .focused {
-  color: black;
-  background-color: white;
-  width: 50px;
-  border-radius: 0px 50px 50px 0px;
+
+.sidenav a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #a2a2a2;
+  display: block;
+  margin-bottom: 0;
+
+  height: 70px;
+ 
+  padding: 6px 8px 6px 16px;
+ padding-top: 40px;
+ text-align: center;
+
+ margin-left: -10px;
+ font-weight: bold;
 }
+
+
+
+
+
+.sidenav .focused, .sidenav .focused:hover {
+  color: white;
+  background-color: #8497b5;
+}
+
+
   
- /* .sidenav a:hover {
-  color: #a0bfbf;
-  } */
+  .sidenav a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateX(0);
+
+  } 
   
   .main {
     
     font-size: 28px; /* Increased text to enable scrolling */
     padding: 0px 10px;
-    margin-left: 160px;
+    margin-left: 100px; /*same as sidenav width*/
   }
 
 footer {
@@ -79,8 +106,8 @@ footer {
   font-size: medium;
   margin: -18px;
   margin-top: 200px;
-  background: #b6baba;
   padding: 50px;
+  width: 90% ; 
 }
 
 footer a{
@@ -146,7 +173,7 @@ a, button
     background-attachment: fixed;
     /*color: white;*/
     font-size:2em;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
 }
 
 .homePage p

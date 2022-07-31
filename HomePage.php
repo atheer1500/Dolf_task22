@@ -109,30 +109,34 @@ text-align: left;
 
 
 <div class="sidenav">
-  <a href="homepage.php" class="focused"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="UserProfile.php"><i class="fa-solid fa-id-card"></i> My profile </a>
+  <a href="homepage.php" class="focused"><i class="fa-solid fa-house fa-2xl"></i> <br><br>Home</a>
+  <a href="UserProfile.php"><i class="fa-solid fa-id-card fa-2xl"></i> <br><br> My Profile </a>
 
-  <a href="UserAccount.php"><i class="fa-solid fa-user"></i> My account </a>
+  <a href="UserAccount.php"><i class="fa-solid fa-user fa-2xl"></i> <br><br> My Account </a>
 
-  <a href="Mytickets.php"><i class="fa-solid fa-ticket"></i> My tickets</a>
-  <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+  <a href="Mytickets.php"><i class="fa-solid fa-ticket fa-2xl"></i> <br><br> My Tickets</a>
+  <a href="logout.php"><i class="fa-solid fa-right-from-bracket fa-2xl"> </i> <br><br> Logout</a>
 </div>
 
 
 
 <div class="main">
 
-<header>
-  <img src="logo.png" width= "200px">
+<header class="right">
+  <img src="logo2.png" width= "200px">
+  <h3 class="right"> فعاليات الشرقية </h3>
+  نعود بحذر مع التقيد بتوجيهات الجهات المعنية
+
 </header>
 
 <div id="section1" >
 
-
+<h3>Recently Added<h3>
 
 <!-- Slideshow container -->
+
 <div class="slideshow-container">
-<h3> Recently Added <h3>
+
 
   <!-- Full-width images with number and caption text -->
   <?php
@@ -258,7 +262,7 @@ echo '</table>';
 
 ?>
 
-<footer>
+<footer class="center">
 <div style="float: left; width: 200px; ">
  <h2>Location</h2>
  <p class="content" ><a href="https://goo.gl/maps/9gHLJABFrQSNQtg2A" target="_blank">

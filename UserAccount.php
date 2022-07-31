@@ -41,13 +41,13 @@ opacity: 0.2;
 </head>
 <body class="homePage admin">
 <div class="sidenav">
-  <a href="homepage.php"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="UserProfile.php"><i class="fa-solid fa-id-card"></i> My profile </a>
+  <a href="homepage.php" ><i class="fa-solid fa-house fa-2xl"></i> <br><br>Home</a>
+  <a href="UserProfile.php"><i class="fa-solid fa-id-card fa-2xl"></i> <br><br> My Profile </a>
 
-  <a href="UserAccount.php" class="focused"><i class="fa-solid fa-user"></i> My account </a>
+  <a href="UserAccount.php" class="focused"><i class="fa-solid fa-user fa-2xl"></i> <br><br> My Account </a>
 
-  <a href=""><i class="fa-solid fa-ticket"></i> My tickets</a>
-  <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+  <a href="Mytickets.php"><i class="fa-solid fa-ticket fa-2xl"></i> <br><br> My Tickets</a>
+  <a href="logout.php"><i class="fa-solid fa-right-from-bracket fa-2xl"> </i> <br><br> Logout</a>
 </div>
 
 
