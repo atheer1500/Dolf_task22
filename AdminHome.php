@@ -30,25 +30,26 @@ p {
 <body class="homePage admin">
 
 
-<header>
-  <img src="logo.png" width= "200px">
-</header>
 
 <div class="sidenav">
-<a href="AdminHome.php"  class="focused"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="AdminAccount.php"><i class="fa-solid fa-user"></i> My Account</a>
+<a href="AdminHome.php"  class="focused"><i class="fa-solid fa-house fa-2xl"></i><br><br> Home</a>
+  <a href="AdminAccount.php"><i class="fa-solid fa-user fa-2xl"></i><br><br> My Account</a>
 
-  <a href="AdminNewActor.php"><i class="fa-solid fa-circle-plus"></i> Add Actor</a>
-  <a href="AdminNewManager.php"><i class="fa-solid fa-circle-plus"></i> Add Manager</a>
-  <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
+  <a href="AdminNewActor.php"><i class="fa-solid fa-circle-plus fa-2xl"></i><br><br> Add Actor</a>
+  <a href="AdminNewManager.php"><i class="fa-solid fa-circle-plus fa-2xl"></i><br><br> Add Manager</a>
+  <hr>
+  <a href="logout.php"><i class="fa-solid fa-right-from-bracket fa-2xl"></i><br><br> Logout</a>
 </div>
 
 
 
-<div class="main" style="margin-top: 10%">
-
-<div style="position: relative;
-  left: -60px;">
+<div class="main" style="">
+<header>
+  <div class="left">
+  <img src="logo2.png" width= "200px">
+</div >
+</header>
+<div style="">
 <h2>Welcome back admin</h2>
 <h4>What would you like to do today?</h4>
 <div class="center">
@@ -63,8 +64,7 @@ p {
 <hr>
 
 <h5 id="actors"> List of Actors </h5>
-<a class="buttonstyle" href="AdminNewActor.php" style="position: relative;
-  left: 200px;">+ New</a>
+<a class="buttonstyle" href="AdminNewActor.php" style="">+ New</a>
 
 <?php
    if (isset ($_GET['problem']) and ($_GET['problem']=='DELETED')){
@@ -115,8 +115,7 @@ echo '</table>';
 <hr> 
 
 <h5 id="managers"> List of Event Managers </h5>
-<a class="buttonstyle" href="AdminNewManager.php" style="position: relative;
-  left: 200px;">+ New</a>
+<a class="buttonstyle" href="AdminNewManager.php" style="">+ New</a>
 
 <?php
 $conn = mysqli_connect("localhost:3306", "root", "", "event");

@@ -25,23 +25,25 @@ $row=mysqli_fetch_row($result);
 </head>
 <body class="homePage admin">
 
-<header>
-  <img src="logo.png" width= "200px">
-</header>
+
 
 <div class="sidenav">
-  <a href="ManagerHome.php"  class="focused"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="ManagerAccount.php"><i class="fa-solid fa-user"></i> My account </a>
-  <a href="viewManger.php"><i class="fa-solid fa-calendar-check"></i> My events </a>
-  <a href="ManagerNewEvent.php"><i class="fa-solid fa-circle-plus"></i> Add Event </a>
-  <a href="Logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+  <a href="ManagerHome.php"  class="focused"><i class="fa-solid fa-house fa-2xl"></i><br><br> Home</a>
+  <a href="ManagerAccount.php"><i class="fa-solid fa-user fa-2xl"></i><br><br> My account </a>
+  <a href="viewManger.php"><i class="fa-solid fa-calendar-check fa-2xl"></i><br><br> My events </a>
+  <a href="ManagerNewEvent.php"><i class="fa-solid fa-circle-plus fa-2xl"></i><br><br> Add Event </a>
+  <hr>
+  <a href="Logout.php"><i class="fa-solid fa-right-from-bracket fa-2xl"></i><br><br> Logout</a>
 </div>
 
-<div class="main" style="margin-top: 10%">
+<div class="main" style="">
+<header>
+  <div class="left">
+  <img src="logo2.png" width= "200px">
+</div >
+</header>
 
-
-<div style="position: relative;
-  left: -60px;">
+<div style="">
 
 <h2>Hello <?php echo  $row[0];?></h2>
 <h4>What would you like to do today?</h4>
@@ -56,8 +58,7 @@ $row=mysqli_fetch_row($result);
 <hr>
 
 <h5 id="events"> List of events </h5>
-<a class="buttonstyle" href="ManagerNewEvent.php" style="position: relative;
-  left: 200px;">+ New</a>
+<a class="buttonstyle" href="ManagerNewEvent.php" style="">+ New</a>
 
 <?php
    if (isset ($_GET['problem']) and ($_GET['problem']=='DELETED')){
