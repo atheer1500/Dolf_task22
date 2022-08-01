@@ -28,71 +28,17 @@ function validate()
     { 
         error.style.display="block";
         error.innerHTML="Please Don't Leave Any Empty Field ";
-        // if ((typeof Email === 'string' && Email.length === 0))
-        // {
-        //     document.getElementById("Email").style.borderColor='red';
-        // }
+    
         if ((!(typeof password === 'number')) || (password.length > 11))
         {
          
             error.innerHTML+="\<br> & the password must be a number only ";
 
         }
-        // if ((typeof Fname === 'string' && Fname.length === 0))
-        // {
-        //     document.getElementById("Fname").style.borderColor='red';
-        // }
-        // if ((typeof Lname === 'string' && Lname.length === 0))
-        // {
-        //     document.getElementById("Lname").style.borderColor='red';
-        // }
+
         
         return false;
-        
-    
-//     if ((typeof Email === 'string' && Email.length === 0)&&(typeof password === 'string' && password.length === 0)&&(Gender==false)&&(typeof Fname === 'string' && Fname.length === 0)&&(typeof Lname === 'string' && Lname.length === 0))
-//    {
-    
-//     error.innerHTML="Please Don't Leave Any Empty Field ";
-//     return false;
-//    }
-//    else if((typeof Email === 'string' && Email.length === 0)&&(typeof password === 'string' && password.length === 0))
-//    {
-    
-//     error.innerHTML="Please Fill The Email \<br>& Password Filed  ";
-    
-//     return false;
-//    }
-//    else if((typeof Email === 'string' && Email.length === 0)&&(Gender==false))
-//    {
-    
-//     error.innerHTML="Please Fill The Email Filed \<br>& choose the Gender type ";
-//     return false;
-//    }
-//    else if((typeof password === 'string' && password.length === 0)&&(Gender==false))
-//    {
-    
-//     error.innerHTML="Please Fill The password Filed \<br>& choose the Gender type ";
-//     return false;
-//    }
-//    else if((typeof Email === 'string' && Email.length === 0))
-//    {
-    
-//     error.innerHTML="Please Fill The Email Filed ";
-//     return false;
-//    }
-//    else if((typeof password === 'string' && password.length === 0))
-//    {
-    
-//     error.innerHTML="Please Fill The password Filed ";
-//     return false;
-//    }
-//    else if((Gender==false))
-//    {
-    
-//     error.innerHTML="Please choose the Gender type";
-//     return false;
-//    }
+
 }
 }
 
