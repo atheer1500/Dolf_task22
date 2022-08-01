@@ -34,7 +34,7 @@
  
  $updateQuery = "UPDATE `event_manger` set `Password` = '$password', `MangerEmail` = '$email', `Name` = '$name' WHERE `MangerID` = '$ID'";
 
-      //Check if if email is taken for another manager.
+      //Check if email is taken by another manager.
 
       $conflictQuery = "SELECT * FROM `event_manger` WHERE `MangerEmail` = '$email' AND `MangerID` != '$ID'";
       $conflictResult=mysqli_query($conn, $conflictQuery);

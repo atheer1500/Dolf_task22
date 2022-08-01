@@ -25,7 +25,7 @@ $email = $_REQUEST['newEmail'];
 $newPass = $_REQUEST['newPass'];
 
  
- $updateQuery = "UPDATE `event_manger` set `MangerEmail` = '$email', `Password` = '$newPass'";
+ $updateQuery = "UPDATE `event_manger` set `MangerEmail` = '$email', `Password` = '$newPass' WHERE `event_manger`.`MangerID` = '$managerID";
 
       //action for update here
       if(mysqli_query($conn, $updateQuery))
