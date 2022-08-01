@@ -15,13 +15,10 @@
      closeconn($conn);
     ?> -->
     <script>
-        // const form=document.getElementById("login");
-        // form.addEventListener("submit",validate());
+     
 function validate()
 {
-    // let e=document.getElementById("Email");
-    // let pass=document.getElementById("password");
-    // let Use=document.getElementById("User");
+   
     let Email=document.forms["myform"]["Email"].value;
     let password=document.forms["myform"]["password"].value;
     let User=document.forms["myform"]["User"].value;
@@ -80,19 +77,7 @@ function validate()
 }
     </script>
     <style>
-#ErrorMessege
-{
-    display: none;
-    color: red;
-    background-color: white;
-    border-radius: 4px;
-    min-height: 20px;
-    max-height: 100px;
-    width: 270px;
-    padding: 8px;
-    margin-left: 200px;
-    text-transform: capitalize;
-}
+
  #passwordF
 {
     margin-left:225px;

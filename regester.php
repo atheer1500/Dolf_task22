@@ -13,23 +13,7 @@
        margin-left: -1000px;
     }
         </style>
-    <!-- <?php
-    //  function  checkinfo()
-    //  {
 
-    //  $Id=$_POST['Email'];
-    //  $pass=$_POST['password'];
-    //  $sql ="SELECT `FirstName` FROM `end_user` WHERE `UserEmail`='".$Id."' AND `Password`=".$pass."";
-    //  $conn=OpenCon();
-    //  $result=mysqli_query($conn,$sql);
-    //  if (mysqli_num_rows($result) == 1)
-    //   {
-    //      $row = mysqli_fetch_assoc($result);
-    //       echo "Logged in!";
-    //   }
-    // }
-    //  closeconn($conn);
-    ?> -->
     <script>
 
         function validate()
@@ -76,8 +60,9 @@
 <body class="LoginRegisterPage">
     <div class="loginContainer">
         <h2> Register </h2>
+        <div id ="ErrorMessege"> </div>
         <div class="loginBox">
-            <form  id="Regester" action = "NewUserRegseter.php" method="POST">
+            <form  id="Regester" action = "NewUserRegseter.php" onsubmit="return  validate()" method="POST">
             <br>
             <input type="text" class="loginInputs" id="Fname" name="Fname" placeholder="Enter First Name">
             <br><br>
