@@ -23,45 +23,48 @@ function validate()
     let password=document.forms["myform"]["password"].value;
     let User=document.forms["myform"]["User"].value;
     var error=document.getElementById("ErrorMessege");
-    
+
     let typeEmail=new Boolean((typeof Email === 'string'));
     let typePass=new Boolean((typeof password === 'string'));
 
-    if ((typeEmail && Email.length === 0)||(typePass && password.length === 0)||(User==false))
+    let lengthEmail=new Boolean((Email.length === 0));
+    let lengthPass=new Boolean((password.length === 0));
+
+    if ((typeEmail && lengthEmail)||(typePass && lengthPass)||(User==false))
     { 
         error.style.display="block";
-    if ((typeEmail && Email.length === 0)&&(typePass && password.length === 0)&&(User==false))
+    if ((typeEmail && lengthEmail)&&(typePass && lengthPass)&&(User==false))
    {
     
     error.innerHTML="Please Don't Leave Any Empty Field ";
     return false;
    }
-   else if((typeEmail && Email.length === 0)&&(typePass && password.length === 0))
+   else if((typeEmail && lengthEmail)&&(typePass && lengthPass))
    {
     
     error.innerHTML="Please Fill The Email \<br>& Password Filed  ";
     
     return false;
    }
-   else if((typeEmail && Email.length === 0)&&(User==false))
+   else if((typeEmail && lengthEmail)&&(User==false))
    {
     
     error.innerHTML="Please Fill The Email Filed \<br>& choose the user type ";
     return false;
    }
-   else if((typePass && password.length === 0)&&(User==false))
+   else if((typePass && lengthPass)&&(User==false))
    {
     
     error.innerHTML="Please Fill The password Filed \<br>& choose the user type ";
     return false;
    }
-   else if((typeEmail && Email.length === 0))
+   else if((typeEmail && lengthEmail))
    {
     
     error.innerHTML="Please Fill The Email Filed ";
     return false;
    }
-   else if((typePass && password.length === 0))
+   else if((typePass && lengthPass))
    {
     
     error.innerHTML="Please Fill The password Filed ";
