@@ -15,21 +15,63 @@
         </style>
 
     <script>
-
-        function validate()
-        {
-            // var Email=document.getElementById("Email");
-            // var Password=document.getElementById("password");
-            // if(!(isset(Email)||isset(Password))||isEmpty(Email)||isEmpty(Password))
-            // {
-            //     window.alert("somthing is missing");
-            // }
-            // else
-            // {
-            //     var form=document.getElementById("login");
-            //     form.setAttribute.
-            // }
-        }
+function validate()
+{
+   
+    let Email=document.forms["myform"]["Email"].value;
+    let password=document.forms["myform"]["password"].value;
+    let Gender=document.forms["myform"]["Gender"].value;
+    let Fname=document.forms["myform"]["Fname"].value;
+    let Lname=document.forms["myform"]["Lname"].value;
+    var error=document.getElementById("ErrorMessege");
+    if ((typeof Email === 'string' && Email.length === 0)||(typeof password === 'string' && password.length === 0)||(Gender==false)||(typeof Fname === 'string' && Fname.length === 0)||(typeof Lname === 'string' && Lname.length === 0))
+    { 
+        error.style.display="block";
+    if ((typeof Email === 'string' && Email.length === 0)&&(typeof password === 'string' && password.length === 0)&&(Gender==false))
+   {
+    
+    error.innerHTML="Please Don't Leave Any Empty Field ";
+    return false;
+   }
+   else if((typeof Email === 'string' && Email.length === 0)&&(typeof password === 'string' && password.length === 0))
+   {
+    
+    error.innerHTML="Please Fill The Email \<br>& Password Filed  ";
+    
+    return false;
+   }
+   else if((typeof Email === 'string' && Email.length === 0)&&(Gender==false))
+   {
+    
+    error.innerHTML="Please Fill The Email Filed \<br>& choose the Gender type ";
+    return false;
+   }
+   else if((typeof password === 'string' && password.length === 0)&&(Gender==false))
+   {
+    
+    error.innerHTML="Please Fill The password Filed \<br>& choose the Gender type ";
+    return false;
+   }
+   else if((typeof Email === 'string' && Email.length === 0))
+   {
+    
+    error.innerHTML="Please Fill The Email Filed ";
+    return false;
+   }
+   else if((typeof password === 'string' && password.length === 0))
+   {
+    
+    error.innerHTML="Please Fill The password Filed ";
+    return false;
+   }
+   else if((Gender==false))
+   {
+    
+    error.innerHTML="Please choose the Gender type";
+    return false;
+   }
+}
+}
 
     </script>
     <style>
@@ -62,7 +104,7 @@
         <h2> Register </h2>
         <div id ="ErrorMessege"> </div>
         <div class="loginBox">
-            <form  id="Regester" action = "NewUserRegseter.php" onsubmit="return  validate()" method="POST">
+            <form  id="myform" action = "NewUserRegseter.php" onsubmit="return  validate()" method="POST">
             <br>
             <input type="text" class="loginInputs" id="Fname" name="Fname" placeholder="Enter First Name">
             <br><br>

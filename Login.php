@@ -70,10 +70,6 @@ function validate()
     return false;
    }
 }
-
-
-
-
 }
     </script>
     <style>
