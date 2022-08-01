@@ -48,12 +48,13 @@ button, .buttonstyle, input[type=submit]
 
 
 <div class="sidenav">
-<a href="AdminHome.php"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="AdminAccount.php"><i class="fa-solid fa-user"></i> My Account</a>
+<a href="AdminHome.php" ><i class="fa-solid fa-house fa-2xl"></i><br><br> Home</a>
+  <a href="AdminAccount.php"><i class="fa-solid fa-user fa-2xl"></i><br><br> My Account</a>
 
-  <a href="AdminNewActor.php"  class="focused"><i class="fa-solid fa-circle-plus"></i> Add Actor</a>
-  <a href="AdminNewManager.php"><i class="fa-solid fa-circle-plus"></i> Add Manager</a>
-  <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> <!--here we can move to php page that excute logout then header(location: index.html)-->
+  <a href="AdminNewActor.php" class="focused"><i class="fa-solid fa-circle-plus fa-2xl"></i><br><br> Add Actor</a>
+  <a href="AdminNewManager.php"><i class="fa-solid fa-circle-plus fa-2xl"></i><br><br> Add Manager</a>
+  <hr>
+  <a href="logout.php"><i class="fa-solid fa-right-from-bracket fa-2xl"></i><br><br> Logout</a>
 </div>
 
 

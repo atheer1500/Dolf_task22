@@ -61,11 +61,12 @@ button, .buttonstyle, input[type=submit]
 
 
 <div class="sidenav">
-  <a href="ManagerHome.php"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="ManagerAccount.php"><i class="fa-solid fa-user"></i> My account </a>
-  <a href="viewManger.php"><i class="fa-solid fa-calendar-check"></i> My events </a>
-  <a href="ManagerNewEvent.php"><i class="fa-solid fa-circle-plus"></i> Add Event </a>
-  <a href="Logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+  <a href="ManagerHome.php" ><i class="fa-solid fa-house fa-2xl"></i><br><br> Home</a>
+  <a href="ManagerAccount.php"><i class="fa-solid fa-user fa-2xl"></i><br><br> My Account </a>
+  <a href="viewManger.php"><i class="fa-solid fa-calendar-check fa-2xl"></i><br><br> My Events </a>
+  <a href="ManagerNewEvent.php"><i class="fa-solid fa-circle-plus fa-2xl"></i><br><br> Add Event </a>
+  <hr>
+  <a href="Logout.php"><i class="fa-solid fa-right-from-bracket fa-2xl"></i><br><br> Logout</a>
 </div>
 
 

@@ -9,7 +9,9 @@
 
 
 
- @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+ /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap'); */
+
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
  body {
   background-color: #f4f6f8;
@@ -223,7 +225,7 @@ a, button
     background-attachment: fixed;*/
     /*color: white;*/
     font-size:2em;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /*font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
 }
 
 .managerPage p
