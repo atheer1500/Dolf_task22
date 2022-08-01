@@ -27,7 +27,7 @@ function validate()
     if ((typeof Email === 'string' && Email.length === 0)||(typeof password === 'string' && password.length === 0)||(Gender==false)||(typeof Fname === 'string' && Fname.length === 0)||(typeof Lname === 'string' && Lname.length === 0))
     { 
         error.style.display="block";
-    if ((typeof Email === 'string' && Email.length === 0)&&(typeof password === 'string' && password.length === 0)&&(Gender==false))
+    if ((typeof Email === 'string' && Email.length === 0)&&(typeof password === 'string' && password.length === 0)&&(Gender==false)&&(typeof Fname === 'string' && Fname.length === 0)&&(typeof Lname === 'string' && Lname.length === 0))
    {
     
     error.innerHTML="Please Don't Leave Any Empty Field ";

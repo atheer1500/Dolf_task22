@@ -24,49 +24,42 @@ function validate()
     let User=document.forms["myform"]["User"].value;
     var error=document.getElementById("ErrorMessege");
 
-    let typeEmail=new Boolean((typeof Email === 'string'));
-    let lengthEmail=new Boolean((Email.length === 0));
-    // let lenE=Email.length;
 
-    let typePass=new Boolean((typeof password === 'string'));
-    let lengthPass=new Boolean((password.length === 0));
-    // let lenP=password.length;
-
-    if ((typeEmail && lengthEmail)||(typePass && lengthPass)||(User==false))
+    if (( (typeof Email === 'string') && (Email.length === 0))||((typeof password === 'string') && (password.length === 0))||(User==false))
     { 
         error.style.display="block";
-    if ((typeEmail && lengthEmail)&&(typePass && lengthPass)&&(User==false))
+    if (( (typeof Email === 'string') && (Email.length === 0))&&((typeof password === 'string') && (password.length === 0))&&(User==false))
    {
     
     error.innerHTML="Please Don't Leave Any Empty Field ";
     return false;
    }
-   else if((typeEmail && lengthEmail)&&(typePass && lengthPass))
+   else if(( (typeof Email === 'string') && (Email.length === 0))&&((typeof password === 'string') && (password.length === 0)))
    {
     
     error.innerHTML="Please Fill The Email \<br>& Password Filed  ";
     
     return false;
    }
-   else if((typeEmail && lengthEmail)&&(User==false))
+   else if(( (typeof Email === 'string') && (Email.length === 0))&&(User==false))
    {
     
     error.innerHTML="Please Fill The Email Filed \<br>& choose the user type ";
     return false;
    }
-   else if((typePass && lengthPass)&&(User==false))
+   else if(((typeof password === 'string') && (password.length === 0))&&(User==false))
    {
     
     error.innerHTML="Please Fill The password Filed \<br>& choose the user type ";
     return false;
    }
-   else if((typeEmail && lengthEmail))
+   else if(( (typeof Email === 'string') && (Email.length === 0)))
    {
     
     error.innerHTML="Please Fill The Email Filed ";
     return false;
    }
-   else if((typePass && lengthPass))
+   else if(((typeof password === 'string') && (password.length === 0)))
    {
     
     error.innerHTML="Please Fill The password Filed ";
@@ -79,46 +72,7 @@ function validate()
     return false;
    }
 }
-// else if ((lenE>35) ||lenP>11||(typeof password === 'number'))
-// {
-//     error.style.display="block";
 
-// if(lenE>35&&lenP>11&&(typeof password === 'number'))
-// {
-//     error.innerHTML="Please Enter only 35 charecter or less for the Email \<br> only Numbers for the password \<br> & 11 or less charcter for the password   ";
-//     return false;
-// }
-// else if (lenE>35&&lenP>11)
-// {
-//     error.innerHTML="Please Enter only 35 charecter or less for the Email  \<br> & 11 or less charcter for the password   ";
-//     return false;
-// }
-// else if (lenP>11&&!(typeof password === 'number'))
-// {
-//     error.innerHTML="Please Enter only 11 or less charcter for the password  \<br>& Please Enter only Numbers for the password   ";
-//     return false;
-// }
-// else if (lenE>35 &&!(typeof password === 'number'))
-// {
-//     error.innerHTML="Please Enter only 35 charecter or less for the Email \<br>& only numbers for the passowrd   ";
-//     return false;
-// }
-// else if (lenE>35)
-// {
-//     error.innerHTML="Please Enter only 35 charecter or less for the Email ";
-//     return false;
-// }
-// else if (lenP>11)
-// {
-//     error.innerHTML="Please Enter only 11 charecter or less for the password ";
-//     return false;
-// }
-// else if(!(typeof password === 'number')) 
-// {
-//     error.innerHTML="Please Enter only Numbers for the password ";
-//     return false;
-// }
-// }
 }
     </script>
     <style>
