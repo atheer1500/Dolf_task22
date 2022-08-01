@@ -29,8 +29,10 @@
 header {
   text-align: center;
   font-size: medium;
-  margin: -18px;
-  padding: 50px;
+  margin-top: -18px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+
   margin-bottom: 50px;
   margin-top: -80px;
 
@@ -92,12 +94,12 @@ user-select: none; /* Standard */
     
     font-size: 28px; /* Increased text to enable scrolling */
     padding: 0px 10px;
-    margin-left: 100px; /*same as sidenav width*/
+    margin-left: 150px; /*same as sidenav width*/
 
     /* 100 % 100px
     90 % 150px
     80 % 200px */
-   /* width: 100%; */
+   width: 85%;
   }
 
 footer {

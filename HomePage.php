@@ -135,11 +135,11 @@ text-align: left;
 
 <header>
   <div class="left">
-  <img src="logo2.png" width= "200px">
+  <img src="logo.png" width= "150px">
 </div >
 </header>
 
-<div class="left" style="margin-top: -100px; margin-top: -100px;   margin-bottom: 100px; margin-left: 50px;">
+<div class="left" style="margin-top: -100px; margin-top: -100px;   margin-bottom: 100px;">
 <div  id ="containerIntro">
   <h1  style="text-align:  unset"> Events </h1> <h1 style="color: #8497b5">22</h1>
 </div>

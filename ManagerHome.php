@@ -39,7 +39,7 @@ $row=mysqli_fetch_row($result);
 <div class="main" style="">
 <header>
   <div class="left">
-  <img src="logo2.png" width= "200px">
+  <img src="logo.png" width= "150px">
 </div >
 </header>
 
