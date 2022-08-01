@@ -19,19 +19,63 @@
         // form.addEventListener("submit",validate());
 function validate()
 {
-   // var email=document.getElementById("Email");
+    // let e=document.getElementById("Email");
+    // let pass=document.getElementById("password");
+    // let Use=document.getElementById("User");
     let Email=document.forms["myform"]["Email"].value;
     let password=document.forms["myform"]["password"].value;
     let User=document.forms["myform"]["User"].value;
     var error=document.getElementById("ErrorMessege");
-    //&&(User.checked==false)
-    //(typeof Email === 'string' && Email.length === 0)&&(typeof password === 'string' && password.length === 0)&&
-    if ((User==false))
+    if ((typeof Email === 'string' && Email.length === 0)||(typeof password === 'string' && password.length === 0)||(User==false))
+    { 
+        error.style.display="block";
+    if ((typeof Email === 'string' && Email.length === 0)&&(typeof password === 'string' && password.length === 0)&&(User==false))
    {
-    error.style.display="block";
-    error.innerHTML="Pleas dont leave any empty field  !!"
+    
+    error.innerHTML="Please Don't Leave Any Empty Field ";
     return false;
    }
+   else if((typeof Email === 'string' && Email.length === 0)&&(typeof password === 'string' && password.length === 0))
+   {
+    
+    error.innerHTML="Please Fill The Email \<br>& Password Filed  ";
+    
+    return false;
+   }
+   else if((typeof Email === 'string' && Email.length === 0)&&(User==false))
+   {
+    
+    error.innerHTML="Please Fill The Email Filed \<br>& choose the user type ";
+    return false;
+   }
+   else if((typeof password === 'string' && password.length === 0)&&(User==false))
+   {
+    
+    error.innerHTML="Please Fill The password Filed \<br>& choose the user type ";
+    return false;
+   }
+   else if((typeof Email === 'string' && Email.length === 0))
+   {
+    
+    error.innerHTML="Please Fill The Email Filed ";
+    return false;
+   }
+   else if((typeof password === 'string' && password.length === 0))
+   {
+    
+    error.innerHTML="Please Fill The password Filed ";
+    return false;
+   }
+   else if((User==false))
+   {
+    
+    error.innerHTML="Please choose the user type";
+    return false;
+   }
+}
+
+
+
 
 }
     </script>
@@ -47,6 +91,7 @@ function validate()
     width: 270px;
     padding: 8px;
     margin-left: 200px;
+    text-transform: capitalize;
 }
  #passwordF
 {
