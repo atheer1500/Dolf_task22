@@ -25,10 +25,12 @@ function validate()
     var error=document.getElementById("ErrorMessege");
 
     let typeEmail=new Boolean((typeof Email === 'string'));
-    let typePass=new Boolean((typeof password === 'string'));
-
     let lengthEmail=new Boolean((Email.length === 0));
+    // let lenE=Email.length;
+
+    let typePass=new Boolean((typeof password === 'string'));
     let lengthPass=new Boolean((password.length === 0));
+    // let lenP=password.length;
 
     if ((typeEmail && lengthEmail)||(typePass && lengthPass)||(User==false))
     { 
@@ -77,6 +79,46 @@ function validate()
     return false;
    }
 }
+// else if ((lenE>35) ||lenP>11||(typeof password === 'number'))
+// {
+//     error.style.display="block";
+
+// if(lenE>35&&lenP>11&&(typeof password === 'number'))
+// {
+//     error.innerHTML="Please Enter only 35 charecter or less for the Email \<br> only Numbers for the password \<br> & 11 or less charcter for the password   ";
+//     return false;
+// }
+// else if (lenE>35&&lenP>11)
+// {
+//     error.innerHTML="Please Enter only 35 charecter or less for the Email  \<br> & 11 or less charcter for the password   ";
+//     return false;
+// }
+// else if (lenP>11&&!(typeof password === 'number'))
+// {
+//     error.innerHTML="Please Enter only 11 or less charcter for the password  \<br>& Please Enter only Numbers for the password   ";
+//     return false;
+// }
+// else if (lenE>35 &&!(typeof password === 'number'))
+// {
+//     error.innerHTML="Please Enter only 35 charecter or less for the Email \<br>& only numbers for the passowrd   ";
+//     return false;
+// }
+// else if (lenE>35)
+// {
+//     error.innerHTML="Please Enter only 35 charecter or less for the Email ";
+//     return false;
+// }
+// else if (lenP>11)
+// {
+//     error.innerHTML="Please Enter only 11 charecter or less for the password ";
+//     return false;
+// }
+// else if(!(typeof password === 'number')) 
+// {
+//     error.innerHTML="Please Enter only Numbers for the password ";
+//     return false;
+// }
+// }
 }
     </script>
     <style>
