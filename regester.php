@@ -32,10 +32,12 @@ function validate()
         // {
         //     document.getElementById("Email").style.borderColor='red';
         // }
-        // if ((typeof password === 'string' && password.length === 0))
-        // {
-        //     document.getElementById("passwordF").style.borderColor='red';
-        // }
+        if ((!(typeof password === 'number')) || (password.length > 11))
+        {
+         
+            error.innerHTML+="\<br> & the password must be a number only ";
+
+        }
         // if ((typeof Fname === 'string' && Fname.length === 0))
         // {
         //     document.getElementById("Fname").style.borderColor='red';
