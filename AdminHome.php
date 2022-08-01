@@ -46,7 +46,7 @@ p {
 <div class="main" style="">
 <header>
   <div class="left">
-  <img src="logo.png" width= "200px">
+  <img src="logo.png" width= "150px">
 </div >
 </header>
 <div style="">
