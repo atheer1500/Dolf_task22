@@ -28,12 +28,10 @@ function validate()
     { 
         error.style.display="block";
         error.innerHTML="Please Don't Leave Any Empty Field ";
-    
+        
         if ((!(typeof password === 'number')) || (password.length > 11))
         {
-         
             error.innerHTML+="\<br> & the password must be a number only ";
-
         }
 
         
