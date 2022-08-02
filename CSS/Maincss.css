@@ -551,6 +551,9 @@ top: -5px;
 .myform input[type=text]:disabled, .myform input[type=password]:disabled {
   border:none;
   background-color: rgba(0, 0, 0, 0.1);
+
+  color: gray;
+
 }
 
 .myform input[type=submit] {
@@ -643,6 +646,8 @@ top: -5px;
 .container select:disabled, .container input:disabled {
   border-color: rgba(0, 0, 0, 0.01);
   background-color: rgba(0, 0, 0, 0.1);
+
+  color: gray;
 }
 
 .container #hint{
