@@ -80,7 +80,7 @@ if ($resultsqlviewuser = mysqli_query($conn, $sqlviewuser))
     echo" <div class='NumOfTikContainer'> 
     <div class='NumOfTikNum'>"
     . $_SESSION['NumberOfTickets__'].
-    "</div><br><div class='NumOfTikText'>Available Tickets</div></div>";
+    "</div><br><div class='NumOfTikText' style ='margin-right:5.5%;margin-top:-1%;'> Tickets</div></div>";
    //echo "<a href='#' class='editbutton'> Edit</a>";
     echo "</div>";
     //?id=" . $_SESSION['EventID'] .  "

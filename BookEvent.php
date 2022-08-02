@@ -77,7 +77,7 @@ if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))
 
 <span  class='paymentRadio'>
 <input type='radio' id='cash' name='Payment' value='cash'> <label class='paymentRadioText'>Cash</label>
-<input type='radio' id='card' name='Payment' value='card'> <label class='paymentRadioText'>Card On Arrival</label>
+<input type='radio' id='card' name='Payment' value='card'> <label class='paymentRadioText'>Card </label>
 
 
 </span>
