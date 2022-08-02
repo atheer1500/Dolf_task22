@@ -55,6 +55,7 @@ button, .buttonstyle, input[type=submit]
 }
 
 
+
 </style>
 </head>
 <body class="admin">
@@ -95,15 +96,16 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
      }
 
 ?>       
+<div id="imgContainer">
 <p>
 
     <label for="uploadImg"> <span>Event Picture:</span>
     <span class ="right">  <img src= "<?php echo $row[6] ?>" height="140px" width="140px" id="img" style="cursor: pointer" title="">       </span>         
 </label>
-<span class="hint" id="hint"> Edit</span>
+<div id="hint"> Edit</div>
     <input type="file" accept="image/*" name="event_img" id="uploadImg" style="display: none; " onChange="change()" />
 </p>
-
+    </div>
 <p>
     <label for="eventTitle"><span>Event Title:</span></label>
    <input type="text" name="event_title" id="eventTitle" 
