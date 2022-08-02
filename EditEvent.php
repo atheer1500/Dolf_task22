@@ -55,7 +55,7 @@
         $query = "SELECT `Pic` FROM `events` WHERE `EventID` = '$eventID'";
         $result=mysqli_query($conn, $query);
         $row=mysqli_fetch_row($result);
-        if ($img == "")
+        if ($img == "images/")
         {
             $img = $row[0];
         }
