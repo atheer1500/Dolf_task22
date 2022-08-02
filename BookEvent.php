@@ -76,14 +76,26 @@ if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))
 <label for='Tickets'><span class='lab'>Payment Method :</span></label>
 
 <span style='display: block;' class='paymentRadio'>
-<input type='radio' id='cash' name='Payment' value='cash' >Cash
-<input type='radio' id='card' name='Payment' value='card'  >Card On Arrival
+<input type='radio' id='cash' name='Payment' value='cash' ><lable style:'    height: 75px;align-items: center;'>Cash</lable>
+<input type='radio' id='card' name='Payment' value='card'  > <lable style='margin-top:-23%;height: 30px;min-width: 90%;'>Card On Arrival</lable>
 
 
 </span>
 </p>
 
-<input type='submit' style='margin-left:24%;color:black;'  value='Submit'>
+<input type='submit' style='margin-left:23%;
+
+    border: 1px solid ;
+    border-radius: 50px;
+    padding: 10px;
+    text-decoration: none;
+    background-color:#8497b5;
+    font-weight: bold;
+    font-size: medium;
+    text-align: center;
+    cursor: pointer;
+    color:white;
+'  value='Submit'>
 </form></div>";
      }
 
