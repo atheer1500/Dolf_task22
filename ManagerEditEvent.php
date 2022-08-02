@@ -149,7 +149,7 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
 
 <p>
 <label for="eventActor"><span>Actor:</span> </label>
- <select id="eventActor" name="event_actor" disabled>
+ <select id="eventActor" name="event_actor" required>
   <?php
 
   
