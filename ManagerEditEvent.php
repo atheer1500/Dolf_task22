@@ -98,9 +98,9 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
 <p>
 
     <label for="uploadImg"> <span>Event Picture:</span>
-    <span class ="right">  <img src= "<?php echo $row[6] ?>" height="140px" width="140px" id="img" style="cursor: pointer">       </span>         
+    <span class ="right">  <img src= "<?php echo $row[6] ?>" height="140px" width="140px" id="img" style="cursor: pointer" title="">       </span>         
 </label>
-
+<span class="hint" id="hint"> Edit</span>
     <input type="file" accept="image/*" name="event_img" id="uploadImg" style="display: none; " onChange="change()" />
 </p>
 
@@ -218,7 +218,14 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
   }
       
       
-      
+  $( "#img" ).mouseover(function() {
+  $( "#hint" ).css("display", "block");
+});
+
+
+$( "#img" ).mouseleave(function() {
+  $( "#hint" ).hide();
+});
       </script>
 </body>
 </html>

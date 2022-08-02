@@ -645,6 +645,13 @@ top: -5px;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.container .hint{
+  position: relative; z-index: 2; top: -41px; right: -205px; width: 140px; 
+  background-color: rgba(255, 255, 255, 0.5); text-align: center;
+  display: none;
+  border-radius: 0px 50px 0px 0px;
+}
+
 
 #ErrorMessege
 {
