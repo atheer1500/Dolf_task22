@@ -516,7 +516,6 @@ div#book
 .paymentRadio
 {
  
-   display: inline; 
   min-height: 25px;
   font-size: 15px;
   margin-left: 150px;
@@ -526,8 +525,8 @@ div#book
 
 .paymentRadioText
 {
- margin-left: -10px;
- padding-top: 100px;
+position: relative;
+top: -5px;
 }
 
 
