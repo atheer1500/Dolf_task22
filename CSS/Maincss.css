@@ -533,7 +533,7 @@ div#book
   float: right;
 }
 
-.myform input[type=text]:disabled, input[type=password]:disabled {
+.myform input[type=text]:disabled, .myform input[type=password]:disabled {
   border:none;
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -603,6 +603,7 @@ div#book
 	display: inline-block;
 	margin-top: 10px;
 	width: 50%;
+  resize: none;
 
   
   border: 2px solid rgb(187, 187, 187);
@@ -623,6 +624,12 @@ div#book
 	display: inline-block;
 	width: 49.4%;
 }
+
+.container select:disabled, .container input:disabled {
+  border-color: rgba(0, 0, 0, 0.01);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 
 #ErrorMessege
 {
