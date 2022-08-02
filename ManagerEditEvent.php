@@ -120,7 +120,7 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
 
 <p>
     <label for="eventTime"><span>Event Time:</span></label>
-    <select name="event_time" id="eventTime" disabled>
+    <select name="event_time" id="eventTime" required>
         <option value="12 PM - 2 PM"  <?php if ($row[2] == '12 PM - 2 PM') echo 'selected'; ?>>12 PM - 2 PM</option>
         <option value="2 PM - 4 PM" <?php if ($row[2] == '2 PM - 4 PM') echo 'selected'; ?>>2 PM - 4 PM</option>
         <option value="4 PM - 6 PM" <?php if ($row[2] == '4 PM - 6 PM') echo 'selected'; ?>>4 PM - 6 PM</option>
@@ -135,7 +135,7 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
     <label for="eventDate"><span>Event Date:</span></label>
     <input type="Date" name="event_date" id="eventDate" 
     value = "<?php echo $row[3] ?>"
-    disabled>
+    required>
 </p>
 
 <p>
