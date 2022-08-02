@@ -19,6 +19,18 @@
       //    ?>
       // }
       </script>
+      <style>
+        h2,h4
+        {
+          text-align: center;
+          
+        }
+        body
+        {
+          font-family: 'Roboto','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        </style>
       
 </head>
 <body >

@@ -14,7 +14,7 @@ if ($ResultSqlForFirstName = mysqli_query($conn, $SqlForFirstName))
   while($RowForFirstName =mysqli_fetch_array($ResultSqlForFirstName))
   {
     $_SESSION['FirstName']=$RowForFirstName['FirstName'];
-    echo "<h2 style='margin-left:-5%;'>Hi There ! ".$_SESSION['FirstName']."</h2>";
+    echo "<h2 >Hi There ! ".$_SESSION['FirstName']."</h2>";
     echo "<h4 > To book an event <br> Please select :</h4>";
 
   }
@@ -49,7 +49,7 @@ if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))
     <div class='container'>
     <form action='BookAnEvent.php?evID=".$evID."' method='post'  >
 <p>
-<span class='lab ' style='margin-left: 22%; font-size:25px;width: 90%; text-transform: Uppercase;' >".$_SESSION['Title']."</span>
+<span class='lab ' style=' text-align: center; font-size:25px;width: 80%; text-transform: Uppercase;' >".$_SESSION['Title']."</span>
 </p>
 <p>
 
@@ -57,18 +57,18 @@ if ($ResultSqlForEvents = mysqli_query($conn, $SqlForEvents))
 </label>
 </p>
 <p>
-<span class='lab ' style='margin-left: 12%; width: 90%;' >
-<i class='far fa-clock'></i>&nbsp; &nbsp; &nbsp; &nbsp;".$_SESSION['Time']." &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+<span class='lab ' style='text-align: center; width: 80%;' >
+<i class='far fa-clock'></i>&nbsp; &nbsp; &nbsp; &nbsp;".$_SESSION['Time']." &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 <i class='far fa-calendar-alt'>&nbsp; &nbsp;&nbsp; &nbsp;</i> ".$_SESSION['Date']."
 </span>
 </p>
 
 <p>
-<span class='lab ' style='margin-left: 35%;' >".$_SESSION['Name']."</span>
+<span class='lab ' style='text-align: center; width: 80%;' >".$_SESSION['Name']."</span>
 </p>
 
 <p>
-<label for='Tickets'><span class='lab'>Number Of Tickets : </span></label>
+<label for='Tickets'><span class='lab' >Number Of Tickets : </span></label>
 <input type='number' id='Tickets' name='Tickets'min='1' max='".$_SESSION['AvailableTickets__']."' value='1' step='1'>
 </p>
 
