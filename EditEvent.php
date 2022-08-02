@@ -16,15 +16,21 @@
   
  $eventID=$_SESSION['EventID'];
 
- // take the data from the database 
- $img =  $_REQUEST['event_img']; //Here we can change the path (add folder name for example)
+ //Take image from the form 
+ $imgCopy =  $_FILES['event_img'];
+ //Move image to Images folder
+ move_uploaded_file($imgCopy['tmp_name'],"images/".$imgCopy['name']);
+
+//Take image path
+ $img =   "images/".$imgCopy['name'];
+
+//Take the data from the form 
  $title =  $_REQUEST['event_title'];
  $description = $_REQUEST['event_description'];
  $time = $_REQUEST['event_time'];
  $date = $_REQUEST['event_date'];
  $actor = $_REQUEST['event_actor'];
  $ticketsNum = $_REQUEST['event_tickets'];
-
 
 
 

@@ -65,7 +65,7 @@ button, .buttonstyle, input[type=submit]
 <div style="text-align: center; ">
 <div class="container">
 
-<form  action="InsertEvent.php" method="post" name ="newEventForm" onsubmit = "return(validate());">
+<form  action="InsertEvent.php" method="post" enctype="multipart/form-data" name ="newEventForm" onsubmit = "return(validate());">
 <?php
 if (isset ($_GET['problem']) and ($_GET['problem']=='ADD')) {
 echo '<script> window.onload=function(){alert("The event is added successfuly");}; </script>';}

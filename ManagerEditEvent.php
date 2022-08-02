@@ -76,7 +76,7 @@ button, .buttonstyle, input[type=submit]
 <div style="text-align: center; ">
 <div class="container">
 
-<form action="EditEvent.php?id=<?php echo $eventID; ?>" method="post">
+<form action="EditEvent.php?id=<?php echo $eventID; ?>" method="post" enctype="multipart/form-data">
 <?php
 //Show success/fail meesages
 if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
