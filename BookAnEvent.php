@@ -1,5 +1,10 @@
 <?php
 session_start();
+if (!isset($_SESSION['userID']))
+header('location:unauthorized.php');
+?>
+<?php
+session_start();
 include('connection.php'); 
 $conn=OpenCon();
 $evID= $_GET['evID'];
