@@ -88,17 +88,17 @@ else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR1')){
 
 <p>
     <label for="eventTitle"><span>Event Title:</span></label>
-   <input type="text" name="event_title" id="eventTitle" required> 
+   <input type="text" name="event_title" id="eventTitle" > 
 </p>
 
 <p>
     <label for="eventDescription"><span> Event Description:</span></label>
-    <textarea class="border" name="event_description" id="eventDescription" cols="60" rows="10" " required ></textarea><br>
+    <textarea class="border" name="event_description" id="eventDescription" cols="60" rows="10"  ></textarea><br>
 </p>
 
 <p>
     <label for="eventTime"><span>Event Time:</span></label>
-    <select name="event_time" id="eventTime" required>
+    <select name="event_time" id="eventTime" >
         <option value="12 PM - 2 PM">12 PM - 2 PM</option>
         <option value="2 PM - 4 PM">2 PM - 4 PM</option>
         <option value="4 PM - 6 PM">4 PM - 6 PM</option>
@@ -111,19 +111,19 @@ else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR1')){
 
 <p>
     <label for="eventDate"><span>Event Date:</span></label>
-    <input type="Date" name="event_date" id="eventDate" required>
+    <input type="Date" name="event_date" id="eventDate" >
 </p>
 
 <p>
     <label for="eventTickets"><span>Number of Tickets:</span></label>
-    <input type="number" id="eventTickets" name="event_tickets" min="1" max="100" required> 
+    <input type="number" id="eventTickets" name="event_tickets" min="1" max="100" > 
 </p>
 
 
 
 <p>
 <label for="eventActor"><span>Actor:</span> </label>
- <select id="eventActor" name="event_actor" required>
+ <select id="eventActor" name="event_actor" >
   <?php
   //Database connection
   $conn = mysqli_connect("localhost:3306", "root", "", "event");
@@ -189,6 +189,33 @@ else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR1')){
     alert("Please upload an image. ");
     return false;
   }
+  else  if (document.forms["newEventForm"]["event_title"].value == "")
+  {
+    alert("Please fill all the fields. ");
+    document.forms["newEventForm"]["event_title"].focus();
+    return false;
+  }
+  else  if (document.forms["newEventForm"]["event_description"].value == "")
+  {
+    alert("Please fill all the fields. ");
+    document.forms["newEventForm"]["event_description"].focus();
+    return false;
+  }
+  else  if (document.forms["newEventForm"]["event_date"].value == "")
+  {
+    alert("Please fill all the fields. ");
+    document.forms["newEventForm"]["event_date"].focus();
+    return false;
+  }
+  else  if (document.forms["newEventForm"]["event_tickets"].value == "")
+  {
+    alert("Please fill all the fields. ");
+    document.forms["newEventForm"]["event_tickets"].focus();
+    return false;
+  }
+
+
+
 }
       
       

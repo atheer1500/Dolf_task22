@@ -21,11 +21,20 @@
   overflow-x: hidden;
 }
 
+/*Hide scrollbar but still able to scroll*/
+body{
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+body::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
 ::selection {
   background-color: rgba(0,0,0,.3);
   color: white;
-
 }
+
 header {
   text-align: center;
   font-size: medium;
@@ -94,7 +103,7 @@ user-select: none; /* Standard */
     
     font-size: 28px; /* Increased text to enable scrolling */
     padding: 0px 10px;
-    margin-left: 150px; /*same as sidenav width*/
+    margin-left: 155px; /*Same as sidenav width if width is auto*/
 
     /* 100 % 100px
     90 % 150px
@@ -542,6 +551,9 @@ top: -5px;
 .myform input[type=text]:disabled, .myform input[type=password]:disabled {
   border:none;
   background-color: rgba(0, 0, 0, 0.1);
+
+  color: gray;
+
 }
 
 .myform input[type=submit] {
@@ -634,7 +646,32 @@ top: -5px;
 .container select:disabled, .container input:disabled {
   border-color: rgba(0, 0, 0, 0.01);
   background-color: rgba(0, 0, 0, 0.1);
+
+  color: gray;
 }
+
+.container #hint{
+  position: absolute;
+  top: 80%;
+  left: 62.6%;
+
+  opacity: 0.8;
+  transform: translate(-50%, -50%);
+
+  background-color: rgba(0, 0, 0); 
+  text-align: center;
+  color: white;
+  width:25%;
+  font-size: 12px;
+
+  border-radius: 50px 50px 0px  0px ;
+
+  display: none;
+}
+
+.container #imgContainer{ 
+  position: relative;
+ } 
 
 
 #ErrorMessege
