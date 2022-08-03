@@ -153,19 +153,20 @@ a, button
 
 .firstPage
 {
-    background-image: linear-gradient(#e66465, #9198e5),
-     url('background.png');
     /* color: white; */
     font-size:6em;
     /* text-align: center; */
 }
 
-.firstPage p{
-    /* color: white; */
+.firstPage .paragraph{
     font-size: large;
-    /* text-align: center; */
     margin-top: -100px;
     line-height: 25px;
+}
+
+.firstPage .button2{
+margin-top: -20px;
+margin-bottom: -150px;
 }
 
 .firstPage a {
@@ -177,7 +178,9 @@ a, button
     font-weight: bold;
     font-size: large; */
     display: inline-block;
-    width: 100px;
+    width: 200px;
+ 
+    /* height: 30px;line-height: 30px; */
 }
 
 /* .firstPage .buttonstyle
