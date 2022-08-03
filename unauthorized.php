@@ -21,13 +21,16 @@ echo '
 </head>
 <body class="homepage">
 <div class="center" style="margin-top:200px;">
-<h2>Unauthorized Page</h2>
-<img src="Unauthorized-Access-PNG.png" width = "100px">
+<img src="Unauthorized-Access-PNG.png" width = "200px" style="">
+<h1>Unauthorized Page</h1>
+
 <p>
-Sorry you\'re not authorized.
-Please login to access this page.
+Sorry, you\'re not authorized to access this page.
+Please login.
 </p><br>
-<a href="login.php" class="buttonstyle2">Login</a>
+<a href="login.php" class="buttonstyle2" style="display:inline-block; width:25%">Login</a><br>
+<a href="homepage.php" class="buttonstyle" style="display:inline-block; width:25%">Go to Home Page</a>
+
 
     </div>
 </body>
