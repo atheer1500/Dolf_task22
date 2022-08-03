@@ -36,6 +36,11 @@
 </div>
 <div >
 <?php
+session_start();
+if (!isset($_SESSION["userID"]))
+header('location:unauthorized.php');
+?>
+<?php
 include('connection.php'); 
 $conn=OpenCon();
 session_start();
