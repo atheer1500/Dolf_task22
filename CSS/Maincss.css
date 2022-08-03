@@ -103,7 +103,7 @@ user-select: none; /* Standard */
     
     font-size: 28px; /* Increased text to enable scrolling */
     padding: 0px 10px;
-    margin-left: 150px; /*same as sidenav width*/
+    margin-left: 155px; /*Same as sidenav width if width is auto*/
 
     /* 100 % 100px
     90 % 150px

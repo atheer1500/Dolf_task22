@@ -217,11 +217,31 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
        //Form validation
 
   function validate() {
-    if (document.forms["newEventForm"]["event_title"].value == "" || document.forms["newEventForm"]["event_description"].value == "" || document.forms["newEventForm"]["event_date"].value == "" || document.forms["newEventForm"]["event_tickets"].value == "")
+    if (document.forms["newEventForm"]["event_title"].value == "")
   {
     alert("Please fill all the fields. ");
+    document.forms["newEventForm"]["event_title"].focus();
     return false;
   }
+  else  if (document.forms["newEventForm"]["event_description"].value == "")
+  {
+    alert("Please fill all the fields. ");
+    document.forms["newEventForm"]["event_description"].focus();
+    return false;
+  }
+  else  if (document.forms["newEventForm"]["event_date"].value == "")
+  {
+    alert("Please fill all the fields. ");
+    document.forms["newEventForm"]["event_date"].focus();
+    return false;
+  }
+  else  if (document.forms["newEventForm"]["event_tickets"].value == "")
+  {
+    alert("Please fill all the fields. ");
+    document.forms["newEventForm"]["event_tickets"].focus();
+    return false;
+  }
+
   }
       
       
