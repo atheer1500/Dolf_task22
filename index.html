@@ -6,8 +6,21 @@
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Intro Page</title>
     <link rel="stylesheet" href="CSS/Maincss.css">
+    <style>
+        .hero { 
+
+    background-image: url('background.png');
+    background-size: cover;
+}
+
+.hero::before {
+
+    background-color: rgba(132, 151, 181, 0.5);
+}
+    </style>
 </head>
-<body class="firstPage homepage" style="background-image: url('');">
+
+<body class="firstPage homepage hero" >
 
 
     <div style="margin-left:  100px;margin-right: 200px; margin-top: 50px;">
@@ -15,17 +28,20 @@
             <div style="float: left; ">
 
            <h4> Welcome</h4>
-   <p> Welcome to MA Event! <br> Here you will find the joyful you're looking for <br>Concerts, stage performances and more...<br> Book your tickets now!</p>
-   <a href="http://localhost/Dolf_task22/HomePage.php" target="_self" class="buttonstyle2">Get started! </a>
 
+   <p> Welcome to MA Event! <br> Here you will find the joyful you're looking for <br>Concerts, stage performances and more...<br> Book your tickets now!</p>
+   <div class="center">
+       <a href="http://localhost/Dolf_task22/HomePage.php" target="_self" class="buttonstyle2">Get started! </a>
    <a href="http://localhost/Dolf_task22/login.php" target="_self" class="buttonstyle">Login </a>
+   </div>
+
     </div>
 
 
    <!-- <img src="bts-tour-seoul.jpeg" height="200px" style="z-index:-10; position: absolute; right: 70%; top: 50%">
    <img src="7mENOLdfGdB2DZ1MgMxeWkkIY6eoS1iVcDPLXqsP.jpg" height="150px" style="z-index:-10; position: absolute; right: 65%; top: 60%"> -->
 
-   <div style="float: right; margin-top: 100px;">
+   <div style="float: right; margin-top: 150px;">
     <img src="logo2.png">
     </div>
     </div>

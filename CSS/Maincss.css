@@ -162,9 +162,10 @@ a, button
 
 .firstPage p{
     /* color: white; */
-    font-size: medium;
+    font-size: large;
     /* text-align: center; */
-    margin-top: 0;
+    margin-top: -100px;
+    line-height: 25px;
 }
 
 .firstPage a {
