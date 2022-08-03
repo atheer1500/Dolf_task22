@@ -77,7 +77,7 @@ button, .buttonstyle, input[type=submit]
 <div style="text-align: center; ">
 <div class="container">
 
-<form action="EditEvent.php?id=<?php echo $eventID; ?>" method="post" enctype="multipart/form-data">
+<form action="EditEvent.php?id=<?php echo $eventID; ?>" method="post" enctype="multipart/form-data" name ="newEventForm">
 <?php
 //Show success/fail meesages
 if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
@@ -110,17 +110,17 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
     <label for="eventTitle"><span>Event Title:</span></label>
    <input type="text" name="event_title" id="eventTitle" 
    value = "<?php echo $row[1] ?>"
-   required> 
+   > 
 </p>
 
 <p>
     <label for="eventDescription"><span> Event Description:</span></label>
-    <textarea class="border" name="event_description" id="eventDescription" cols="60" rows="10" " required ><?php echo $row[4]; ?></textarea><br>
+    <textarea class="border" name="event_description" id="eventDescription" cols="60" rows="10" ><?php echo $row[4]; ?></textarea><br>
 </p>
 
 <p>
     <label for="eventTime"><span>Event Time:</span></label>
-    <select name="event_time" id="eventTime" required>
+    <select name="event_time" id="eventTime" >
         <option value="12 PM - 2 PM"  <?php if ($row[2] == '12 PM - 2 PM') echo 'selected'; ?>>12 PM - 2 PM</option>
         <option value="2 PM - 4 PM" <?php if ($row[2] == '2 PM - 4 PM') echo 'selected'; ?>>2 PM - 4 PM</option>
         <option value="4 PM - 6 PM" <?php if ($row[2] == '4 PM - 6 PM') echo 'selected'; ?>>4 PM - 6 PM</option>
@@ -135,21 +135,21 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
     <label for="eventDate"><span>Event Date:</span></label>
     <input type="Date" name="event_date" id="eventDate" 
     value = "<?php echo $row[3] ?>"
-    required>
+    >
 </p>
 
 <p>
     <label for="eventTickets"><span>Number of Tickets:</span></label>
-    <input type="number" id="eventTickets" name="event_tickets" min="1" max="100" 
+    <input type="number" id="eventTickets" name="event_tickets" min="0" max="100" 
     value = "<?php echo $row[5] ?>"
-    required> 
+    > 
 </p>
 
 
 
 <p>
 <label for="eventActor"><span>Actor:</span> </label>
- <select id="eventActor" name="event_actor" required>
+ <select id="eventActor" name="event_actor" >
   <?php
 
   
@@ -186,7 +186,7 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
 
 
  
-           <div class="center"><input type="submit" name="update_button" value="Update Event" style="background-color: #8497b5; border:none;"> </div>
+           <div class="center"><input type="submit" name="update_button" value="Update Event" style="background-color: #8497b5; border:none;"  onclick = "return(validate());"> </div>
            <div class="center"><input type="submit" name = "delete_button" value="Delete Event" style="background-color: red; border:none;"> </div>
 
           </form></div>
@@ -217,6 +217,11 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
        //Form validation
 
   function validate() {
+    if (document.forms["newEventForm"]["event_title"].value == "" || document.forms["newEventForm"]["event_description"].value == "" || document.forms["newEventForm"]["event_date"].value == "" || document.forms["newEventForm"]["event_tickets"].value == "")
+  {
+    alert("Please fill all the fields. ");
+    return false;
+  }
   }
       
       
