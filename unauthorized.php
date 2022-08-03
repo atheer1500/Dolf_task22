@@ -20,7 +20,7 @@ echo '
 
 </head>
 <body class="homepage">
-<div class="center" style="margin-top:200px;">
+<div class="center" style="margin-top:190px;">
 <img src="Unauthorized-Access-PNG.png" width = "200px" style="">
 <h1>Unauthorized Page</h1>
 
