@@ -164,18 +164,32 @@ a, button
 .firstPage .paragraph{
     color: white;
     font-size: medium;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
 
 .firstPage a {
-    border: 1px solid white;
+    /* border: 1px solid white;
     border-radius: 50px;
     padding: 5px;
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: large;
+    font-size: large; */
+    display: inline-block;
+    width: 100px;
+}
+
+.firstPage .buttonstyle
+{
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.firstPage .buttonstyle2
+{
+    border: 1px solid #ffffff;
+    color: #8497b5;
+    background-color: #ffffff;
 }
 
 /*home page style */
