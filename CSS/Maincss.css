@@ -155,16 +155,16 @@ a, button
 {
     background-image: linear-gradient(#e66465, #9198e5),
      url('background.png');
-    color: white;
+    /* color: white; */
     font-size:6em;
-    /*font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
-    text-align: center;
+    /* text-align: center; */
 }
 
-.firstPage .paragraph{
-    color: white;
+.firstPage p{
+    /* color: white; */
     font-size: medium;
-    text-align: center;
+    /* text-align: center; */
+    margin-top: 0;
 }
 
 .firstPage a {
@@ -179,7 +179,7 @@ a, button
     width: 100px;
 }
 
-.firstPage .buttonstyle
+/* .firstPage .buttonstyle
 {
     border: 1px solid #ffffff;
     color: #ffffff;
@@ -190,7 +190,7 @@ a, button
     border: 1px solid #ffffff;
     color: #8497b5;
     background-color: #ffffff;
-}
+} */
 
 /*home page style */
 
