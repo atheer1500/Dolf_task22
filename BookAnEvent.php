@@ -1,11 +1,23 @@
 <?php
-
-if (isset($_POST['Tickets'])&&isset($_POST['Payment'])) 
-{
 session_start();
 include('connection.php'); 
 $conn=OpenCon();
 $evID= $_GET['evID'];
+
+$SqlFindEvent="SELECT `PaymentMethod` FROM `book` WHERE `UserEmail`='".$_SESSION["userID"]."' AND `EventID`='".$evID."'";
+if($ResultSqlFindEvent=mysqli_query($conn,$SqlFindEvent))
+{
+  
+}
+else
+{
+
+if (isset($_POST['Tickets'])&&isset($_POST['Payment'])) 
+{
+// session_start();
+// include('connection.php'); 
+// $conn=OpenCon();
+// $evID= $_GET['evID'];
 
 $SqlInsertToBook="INSERT INTO `book`(`PaymentMethod`, `NumberOfTickets__`, `UserEmail`, `EventID`)
 VALUES ('".$_POST['Payment']."','".$_POST['Tickets']."','".$_SESSION["userID"]."','".$evID."');";
@@ -72,5 +84,5 @@ else if (!isset($_POST['Payment']))
         } 
   </script>"; 
 }
-
+}
 
