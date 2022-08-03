@@ -27,20 +27,20 @@
 //Take the data from the form 
  $title =  $_REQUEST['event_title'];
  $description = $_REQUEST['event_description'];
- $time = $_REQUEST['event_time'];
- $date = $_REQUEST['event_date'];
- $actor = $_REQUEST['event_actor'];
+//  $time = $_REQUEST['event_time'];
+//  $date = $_REQUEST['event_date'];
+//  $actor = $_REQUEST['event_actor'];
  $ticketsNum = $_REQUEST['event_tickets'];
 
 
 
 
- //GET THE ACTOR ID
- $query = "SELECT `ActorID` FROM `actor` WHERE `Name` = '$actor'";
- $result=mysqli_query($conn, $query);
- $row=mysqli_fetch_row($result);
+//  //GET THE ACTOR ID
+//  $query = "SELECT `ActorID` FROM `actor` WHERE `Name` = '$actor'";
+//  $result=mysqli_query($conn, $query);
+//  $row=mysqli_fetch_row($result);
  
- $actorID = $row[0];
+//  $actorID = $row[0];
 
 
   //get event id
@@ -63,12 +63,12 @@
         //Update qeury
         $updateQuery = "UPDATE `events` set 
         `Title` = '$title', 
-        `Time` = '$time', 
-        `Date` = '$date',
+        -- `Time` = '$time', 
+        -- `Date` = '$date',
         `Description` = '$description',
         `AvailableTickets__` = '$ticketsNum',
-        `Pic` = '$img',
-        `ActorID` = '$actorID'
+        `Pic` = '$img'
+        -- ,`ActorID` = '$actorID'
          WHERE `EventID` = '$eventID'";
 
 
