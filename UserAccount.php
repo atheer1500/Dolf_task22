@@ -3,7 +3,7 @@ session_start();
 if (isset($_SESSION['userID']))
 $userID = $_SESSION["userID"];
 else
-header('location:login.php');
+header('location:unauthorized.php');
 ?>
 
 <!DOCTYPE html>

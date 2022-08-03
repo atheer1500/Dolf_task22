@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['MangerID']))
-header('location:login.php');
+header('location:unauthorized.php');
 
 //Get event ID
 $eventID = $_GET['id'];

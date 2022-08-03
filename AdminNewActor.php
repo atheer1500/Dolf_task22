@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['AdminID']))
-header('location:login.php');
+header('location:unauthorized.php');
 ?>
 
 <!DOCTYPE html>

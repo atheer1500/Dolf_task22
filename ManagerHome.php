@@ -3,7 +3,7 @@ session_start();
 if (isset($_SESSION['MangerID']))
 $managerID = $_SESSION["MangerID"];
 else
-header('location:login.php');
+header('location:unauthorized.php');
 
 include('connection.php'); 
 $conn=OpenCon();
