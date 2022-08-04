@@ -3,19 +3,20 @@ session_start();
 if (!isset($_SESSION["userID"]))
 header('location:unauthorized.php');
 ?>
+
 <?php
 //session_start();
 include('connection.php'); 
 $conn=OpenCon();
 $evID= $_GET['evID'];
 
-$SqlFindEvent="SELECT `PaymentMethod` FROM `book` WHERE `UserEmail`='".$_SESSION["userID"]."' AND `EventID`='".$evID."'";
-if($ResultSqlFindEvent=mysqli_query($conn,$SqlFindEvent))
-{
-  
-}
-else
-{
+// $SqlFindEvent="SELECT `PaymentMethod` FROM `book` WHERE `UserEmail`='".$_SESSION["userID"]."' AND `EventID`='". $evID ."';";
+// if($ResultSqlFindEvent=mysqli_query($conn,$SqlFindEvent))
+// {
+//   echo"you cant !";
+// }
+// else
+// {
 
 if (isset($_POST['Tickets'])&&isset($_POST['Payment'])) 
 {
@@ -89,5 +90,6 @@ else if (!isset($_POST['Payment']))
         } 
   </script>"; 
 }
-}
+
+?>
 
