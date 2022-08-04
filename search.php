@@ -68,7 +68,7 @@ if ($resultsqlfortable = mysqli_query($conn, $sqlfortable))
   while($rowfortable =mysqli_fetch_array($resultsqlfortable))
   {
     $_SESSION['EventID']=$rowfortable["EventID"];
- $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`AvailableTickets__`,`Pic` FROM `events` WHERE `EventID`= ".$_SESSION['EventID']."  AND (`Title` LIKE '%".$_GET['search']."%' OR `Description`LIKE '%".$_GET['search']."%' );";  
+ $sqlforview = "SELECT `Title`,`Time`,`Date`,`Description`,`AvailableTickets__`,`Pic` FROM `events` WHERE `EventID`= ".$_SESSION['EventID']."  AND (`Title` LIKE '%".$_POST['search']."%' OR `Description`LIKE '%".$_POST['search']."%' );";  
  if ($result = mysqli_query($conn, $sqlforview))  
  {
   //images\ab.jbg
