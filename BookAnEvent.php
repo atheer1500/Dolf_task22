@@ -55,7 +55,7 @@ if ($ResultSqlInsertToBook= mysqli_query($conn, $SqlInsertToBook)&&$ResultSqlUpd
 <h2 style='margin-left:10%;margin-top:10%;'> 
  Booked Successfully<br>
  to view your booking <a style ='  text-align: center;
- color: #1c2841;'href='Mytickets.php?evID=".$evID."'>click hear</a></h2>
+ color: #1c2841;'href='Mytickets.php?evID=".$evID."'>click here</a></h2>
 
 ";
 }

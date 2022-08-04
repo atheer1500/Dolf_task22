@@ -57,7 +57,7 @@
   else if (isset($_POST['delete_button'])) {
       //Actions for delete
 
-      //First, delete events creeated by this manager.
+      //First, delete events created by this manager.
 
         $selectQuery = "SELECT `EventID` FROM `edit_event` WHERE `MangerID` = '$ID'";
         $selectQueryResult = mysqli_query($conn, $selectQuery);
