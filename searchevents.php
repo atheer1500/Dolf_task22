@@ -20,7 +20,46 @@
       // }
       </script>
 <style>
-            .search
+          .search
+{
+  margin-left: 15%;
+}
+
+.search-container1
+{
+  margin-left:-50px;
+  margin-top:70px;
+  margin-bottom: -40px;
+ 
+}
+.searchBar1
+{
+  height: 30px; 
+  position: relative; 
+  width: 370px; 
+  border-radius: 5px ;
+
+  
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+
+}
+
+.searchIcon
+{
+  cursor: pointer; 
+  background-color: #C0C0C0;
+  padding-left: 10px; 
+  padding-right: 10px; 
+  margin-left: -10px; 
+
+  border-radius: 0px 5px 5px 0px;
+
+  border:none;
+  height: 32px; 
+}
+
+            /* .search
 {
   margin-left: 15%;
 }
@@ -40,6 +79,45 @@
   border-radius: 5px ;
 
 }
+.search
+{
+  margin-left: 15%;
+}
+
+.search-container1
+{
+  margin-left:-50px;
+  margin-top:70px;
+  margin-bottom: -40px;
+ 
+}
+.searchBar1
+{
+  height: 30px; 
+  position: relative; 
+  width: 370px; 
+  border-radius: 5px ;
+
+  
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+
+}
+
+.searchIcon
+{
+  cursor: pointer; 
+  background-color: #C0C0C0;
+  padding-left: 10px; 
+  padding-right: 10px; 
+  margin-left: -10px; 
+
+  border-radius: 0px 5px 5px 0px;
+
+  border:none;
+  height: 32px; 
+}
+ */
 
 </style>
 
@@ -57,12 +135,21 @@
 
   <a href="logout.php"><i class="fa-solid fa-right-from-bracket fa-2xl"> </i> <br><br> Logout</a>
 </div>
+
+<div class="search-container1" >
+<form  class="search" action="searchevents.php" method="post">
+  <input class="searchBar1"type="text" placeholder="Search for an event.." name="search" id="searchBar" value="<?php if (isset($_POST['search'])) echo $_POST['search']; ?>">
+  <button type="submit"  class="searchIcon"><i class="fa fa-search"></i></button>
+</form>
+</div>
+<!-- 
 <div class="search-container1" >
 <form  class="search" action="searchevents.php" method="post">
   <input type="text" placeholder="Search for an event.." name="search" id="searchBar1" value="<?php if (isset($_POST['search'])) echo $_POST['search']; ?>">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
-</div>
+</div> -->
+
 <div >
 <?php
 include('connection.php'); 

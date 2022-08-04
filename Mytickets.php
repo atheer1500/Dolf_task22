@@ -28,12 +28,19 @@
   <a href="logout.php"><i class="fa-solid fa-right-from-bracket fa-2xl"> </i> <br><br> Logout</a>
 </div>
 
-<div class="search-container" >
+<div class="search-container1" >
+<form  class="search" action="searchevents.php" method="post">
+  <input class="searchBar1"type="text" placeholder="Search for an event.." name="search" id="searchBar" value="<?php if (isset($_POST['search'])) echo $_POST['search']; ?>">
+  <button type="submit"  class="searchIcon"><i class="fa fa-search"></i></button>
+</form>
+</div>
+
+<!-- <div class="search-container" >
 <form  class="search" action="searchevents.php" method="post">
   <input type="text" placeholder="Search for an event.." name="search" id="searchBar" value="<?php if (isset($_POST['search'])) echo $_POST['search']; ?>">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
-</div>
+</div> -->
 <div >
 <?php
 session_start();
