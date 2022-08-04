@@ -7,7 +7,7 @@ $userID = $_SESSION["userID"];
  // username => root
  // password => empty
  // database name => event
- $conn = mysqli_connect("localhost", "root", "", "event");
+ $conn = mysqli_connect("localhost", "id19368729_maisaaahmadali", "SAVCOrVt]}D4D-VZ", "id19368729_event");
   
  // Check connection
  if($conn === false){

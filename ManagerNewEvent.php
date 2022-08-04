@@ -126,7 +126,7 @@ else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR1')){
  <select id="eventActor" name="event_actor" >
   <?php
   //Database connection
-  $conn = mysqli_connect("localhost:3306", "root", "", "event");
+  $conn = mysqli_connect("localhost", "id19368729_maisaaahmadali", "SAVCOrVt]}D4D-VZ", "id19368729_event");
   if (!$conn)
   die ("Could not connect to the database");
   

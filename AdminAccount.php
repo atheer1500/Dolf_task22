@@ -59,7 +59,7 @@ echo '
 <form class="myform" name ="adminForm" action="EditAdmin.php" method="post">';
 
 //Database connention
-$conn = mysqli_connect("localhost:3306", "root", "", "event");
+$conn = mysqli_connect("localhost", "id19368729_maisaaahmadali", "SAVCOrVt]}D4D-VZ", "id19368729_event");
 if (!$conn)
 die ("Could not connect to the database");
 
