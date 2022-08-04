@@ -9,16 +9,7 @@ header('location:unauthorized.php');
 include('connection.php'); 
 $conn=OpenCon();
 $evID= $_GET['evID'];
-
-// $SqlFindEvent="SELECT `PaymentMethod` FROM `book` WHERE `UserEmail`='".$_SESSION["userID"]."' AND `EventID`='". $evID ."';";
-// if($ResultSqlFindEvent=mysqli_query($conn,$SqlFindEvent))
-// {
-//   echo"you cant !";
-// }
-// else
-// {
-
-if (isset($_POST['Tickets'])&&isset($_POST['Payment'])) 
+ if (isset($_POST['Tickets'])&&isset($_POST['Payment'])) 
 {
 // session_start();
 // include('connection.php'); 

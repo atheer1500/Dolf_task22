@@ -12,6 +12,50 @@ $conn=OpenCon();
 $evID= $_GET['evID'];
     
 $conn=OpenCon();
+
+$SqlFindEvent="SELECT `PaymentMethod` FROM `book` WHERE `UserEmail`='".$_SESSION["userID"]."' AND `EventID`='". $evID ."';";
+      $ResultSqlFindEvent=mysqli_query($conn, $SqlFindEvent);
+      $SqlFindEventCount = mysqli_num_rows($ResultSqlFindEvent);
+      if ($SqlFindEventCount>0)
+      {
+        echo "<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+        <script src='https://kit.fontawesome.com/191f749b6c.js' crossorigin='anonymous'></script>
+         <link rel='stylesheet' href='CSS/Maincss.css' media='all' type='text/css'>
+         <link rel='stylesheet' href='CSS/user.css' media='all' type='text/css'>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+        <title>View conserts</title>
+        <script>
+          // function Logout()
+          // {
+          //    <?php
+          //    include_once('Logout.php');
+          //    ?>
+          // }
+          </script>
+        
+    </head>
+    <body >
+       
+    <div class='sidenav'>
+      <a href='homepage.php'><i class='fa-solid fa-house fa-2xl'></i> <br><br>Home</a>
+      <a href='UserProfile.php'><i class='fa-solid fa-id-card fa-2xl'></i> <br><br> My Profile </a>
+    
+      <a href='UserAccount.php'><i class='fa-solid fa-user fa-2xl'></i> <br><br> My Account </a>
+    
+      <a href='Mytickets.php'><i class='fa-solid fa-ticket fa-2xl'></i> <br><br> My Tickets</a>
+      <hr>
+    
+      <a href='logout.php'><i class='fa-solid fa-right-from-bracket fa-2xl'> </i> <br><br> Logout</a>
+    </div>
+    
+    <h2 style='margin-left:10%;margin-top:10%;'> 
+     you have alrady booked this event<br>
+     to view your booking <a style ='  text-align: center;
+     color: #1c2841;'href='Mytickets.php?evID=".$evID."'>click hear</a></h2>
+    
+    ";
+      }
+else{
 $SqlForFirstName="SELECT `FirstName` FROM `end_user` WHERE `UserEmail`='".$_SESSION["userID"]."';";
 
 if ($ResultSqlForFirstName = mysqli_query($conn, $SqlForFirstName))  
@@ -120,5 +164,5 @@ else  {
 // <div class="Select-container">
 //       <label> Select a Consort:</label>
 //       <select id="Consort">
-
+}
 ?>
