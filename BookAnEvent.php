@@ -73,7 +73,7 @@ else if (!isset($_POST['Payment']))
         {  
           if (confirm('You have not chose a payment method') == true) 
           {
-            window.open('Book.php', '_blank');
+            window.open('Book.php?evID=".$evID."', '_blank');
           } 
         
           
