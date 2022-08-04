@@ -2,10 +2,11 @@
 
 function OpenCon()
 {
-$servername = "localhost:3306";
-$username = "root";
-$pass = "";
-$dbname = "event";
+$servername = "localhost";
+$username = "id19368729_maisaaahmadali";
+$pass = "SAVCOrVt]}D4D-VZ";
+$dbname = "id19368729_event";
+//mysqli_connect("localhost", "id19368729_maisaaahmadali", "SAVCOrVt]}D4D-VZ", "id19368729_event");
   
 // Create connection
 $conn = new mysqli($servername, $username, $pass, $dbname);
