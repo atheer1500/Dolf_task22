@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/Maincss.css?v=<?php echo time(); ?>"  media="all" type="text/css">
-    <link rel="stylesheet" href="CSS/user.css?v=<?php echo time(); ?>" media="all" type="text/css">
+    <link rel="stylesheet" href="CSS/Maincss.css?v=<?php echo time();?>"  media="all" type="text/css">
+    <link rel="stylesheet" href="CSS/user.css?v=<?php echo time();?>" media="all" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>View conserts</title>
     <script>
@@ -45,15 +45,17 @@
 
 </head>
 <body >
-   
+
 <div class="sidenav">
-  <a href="homepage.php" ><i class="fa-solid fa-house"></i> Home</a>
-  <a href="UserProfile.php"><i class="fa-solid fa-id-card"></i> My profile </a>
+  <a href="homepage.php" ><i class="fa-solid fa-house fa-2xl"></i> <br><br>Home</a>
+  <a href="UserProfile.php"><i class="fa-solid fa-id-card fa-2xl"></i> <br><br> My Profile </a>
 
-  <a href="UserAccount.php"><i class="fa-solid fa-user"></i> My account </a>
+  <a href="UserAccount.php"><i class="fa-solid fa-user fa-2xl"></i> <br><br> My Account </a>
 
-  <a href="Mytickets.php"class="focused"><i class="fa-solid fa-ticket"></i> My tickets</a>
-  <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+  <a href="Mytickets.php" class="focused"><i class="fa-solid fa-ticket fa-2xl"></i> <br><br> My Tickets</a>
+  <hr>
+
+  <a href="logout.php"><i class="fa-solid fa-right-from-bracket fa-2xl"> </i> <br><br> Logout</a>
 </div>
 <div class="search-container1" >
 <form  class="search" action="searchevents.php" method="post">
@@ -107,7 +109,7 @@ if ($resultsqlviewuser = mysqli_query($conn, $sqlviewuser))
     echo" <div class='NumOfTikContainer'> 
     <div class='NumOfTikNum'>"
     . $_SESSION['NumberOfTickets__'].
-    "</div><br><div class='NumOfTikText'>Available Tickets</div></div>";
+    "</div><br><div class='NumOfTikText' style ='margin-right:5.5%;margin-top:-1%;'> Tickets</div></div>";
    //echo "<a href='#' class='editbutton'> Edit</a>";
     echo "</div>";
     //?id=" . $_SESSION['EventID'] .  "
