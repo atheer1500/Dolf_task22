@@ -8,13 +8,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/Maincss.css?v=<?php echo time(); ?>" media="all" type="text/css">
-    <link rel="stylesheet" href="CSS/user.css?v=<?php echo time(); ?>" media="all" type="text/css">
+    <!-- <link rel="stylesheet" href="CSS/user.css?v=<?php echo time(); ?>" media="all" type="text/css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>View conserts</title>
+    <title>View concerts</title>
 
+<style>
+          .search
+{
+  margin-left: 15%;
+}
 
+.search-container1
+{
+  margin-left:-50px;
+  margin-top:70px;
+  margin-bottom: -40px;
+ 
+}
+.searchBar1
+{
+  height: 30px; 
+  position: relative; 
+  width: 370px; 
+  border-radius: 5px ;
+
+  
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+
+}
+
+.searchIcon
+{
+  cursor: pointer; 
+  background-color: #C0C0C0;
+  padding-left: 10px; 
+  padding-right: 10px; 
+  margin-left: -10px; 
+
+  border-radius: 0px 5px 5px 0px;
+
+  border:none;
+  height: 32px; 
+}
+
+  </style>
 </head>
-<body >
+<body  class="managerPage">
    
 <div class="sidenav">
   <a href="homepage.php" ><i class="fa-solid fa-house fa-2xl"></i> <br><br>Home</a>
@@ -41,7 +81,7 @@
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
 </div> -->
-<div >
+<div style="margin-top: 6%;" >
 <?php
 session_start();
 if (!isset($_SESSION["userID"]))

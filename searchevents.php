@@ -8,9 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/Maincss.css?v=<?php echo time();?>"  media="all" type="text/css">
-    <link rel="stylesheet" href="CSS/user.css?v=<?php echo time();?>" media="all" type="text/css">
+    <!-- <link rel="stylesheet" href="CSS/user.css?v=<?php echo time();?>" media="all" type="text/css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>View conserts</title>
+    <title>View concerts</title>
     <script>
       // function Logout()
       // {
@@ -122,7 +122,7 @@
 </style>
 
 </head>
-<body >
+<body class="managerPage">
 
 <div class="sidenav">
   <a href="homepage.php" ><i class="fa-solid fa-house fa-2xl"></i> <br><br>Home</a>
@@ -150,7 +150,7 @@
 </form>
 </div> -->
 
-<div >
+<div style="margin-top: 6%;">
 <?php
 include('connection.php'); 
 $conn=OpenCon();
