@@ -35,24 +35,45 @@ header('location:login.php');
   width: 370px; 
   border-radius: 5px ;
 
+  
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+
 }
+
+.searchIcon
+{
+  cursor: pointer; 
+  background-color: #C0C0C0;
+  padding-left: 10px; 
+  padding-right: 10px; 
+  margin-left: -10px; 
+
+  border-radius: 0px 5px 5px 0px;
+
+  border:none;
+  height: 32px; 
+}
+
 
     </style>
 
 </head>
 <body  class="managerPage">
+
 <div class="sidenav">
-  <a href="ManagerHome.php"><i class="fa-solid fa-house"></i> Home</a>
-  <a href="ManagerAccount.php"><i class="fa-solid fa-user"></i> My account </a>
-  <a href="viewManger.php"  class="focused"><i class="fa-solid fa-calendar-check"></i> My events </a>
-  <a href="ManagerNewEvent.php"><i class="fa-solid fa-circle-plus"></i> Add Event </a>
-  <a href="Logout.php"><i class="fa-solid fa-right-from-bracket"></i> Logout</a> 
+  <a href="ManagerHome.php"  ><i class="fa-solid fa-house fa-2xl"></i><br><br> Home</a>
+  <a href="ManagerAccount.php"><i class="fa-solid fa-user fa-2xl"></i><br><br> My Account </a>
+  <a href="viewManger.php"class="focused"><i class="fa-solid fa-calendar-check fa-2xl"></i><br><br> My Events </a>
+  <a href="ManagerNewEvent.php"><i class="fa-solid fa-circle-plus fa-2xl"></i><br><br> Add Event </a>
+  <hr>
+  <a href="Logout.php"><i class="fa-solid fa-right-from-bracket fa-2xl"></i><br><br> Logout</a>
 </div>
 
 <div class="search-container1" >
 <form  class="search" action="search.php" method="post">
   <input class="searchBar1"type="text" placeholder="Search for an event.." name="search" id="searchBar" value="<?php if (isset($_POST['search'])) echo $_POST['search']; ?>">
-  <button type="submit" ><i class="fa fa-search"></i></button>
+  <button type="submit"  class="searchIcon"><i class="fa fa-search"></i></button>
 </form>
 </div>
 <div id="events" style="margin-top: 6%;" >
