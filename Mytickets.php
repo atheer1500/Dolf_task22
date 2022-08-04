@@ -43,7 +43,7 @@ header('location:unauthorized.php');
 <?php
 include('connection.php'); 
 $conn=OpenCon();
-session_start();
+//session_start();
 
 //$evID= $_GET['evID'];
 
