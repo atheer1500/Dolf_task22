@@ -49,9 +49,9 @@ $SqlFindEvent="SELECT `PaymentMethod` FROM `book` WHERE `UserEmail`='".$_SESSION
     </div>
     
     <h2 style='margin-left:10%;margin-top:10%;'> 
-     you have alrady booked this event<br>
+     You have alrady booked this event<br>
      to view your booking <a style ='  text-align: center;
-     color: #1c2841;'href='Mytickets.php?evID=".$evID."'>click hear</a></h2>
+     color: #1c2841;'href='Mytickets.php?evID=".$evID."'>click here</a></h2>
     
     ";
       }

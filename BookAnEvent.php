@@ -27,7 +27,7 @@ if ($ResultSqlInsertToBook= mysqli_query($conn, $SqlInsertToBook)&&$ResultSqlUpd
      <link rel='stylesheet' href='CSS/Maincss.css' media='all' type='text/css'>
      <link rel='stylesheet' href='CSS/user.css' media='all' type='text/css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-    <title>View conserts</title>
+    <title>View concerts</title>
     <script>
       // function Logout()
       // {

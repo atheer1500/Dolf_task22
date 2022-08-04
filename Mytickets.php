@@ -44,7 +44,7 @@
   background-color: #C0C0C0;
   padding-left: 10px; 
   padding-right: 10px; 
-  margin-left: -10px; 
+  margin-left: -6px; 
 
   border-radius: 0px 5px 5px 0px;
 
