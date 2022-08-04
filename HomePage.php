@@ -312,7 +312,7 @@ echo '</table>';
 
 <br><br><br><br>
 
-<p style="margin-bottom: -25px; opacity: 0.4;"> © 2022 Copyright: maevents.com </p>
+<p style="margin-bottom: -40px; opacity: 0.4;"> © 2022 Copyright: maevents.com </p>
 
 </footer>
 </div>

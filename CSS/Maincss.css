@@ -207,15 +207,12 @@ margin-bottom: -150px;
 
 .homePage
 {
-    background-attachment: fixed;
-    /*color: white;*/
-    font-size:2em;
-    
+    /* background-attachment: fixed;
+    font-size:2em;   */
 }
 
 .homePage p
 {
-    /*color: white;*/
     text-align: center;
 }
 
