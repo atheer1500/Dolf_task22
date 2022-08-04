@@ -131,7 +131,7 @@ function validate()
             </form>
 
             <a href="Regester.php" class="newuser"style="  text-decoration: none;
-  color: #063a62db;">new user? click hear!</a>
+  color: #063a62db;">New user? click here!</a>
   <br>
 
         </div>
