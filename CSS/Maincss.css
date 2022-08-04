@@ -164,10 +164,10 @@ a, button
     line-height: 25px;
 }
 
-.firstPage .button2{
+/* .firstPage .button2{
 margin-top: -20px;
 margin-bottom: -150px;
-}
+} */
 
 .firstPage a {
     /* border: 1px solid white;
@@ -182,20 +182,24 @@ margin-bottom: -150px;
 
  
     /* height: 30px;line-height: 30px; */
+    
 }
 
 
-/* .firstPage .buttonstyle
+.firstPage .buttonstyle
 {
-    border: 1px solid #ffffff;
-    color: #ffffff;
+    /* border: 1px solid #ffffff;
+    color: #ffffff; */
+    position: relative;
+    top: -50px;
 }
 
-.firstPage .buttonstyle2
+/* .firstPage .buttonstyle2
 {
     border: 1px solid #ffffff;
     color: #8497b5;
     background-color: #ffffff;
+
 } */
 
 /*home page style */
