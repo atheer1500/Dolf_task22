@@ -24,11 +24,19 @@ $managerID = $_SESSION["MangerID"];
 $email = $_REQUEST['newEmail'];
 $newPass = $_REQUEST['newPass'];
 
- 
+$conflictQuery = "SELECT * FROM `event_manger` WHERE `MangerEmail` = '$email' AND `event_manger`.`MangerID` != '$managerID'";
+$conflictResult=mysqli_query($conn, $conflictQuery);
+$conflictCount = mysqli_num_rows($conflictResult);
  $updateQuery = "UPDATE `event_manger` set `MangerEmail` = '$email', `Password` = '$newPass' WHERE `MangerID` = '$managerID'";
 
+//Check if if email is taken.
+if ($conflictCount > 0){
+    header('location: ManagerAccount.php?id=' . $ID . '&problem=UPDATEERROR1');
+}
+
+
       //action for update here
-      if(mysqli_query($conn, $updateQuery))
+     else if(mysqli_query($conn, $updateQuery))
         header('location: ManagerAccount.php?id=' . $ID . '&problem=UPDATED'); //go back to the EDIT page
       
       

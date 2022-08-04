@@ -48,7 +48,7 @@
       }
 
       //action for update here
-      if(mysqli_query($conn, $updateQuery))
+      else if(mysqli_query($conn, $updateQuery))
         header('location: AdminEditActor.php?id=' . $ID . '&problem=UPDATED'); //go back to the EDIT page
       
       

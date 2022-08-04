@@ -64,6 +64,10 @@ if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATED')) {
    echo '<script> window.onload=function(){alert("Failed to update!");}; </script>         ';
    }
 
+   else if (isset ($_GET['problem']) and ($_GET['problem']=='UPDATEERROR1')){
+    echo '<script> window.onload=function(){alert("Failed: The email is taken!");}; </script>         ';
+    }
+
 
 
 echo '
