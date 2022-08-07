@@ -23,21 +23,27 @@ use function PHPSTORM_META\type;
 
         $sql = "SELECT `UserEmail` FROM `end_user` WHERE `UserEmail`='".$Id."' AND `Password`=".$pass.";";  
         
-        $result = mysqli_query($conn, $sql);  
+        $result = mysqli_query($conn, $sql);
+        $count = mysqli_num_rows($result);  
+     
+        if($count == 1)
+        {  
         while( $row = mysqli_fetch_array($result, MYSQLI_ASSOC))
         { 
         $_SESSION["userID"]=$row["UserEmail"]; //To book and edit account
 
-        $count = mysqli_num_rows($result);  
-     
-        if($count == 1){ 
+         
            header("Location:HomePage.php") ;
-        }  
-        else{  
-            echo "<h1> Login failed. Invalid username or password. user</h1>";  
+        } 
+     } 
+        else
+        {  
+            header('location:unauthorized.php');
+            
+            // echo "<h1> Login failed. Invalid username or password. user</h1>";  
         }    
         }
-     }
+     
      else  if ($type=='Admin')
      {
        $sql = "SELECT `AdminID` FROM `admin` WHERE `AdminEmail`='".$Id."' AND `Passowrd`='".$pass."';";  
