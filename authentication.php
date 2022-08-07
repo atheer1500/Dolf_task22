@@ -38,7 +38,7 @@ use function PHPSTORM_META\type;
      } 
         else
         {  
-            header('location:unauthorized.php');
+            header('location:wrongAccont.php');
             
             // echo "<h1> Login failed. Invalid username or password. user</h1>";  
         }    
@@ -48,20 +48,21 @@ use function PHPSTORM_META\type;
      {
        $sql = "SELECT `AdminID` FROM `admin` WHERE `AdminEmail`='".$Id."' AND `Passowrd`='".$pass."';";  
        $result = mysqli_query($conn, $sql);  
-       
+       $count = mysqli_num_rows($result);  
+    
+       if($count == 1){ 
        while( $row = mysqli_fetch_array($result, MYSQLI_ASSOC))
        {
         $_SESSION['AdminID']=$row["AdminID"];
        
         
-       $count = mysqli_num_rows($result);  
-    
-       if($count == 1){  
-           echo "<h1><center> Login successful  Admin</center></h1>";
+       
            header("Location:AdminHome.php");   
-       }  
+       }
+    }  
        else{  
-           echo "<h1> Login failed. Invalid username or password.Admin</h1>";  
+        header('location:wrongAccont.php');
+            
        }  
      } 
     }
@@ -86,9 +87,9 @@ use function PHPSTORM_META\type;
           
         
         else{  
-            echo "<h1> Login failed . Invalid username or password. EM</h1>";  
+            header('location:wrongAccont.php');
         } 
     
     }
-}
+
 ?>  
