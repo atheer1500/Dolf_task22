@@ -71,12 +71,11 @@ use function PHPSTORM_META\type;
         
         $sql = "SELECT `MangerID` FROM `event_manger` WHERE `MangerEmail`='".$Id."' AND `Password`=".$pass.";";  
         $result = mysqli_query($conn, $sql);  
-        
-                if ($result->num_rows ==1)
-                 {
-                    // output data of each row
-                    while($row = $result->fetch_assoc())
-                    {
+        $count = mysqli_num_rows($result);  
+    
+        if($count == 1){ 
+        while( $row = mysqli_fetch_array($result, MYSQLI_ASSOC))
+        {
                         $_SESSION['MangerID']=$row["MangerID"];
                         
                         header("Location:ManagerHome.php"); 
