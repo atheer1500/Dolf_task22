@@ -65,7 +65,7 @@ header('location:unauthorized.php');
   <a href="viewManger.php"class="focused"><i class="fa-solid fa-calendar-check fa-2xl"></i><br><br> My Events </a>
   <a href="ManagerNewEvent.php"><i class="fa-solid fa-circle-plus fa-2xl"></i><br><br> Add Event </a>
   <hr>
-  <a href="Logout.php"><i class="fa-solid fa-right-from-bracket fa-2xl"></i><br><br> Logout</a>
+  <a href="logout.php"><i class="fa-solid fa-right-from-bracket fa-2xl"></i><br><br> Logout</a>
 </div>
 
 <div class="search-container1" >
