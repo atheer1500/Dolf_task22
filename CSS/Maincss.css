@@ -346,7 +346,7 @@ font-size: small;
     background-attachment:fixed;
     height:100%;
     align-items: center;
-    background-color: #e3e8e8;
+    /* background-color: #e3e8e8; */
 
     background-attachment: fixed;
     color: black;
@@ -367,7 +367,7 @@ font-size: small;
     align-items: center;
     text-align: center;
     color: #063a62;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
 }
 .loginBox
 {
