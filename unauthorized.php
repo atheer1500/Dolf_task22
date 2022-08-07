@@ -28,7 +28,7 @@ echo '
 Sorry, you\'re not authorized to access this page.
 Please login.
 </p><br>
-<a href="login.php" class="buttonstyle2" style="display:inline-block; width:25%">Login</a><br>
+<a href="Login.php" class="buttonstyle2" style="display:inline-block; width:25%">Login</a><br>
 <a href="homepage.php" class="buttonstyle" style="display:inline-block; width:25%">Go to Home Page</a>
 
 
