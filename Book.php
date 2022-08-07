@@ -11,14 +11,7 @@
     <link rel="stylesheet" href="CSS/user.css?v=<?php echo time(); ?>" media="all" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>View concerts</title>
-    <script>
-      // function Logout()
-      // {
-      //    <?php
-      //    include_once("Logout.php");
-      //    ?>
-      // }
-      </script>
+
       <style>
         h2,h4
         {
@@ -47,12 +40,13 @@
   <a href="logout.php"><i class="fa-solid fa-right-from-bracket fa-2xl"> </i> <br><br> Logout</a>
 </div>
 
+<div class='main'>
 
 <!-- <i class=' fa-solid fa-hand-wave '></i> -->
 
 
 <?php include("BookEvent.php"); ?>
-
+      </div>
 
 </body>
 </html>

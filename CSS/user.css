@@ -17,42 +17,7 @@ td {
       margin: 10px;
   }
   
-  .container {
-    padding: 20px;
-    background-color: rgb(255, 255, 255);
-    margin: auto;
-    margin-top: 20px;
-    margin-left: 33%;
-    line-height: 30px;
-    width: 500px;
-    text-align: left;
-    border-radius: 20px;
-  }
-  
-  .container span {
-    padding-left: 40px;
-    display: inline-block;
-    vertical-align: top;
-    width: 30%;
-  }
-  
-  .container input{
-    min-height: 25px;
-    display: inline-block;
-    width: 50%;
-  }
-  
-  .container textarea {
-    display: inline-block;
-    margin-top: 10px;
-    width: 50%;
-  }
-  .container select,.container input[type=number] {
-    min-height: 25px;
-    display: inline-block;
-    width: 51%;
-     font-size: 15px;
-  }
+ 
 
   
   .right{
@@ -62,10 +27,11 @@ td {
   body{
     background-color: #f4f6f8;
     background-attachment: fixed;
-      color: black;
-      font-size:2em;
-      /*font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
-  
+      color: black; 
+  }
+  .main
+  {
+    /* font-size:2em; */
   }
   span.lab
   {
