@@ -73,14 +73,15 @@ use function PHPSTORM_META\type;
         $result = mysqli_query($conn, $sql);  
         $count = mysqli_num_rows($result);  
     
-        if($count == 1){ 
+        if($count == 1)
+        { 
         while( $row = mysqli_fetch_array($result, MYSQLI_ASSOC))
-        {
+                {
                         $_SESSION['MangerID']=$row["MangerID"];
                         
                         header("Location:ManagerHome.php"); 
-                    }
-                } 
+                }
+        } 
          
             // echo "<h1><center> Login successful  EM</center></h1>"; 
           
