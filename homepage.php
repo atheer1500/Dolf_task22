@@ -117,12 +117,16 @@ text-align: left;
     
 
 
-
+<!-- <?php
+if (!isset($_SESSION["userID"])||!isset($_SESSION['AdminID'])||!isset($_SESSION['MangerID']))
+echo 'style="opacity: 0.27;"'
+?> -->
 
 
 <div class="sidenav">
   <a href="homepage.php" class="focused"><i class="fa-solid fa-house fa-2xl"></i> <br><br>Home</a>
-  <a href="UserProfile.php"><i class="fa-solid fa-id-card fa-2xl"></i> <br><br> My Profile </a>
+  <a href="UserProfile.php"><i class="fa-solid fa-id-card fa-2xl">
+</i> <br><br> My Profile </a>
 
   <a href="UserAccount.php"><i class="fa-solid fa-user fa-2xl"></i> <br><br> My Account </a>
 
