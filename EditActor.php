@@ -39,7 +39,7 @@
 
       //Check if if email is taken for another ACTOR.
 
-      $conflictQuery = "SELECT * FROM `actor` WHERE `ActorEmail` = '$email' OR `Name` = '$name' AND `ActorID` != '$ID'";
+      $conflictQuery = "SELECT * FROM `actor` WHERE (`ActorEmail` = '$email' OR `Name` = '$name') AND `ActorID` != '$ID'";
       $conflictResult=mysqli_query($conn, $conflictQuery);
       $conflictCount = mysqli_num_rows($conflictResult);
 
