@@ -65,7 +65,7 @@
             
        }  
      } 
-    }
+    
     else if($type=='EventManger')
     {
         
@@ -80,9 +80,9 @@
                 {
                         $_SESSION['MangerID']=$row["MangerID"];
                         
-                       
+                        header("Location:ManagerHome.php"); 
                 }
-                header("Location:ManagerHome.php"); 
+          
         } 
          
             // echo "<h1><center> Login successful  EM</center></h1>"; 
@@ -93,5 +93,6 @@
         } 
     
     }
+}
 
 ?>  
