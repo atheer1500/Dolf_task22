@@ -1,6 +1,6 @@
 <?php
 
-use function PHPSTORM_META\type;
+//use function PHPSTORM_META\type;
  
     include('connection.php'); 
     if ($_SERVER["REQUEST_METHOD"] == "POST")
@@ -65,9 +65,10 @@ use function PHPSTORM_META\type;
             
        }  
      } 
-    }
+    
     else if($type=='EventManger')
     {
+        
         
         $sql = "SELECT `MangerID` FROM `event_manger` WHERE `MangerEmail`='".$Id."' AND `Password`=".$pass.";";  
         $result = mysqli_query($conn, $sql);  
@@ -81,6 +82,7 @@ use function PHPSTORM_META\type;
                         
                         header("Location:ManagerHome.php"); 
                 }
+          
         } 
          
             // echo "<h1><center> Login successful  EM</center></h1>"; 
@@ -91,5 +93,6 @@ use function PHPSTORM_META\type;
         } 
     
     }
+}
 
 ?>  
