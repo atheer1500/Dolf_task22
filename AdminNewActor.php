@@ -100,10 +100,10 @@ else if (isset ($_GET['problem']) and ($_GET['problem']=='ADDERROR1')){
 
 <span style = "float: right">
 
-    <input type="radio" id="f2" name="actor_gender" value="Female">
-<label for="f" style="float: none; margin-right: 25px;">Female</label>
+    <input type="radio" id="f2" name="actor_gender" value="F">
+<label for="f2" style="float: none; margin-right: 25px;">Female</label>
 
-<input type="radio" id="m" name="actor_gender" value="Male">
+<input type="radio" id="m" name="actor_gender" value="M">
 <label for="m" style="float: none;">Male</label>
 </span>
 

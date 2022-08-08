@@ -108,10 +108,10 @@ $row=mysqli_fetch_row($result);
 
 <span style = "float: right">
 
-    <input type="radio" id="f2" name="actor_gender" value="Female" <?php if ($row[2] == 'F') echo 'checked="checked"'; ?>>
+    <input type="radio" id="f2" name="actor_gender" value="F" <?php if ($row[2] == 'F') echo 'checked="checked"'; ?>>
   <label for="f" style="float: none; margin-right: 25px;">Female</label>
 
-<input type="radio" id="m" name="actor_gender" value="Male" <?php if ($row[2] == 'M') echo 'checked="checked"'; ?>>
+<input type="radio" id="m" name="actor_gender" value="M" <?php if ($row[2] == 'M') echo 'checked="checked"'; ?>>
 <label for="m" style="float: none;">Male</label>
     </span>
 
