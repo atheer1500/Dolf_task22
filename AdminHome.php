@@ -50,7 +50,7 @@ p {
 </div >
 </header>
 <div style="">
-<h2>Welcome back admin</h2>
+<h2>Welcome back Admin</h2>
 <h4>What would you like to do today?</h4>
 <div class="center">
 <a class ="buttonstyle2" href="#actors"> Manage Actors </a>
