@@ -66,29 +66,46 @@ use function PHPSTORM_META\type;
        }  
      } 
     }
-    else if($type=='EventManger')
+    else 
     {
-        
-        $sql = "SELECT `MangerID` FROM `event_manger` WHERE `MangerEmail`='".$Id."' AND `Password`=".$pass.";";  
-        $result = mysqli_query($conn, $sql);  
-        $count = mysqli_num_rows($result);  
+        $sql = "SELECT `MangerID` FROM `event_manger` WHERE `MangerEmail`='".$Id."' AND `Password`=".$pass.";"; 
+       $result = mysqli_query($conn, $sql);  
+       $count = mysqli_num_rows($result);  
     
-        if($count == 1)
-        { 
-        while( $row = mysqli_fetch_array($result, MYSQLI_ASSOC))
-                {
-                        $_SESSION['MangerID']=$row["MangerID"];
+       if($count == 1){ 
+       while( $row = mysqli_fetch_array($result, MYSQLI_ASSOC))
+       {
+        $_SESSION['MangerID']=$row["MangerID"];
                         
-                        header("Location:ManagerHome.php"); 
-                }
-        } 
+       
+        header("Location:ManagerHome.php");  
+       }
+    }  
+       else{  
+        header('location:wrongAccont.php');
+            
+       } 
+        
+        // $sql = "SELECT `MangerID` FROM `event_manger` WHERE `MangerEmail`='".$Id."' AND `Password`=".$pass.";";  
+        // $result = mysqli_query($conn, $sql);  
+        // $count = mysqli_num_rows($result);  
+    
+        // if($count == 1)
+        // { 
+        // while( $row = mysqli_fetch_array($result, MYSQLI_ASSOC))
+        //         {
+        //                 $_SESSION['MangerID']=$row["MangerID"];
+                        
+        //                 header("Location:ManagerHome.php"); 
+        //         }
+        // } 
          
-            // echo "<h1><center> Login successful  EM</center></h1>"; 
+        //     // echo "<h1><center> Login successful  EM</center></h1>"; 
           
         
-        else{  
-            header('location:wrongAccont.php');
-        } 
+        // else{  
+        //     header('location:wrongAccont.php');
+        // } 
     
     }
 
