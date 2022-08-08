@@ -142,7 +142,9 @@ echo 'style="opacity: 0.27;"'
 
 <header>
   <div class="left">
+  <a href="index.html">
   <img src="logo.png" width= "150px">
+</a>
 </div >
 </header>
 

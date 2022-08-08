@@ -46,7 +46,9 @@ p {
 <div class="main" style="">
 <header>
   <div class="left">
+  <a href="index.html">
   <img src="logo.png" width= "150px">
+</a>
 </div >
 </header>
 <div style="">
