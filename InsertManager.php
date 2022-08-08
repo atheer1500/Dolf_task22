@@ -27,8 +27,8 @@ $row=mysqli_fetch_row($result);
 $admin_id = $row[2];
   
  // insert query
- $sql = "INSERT INTO  `event_manger`  VALUES ('$pass',
-     '$email','$name', '' ,'$admin_id')";
+ $sql = "INSERT INTO `event_manger`(`Password`, `MangerEmail`, `Name`, `AdminID`) VALUES ('$pass',
+     '$email','$name', '$admin_id')";
   
 
 

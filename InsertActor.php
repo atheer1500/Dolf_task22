@@ -33,8 +33,9 @@
 
   
  // insert query
- $sql = "INSERT INTO actor  VALUES ('$name',
-     '$email','$gender', '' ,'$admin_id')";
+ $sql = "INSERT INTO actor (`Name`, `ActorEmail`, `Gender`, `AdminID`) VALUES ('$name',
+     '$email','$gender' ,'$admin_id')";
+     
   
 
   //Check if if email is taken for another manager.
@@ -42,19 +43,24 @@
 $conflictQuery = "SELECT * FROM `actor` WHERE `ActorEmail` = '$email' OR `Name` = '$name'";
 $conflictResult=mysqli_query($conn, $conflictQuery);
 $conflictCount = mysqli_num_rows($conflictResult);
+$insertResult=mysqli_query($conn, $sql);
 
  if ($conflictCount > 0){
     header('location: AdminNewActor.php?problem=ADDERROR1');
  }
 
 
- else if(mysqli_query($conn, $sql)){
+ else if($insertResult){
    header('location: AdminNewActor.php?problem=ADD'); //go back to the add page
 
  }
  
  else
-    header('location: AdminNewActor.php?problem=ADDERROR')
+
+      // printf("Error: %s\n", mysqli_error($conn));
+   header('location: AdminNewActor.php?problem=ADDERROR')
  
+ 
+   
 
  ?>

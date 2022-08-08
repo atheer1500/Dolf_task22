@@ -53,7 +53,8 @@
       
       
       else
-         header('location: AdminEditActor.php?problem=UPDATEERROR');
+      // printf("Error: %s\n", mysqli_error($conn));
+     header('location: AdminEditActor.php?problem=UPDATEERROR');
         } 
   
 
