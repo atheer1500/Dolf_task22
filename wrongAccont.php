@@ -22,10 +22,10 @@ echo '
 <body class="homepage">
 <div class="center" style="margin-top:190px;">
 <img src="Unauthorized-Access-PNG.png" width = "200px" style="">
-<h1>E-mail Address or  password are incorrect</h1>
+<h1>Incorrect Email or  Password</h1>
 
 <p>
-Sorry,try again or go home .
+Please try again or go to home page.
 </p><br>
 <a href="Login.php" class="buttonstyle2" style="display:inline-block; width:25%">Login</a><br>
 <a href="homepage.php" class="buttonstyle" style="display:inline-block; width:25%">Go to Home Page</a>
