@@ -707,15 +707,3 @@ top: -5px;
 }
 
 
-#ErrorMessege2
-{
-    color: red;
-    background-color: white;
-    border-radius: 4px;
-    min-height: 20px;
-    max-height: 100px;
-    width: 270px;
-    padding: 8px;
-    margin-left: 200px;
-    text-transform: capitalize;
-}
