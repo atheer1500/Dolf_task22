@@ -51,7 +51,7 @@ function validate()
 }
 .buttonstyle, input[type=submit]
 {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     border: 1px solid #8497b5;
     border-radius: 50px;
     padding: 10px;
@@ -90,7 +90,7 @@ function validate()
             <button  class="buttonstyle"style="width:230px ;height: 39px;" >Regester</button>
             </form>
             <a href="Login.php" class="newuser" style="  text-decoration: none;
-  color: #063a62db;">alrady have an account? click hear!</a>
+  color: #063a62db;">Already have an account? click here!</a>
 <br>
         </div>
       

@@ -38,7 +38,9 @@
      } 
         else
         {  
-            header('location:wrongAccont.php');
+            // header('location:wrongAccont.php');
+
+            header('location: Login.php?problem=PASSERROR');
             
             // echo "<h1> Login failed. Invalid username or password. user</h1>";  
         }    

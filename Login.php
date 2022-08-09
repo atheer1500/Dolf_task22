@@ -112,6 +112,16 @@ function validate()
     <div class="loginContainer">
         <h2> Login  </h2>
         <div id ="ErrorMessege"> </div>
+
+        <?php
+if (isset ($_GET['problem']) and ($_GET['problem']=='PASSERROR')) 
+      echo '
+      <div id ="ErrorMessege" style="display: block"> 
+      E-mail or password are incorrect
+      </div>
+      ';
+     
+ ?>
         <div class="loginBox">
             <form  name="myform" id="login" action = "authentication.php" onsubmit="return  validate()" method="POST">
             <br>
