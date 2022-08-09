@@ -130,7 +130,7 @@ function validate()
             <button   class="buttonstyle"style="width:230px ;height: 39px;"  >Log In</button>
             </form>
 
-            <a href="Regester.php" class="newuser"style="  text-decoration: none;
+            <a href="regester.php" class="newuser"style="  text-decoration: none;
   color: #063a62db;">New user? click here!</a>
   <br>
 

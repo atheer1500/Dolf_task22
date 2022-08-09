@@ -87,7 +87,7 @@ function validate()
             <input  class="loginInputs" type="text" id="Email" name="Email" placeholder="ُE-maill address"><br><br>
             <input class="loginInputs" type="password" id="passwordF" name="password" placeholder="Password" ><br>
 <br>
-            <button  class="buttonstyle"style="width:230px ;height: 39px;" >Regester</button>
+            <button  class="buttonstyle"style="width:230px ;height: 39px;" >Register</button>
             </form>
             <a href="Login.php" class="newuser" style="  text-decoration: none;
   color: #063a62db;">Already have an account? click here!</a>
